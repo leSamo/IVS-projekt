@@ -1,9 +1,11 @@
-# IVS projekt - Kalkulačka
+﻿# IVS projekt - Kalkulačka
 2019/20 tím Orient Express
 
 -----
 ## Práca s git-om
 ### Prvé nastavenie
+#### Potrebné nástroje
+Visual Studio má podporu pre git, takže zmeny sa dajú vykonávať v rámci neho, ale na nastavenie repozitáru a opravu chýb je potrebný shell, odporúčam Git Bash.
 #### Nastavenie prihlasovacích údajov (rovnakých ako na github)  
 `git config --global user.name "John Doe"`  
 `git config --global user.email johndoe@example.com`  
