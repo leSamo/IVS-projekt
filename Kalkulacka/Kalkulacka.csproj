@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,22 +84,82 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tlac.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tlacidlook.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tlac_siva.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tlacidlo_tuk.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tlacidlo_ukaz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sin11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odmoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odmoc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odmoc2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odmoc3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arccos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kratt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pluss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plusss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plusssssssssssss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
