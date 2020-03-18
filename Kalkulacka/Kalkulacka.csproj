@@ -161,5 +161,95 @@
   <ItemGroup>
     <None Include="Resources\pi.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kratttttt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krat3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krat4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krat5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loggg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinuss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinuss1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cosinus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cosinus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cosinus11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cosinus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xvy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pi3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odmnina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odmnina2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odmnina3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

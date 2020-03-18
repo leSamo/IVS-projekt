@@ -19,6 +19,8 @@ namespace Kalkulacka
             InitializeComponent();
         }
 
+      
+
         private void shift_kliknuty_Click(object sender, EventArgs e)
         {
             if (index > 0)
@@ -38,6 +40,19 @@ namespace Kalkulacka
             listPanel[index].BringToFront();
         }
 
-       
+        private void off_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void off_shift_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
