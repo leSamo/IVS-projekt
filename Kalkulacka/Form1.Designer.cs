@@ -82,6 +82,9 @@
             this.arcsin = new System.Windows.Forms.Button();
             this.plus = new System.Windows.Forms.Button();
             this.krat = new System.Windows.Forms.Button();
+            this.M_tlacidlo = new System.Windows.Forms.Label();
+            this.panel_shift = new System.Windows.Forms.Panel();
+            this.panel_shift2 = new System.Windows.Forms.Panel();
             this.unclicked_shift.SuspendLayout();
             this.clicked_shift.SuspendLayout();
             this.SuspendLayout();
@@ -92,13 +95,13 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.textBox1.Location = new System.Drawing.Point(1, 1);
-            this.textBox1.MaxLength = 12;
+            this.textBox1.HideSelection = false;
+            this.textBox1.Location = new System.Drawing.Point(1, 3);
+            this.textBox1.MaxLength = 9;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(304, 74);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // cislo_nula
             // 
@@ -495,7 +498,7 @@
             this.shift_nekliknuty.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.shift_nekliknuty.ForeColor = System.Drawing.Color.LightGray;
             this.shift_nekliknuty.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.shift_nekliknuty.Location = new System.Drawing.Point(0, 0);
+            this.shift_nekliknuty.Location = new System.Drawing.Point(420, 398);
             this.shift_nekliknuty.Name = "shift_nekliknuty";
             this.shift_nekliknuty.Size = new System.Drawing.Size(60, 60);
             this.shift_nekliknuty.TabIndex = 27;
@@ -506,13 +509,8 @@
             // unclicked_shift
             // 
             this.unclicked_shift.Controls.Add(this.tan);
-            this.unclicked_shift.Controls.Add(this.off);
-            this.unclicked_shift.Controls.Add(this.MRC);
-            this.unclicked_shift.Controls.Add(this.Mplus);
-            this.unclicked_shift.Controls.Add(this.Mminus);
             this.unclicked_shift.Controls.Add(this.x2);
             this.unclicked_shift.Controls.Add(this.mocnina);
-            this.unclicked_shift.Controls.Add(this.shift_nekliknuty);
             this.unclicked_shift.Controls.Add(this.pi);
             this.unclicked_shift.Controls.Add(this.sin);
             this.unclicked_shift.Controls.Add(this.log);
@@ -520,9 +518,9 @@
             this.unclicked_shift.Controls.Add(this.odmocnina2);
             this.unclicked_shift.Controls.Add(this.ln);
             this.unclicked_shift.Controls.Add(this.cos);
-            this.unclicked_shift.Location = new System.Drawing.Point(1, 76);
+            this.unclicked_shift.Location = new System.Drawing.Point(1, 137);
             this.unclicked_shift.Name = "unclicked_shift";
-            this.unclicked_shift.Size = new System.Drawing.Size(304, 183);
+            this.unclicked_shift.Size = new System.Drawing.Size(304, 121);
             this.unclicked_shift.TabIndex = 28;
             // 
             // tan
@@ -540,7 +538,7 @@
             this.tan.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tan.ForeColor = System.Drawing.Color.LightGray;
             this.tan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.tan.Location = new System.Drawing.Point(122, 61);
+            this.tan.Location = new System.Drawing.Point(122, 0);
             this.tan.Name = "tan";
             this.tan.Size = new System.Drawing.Size(60, 60);
             this.tan.TabIndex = 35;
@@ -560,7 +558,7 @@
             this.off.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.off.ForeColor = System.Drawing.Color.LightGray;
             this.off.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.off.Location = new System.Drawing.Point(244, 0);
+            this.off.Location = new System.Drawing.Point(245, 76);
             this.off.Name = "off";
             this.off.Size = new System.Drawing.Size(60, 60);
             this.off.TabIndex = 42;
@@ -582,7 +580,7 @@
             this.MRC.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MRC.ForeColor = System.Drawing.Color.LightGray;
             this.MRC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.MRC.Location = new System.Drawing.Point(61, 0);
+            this.MRC.Location = new System.Drawing.Point(62, 76);
             this.MRC.Name = "MRC";
             this.MRC.Size = new System.Drawing.Size(60, 60);
             this.MRC.TabIndex = 41;
@@ -603,7 +601,7 @@
             this.Mplus.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Mplus.ForeColor = System.Drawing.Color.LightGray;
             this.Mplus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mplus.Location = new System.Drawing.Point(122, 0);
+            this.Mplus.Location = new System.Drawing.Point(123, 76);
             this.Mplus.Name = "Mplus";
             this.Mplus.Size = new System.Drawing.Size(60, 60);
             this.Mplus.TabIndex = 40;
@@ -624,7 +622,7 @@
             this.Mminus.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Mminus.ForeColor = System.Drawing.Color.LightGray;
             this.Mminus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mminus.Location = new System.Drawing.Point(183, 0);
+            this.Mminus.Location = new System.Drawing.Point(184, 76);
             this.Mminus.Name = "Mminus";
             this.Mminus.Size = new System.Drawing.Size(60, 60);
             this.Mminus.TabIndex = 39;
@@ -646,7 +644,7 @@
             this.x2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.x2.ForeColor = System.Drawing.Color.LightGray;
             this.x2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.x2.Location = new System.Drawing.Point(61, 122);
+            this.x2.Location = new System.Drawing.Point(61, 61);
             this.x2.Name = "x2";
             this.x2.Size = new System.Drawing.Size(60, 60);
             this.x2.TabIndex = 28;
@@ -667,7 +665,7 @@
             this.mocnina.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.mocnina.ForeColor = System.Drawing.Color.LightGray;
             this.mocnina.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.mocnina.Location = new System.Drawing.Point(122, 122);
+            this.mocnina.Location = new System.Drawing.Point(122, 61);
             this.mocnina.Name = "mocnina";
             this.mocnina.Size = new System.Drawing.Size(60, 60);
             this.mocnina.TabIndex = 30;
@@ -688,7 +686,7 @@
             this.pi.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.pi.ForeColor = System.Drawing.Color.LightGray;
             this.pi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.pi.Location = new System.Drawing.Point(244, 61);
+            this.pi.Location = new System.Drawing.Point(244, 0);
             this.pi.Name = "pi";
             this.pi.Size = new System.Drawing.Size(60, 60);
             this.pi.TabIndex = 33;
@@ -709,7 +707,7 @@
             this.sin.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sin.ForeColor = System.Drawing.Color.LightGray;
             this.sin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.sin.Location = new System.Drawing.Point(0, 61);
+            this.sin.Location = new System.Drawing.Point(0, 0);
             this.sin.Name = "sin";
             this.sin.Size = new System.Drawing.Size(60, 60);
             this.sin.TabIndex = 26;
@@ -729,7 +727,7 @@
             this.log.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.log.ForeColor = System.Drawing.Color.LightGray;
             this.log.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.log.Location = new System.Drawing.Point(0, 122);
+            this.log.Location = new System.Drawing.Point(0, 61);
             this.log.Name = "log";
             this.log.Size = new System.Drawing.Size(60, 60);
             this.log.TabIndex = 31;
@@ -751,7 +749,7 @@
             this.faktorial.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.faktorial.ForeColor = System.Drawing.Color.LightGray;
             this.faktorial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.faktorial.Location = new System.Drawing.Point(183, 61);
+            this.faktorial.Location = new System.Drawing.Point(183, 0);
             this.faktorial.Name = "faktorial";
             this.faktorial.Size = new System.Drawing.Size(60, 60);
             this.faktorial.TabIndex = 34;
@@ -772,7 +770,7 @@
             this.odmocnina2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.odmocnina2.ForeColor = System.Drawing.Color.LightGray;
             this.odmocnina2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.odmocnina2.Location = new System.Drawing.Point(183, 122);
+            this.odmocnina2.Location = new System.Drawing.Point(183, 61);
             this.odmocnina2.Name = "odmocnina2";
             this.odmocnina2.Size = new System.Drawing.Size(60, 60);
             this.odmocnina2.TabIndex = 36;
@@ -792,7 +790,7 @@
             this.ln.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ln.ForeColor = System.Drawing.Color.LightGray;
             this.ln.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ln.Location = new System.Drawing.Point(244, 122);
+            this.ln.Location = new System.Drawing.Point(244, 61);
             this.ln.Name = "ln";
             this.ln.Size = new System.Drawing.Size(60, 60);
             this.ln.TabIndex = 32;
@@ -814,7 +812,7 @@
             this.cos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cos.ForeColor = System.Drawing.Color.LightGray;
             this.cos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cos.Location = new System.Drawing.Point(61, 61);
+            this.cos.Location = new System.Drawing.Point(61, 0);
             this.cos.Name = "cos";
             this.cos.Size = new System.Drawing.Size(60, 60);
             this.cos.TabIndex = 37;
@@ -823,23 +821,18 @@
             // clicked_shift
             // 
             this.clicked_shift.Controls.Add(this.cotan);
-            this.clicked_shift.Controls.Add(this.off_shift);
-            this.clicked_shift.Controls.Add(this.MRC_shift);
-            this.clicked_shift.Controls.Add(this.Mplus_shift);
-            this.clicked_shift.Controls.Add(this.Mminus_shift);
             this.clicked_shift.Controls.Add(this.krat_desat);
             this.clicked_shift.Controls.Add(this.arccos);
             this.clicked_shift.Controls.Add(this.log_vseob);
             this.clicked_shift.Controls.Add(this.x_minus1);
             this.clicked_shift.Controls.Add(this.x3);
-            this.clicked_shift.Controls.Add(this.shift_kliknuty);
             this.clicked_shift.Controls.Add(this.odmocnina);
             this.clicked_shift.Controls.Add(this.euler);
             this.clicked_shift.Controls.Add(this.odmocnina3);
             this.clicked_shift.Controls.Add(this.arcsin);
-            this.clicked_shift.Location = new System.Drawing.Point(1, 76);
+            this.clicked_shift.Location = new System.Drawing.Point(1, 137);
             this.clicked_shift.Name = "clicked_shift";
-            this.clicked_shift.Size = new System.Drawing.Size(306, 183);
+            this.clicked_shift.Size = new System.Drawing.Size(304, 121);
             this.clicked_shift.TabIndex = 29;
             // 
             // cotan
@@ -857,7 +850,7 @@
             this.cotan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cotan.ForeColor = System.Drawing.Color.LightGray;
             this.cotan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cotan.Location = new System.Drawing.Point(122, 61);
+            this.cotan.Location = new System.Drawing.Point(122, 0);
             this.cotan.Name = "cotan";
             this.cotan.Size = new System.Drawing.Size(60, 60);
             this.cotan.TabIndex = 35;
@@ -877,7 +870,7 @@
             this.off_shift.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.off_shift.ForeColor = System.Drawing.Color.LightGray;
             this.off_shift.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.off_shift.Location = new System.Drawing.Point(244, 0);
+            this.off_shift.Location = new System.Drawing.Point(845, 140);
             this.off_shift.Name = "off_shift";
             this.off_shift.Size = new System.Drawing.Size(60, 60);
             this.off_shift.TabIndex = 41;
@@ -899,7 +892,7 @@
             this.MRC_shift.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MRC_shift.ForeColor = System.Drawing.Color.LightGray;
             this.MRC_shift.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.MRC_shift.Location = new System.Drawing.Point(61, 0);
+            this.MRC_shift.Location = new System.Drawing.Point(609, 150);
             this.MRC_shift.Name = "MRC_shift";
             this.MRC_shift.Size = new System.Drawing.Size(60, 60);
             this.MRC_shift.TabIndex = 40;
@@ -920,7 +913,7 @@
             this.Mplus_shift.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Mplus_shift.ForeColor = System.Drawing.Color.LightGray;
             this.Mplus_shift.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mplus_shift.Location = new System.Drawing.Point(122, 0);
+            this.Mplus_shift.Location = new System.Drawing.Point(696, 140);
             this.Mplus_shift.Name = "Mplus_shift";
             this.Mplus_shift.Size = new System.Drawing.Size(60, 60);
             this.Mplus_shift.TabIndex = 39;
@@ -941,7 +934,7 @@
             this.Mminus_shift.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Mminus_shift.ForeColor = System.Drawing.Color.LightGray;
             this.Mminus_shift.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mminus_shift.Location = new System.Drawing.Point(183, 0);
+            this.Mminus_shift.Location = new System.Drawing.Point(762, 138);
             this.Mminus_shift.Name = "Mminus_shift";
             this.Mminus_shift.Size = new System.Drawing.Size(60, 60);
             this.Mminus_shift.TabIndex = 38;
@@ -963,7 +956,7 @@
             this.krat_desat.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.krat_desat.ForeColor = System.Drawing.Color.LightGray;
             this.krat_desat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.krat_desat.Location = new System.Drawing.Point(244, 61);
+            this.krat_desat.Location = new System.Drawing.Point(244, 0);
             this.krat_desat.Name = "krat_desat";
             this.krat_desat.Size = new System.Drawing.Size(60, 60);
             this.krat_desat.TabIndex = 31;
@@ -984,7 +977,7 @@
             this.arccos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.arccos.ForeColor = System.Drawing.Color.LightGray;
             this.arccos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.arccos.Location = new System.Drawing.Point(61, 61);
+            this.arccos.Location = new System.Drawing.Point(61, 0);
             this.arccos.Name = "arccos";
             this.arccos.Size = new System.Drawing.Size(60, 60);
             this.arccos.TabIndex = 30;
@@ -1005,7 +998,7 @@
             this.log_vseob.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.log_vseob.ForeColor = System.Drawing.Color.LightGray;
             this.log_vseob.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.log_vseob.Location = new System.Drawing.Point(0, 122);
+            this.log_vseob.Location = new System.Drawing.Point(0, 61);
             this.log_vseob.Name = "log_vseob";
             this.log_vseob.Size = new System.Drawing.Size(60, 60);
             this.log_vseob.TabIndex = 34;
@@ -1026,7 +1019,7 @@
             this.x_minus1.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.x_minus1.ForeColor = System.Drawing.Color.LightGray;
             this.x_minus1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.x_minus1.Location = new System.Drawing.Point(183, 61);
+            this.x_minus1.Location = new System.Drawing.Point(183, 0);
             this.x_minus1.Name = "x_minus1";
             this.x_minus1.Size = new System.Drawing.Size(60, 60);
             this.x_minus1.TabIndex = 32;
@@ -1047,7 +1040,7 @@
             this.x3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.x3.ForeColor = System.Drawing.Color.LightGray;
             this.x3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.x3.Location = new System.Drawing.Point(61, 122);
+            this.x3.Location = new System.Drawing.Point(61, 61);
             this.x3.Name = "x3";
             this.x3.Size = new System.Drawing.Size(60, 60);
             this.x3.TabIndex = 28;
@@ -1067,7 +1060,7 @@
             this.shift_kliknuty.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.shift_kliknuty.ForeColor = System.Drawing.Color.LightGray;
             this.shift_kliknuty.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.shift_kliknuty.Location = new System.Drawing.Point(0, 0);
+            this.shift_kliknuty.Location = new System.Drawing.Point(791, 359);
             this.shift_kliknuty.Name = "shift_kliknuty";
             this.shift_kliknuty.Size = new System.Drawing.Size(60, 60);
             this.shift_kliknuty.TabIndex = 27;
@@ -1090,7 +1083,7 @@
             this.odmocnina.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.odmocnina.ForeColor = System.Drawing.Color.LightGray;
             this.odmocnina.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.odmocnina.Location = new System.Drawing.Point(122, 122);
+            this.odmocnina.Location = new System.Drawing.Point(122, 61);
             this.odmocnina.Name = "odmocnina";
             this.odmocnina.Size = new System.Drawing.Size(60, 60);
             this.odmocnina.TabIndex = 33;
@@ -1111,7 +1104,7 @@
             this.euler.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.euler.ForeColor = System.Drawing.Color.LightGray;
             this.euler.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.euler.Location = new System.Drawing.Point(244, 122);
+            this.euler.Location = new System.Drawing.Point(244, 61);
             this.euler.Name = "euler";
             this.euler.Size = new System.Drawing.Size(60, 60);
             this.euler.TabIndex = 36;
@@ -1132,7 +1125,7 @@
             this.odmocnina3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.odmocnina3.ForeColor = System.Drawing.Color.LightGray;
             this.odmocnina3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.odmocnina3.Location = new System.Drawing.Point(183, 122);
+            this.odmocnina3.Location = new System.Drawing.Point(183, 61);
             this.odmocnina3.Name = "odmocnina3";
             this.odmocnina3.Size = new System.Drawing.Size(60, 60);
             this.odmocnina3.TabIndex = 35;
@@ -1153,7 +1146,7 @@
             this.arcsin.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.arcsin.ForeColor = System.Drawing.Color.LightGray;
             this.arcsin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.arcsin.Location = new System.Drawing.Point(0, 61);
+            this.arcsin.Location = new System.Drawing.Point(0, 0);
             this.arcsin.Name = "arcsin";
             this.arcsin.Size = new System.Drawing.Size(60, 60);
             this.arcsin.TabIndex = 26;
@@ -1201,13 +1194,54 @@
             this.krat.Text = "×";
             this.krat.UseVisualStyleBackColor = false;
             // 
+            // M_tlacidlo
+            // 
+            this.M_tlacidlo.AutoSize = true;
+            this.M_tlacidlo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(225)))));
+            this.M_tlacidlo.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.M_tlacidlo.ForeColor = System.Drawing.Color.Gray;
+            this.M_tlacidlo.Location = new System.Drawing.Point(2, 3);
+            this.M_tlacidlo.Name = "M_tlacidlo";
+            this.M_tlacidlo.Size = new System.Drawing.Size(24, 19);
+            this.M_tlacidlo.TabIndex = 30;
+            this.M_tlacidlo.Text = "M";
+            // 
+            // panel_shift
+            // 
+            this.panel_shift.Location = new System.Drawing.Point(791, 284);
+            this.panel_shift.Name = "panel_shift";
+            this.panel_shift.Size = new System.Drawing.Size(60, 60);
+            this.panel_shift.TabIndex = 43;
+            this.panel_shift.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_shift_Paint);
+            // 
+            // panel_shift2
+            // 
+            this.panel_shift2.Location = new System.Drawing.Point(420, 320);
+            this.panel_shift2.Name = "panel_shift2";
+            this.panel_shift2.Size = new System.Drawing.Size(60, 60);
+            this.panel_shift2.TabIndex = 44;
+            this.panel_shift2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_shift2_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(310, 503);
+            this.ClientSize = new System.Drawing.Size(979, 633);
+            this.Controls.Add(this.panel_shift2);
+            this.Controls.Add(this.shift_kliknuty);
+            this.Controls.Add(this.shift_nekliknuty);
+            this.Controls.Add(this.panel_shift);
+            this.Controls.Add(this.M_tlacidlo);
+            this.Controls.Add(this.MRC);
+            this.Controls.Add(this.off);
+            this.Controls.Add(this.Mplus);
+            this.Controls.Add(this.off_shift);
+            this.Controls.Add(this.Mminus);
             this.Controls.Add(this.clicked_shift);
+            this.Controls.Add(this.Mminus_shift);
+            this.Controls.Add(this.Mplus_shift);
+            this.Controls.Add(this.MRC_shift);
             this.Controls.Add(this.unclicked_shift);
             this.Controls.Add(this.del);
             this.Controls.Add(this.AC);
@@ -1231,11 +1265,12 @@
             this.Controls.Add(this.cislo_jeden);
             this.Controls.Add(this.textBox1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ForeColor = System.Drawing.Color.Orchid;
+            this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.unclicked_shift.ResumeLayout(false);
             this.clicked_shift.ResumeLayout(false);
@@ -1299,6 +1334,9 @@
         private System.Windows.Forms.Button MRC_shift;
         private System.Windows.Forms.Button Mplus_shift;
         private System.Windows.Forms.Button Mminus_shift;
+        private System.Windows.Forms.Label M_tlacidlo;
+        private System.Windows.Forms.Panel panel_shift;
+        private System.Windows.Forms.Panel panel_shift2;
     }
 }
 

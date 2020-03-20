@@ -15,13 +15,15 @@ namespace Kalkulacka
         List<Panel> listPanel = new List<Panel>();
         int index;
         //private object txt_Result;
-        
+
 
         public Form1()
         {
             InitializeComponent();
-            
+
         }
+
+        //M_tlacidlo.ForeColor = Color.Black;
 
         private void shift_kliknuty_Click(object sender, EventArgs e)
         {
@@ -42,6 +44,17 @@ namespace Kalkulacka
             listPanel[index].BringToFront();
         }
 
+        private void panel_shift2_Paint(object sender, PaintEventArgs e)
+        {
+            if (index < listPanel.Count - 1)
+                listPanel[++index].BringToFront();
+        }
+
+        private void panel_shift_Paint(object sender, PaintEventArgs e)
+        {
+            if (index > 0)
+                listPanel[--index].BringToFront();
+        }
         private void off_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -80,7 +93,7 @@ namespace Kalkulacka
         {
             if (textBox1.Text.Length > 8)
             {
-                textBox1.Text = textBox1.Text ;
+                textBox1.Text = textBox1.Text;
             }
             else
             {
@@ -174,7 +187,7 @@ namespace Kalkulacka
 
         private void ciarka_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
+            if (textBox1.Text.Length > 7)
             {
                 textBox1.Text = textBox1.Text;
             }
@@ -193,17 +206,16 @@ namespace Kalkulacka
             {
                 textBox1.Text = textBox1.Text + ",";
             }
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
         }
+
+
 
         private void del_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
         }
+
+     
     }
 }

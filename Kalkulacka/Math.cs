@@ -1,4 +1,4 @@
-﻿using System.Math;
+﻿//using System.Math;
 
 namespace Kalkulacka
 {
