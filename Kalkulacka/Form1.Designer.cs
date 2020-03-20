@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cislo_nula = new System.Windows.Forms.Button();
             this.cislo_devat = new System.Windows.Forms.Button();
@@ -113,12 +114,13 @@
             this.cislo_nula.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cislo_nula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.cislo_nula.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cislo_nula.Location = new System.Drawing.Point(1, 443);
+            this.cislo_nula.Location = new System.Drawing.Point(1, 442);
             this.cislo_nula.Name = "cislo_nula";
             this.cislo_nula.Size = new System.Drawing.Size(60, 60);
             this.cislo_nula.TabIndex = 12;
             this.cislo_nula.Text = "0";
             this.cislo_nula.UseVisualStyleBackColor = false;
+            this.cislo_nula.Click += new System.EventHandler(this.cislo_nula_Click);
             // 
             // cislo_devat
             // 
@@ -133,12 +135,13 @@
             this.cislo_devat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cislo_devat.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cislo_devat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.cislo_devat.Location = new System.Drawing.Point(123, 260);
+            this.cislo_devat.Location = new System.Drawing.Point(123, 259);
             this.cislo_devat.Name = "cislo_devat";
             this.cislo_devat.Size = new System.Drawing.Size(60, 60);
             this.cislo_devat.TabIndex = 9;
             this.cislo_devat.Text = "9";
             this.cislo_devat.UseVisualStyleBackColor = false;
+            this.cislo_devat.Click += new System.EventHandler(this.cislo_devat_Click);
             // 
             // cislo_osem
             // 
@@ -153,12 +156,13 @@
             this.cislo_osem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cislo_osem.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cislo_osem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.cislo_osem.Location = new System.Drawing.Point(62, 260);
+            this.cislo_osem.Location = new System.Drawing.Point(62, 259);
             this.cislo_osem.Name = "cislo_osem";
             this.cislo_osem.Size = new System.Drawing.Size(60, 60);
             this.cislo_osem.TabIndex = 8;
             this.cislo_osem.Text = "8";
             this.cislo_osem.UseVisualStyleBackColor = false;
+            this.cislo_osem.Click += new System.EventHandler(this.cislo_osem_Click);
             // 
             // cislo_sedem
             // 
@@ -173,12 +177,13 @@
             this.cislo_sedem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cislo_sedem.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cislo_sedem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.cislo_sedem.Location = new System.Drawing.Point(1, 260);
+            this.cislo_sedem.Location = new System.Drawing.Point(1, 259);
             this.cislo_sedem.Name = "cislo_sedem";
             this.cislo_sedem.Size = new System.Drawing.Size(60, 60);
             this.cislo_sedem.TabIndex = 7;
             this.cislo_sedem.Text = "7";
             this.cislo_sedem.UseVisualStyleBackColor = false;
+            this.cislo_sedem.Click += new System.EventHandler(this.cislo_sedem_Click);
             // 
             // cislo_sest
             // 
@@ -193,12 +198,13 @@
             this.cislo_sest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cislo_sest.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cislo_sest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.cislo_sest.Location = new System.Drawing.Point(123, 321);
+            this.cislo_sest.Location = new System.Drawing.Point(123, 320);
             this.cislo_sest.Name = "cislo_sest";
             this.cislo_sest.Size = new System.Drawing.Size(60, 60);
             this.cislo_sest.TabIndex = 6;
             this.cislo_sest.Text = "6";
             this.cislo_sest.UseVisualStyleBackColor = false;
+            this.cislo_sest.Click += new System.EventHandler(this.cislo_sest_Click);
             // 
             // cislo_pat
             // 
@@ -213,12 +219,13 @@
             this.cislo_pat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cislo_pat.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cislo_pat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.cislo_pat.Location = new System.Drawing.Point(62, 321);
+            this.cislo_pat.Location = new System.Drawing.Point(62, 320);
             this.cislo_pat.Name = "cislo_pat";
             this.cislo_pat.Size = new System.Drawing.Size(60, 60);
             this.cislo_pat.TabIndex = 5;
             this.cislo_pat.Text = "5";
             this.cislo_pat.UseVisualStyleBackColor = false;
+            this.cislo_pat.Click += new System.EventHandler(this.cislo_pat_Click);
             // 
             // cislo_styri
             // 
@@ -233,12 +240,13 @@
             this.cislo_styri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cislo_styri.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cislo_styri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.cislo_styri.Location = new System.Drawing.Point(1, 321);
+            this.cislo_styri.Location = new System.Drawing.Point(1, 320);
             this.cislo_styri.Name = "cislo_styri";
             this.cislo_styri.Size = new System.Drawing.Size(60, 60);
             this.cislo_styri.TabIndex = 4;
             this.cislo_styri.Text = "4";
             this.cislo_styri.UseVisualStyleBackColor = false;
+            this.cislo_styri.Click += new System.EventHandler(this.cislo_styri_Click);
             // 
             // cislo_tri
             // 
@@ -253,12 +261,13 @@
             this.cislo_tri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cislo_tri.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cislo_tri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.cislo_tri.Location = new System.Drawing.Point(123, 382);
+            this.cislo_tri.Location = new System.Drawing.Point(123, 381);
             this.cislo_tri.Name = "cislo_tri";
             this.cislo_tri.Size = new System.Drawing.Size(60, 60);
             this.cislo_tri.TabIndex = 3;
             this.cislo_tri.Text = "3";
             this.cislo_tri.UseVisualStyleBackColor = false;
+            this.cislo_tri.Click += new System.EventHandler(this.cislo_tri_Click);
             // 
             // cislo_dva
             // 
@@ -273,12 +282,13 @@
             this.cislo_dva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cislo_dva.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cislo_dva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.cislo_dva.Location = new System.Drawing.Point(62, 382);
+            this.cislo_dva.Location = new System.Drawing.Point(62, 381);
             this.cislo_dva.Name = "cislo_dva";
             this.cislo_dva.Size = new System.Drawing.Size(60, 60);
             this.cislo_dva.TabIndex = 2;
             this.cislo_dva.Text = "2";
             this.cislo_dva.UseVisualStyleBackColor = false;
+            this.cislo_dva.Click += new System.EventHandler(this.cislo_dva_Click);
             // 
             // cislo_jeden
             // 
@@ -293,12 +303,13 @@
             this.cislo_jeden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cislo_jeden.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cislo_jeden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.cislo_jeden.Location = new System.Drawing.Point(1, 382);
+            this.cislo_jeden.Location = new System.Drawing.Point(1, 381);
             this.cislo_jeden.Name = "cislo_jeden";
             this.cislo_jeden.Size = new System.Drawing.Size(60, 60);
             this.cislo_jeden.TabIndex = 1;
             this.cislo_jeden.Text = "1";
             this.cislo_jeden.UseVisualStyleBackColor = false;
+            this.cislo_jeden.Click += new System.EventHandler(this.cislo_jeden_Click);
             // 
             // ANS
             // 
@@ -314,7 +325,7 @@
             this.ANS.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ANS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.ANS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ANS.Location = new System.Drawing.Point(123, 443);
+            this.ANS.Location = new System.Drawing.Point(123, 442);
             this.ANS.Name = "ANS";
             this.ANS.Size = new System.Drawing.Size(60, 60);
             this.ANS.TabIndex = 13;
@@ -335,12 +346,13 @@
             this.ciarka.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ciarka.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.ciarka.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ciarka.Location = new System.Drawing.Point(62, 443);
+            this.ciarka.Location = new System.Drawing.Point(62, 442);
             this.ciarka.Name = "ciarka";
             this.ciarka.Size = new System.Drawing.Size(60, 60);
             this.ciarka.TabIndex = 14;
             this.ciarka.Text = ",";
             this.ciarka.UseVisualStyleBackColor = false;
+            this.ciarka.Click += new System.EventHandler(this.ciarka_Click);
             // 
             // delene
             // 
@@ -356,7 +368,7 @@
             this.delene.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.delene.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.delene.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.delene.Location = new System.Drawing.Point(245, 321);
+            this.delene.Location = new System.Drawing.Point(245, 320);
             this.delene.Name = "delene";
             this.delene.Size = new System.Drawing.Size(60, 60);
             this.delene.TabIndex = 17;
@@ -377,7 +389,7 @@
             this.minus.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.minus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.minus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.minus.Location = new System.Drawing.Point(245, 382);
+            this.minus.Location = new System.Drawing.Point(245, 381);
             this.minus.Name = "minus";
             this.minus.Size = new System.Drawing.Size(60, 60);
             this.minus.TabIndex = 19;
@@ -398,7 +410,7 @@
             this.RND.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.RND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.RND.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.RND.Location = new System.Drawing.Point(184, 443);
+            this.RND.Location = new System.Drawing.Point(184, 442);
             this.RND.Name = "RND";
             this.RND.Size = new System.Drawing.Size(60, 60);
             this.RND.TabIndex = 21;
@@ -419,7 +431,7 @@
             this.rovna_sa.Font = new System.Drawing.Font("Century Gothic", 15.5F);
             this.rovna_sa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.rovna_sa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.rovna_sa.Location = new System.Drawing.Point(245, 443);
+            this.rovna_sa.Location = new System.Drawing.Point(245, 442);
             this.rovna_sa.Name = "rovna_sa";
             this.rovna_sa.Size = new System.Drawing.Size(60, 60);
             this.rovna_sa.TabIndex = 22;
@@ -440,7 +452,7 @@
             this.AC.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.AC.ForeColor = System.Drawing.Color.LightGray;
             this.AC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.AC.Location = new System.Drawing.Point(245, 260);
+            this.AC.Location = new System.Drawing.Point(245, 259);
             this.AC.Name = "AC";
             this.AC.Size = new System.Drawing.Size(60, 60);
             this.AC.TabIndex = 23;
@@ -461,12 +473,13 @@
             this.del.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.del.ForeColor = System.Drawing.Color.LightGray;
             this.del.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.del.Location = new System.Drawing.Point(184, 260);
+            this.del.Location = new System.Drawing.Point(184, 259);
             this.del.Name = "del";
             this.del.Size = new System.Drawing.Size(60, 60);
             this.del.TabIndex = 24;
             this.del.Text = "DEL";
             this.del.UseVisualStyleBackColor = false;
+            this.del.Click += new System.EventHandler(this.del_Click);
             // 
             // shift_nekliknuty
             // 
@@ -826,7 +839,7 @@
             this.clicked_shift.Controls.Add(this.arcsin);
             this.clicked_shift.Location = new System.Drawing.Point(1, 76);
             this.clicked_shift.Name = "clicked_shift";
-            this.clicked_shift.Size = new System.Drawing.Size(304, 183);
+            this.clicked_shift.Size = new System.Drawing.Size(306, 183);
             this.clicked_shift.TabIndex = 29;
             // 
             // cotan
@@ -852,13 +865,13 @@
             // 
             // off_shift
             // 
-            this.off_shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
+            this.off_shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.off_shift.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.off_shift.Cursor = System.Windows.Forms.Cursors.Hand;
             this.off_shift.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.off_shift.FlatAppearance.BorderSize = 0;
             this.off_shift.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.off_shift.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.off_shift.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
             this.off_shift.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
             this.off_shift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.off_shift.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -874,13 +887,13 @@
             // 
             // MRC_shift
             // 
-            this.MRC_shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
+            this.MRC_shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.MRC_shift.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MRC_shift.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MRC_shift.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.MRC_shift.FlatAppearance.BorderSize = 0;
             this.MRC_shift.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.MRC_shift.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.MRC_shift.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
             this.MRC_shift.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
             this.MRC_shift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MRC_shift.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -895,13 +908,13 @@
             // 
             // Mplus_shift
             // 
-            this.Mplus_shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
+            this.Mplus_shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.Mplus_shift.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Mplus_shift.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Mplus_shift.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Mplus_shift.FlatAppearance.BorderSize = 0;
             this.Mplus_shift.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.Mplus_shift.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.Mplus_shift.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
             this.Mplus_shift.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
             this.Mplus_shift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mplus_shift.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -916,13 +929,13 @@
             // 
             // Mminus_shift
             // 
-            this.Mminus_shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
+            this.Mminus_shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.Mminus_shift.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Mminus_shift.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Mminus_shift.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Mminus_shift.FlatAppearance.BorderSize = 0;
             this.Mminus_shift.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.Mminus_shift.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.Mminus_shift.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
             this.Mminus_shift.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
             this.Mminus_shift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mminus_shift.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -1042,14 +1055,14 @@
             // 
             // shift_kliknuty
             // 
-            this.shift_kliknuty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.shift_kliknuty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
             this.shift_kliknuty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.shift_kliknuty.Cursor = System.Windows.Forms.Cursors.Hand;
             this.shift_kliknuty.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.shift_kliknuty.FlatAppearance.BorderSize = 0;
             this.shift_kliknuty.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.shift_kliknuty.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
-            this.shift_kliknuty.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
+            this.shift_kliknuty.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.shift_kliknuty.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
             this.shift_kliknuty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.shift_kliknuty.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.shift_kliknuty.ForeColor = System.Drawing.Color.LightGray;
@@ -1160,7 +1173,7 @@
             this.plus.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.plus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.plus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plus.Location = new System.Drawing.Point(184, 382);
+            this.plus.Location = new System.Drawing.Point(184, 381);
             this.plus.Name = "plus";
             this.plus.Size = new System.Drawing.Size(60, 60);
             this.plus.TabIndex = 20;
@@ -1181,7 +1194,7 @@
             this.krat.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.krat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
             this.krat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.krat.Location = new System.Drawing.Point(184, 321);
+            this.krat.Location = new System.Drawing.Point(184, 320);
             this.krat.Name = "krat";
             this.krat.Size = new System.Drawing.Size(60, 60);
             this.krat.TabIndex = 18;
@@ -1193,7 +1206,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(308, 505);
+            this.ClientSize = new System.Drawing.Size(310, 503);
             this.Controls.Add(this.clicked_shift);
             this.Controls.Add(this.unclicked_shift);
             this.Controls.Add(this.del);
@@ -1218,10 +1231,11 @@
             this.Controls.Add(this.cislo_jeden);
             this.Controls.Add(this.textBox1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ForeColor = System.Drawing.Color.Transparent;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ForeColor = System.Drawing.Color.Orchid;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "           ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.unclicked_shift.ResumeLayout(false);
             this.clicked_shift.ResumeLayout(false);
@@ -1278,13 +1292,13 @@
         private System.Windows.Forms.Button MRC;
         private System.Windows.Forms.Button Mplus;
         private System.Windows.Forms.Button Mminus;
+        private System.Windows.Forms.Button off;
+        private System.Windows.Forms.Button tan;
+        private System.Windows.Forms.Button cotan;
+        private System.Windows.Forms.Button off_shift;
         private System.Windows.Forms.Button MRC_shift;
         private System.Windows.Forms.Button Mplus_shift;
         private System.Windows.Forms.Button Mminus_shift;
-        private System.Windows.Forms.Button off;
-        private System.Windows.Forms.Button off_shift;
-        private System.Windows.Forms.Button tan;
-        private System.Windows.Forms.Button cotan;
     }
 }
 
