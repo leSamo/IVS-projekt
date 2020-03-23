@@ -188,5 +188,81 @@ namespace Kalkulacka
                 textBox1.Text = "-";
             }
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+           /* Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8 && chr != ',' && chr != '-')
+            {
+                e.Handled = true;
+            }*/
+
+            if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
+            {
+                if (textBox1.Text.Length > 10)
+                {
+
+                }
+                else
+                {
+                    Char chr = e.KeyChar;
+                    if (!Char.IsDigit(chr) && chr != 8 )
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+            else if (textBox1.Text.Contains("-"))
+            {
+                if (textBox1.Text.Length > 9)
+                {
+
+                }
+                else
+                {
+                    Char chr = e.KeyChar;
+                    if (!Char.IsDigit(chr) && chr != 8 && chr !=',')
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+            else if ( textBox1.Text.Contains(","))
+            {
+                if (textBox1.Text.Length > 9)
+                {
+                    Char chr = e.KeyChar;
+                    if (!Char.IsDigit(chr) && chr != 8)
+                    {
+                        e.Handled = false;
+                    }
+                }
+                else
+                {
+                    Char chr = e.KeyChar;
+                    if (!Char.IsDigit(chr) && chr != 8 && chr != '-')
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+            else if (textBox1.Text.Length > 8)
+            {
+                Char chr = e.KeyChar;
+                if (!Char.IsDigit(chr) && chr != 8 && chr != ',' && chr != '-')
+                {
+                    e.Handled = false;
+                }
+            }
+            else
+            {
+                Char chr = e.KeyChar;
+                if (!Char.IsDigit(chr) && chr != 8 && chr != ',' && chr != '-')
+                {
+                    e.Handled = true;
+                }
+            }
+        }
     }
 }
