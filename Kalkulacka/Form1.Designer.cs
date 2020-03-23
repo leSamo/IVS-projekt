@@ -95,7 +95,7 @@
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.textBox1.HideSelection = false;
             this.textBox1.Location = new System.Drawing.Point(1, 1);
-            this.textBox1.MaxLength = 12;
+            this.textBox1.MaxLength = 11;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(354, 74);
             this.textBox1.TabIndex = 0;
@@ -1220,7 +1220,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(801, 573);
+            this.ClientSize = new System.Drawing.Size(356, 573);
             this.Controls.Add(this.DisplayedM);
             this.Controls.Add(this.shiftClickedPanel);
             this.Controls.Add(this.shiftUnclickedPanel);

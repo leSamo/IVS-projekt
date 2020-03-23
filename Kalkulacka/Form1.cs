@@ -40,8 +40,8 @@ namespace Kalkulacka
                     textBox1.Text = textBox1.Text + d;
                 }
             }
-            else if (textBox1.Text.Contains("-") || textBox1.Text.Contains(",")) { 
-            
+            else if (textBox1.Text.Contains("-") || textBox1.Text.Contains(","))
+            { 
                 if (textBox1.Text.Length > 9)
                 {
 
@@ -50,12 +50,10 @@ namespace Kalkulacka
                 {
                     textBox1.Text = textBox1.Text + d;
                 }
-
             }
-            else if (textBox1.Text.Length > 9)
+            else if (textBox1.Text.Length > 8)
             {
-              
-
+             
             }
             else
             {
@@ -147,7 +145,8 @@ namespace Kalkulacka
         private void decPoint_Click(object sender, EventArgs e)
         {
 
-            if (textBox1.Text.Contains(",")) {
+            if (textBox1.Text.Contains(","))
+            {
 
             }
             else if (textBox1.Text == "" || textBox1.Text == "-")
@@ -156,16 +155,16 @@ namespace Kalkulacka
             }
             else if (textBox1.Text.Contains("-"))
             {
-                if (textBox1.Text.Length > 8)
+                if (textBox1.Text.Length > 9)
                 {
-                    textBox1.Text = textBox1.Text + ",";
+                    
                 }
                 else
                 {
                     textBox1.Text = textBox1.Text + ",";
                 }
             }
-            else if (textBox1.Text.Length > 7)
+            else if (textBox1.Text.Length > 8)
             {
 
             }
