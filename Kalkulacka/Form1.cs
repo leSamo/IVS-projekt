@@ -23,38 +23,65 @@ namespace Kalkulacka
 
         }
 
-        //M_tlacidlo.ForeColor = Color.Black;
-
-        private void shift_kliknuty_Click(object sender, EventArgs e)
+        private void funkciaNaVyuzitie ()
         {
-            if (index > 0)
-                listPanel[--index].BringToFront();
+            DisplayedM.ForeColor = Color.Black;
         }
 
-        private void shift_nekliknuty_Click(object sender, EventArgs e)
+        private void length (char d)
         {
-            if (index < listPanel.Count - 1)
-                listPanel[++index].BringToFront();
-        }
+            if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
+            {
+                if (textBox1.Text.Length > 10)
+                {
 
+                }
+                else{
+                    textBox1.Text = textBox1.Text + d;
+                }
+            }
+            else if (textBox1.Text.Contains("-") || textBox1.Text.Contains(","))
+            { 
+                if (textBox1.Text.Length > 9)
+                {
+
+                }
+                else
+                {
+                    textBox1.Text = textBox1.Text + d;
+                }
+            }
+            else if (textBox1.Text.Length > 8)
+            {
+             
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + d;
+            }
+            
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-            listPanel.Add(unclicked_shift);
-            listPanel.Add(clicked_shift);
+            listPanel.Add(shiftUnclickedPanel);
+            listPanel.Add(shiftClickedPanel);
             listPanel[index].BringToFront();
         }
 
-        private void panel_shift2_Paint(object sender, PaintEventArgs e)
+        private void shiftClicked_Click(object sender, EventArgs e)
+        {
+            if (index > 0)
+                listPanel[--index].BringToFront();
+        }
+
+        private void shiftUnclicked_Click(object sender, EventArgs e)
         {
             if (index < listPanel.Count - 1)
                 listPanel[++index].BringToFront();
         }
 
-        private void panel_shift_Paint(object sender, PaintEventArgs e)
-        {
-            if (index > 0)
-                listPanel[--index].BringToFront();
-        }
+     
+        
         private void off_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -65,157 +92,101 @@ namespace Kalkulacka
             this.Close();
         }
 
-        private void cislo_nula_Click(object sender, EventArgs e)
+        private void num0_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
-            {
-                textBox1.Text = textBox1.Text;
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "0";
-            }
+            length('0');
         }
 
-        private void cislo_jeden_Click(object sender, EventArgs e)
+        private void num1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
-            {
-                textBox1.Text = textBox1.Text;
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "1";
-            }
+            length('1');
         }
 
-        private void cislo_dva_Click(object sender, EventArgs e)
+        private void num2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
-            {
-                textBox1.Text = textBox1.Text;
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "2";
-            }
+            length('2');
         }
 
-        private void cislo_tri_Click(object sender, EventArgs e)
+        private void num3_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
-            {
-                textBox1.Text = textBox1.Text;
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "3";
-            }
+            length('3');
         }
 
-        private void cislo_styri_Click(object sender, EventArgs e)
+        private void num4_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
-            {
-                textBox1.Text = textBox1.Text;
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "4";
-            }
+            length('4');
         }
 
-        private void cislo_pat_Click(object sender, EventArgs e)
+        private void num5_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
-            {
-                textBox1.Text = textBox1.Text;
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "5";
-            }
+            length('5');
         }
 
-        private void cislo_sest_Click(object sender, EventArgs e)
+        private void num6_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
-            {
-                textBox1.Text = textBox1.Text;
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "6";
-            }
+            length('6');
         }
 
-        private void cislo_sedem_Click(object sender, EventArgs e)
+        private void num7_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
-            {
-                textBox1.Text = textBox1.Text;
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "7";
-            }
+            length('7');
         }
 
-        private void cislo_osem_Click(object sender, EventArgs e)
+        private void num8_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
-            {
-                textBox1.Text = textBox1.Text;
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "8";
-            }
+            length('8');
         }
 
-        private void cislo_devat_Click(object sender, EventArgs e)
+        private void num9_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 8)
-            {
-                textBox1.Text = textBox1.Text;
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "9";
-            }
+            length('9');
         }
 
-        private void ciarka_Click(object sender, EventArgs e)
+        private void decPoint_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 7)
+
+            if (textBox1.Text.Contains(","))
             {
-                textBox1.Text = textBox1.Text;
+
             }
-
-
-            else if (textBox1.Text.Contains(","))
-            {
-                textBox1.Text = textBox1.Text;
-            }
-
-            else if (textBox1.Text == "")
+            else if (textBox1.Text == "" || textBox1.Text == "-")
             {
                 textBox1.Text = textBox1.Text + "0,";
+            }
+            else if (textBox1.Text.Contains("-"))
+            {
+                if (textBox1.Text.Length > 9)
+                {
+                    
+                }
+                else
+                {
+                    textBox1.Text = textBox1.Text + ",";
+                }
+            }
+            else if (textBox1.Text.Length > 8)
+            {
+
             }
             else
             {
                 textBox1.Text = textBox1.Text + ",";
             }
 
+          
         }
-
-
 
         private void del_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
         }
 
-     
+        private void subtraction_Click(object sender, EventArgs e)
+        {
+            if ( textBox1.Text == "")
+            {
+                textBox1.Text = "-";
+            }
+        }
     }
 }
