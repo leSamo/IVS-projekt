@@ -376,6 +376,7 @@
             this.division.TabIndex = 17;
             this.division.Text = "÷";
             this.division.UseVisualStyleBackColor = false;
+            this.division.Click += new System.EventHandler(this.operation_Click);
             // 
             // subtraction
             // 
@@ -419,6 +420,7 @@
             this.RAND.TabIndex = 21;
             this.RAND.Text = "RAND";
             this.RAND.UseVisualStyleBackColor = false;
+            this.RAND.Click += new System.EventHandler(this.RAND_Click);
             // 
             // equals
             // 
@@ -440,6 +442,7 @@
             this.equals.TabIndex = 22;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = false;
+            this.equals.Click += new System.EventHandler(this.equals_Click);
             // 
             // AC
             // 
@@ -461,6 +464,7 @@
             this.AC.TabIndex = 23;
             this.AC.Text = "AC";
             this.AC.UseVisualStyleBackColor = false;
+            this.AC.Click += new System.EventHandler(this.AC_Click);
             // 
             // del
             // 
@@ -1161,6 +1165,7 @@
             this.arcsin.Size = new System.Drawing.Size(70, 70);
             this.arcsin.TabIndex = 26;
             this.arcsin.UseVisualStyleBackColor = false;
+            this.arcsin.Click += new System.EventHandler(this.operation_Click);
             // 
             // addition
             // 
@@ -1182,6 +1187,7 @@
             this.addition.TabIndex = 20;
             this.addition.Text = "+";
             this.addition.UseVisualStyleBackColor = false;
+            this.addition.Click += new System.EventHandler(this.operation_Click);
             // 
             // multiplication
             // 
@@ -1203,6 +1209,7 @@
             this.multiplication.TabIndex = 18;
             this.multiplication.Text = "×";
             this.multiplication.UseVisualStyleBackColor = false;
+            this.multiplication.Click += new System.EventHandler(this.operation_Click);
             // 
             // DisplayedM
             // 

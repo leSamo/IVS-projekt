@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kalkulacka
@@ -13,7 +8,10 @@ namespace Kalkulacka
     public partial class Form1 : Form
     {
         List<Panel> listPanel = new List<Panel>();
+        MathComponentsNS.MathComponents newMath = new MathComponentsNS.MathComponents();
         int index;
+        string operationPerformed = "";
+        double firstNum = 0;
         //private object txt_Result;
 
 
@@ -178,14 +176,21 @@ namespace Kalkulacka
 
         private void del_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            
         }
 
         private void subtraction_Click(object sender, EventArgs e)
         {
+            bool convValid;
             if ( textBox1.Text == "")
             {
                 textBox1.Text = "-";
+            }
+            else
+            {
+                convValid = double.TryParse(textBox1.Text, out firstNum);
+                textBox1.Text = "";
+                operationPerformed = "substraction";
             }
         }
 
@@ -263,6 +268,68 @@ namespace Kalkulacka
                     e.Handled = true;
                 }
             }
+        }
+
+        public void Valid_Chk((bool, double) result)                //Funkce pro kontrolu úspěšného dokončení výpočtu a případného vypsání výsledku
+        {
+            if (result.Item1)
+            {
+                //TODO error handler
+            }
+            else
+            {
+                textBox1.Text = result.Item2.ToString();
+            }
+        }
+
+        private void RAND_Click(object sender, EventArgs e)         //Funkce RAND (není jako operace, protože funguje bez stisknutí rovnítka)
+        {
+
+            (bool, double) result = newMath.Random();
+            Valid_Chk(result);
+        }
+
+        private void operation_Click(object sender, EventArgs e)    //Určení stisknuté operace, uložení vstupu, vymazání textboxu
+        {
+            bool convValid;
+            Button button = (Button)sender;
+            if (textBox1.Text != "")
+            {
+                convValid = double.TryParse(textBox1.Text, out firstNum);           //TODO vyřešit multiinput
+                textBox1.Text = "";
+            }
+            operationPerformed = button.Name;
+        }
+
+        private void equals_Click(object sender, EventArgs e)
+        {
+            bool convValid;
+            (bool, double) result = (true, 0);
+            convValid = double.TryParse(textBox1.Text, out double secondNum);
+            switch (operationPerformed)
+            {
+                case "addition":
+                    result = newMath.Add(firstNum, secondNum);
+                    break;
+                case "substraction":
+                    result = newMath.Subtract(firstNum, secondNum);
+                    break;
+                case "multiplication":
+                    result = newMath.Multiply(firstNum, secondNum);
+                    break;
+                case "division":
+                    result = newMath.Divide(firstNum, secondNum);
+                    break;
+                default:
+                    break;
+            }
+            Valid_Chk(result);
+            operationPerformed = "";
+        }
+
+        private void AC_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
         }
     }
 }
