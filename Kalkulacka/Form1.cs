@@ -290,7 +290,7 @@ namespace Kalkulacka
             operationPerformed = button.Name;
             if (textBox1.Text != "" && firstNum == 0)
             {
-                convValid = double.TryParse(textBox1.Text, out firstNum);           //TODO vyřešit multiinput
+                convValid = double.TryParse(textBox1.Text, out firstNum);
                 textBox1.Text = "";
             }
             else if (textBox1.Text != "" && firstNum != 0)
@@ -304,6 +304,9 @@ namespace Kalkulacka
         {
             Button button = (Button)sender;
             string instantOp = button.Name;
+            (bool, double) result = (true, 0);
+            bool checkNeeded = false;
+            double input = double.Parse(textBox1.Text);
 
             switch (instantOp)
             {
@@ -311,7 +314,8 @@ namespace Kalkulacka
                     textBox1.Text = ans.ToString();
                     break;
                 case "RAND":
-                    textBox1.Text = newMath.Random().Item2.ToString();
+                    result = newMath.Random();
+                    checkNeeded = true;
                     break;
                 case "del":
                     textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
@@ -327,6 +331,71 @@ namespace Kalkulacka
                         firstNum = 0;
                     }
                     break;
+                case "sin":
+                    result = newMath.Sin(input);
+                    checkNeeded = true;
+                    break;
+                case "cos":
+                    result = newMath.Cos(input);
+                    checkNeeded = true;
+                    break;
+                case "tan":
+                    result = newMath.Tan(input);
+                    checkNeeded = true;
+                    break;
+                case "factorial":
+                    result = newMath.Factorial(input);
+                    checkNeeded = true;
+                    break;
+                case "pi":
+                    //TODO (no access to PI)
+                    break;
+                case "log":
+                    result = newMath.Logarithm(10, input);
+                    checkNeeded = true;
+                    break;
+                case "Power2":
+                    result = newMath.Exponentiate(input, 2);
+                    checkNeeded = true;
+                    break;
+                case "root2":
+                    result = newMath.Root(2, input);
+                    checkNeeded = true;
+                    break;
+                case "ln":
+                    //TODO (no access to e)
+                    break;
+                case "arcsin":
+                    result = newMath.Arcsin(input);
+                    checkNeeded = true;
+                    break;
+                case "arccos":
+                    result = newMath.Arccos(input);
+                    checkNeeded = true;
+                    break;
+                case "arctan":
+                    result = newMath.Arctan(input);
+                    checkNeeded = true;
+                    break;
+                case "PowerXMinus1":
+                    result = newMath.Exponentiate(input, -1);
+                    checkNeeded = true;
+                    break;
+                case "Power3":
+                    result = newMath.Exponentiate(input, 3);
+                    checkNeeded = true;
+                    break;
+                case "root3":
+                    result = newMath.Root(3, input);
+                    checkNeeded = true;
+                    break;
+                case "euler":
+                    //TODO
+                    break;
+            }
+            if (checkNeeded)
+            {
+                Valid_Chk(result);
             }
         }
 
@@ -349,6 +418,18 @@ namespace Kalkulacka
                     break;
                 case "division":
                     result = newMath.Divide(firstNum, secondNum);
+                    break;
+                case "powerX":
+                    result = newMath.Exponentiate(firstNum, secondNum);
+                    break;
+                case "multiplication10":
+                    //TODO (missing function in lib for easy solve)
+                    break;
+                case "logDec":
+                    result = newMath.Logarithm(secondNum, firstNum);
+                    break;
+                case "root":
+                    result = newMath.Root(secondNum, firstNum);
                     break;
                 default:
                     break;

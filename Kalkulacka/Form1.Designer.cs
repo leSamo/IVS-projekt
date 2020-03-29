@@ -67,7 +67,7 @@
             this.shiftClickedPanel = new System.Windows.Forms.Panel();
             this.shiftClicked = new System.Windows.Forms.Button();
             this.offShift = new System.Windows.Forms.Button();
-            this.cotan = new System.Windows.Forms.Button();
+            this.arctan = new System.Windows.Forms.Button();
             this.multiplication10 = new System.Windows.Forms.Button();
             this.MminusShift = new System.Windows.Forms.Button();
             this.arccos = new System.Windows.Forms.Button();
@@ -835,7 +835,7 @@
             // 
             this.shiftClickedPanel.Controls.Add(this.shiftClicked);
             this.shiftClickedPanel.Controls.Add(this.offShift);
-            this.shiftClickedPanel.Controls.Add(this.cotan);
+            this.shiftClickedPanel.Controls.Add(this.arctan);
             this.shiftClickedPanel.Controls.Add(this.multiplication10);
             this.shiftClickedPanel.Controls.Add(this.MminusShift);
             this.shiftClickedPanel.Controls.Add(this.arccos);
@@ -897,26 +897,26 @@
             this.offShift.UseVisualStyleBackColor = false;
             this.offShift.Click += new System.EventHandler(this.off_shift_Click);
             // 
-            // cotan
+            // arctan
             // 
-            this.cotan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.cotan.BackgroundImage = global::Kalkulacka.Properties.Resources.tan1;
-            this.cotan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.cotan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cotan.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.cotan.FlatAppearance.BorderSize = 0;
-            this.cotan.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.cotan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.cotan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.cotan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cotan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cotan.ForeColor = System.Drawing.Color.LightGray;
-            this.cotan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cotan.Location = new System.Drawing.Point(142, 71);
-            this.cotan.Name = "cotan";
-            this.cotan.Size = new System.Drawing.Size(70, 70);
-            this.cotan.TabIndex = 35;
-            this.cotan.UseVisualStyleBackColor = false;
+            this.arctan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.arctan.BackgroundImage = global::Kalkulacka.Properties.Resources.tan1;
+            this.arctan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.arctan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.arctan.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.arctan.FlatAppearance.BorderSize = 0;
+            this.arctan.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.arctan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.arctan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.arctan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.arctan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.arctan.ForeColor = System.Drawing.Color.LightGray;
+            this.arctan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.arctan.Location = new System.Drawing.Point(142, 71);
+            this.arctan.Name = "arctan";
+            this.arctan.Size = new System.Drawing.Size(70, 70);
+            this.arctan.TabIndex = 35;
+            this.arctan.UseVisualStyleBackColor = false;
             // 
             // multiplication10
             // 
@@ -1325,7 +1325,7 @@
         private System.Windows.Forms.Button Mminus;
         private System.Windows.Forms.Button off;
         private System.Windows.Forms.Button tan;
-        private System.Windows.Forms.Button cotan;
+        private System.Windows.Forms.Button arctan;
         private System.Windows.Forms.Button offShift;
         private System.Windows.Forms.Button MRCShift;
         private System.Windows.Forms.Button MplusShift;
