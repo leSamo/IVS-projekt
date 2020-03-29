@@ -615,6 +615,7 @@
             this.MRC.TabIndex = 41;
             this.MRC.Text = "MRC";
             this.MRC.UseVisualStyleBackColor = false;
+            this.MRC.Click += new System.EventHandler(this.MRC_Click);
             // 
             // pi
             // 
@@ -742,6 +743,7 @@
             this.Mplus.TabIndex = 40;
             this.Mplus.Text = "M+";
             this.Mplus.UseVisualStyleBackColor = false;
+            this.Mplus.Click += new System.EventHandler(this.Mplus_Click);
             // 
             // root2
             // 
@@ -826,6 +828,7 @@
             this.Mminus.TabIndex = 39;
             this.Mminus.Text = "M-";
             this.Mminus.UseVisualStyleBackColor = false;
+            this.Mminus.Click += new System.EventHandler(this.Mminus_Click);
             // 
             // shiftClickedPanel
             // 
@@ -955,6 +958,7 @@
             this.MminusShift.TabIndex = 38;
             this.MminusShift.Text = "M-";
             this.MminusShift.UseVisualStyleBackColor = false;
+            this.MminusShift.Click += new System.EventHandler(this.MminusShift_Click);
             // 
             // arccos
             // 
@@ -997,6 +1001,7 @@
             this.MplusShift.TabIndex = 39;
             this.MplusShift.Text = "M+";
             this.MplusShift.UseVisualStyleBackColor = false;
+            this.MplusShift.Click += new System.EventHandler(this.MplusShift_Click);
             // 
             // logDec
             // 
@@ -1039,6 +1044,7 @@
             this.MRCShift.TabIndex = 40;
             this.MRCShift.Text = "MRC";
             this.MRCShift.UseVisualStyleBackColor = false;
+            this.MRCShift.Click += new System.EventHandler(this.MRCShift_Click);
             // 
             // PowerXMinus1
             // 

@@ -12,6 +12,7 @@ namespace Kalkulacka
         int index;
         string operationPerformed = "";
         double firstNum = 0;
+        double MEM = 0;
         //private object txt_Result;
 
 
@@ -64,6 +65,7 @@ namespace Kalkulacka
             listPanel.Add(shiftUnclickedPanel);
             listPanel.Add(shiftClickedPanel);
             listPanel[index].BringToFront();
+            DisplayedM.Visible = false;
         }
 
         private void shiftClicked_Click(object sender, EventArgs e)
@@ -330,6 +332,58 @@ namespace Kalkulacka
         private void AC_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
+        }
+
+        private void Mplus_Click(object sender, EventArgs e)
+        {
+            MplusShift_Click(sender, e);
+        }
+
+        private void MplusShift_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                MEM += double.Parse(textBox1.Text);
+                if (MEM == 0)
+                {
+                    DisplayedM.Visible = false;
+                }
+                else
+                {
+                    DisplayedM.Visible = true;
+                }
+            }
+        }
+
+        private void MRCShift_Click(object sender, EventArgs e)
+        {
+            MRC_Click(sender, e);
+        }
+
+        private void MRC_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = MEM.ToString();
+        }
+
+        private void Mminus_Click(object sender, EventArgs e)
+        {
+            MminusShift_Click(sender, e);
+        }
+
+        private void MminusShift_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                MEM -= double.Parse(textBox1.Text);
+                if (MEM == 0)
+                {
+                    DisplayedM.Visible = false;
+                }
+                else
+                {
+                    DisplayedM.Visible = true;
+                }
+            }
         }
     }
 }
