@@ -13,6 +13,7 @@ namespace Kalkulacka
         string operationPerformed = "";
         double firstNum = 0;
         double MEM = 0;
+        double ans = 0;
         //private object txt_Result;
 
 
@@ -176,11 +177,6 @@ namespace Kalkulacka
           
         }
 
-        private void del_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void subtraction_Click(object sender, EventArgs e)
         {
             bool convValid;
@@ -276,38 +272,70 @@ namespace Kalkulacka
         {
             if (result.Item1)
             {
+                textBox1.Text = "CHYBA!";
                 //TODO error handler
             }
             else
             {
                 textBox1.Text = result.Item2.ToString();
+                firstNum = ans = result.Item2;
+
             }
-        }
-
-        private void RAND_Click(object sender, EventArgs e)         //Funkce RAND (není jako operace, protože funguje bez stisknutí rovnítka)
-        {
-
-            (bool, double) result = newMath.Random();
-            Valid_Chk(result);
         }
 
         private void operation_Click(object sender, EventArgs e)    //Určení stisknuté operace, uložení vstupu, vymazání textboxu
         {
             bool convValid;
             Button button = (Button)sender;
-            if (textBox1.Text != "")
+            operationPerformed = button.Name;
+            if (textBox1.Text != "" && firstNum == 0)
             {
                 convValid = double.TryParse(textBox1.Text, out firstNum);           //TODO vyřešit multiinput
                 textBox1.Text = "";
             }
-            operationPerformed = button.Name;
+            else if (textBox1.Text != "" && firstNum != 0)
+            {
+                Valid_Chk(Calculate());
+                textBox1.Text = "";
+            }
         }
 
-        private void equals_Click(object sender, EventArgs e)
+        private void InstantOp_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            string instantOp = button.Name;
+
+            switch (instantOp)
+            {
+                case "ANS":
+                    textBox1.Text = ans.ToString();
+                    break;
+                case "RAND":
+                    textBox1.Text = newMath.Random().Item2.ToString();
+                    break;
+                case "del":
+                    textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                    break;
+                case "AC":
+                    textBox1.Text = "";
+                    break;
+                case "equals":
+                    if (firstNum != 0)
+                    {
+                        Valid_Chk(Calculate());
+                        operationPerformed = "";
+                        firstNum = 0;
+                    }
+                    break;
+            }
+        }
+
+        public (bool, double) Calculate()
         {
             bool convValid;
             (bool, double) result = (true, 0);
             convValid = double.TryParse(textBox1.Text, out double secondNum);
+
             switch (operationPerformed)
             {
                 case "addition":
@@ -325,13 +353,7 @@ namespace Kalkulacka
                 default:
                     break;
             }
-            Valid_Chk(result);
-            operationPerformed = "";
-        }
-
-        private void AC_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = "";
+            return result;
         }
 
         private void Mplus_Click(object sender, EventArgs e)

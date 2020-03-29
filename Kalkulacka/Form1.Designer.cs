@@ -333,6 +333,7 @@
             this.ANS.TabIndex = 13;
             this.ANS.Text = "ANS";
             this.ANS.UseVisualStyleBackColor = false;
+            this.ANS.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // decPoint
             // 
@@ -420,7 +421,7 @@
             this.RAND.TabIndex = 21;
             this.RAND.Text = "RAND";
             this.RAND.UseVisualStyleBackColor = false;
-            this.RAND.Click += new System.EventHandler(this.RAND_Click);
+            this.RAND.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // equals
             // 
@@ -442,7 +443,7 @@
             this.equals.TabIndex = 22;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = false;
-            this.equals.Click += new System.EventHandler(this.equals_Click);
+            this.equals.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // AC
             // 
@@ -464,7 +465,7 @@
             this.AC.TabIndex = 23;
             this.AC.Text = "AC";
             this.AC.UseVisualStyleBackColor = false;
-            this.AC.Click += new System.EventHandler(this.AC_Click);
+            this.AC.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // del
             // 
@@ -486,7 +487,7 @@
             this.del.TabIndex = 24;
             this.del.Text = "DEL";
             this.del.UseVisualStyleBackColor = false;
-            this.del.Click += new System.EventHandler(this.del_Click);
+            this.del.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // shiftUnclicked
             // 
