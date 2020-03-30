@@ -11,9 +11,9 @@ namespace Kalkulacka
         MathComponentsNS.MathComponents newMath = new MathComponentsNS.MathComponents();
         int index;
         string operationPerformed = "";
-        double firstNum = 0;
-        double MEM = 0;
-        double ans = 0;
+        decimal firstNum = 0;
+        decimal MEM = 0;
+        decimal ans = 0;
         //private object txt_Result;
 
 
@@ -186,7 +186,7 @@ namespace Kalkulacka
             }
             else
             {
-                convValid = double.TryParse(textBox1.Text, out firstNum);
+                convValid = decimal.TryParse(textBox1.Text, out firstNum);
                 textBox1.Text = "";
                 operationPerformed = "substraction";
             }
@@ -268,7 +268,7 @@ namespace Kalkulacka
             }
         }
 
-        public void Valid_Chk((bool, double) result)                //Funkce pro kontrolu úspěšného dokončení výpočtu a případného vypsání výsledku
+        public void Valid_Chk((bool, decimal) result)                //Funkce pro kontrolu úspěšného dokončení výpočtu a případného vypsání výsledku
         {
             if (result.Item1)
             {
@@ -290,7 +290,7 @@ namespace Kalkulacka
             operationPerformed = button.Name;
             if (textBox1.Text != "" && firstNum == 0)
             {
-                convValid = double.TryParse(textBox1.Text, out firstNum);
+                convValid = decimal.TryParse(textBox1.Text, out firstNum);
                 textBox1.Text = "";
             }
             else if (textBox1.Text != "" && firstNum != 0)
@@ -304,9 +304,9 @@ namespace Kalkulacka
         {
             Button button = (Button)sender;
             string instantOp = button.Name;
-            (bool, double) result = (true, 0);
+            (bool, decimal) result = (true, 0);
             bool checkNeeded = false;
-            double input = double.Parse(textBox1.Text);
+            decimal input = decimal.Parse(textBox1.Text);
 
             switch (instantOp)
             {
@@ -399,11 +399,11 @@ namespace Kalkulacka
             }
         }
 
-        public (bool, double) Calculate()
+        public (bool, decimal) Calculate()
         {
             bool convValid;
-            (bool, double) result = (true, 0);
-            convValid = double.TryParse(textBox1.Text, out double secondNum);
+            (bool, decimal) result = (true, 0);
+            convValid = decimal.TryParse(textBox1.Text, out decimal secondNum);
 
             switch (operationPerformed)
             {
@@ -446,7 +446,7 @@ namespace Kalkulacka
         {
             if (textBox1.Text != "")
             {
-                MEM += double.Parse(textBox1.Text);
+                MEM += decimal.Parse(textBox1.Text);
                 if (MEM == 0)
                 {
                     DisplayedM.Visible = false;
@@ -477,7 +477,7 @@ namespace Kalkulacka
         {
             if (textBox1.Text != "")
             {
-                MEM -= double.Parse(textBox1.Text);
+                MEM -= decimal.Parse(textBox1.Text);
                 if (MEM == 0)
                 {
                     DisplayedM.Visible = false;

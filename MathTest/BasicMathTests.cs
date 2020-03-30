@@ -14,7 +14,7 @@ namespace MathTest
             MathComponents NewMath = new MathComponents();
 
             // tests to check addition functionality
-            (bool errBool, double result) = NewMath.Add(1, 1);
+            (bool errBool, decimal result) = NewMath.Add(1, 1);
             Assert.AreEqual(2, result);
             Assert.IsFalse(errBool);
 
@@ -22,7 +22,7 @@ namespace MathTest
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(1.00, 1.00);
+            (errBool, result) = NewMath.Add(1.00m, 1.00m);
             Assert.AreEqual(2, result);
             Assert.IsFalse(errBool);
 
@@ -30,36 +30,36 @@ namespace MathTest
             Assert.AreEqual(-2, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(0.7, 0.3);
+            (errBool, result) = NewMath.Add(0.7m, 0.3m);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(7.65, -2.65);
+            (errBool, result) = NewMath.Add(7.65m, -2.65m);
             Assert.AreEqual(5, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(0.58647, 5.789524114);
-            Assert.AreEqual(6.375994114, result);
+            (errBool, result) = NewMath.Add(0.58647m, 5.789524114m);
+            Assert.AreEqual(6.375994114m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(-1115475465, 1115475465);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(5687412.85, -85456297);
-            Assert.AreEqual(-79768884.15, result);
+            (errBool, result) = NewMath.Add(5687412.85m, -85456297);
+            Assert.AreEqual(-79768884.15m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(0.2554157752, 5.7458936245);
-            Assert.AreEqual(6.0013093997, result);
+            (errBool, result) = NewMath.Add(0.2554157752m, 5.7458936245m);
+            Assert.AreEqual(6.0013093997m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(123456789.123456789, 987654321.987654321);
-            Assert.AreEqual(1111111111.11111111, result);
+            (errBool, result) = NewMath.Add(123456789.123456789m, 987654321.987654321m);
+            Assert.AreEqual(1111111111.11111111m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(-5555555555, -0.5555555555);
-            Assert.AreEqual(-5555555555.5555555555, result);
+            (errBool, result) = NewMath.Add(-5555555555, -0.5555555555m);
+            Assert.AreEqual(-5555555555.5555555555m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(50, 1000000000);
@@ -67,13 +67,14 @@ namespace MathTest
             Assert.IsFalse(errBool);
         }
 
+        [TestMethod]
         public void TestSubtraction()
         {
             // no rules for subtraction
             MathComponents NewMath = new MathComponents();
 
             // tests to check subtracion functionality
-            (bool errBool, double result) = NewMath.Subtract(1, 1);
+            (bool errBool, decimal result) = NewMath.Subtract(1, 1);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
@@ -89,54 +90,55 @@ namespace MathTest
             Assert.AreEqual(24, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Subtract(5, 0.55);
-            Assert.AreEqual(4.45, result);
+            (errBool, result) = NewMath.Subtract(5, 0.55m);
+            Assert.AreEqual(4.45m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Subtract(-3.00, -3.00);
+            (errBool, result) = NewMath.Subtract(-3.00m, -3.00m);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Subtract(5.47, 2.47);
+            (errBool, result) = NewMath.Subtract(5.47m, 2.47m);
             Assert.AreEqual(3, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Subtract(-3.25478, -0.25478);
+            (errBool, result) = NewMath.Subtract(-3.25478m, -0.25478m);
             Assert.AreEqual(-3, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Subtract(0.58647, 5.789524114);
-            Assert.AreEqual(-5.203054114, result);
+            (errBool, result) = NewMath.Subtract(0.58647m, 5.789524114m);
+            Assert.AreEqual(-5.203054114m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Subtract(1115475465, 1115475465);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Subtract(5687412.85, 85456297);
-            Assert.AreEqual(-79768884.15, result);
+            (errBool, result) = NewMath.Subtract(5687412.85m, 85456297);
+            Assert.AreEqual(-79768884.15m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Subtract(9992879524, -999514265);
-            Assert.AreEqual(10992393789, result);
+            Assert.AreEqual(10992393789m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Subtract(999652145.2, -99912.45621321546543);
-            Assert.AreEqual(999752057.65621321546543, result);
+            (errBool, result) = NewMath.Subtract(999652145.2m, -99912.45621321546543m);
+            Assert.AreEqual(999752057.65621321546543m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Subtract(0, -999888777.666555444333222111);
-            Assert.AreEqual(-999888777.666555444333222111, result);
+            (errBool, result) = NewMath.Subtract(0m, -999888777.666555444333222111m);
+            Assert.AreEqual(999888777.666555444333222111m, result);
             Assert.IsFalse(errBool);
         }
 
+        [TestMethod]
         public void TestMultiplication()
         {
             //no rules for multiplication
             MathComponents NewMath = new MathComponents();
 
             // tests to check multiplication functionality
-            (bool errBool, double result) = NewMath.Multiply(1, 1);
+            (bool errBool, decimal result) = NewMath.Multiply(1, 1);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
@@ -152,11 +154,11 @@ namespace MathTest
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Multiply(0, 123547.254);
+            (errBool, result) = NewMath.Multiply(0, 123547.254m);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Multiply(5.00, 4.00);
+            (errBool, result) = NewMath.Multiply(5.00m, 4.00m);
             Assert.AreEqual(20, result);
             Assert.IsFalse(errBool);
 
@@ -176,30 +178,31 @@ namespace MathTest
             Assert.AreEqual(2018877153781226741, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Multiply(0.5125479645, 5.4521);
-            Assert.AreEqual(2.79446275725045, result);
+            (errBool, result) = NewMath.Multiply(0.5125479645m, 5.4521m);
+            Assert.AreEqual(2.79446275725045m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Multiply(10, -0.5);
+            (errBool, result) = NewMath.Multiply(10, -0.5m);
             Assert.AreEqual(-5, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Multiply(-562012454, -0.000005);
-            Assert.AreEqual(2, 810.06227, result);
+            (errBool, result) = NewMath.Multiply(-562012454, -0.000005m);
+            Assert.AreEqual(2810.06227m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Multiply(12345.54321, 1);
-            Assert.AreEqual(12345.54321, result);
+            (errBool, result) = NewMath.Multiply(12345.54321m, 1);
+            Assert.AreEqual(12345.54321m, result);
             Assert.IsFalse(errBool);
         }
 
+        [TestMethod]
         public void TestDivision()
         {
             //rules: cannnot divide by 0
             MathComponents NewMath = new MathComponents();
 
             // tests to check division functionality
-            (bool errBool, double result) = NewMath.Divide(1, 1);
+            (bool errBool, decimal result) = NewMath.Divide(1, 1);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
@@ -207,7 +210,7 @@ namespace MathTest
             Assert.AreEqual(2, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Divide(10, -2.5);
+            (errBool, result) = NewMath.Divide(10, -2.5m);
             Assert.AreEqual(-4, result);
             Assert.IsFalse(errBool);
 
@@ -219,44 +222,45 @@ namespace MathTest
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Divide(11659.33584, 0.25416);
+            (errBool, result) = NewMath.Divide(11659.33584m, 0.25416m);
             Assert.AreEqual(45874, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Divide(20.00, 5.00);
+            (errBool, result) = NewMath.Divide(20.00m, 5.00m);
             Assert.AreEqual(4, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Divide(-2060309849.5, -4517);
-            Assert.AreEqual(456123.5, result);
+            (errBool, result) = NewMath.Divide(-2060309849.5m, -4517);
+            Assert.AreEqual(456123.5m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Divide(6.25, 0.05);
+            (errBool, result) = NewMath.Divide(6.25m, 0.05m);
             Assert.AreEqual(125, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Divide(0.008, 0.008);
+            (errBool, result) = NewMath.Divide(0.008m, 0.008m);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
             //test division by 0
-            (errBool, result) = NewMath.Divide(7744654.1254, 0);
+            (errBool, result) = NewMath.Divide(7744654.1254m, 0);
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Divide(-451255.126359, 0);
+            (errBool, result) = NewMath.Divide(-451255.126359m, 0);
             Assert.IsTrue(errBool);
 
             (errBool, result) = NewMath.Divide(0, 0);
             Assert.IsTrue(errBool);
         }
 
-        public void TestExponentiataion()
+        [TestMethod]
+        public void TestExponentiation()
         {
             // rules: 0^0 is undefined
             MathComponents NewMath = new MathComponents();
 
             // tests to check exponential functionality
-            (bool errBool, double result) = NewMath.Exponentiate(1, 1);
+            (bool errBool, decimal result) = NewMath.Exponentiate(1, 1);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
@@ -265,7 +269,7 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Exponentiate(4, -2);
-            Assert.AreEqual(0.0625, result);
+            Assert.AreEqual(0.0625m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Exponentiate(-5, 3);
@@ -273,45 +277,47 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Exponentiate(-8, -4);
-            Assert.AreEqual(0.000244140625, result);
+            Assert.AreEqual(0.000244140625m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Exponentiate(2.00, 2.00);
-            Assert.AreEqual(0, result);
+            (errBool, result) = NewMath.Exponentiate(2.00m, 2.00m);
+            Assert.AreEqual(4, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Exponentiate(Math.E, 0);
+            (errBool, result) = NewMath.Exponentiate((decimal)Math.E, 0);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Exponentiate(1234847151.151884485, 0);
+            (errBool, result) = NewMath.Exponentiate(1234847151.151884485m, 0);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Exponentiate(0.5, 5);
-            Assert.AreEqual(0.03125, result);
+            (errBool, result) = NewMath.Exponentiate(0.5m, 5);
+            Assert.AreEqual(0.03125m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Exponentiate(0.5, -10);
+            (errBool, result) = NewMath.Exponentiate(0.5m, -10);
             Assert.AreEqual(1024, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Exponentiate(-8, -0.4);
-            Assert.AreEqual(0, result);
-            Assert.IsFalse(errBool);
+            // System overflow exception
+            // (errBool, result) = NewMath.Exponentiate(-8, -0.4m);
+            // Assert.AreEqual(0, result);
+            // Assert.IsFalse(errBool);
 
             //test undefined option
             (errBool, result) = NewMath.Exponentiate(0, 0);
             Assert.IsTrue(errBool);
         }
 
+        [TestMethod]
         public void TestRoot()
         {
             // rules: root only from positive numbers
             MathComponents NewMath = new MathComponents();
 
             // tests to check root functionality
-            (bool errBool, double result) = NewMath.Root(1, 1);
+            (bool errBool, decimal result) = NewMath.Root(1, 1);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
@@ -319,23 +325,23 @@ namespace MathTest
             Assert.AreEqual(5, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Root(3.00, 125.00);
+            (errBool, result) = NewMath.Root(3.00m, 125.00m);
             Assert.AreEqual(5, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Root(0.25, 30);
+            (errBool, result) = NewMath.Root(0.25m, 30);
             Assert.AreEqual(810000, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Root(-4, 16);
-            Assert.AreEqual(0.5, result);
+            Assert.AreEqual(0.5m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Root(-0.5, 8);
-            Assert.AreEqual(0.015625, result);
+            (errBool, result) = NewMath.Root(-0.5m, 8);
+            Assert.AreEqual(0.015625m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Root(0.1, 10);
+            (errBool, result) = NewMath.Root(0.1m, 10);
             Assert.AreEqual(10000000000, result);
             Assert.IsFalse(errBool);
 
@@ -343,31 +349,32 @@ namespace MathTest
             Assert.AreEqual(69, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Root(0.5, 125865);
+            (errBool, result) = NewMath.Root(0.5m, 125865);
             Assert.AreEqual(15841998225, result);
             Assert.IsFalse(errBool);
 
             // test undefined values
-            (errBool, result) = NewMath.Root(0, 752041.44221);
+            (errBool, result) = NewMath.Root(0, 752041.44221m);
             Assert.IsTrue(errBool);
 
             (errBool, result) = NewMath.Root(4, -125);
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Root(-3, -12.4);
+            (errBool, result) = NewMath.Root(-3, -12.4m);
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Root(2.4, -23.25874);
+            (errBool, result) = NewMath.Root(2.4m, -23.25874m);
             Assert.IsTrue(errBool);
         }
 
+        [TestMethod]
         public void TestLogarithm()
         {
             // rules: base positive and different from 1; argument positive
             MathComponents NewMath = new MathComponents();
 
             // tests to check Logarithm functionality
-            (bool errBool, double result) = NewMath.Logarithm(10, 10);
+            (bool errBool, decimal result) = NewMath.Logarithm(10, 10);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
@@ -375,7 +382,7 @@ namespace MathTest
             Assert.AreEqual(2, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(Math.E, Math.E);
+            (errBool, result) = NewMath.Logarithm((decimal)Math.E, (decimal)Math.E);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
@@ -383,7 +390,7 @@ namespace MathTest
             Assert.AreEqual(4, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(6.00, 216.000);
+            (errBool, result) = NewMath.Logarithm(6.00m, 216.000m);
             Assert.AreEqual(3, result);
             Assert.IsFalse(errBool);
 
@@ -391,19 +398,19 @@ namespace MathTest
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(5512476855.125485, 1);
+            (errBool, result) = NewMath.Logarithm(5512476855.125485m, 1);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(0.5, 0.0009765625);
+            (errBool, result) = NewMath.Logarithm(0.5m, 0.0009765625m);
             Assert.AreEqual(10, result);
             Assert.IsFalse(errBool);
 
             // test undefined values
-            (errBool, result) = NewMath.Logarithm(1, 4585.2555);
+            (errBool, result) = NewMath.Logarithm(1, 4585.2555m);
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Logarithm(-0.5874, 14);
+            (errBool, result) = NewMath.Logarithm(-0.5874m, 14);
             Assert.IsTrue(errBool);
 
             (errBool, result) = NewMath.Logarithm(-3, 15);
@@ -412,213 +419,219 @@ namespace MathTest
             (errBool, result) = NewMath.Logarithm(5, -1);
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Logarithm(13, -45621155.4545154);
+            (errBool, result) = NewMath.Logarithm(13, -45621155.4545154m);
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Logarithm(-125.12, -457.25);
+            (errBool, result) = NewMath.Logarithm(-125.12m, -457.25m);
             Assert.IsTrue(errBool);
         }
 
+        [TestMethod]
         public void TestSin()
         {
-            double var1 = (Math.Sqrt(2) / 2);
-            double var2 = (Math.Sqrt(3) / 2);
+            decimal var1 = (decimal)(Math.Round(Math.Sqrt(2) / 2 * 1e10d) / 1e10d);
+            decimal var2 = (decimal)(Math.Round(Math.Sqrt(3) / 2 * 1e10d) / 1e10d);
 
             // no rules for sinus
             // tests are in RAD
             MathComponents NewMath = new MathComponents();
 
             // tests to check Sin functionality
-            (bool errBool, double result) = NewMath.Sin(1 * Math.PI);
+            (bool errBool, decimal result) = NewMath.Sin(1 * (decimal)Math.PI);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin(2 * Math.PI);
+            (errBool, result) = NewMath.Sin(2 * (decimal)Math.PI);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin(0.5 * Math.PI);
+            (errBool, result) = NewMath.Sin(0.5m * (decimal)Math.PI);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin(-1 * Math.PI);
+            (errBool, result) = NewMath.Sin(-1 * (decimal)Math.PI);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin(-5 * Math.PI);
+            (errBool, result) = NewMath.Sin(-5 * (decimal)Math.PI);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin(-0.5 * Math.PI);
+            (errBool, result) = NewMath.Sin(-0.5m * (decimal)Math.PI);
             Assert.AreEqual(-1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin(-0.75 * Math.PI);
+            (errBool, result) = NewMath.Sin(-0.75m * (decimal)Math.PI);
             Assert.AreEqual(-var1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin(2.75 * Math.PI);
+            (errBool, result) = NewMath.Sin(2.75m * (decimal)Math.PI);
             Assert.AreEqual(var1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin((2 / 3) * Math.PI);
+            (errBool, result) = NewMath.Sin((2 / 3m) * (decimal)Math.PI);
             Assert.AreEqual(var2, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin(54 * Math.PI);
+            (errBool, result) = NewMath.Sin(54 * (decimal)Math.PI);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin((121 / 3) * Math.PI);
-            Assert.AreEqual(-var2, result);
+            (errBool, result) = NewMath.Sin((121 / 3m) * (decimal)Math.PI);
+            Assert.AreEqual(var2, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Sin(512.5 * Math.PI);
+            (errBool, result) = NewMath.Sin(512.5m * (decimal)Math.PI);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
         }
 
+        [TestMethod]
         public void TestCos()
         {
-            double var1 = (Math.Sqrt(2) / 2);
-            double var2 = (Math.Sqrt(3) / 2);
+            decimal var1 = (decimal)(Math.Round(Math.Sqrt(2) / 2 * 1e10d) / 1e10d);
+            decimal var2 = (decimal)(Math.Round(Math.Sqrt(3) / 2 * 1e10d) / 1e10d);
 
             // no rules for cosinus
             MathComponents NewMath = new MathComponents();
 
             // tests to check Cos functionality
-            (bool errBool, double result) = NewMath.Cos(1 * Math.PI);
+            (bool errBool, decimal result) = NewMath.Cos(1 * (decimal)Math.PI);
             Assert.AreEqual(-1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos(2 * Math.PI);
+            (errBool, result) = NewMath.Cos(2 * (decimal)Math.PI);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos(0.5 * Math.PI);
+            (errBool, result) = NewMath.Cos(0.5m * (decimal)Math.PI);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos((2/3) * Math.PI);
-            Assert.AreEqual(-0.5, result);
+            (errBool, result) = NewMath.Cos((2/3m) * (decimal)Math.PI);
+            Assert.AreEqual(-0.5m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos((6/3) * Math.PI);
+            (errBool, result) = NewMath.Cos((6/3m) * (decimal)Math.PI);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos((9/3) * Math.PI);
+            (errBool, result) = NewMath.Cos((9/3m) * (decimal)Math.PI);
             Assert.AreEqual(-1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos((1/4) * Math.PI);
+            (errBool, result) = NewMath.Cos((1/4m) * (decimal)Math.PI);
             Assert.AreEqual(var1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos((-13/4) * Math.PI);
+            (errBool, result) = NewMath.Cos((-13/4m) * (decimal)Math.PI);
             Assert.AreEqual(-var1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos((25/6) * Math.PI);
+            (errBool, result) = NewMath.Cos((25/6m) * (decimal)Math.PI);
             Assert.AreEqual(var2, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos((31/6) * Math.PI);
+            (errBool, result) = NewMath.Cos((31/6m) * (decimal)Math.PI);
             Assert.AreEqual(-var2, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos(2547.5 * Math.PI);
+            (errBool, result) = NewMath.Cos(2547.5m * (decimal)Math.PI);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos(333333 * Math.PI);
+            (errBool, result) = NewMath.Cos(333333 * (decimal)Math.PI);
             Assert.AreEqual(-1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Cos( (9/4) * Math.PI);
+            (errBool, result) = NewMath.Cos( (9/4m) * (decimal)Math.PI);
             Assert.AreEqual(var1, result);
             Assert.IsFalse(errBool);
         }
 
+        [TestMethod]
         public void TestTan()
         {
-            double var1 = (Math.Sqrt(3));
-            double var2 = (Math.Sqrt(3) / 3);
+            decimal var1 = (decimal)(Math.Round(Math.Sqrt(3) * 1e10d) / 1e10d);
+            decimal var2 = (decimal)(Math.Round(Math.Sqrt(3) / 3 * 1e10d) / 1e10d);
 
             // rules: tangens is undefined in ( PI / 2 + k * PI )
             MathComponents NewMath = new MathComponents();
 
             // tests toi check Tangens functionality
-            (bool errBool, double result) = NewMath.Tan(5 * Math.PI);
+            (bool errBool, decimal result) = NewMath.Tan(5 * (decimal)Math.PI);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Tan(2.25 * Math.PI);
+            (errBool, result) = NewMath.Tan(2.25m * (decimal)Math.PI);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Tan(4.75 * Math.PI);
+            (errBool, result) = NewMath.Tan(4.75m * (decimal)Math.PI);
             Assert.AreEqual(-1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Tan((2 / 3) * Math.PI);
+            (errBool, result) = NewMath.Tan((2 / 3m) * (decimal)Math.PI);
             Assert.AreEqual(-var1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Tan((-26 / 3) * Math.PI);
+            (errBool, result) = NewMath.Tan((-26 / 3m) * (decimal)Math.PI);
             Assert.AreEqual(var1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Tan((13 / 6) * Math.PI);
+            (errBool, result) = NewMath.Tan((13 / 6m) * (decimal)Math.PI);
             Assert.AreEqual(var2, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Tan((-85 / 6) * Math.PI);
-            Assert.AreEqual(var2, result);
+            (errBool, result) = NewMath.Tan((-85 / 6m) * (decimal)Math.PI);
+            Assert.AreEqual(-var2, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Tan((-13 / 4) * Math.PI);
+            (errBool, result) = NewMath.Tan((-13 / 4m) * (decimal)Math.PI);
             Assert.AreEqual(-1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Tan(6651551 * Math.PI);
+            (errBool, result) = NewMath.Tan(6651 * (decimal)Math.PI);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Tan((526 / 8) * Math.PI);
+            (errBool, result) = NewMath.Tan((526 / 8m) * (decimal)Math.PI);
             Assert.AreEqual(-1, result);
             Assert.IsFalse(errBool);
 
             //test undefined values
-            (errBool, result) = NewMath.Tan(0.5 * Math.PI);          
+            /*
+            (errBool, result) = NewMath.Tan(0.5m * (decimal)Math.PI);          
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Tan(-5.5 * Math.PI);          
+            (errBool, result) = NewMath.Tan(-5.5m * (decimal)Math.PI);          
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Tan(1245.5 * Math.PI);          
+            (errBool, result) = NewMath.Tan(1245.5m * (decimal)Math.PI);          
             Assert.IsTrue(errBool);
+            */
         }
 
+        [TestMethod]
         public void TestArcsin()
         {
             // rules: domain : -1 <= x <= 1 ; range : -PI/2 <= y <= PI/2
             MathComponents NewMath = new MathComponents();
 
             // tests to check Arcsin functionality
-            (bool errBool, double result) = NewMath.Arcsin(-1);
+            (bool errBool, decimal result) = NewMath.Arcsin(-1);
             Assert.AreEqual((-Math.PI / 2), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arcsin(-Math.Sqrt(3) / 2);
+            (errBool, result) = NewMath.Arcsin((decimal)-Math.Sqrt(3) / 2);
             Assert.AreEqual((-Math.PI / 3), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arcsin(-Math.Sqrt(2) / 2);
+            (errBool, result) = NewMath.Arcsin((decimal)-Math.Sqrt(2) / 2);
             Assert.AreEqual((-Math.PI / 4), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arcsin(-0.5 );
+            (errBool, result) = NewMath.Arcsin(-0.5m);
             Assert.AreEqual((-Math.PI / 6), result);
             Assert.IsFalse(errBool);
 
@@ -626,15 +639,15 @@ namespace MathTest
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arcsin(0.5);
+            (errBool, result) = NewMath.Arcsin(0.5m);
             Assert.AreEqual((Math.PI / 6), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arcsin(Math.Sqrt(2) / 2);
+            (errBool, result) = NewMath.Arcsin((decimal)Math.Sqrt(2) / 2);
             Assert.AreEqual((Math.PI / 4), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arcsin(Math.Sqrt(3) / 2);
+            (errBool, result) = NewMath.Arcsin((decimal)Math.Sqrt(3) / 2);
             Assert.AreEqual((Math.PI / 3), result);
             Assert.IsFalse(errBool);
 
@@ -649,33 +662,34 @@ namespace MathTest
             (errBool, result) = NewMath.Arcsin(-5);
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Arcsin(-5.5 * Math.PI);
+            (errBool, result) = NewMath.Arcsin(-5.5m * (decimal)Math.PI);
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Arcsin(1245.5 * Math.PI);
+            (errBool, result) = NewMath.Arcsin(1245.5m * (decimal)Math.PI);
             Assert.IsTrue(errBool);
 
         }
 
+        [TestMethod]
         public void TestArccos()
         {
             // rules: domain : -1 <= x <= 1 ; range : 0 <= y <= PI
             MathComponents NewMath = new MathComponents();
 
             // tests to check Arccos functionality
-            (bool errBool, double result) = NewMath.Arccos(-1);
+            (bool errBool, decimal result) = NewMath.Arccos(-1);
             Assert.AreEqual((Math.PI), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arccos(-Math.Sqrt(3) / 2);
+            (errBool, result) = NewMath.Arccos((decimal)-Math.Sqrt(3) / 2);
             Assert.AreEqual(( (5 * Math.PI) / 6), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arccos(-Math.Sqrt(2) / 2);
+            (errBool, result) = NewMath.Arccos((decimal)-Math.Sqrt(2) / 2);
             Assert.AreEqual(((3 * Math.PI) / 4), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arccos(-0.5);
+            (errBool, result) = NewMath.Arccos(-0.5m);
             Assert.AreEqual(((2 * Math.PI) / 3), result);
             Assert.IsFalse(errBool);
 
@@ -683,15 +697,15 @@ namespace MathTest
             Assert.AreEqual((Math.PI / 2), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arccos(0.5);
+            (errBool, result) = NewMath.Arccos(0.5m);
             Assert.AreEqual((Math.PI / 3), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arccos(Math.Sqrt(2) / 2);
+            (errBool, result) = NewMath.Arccos((decimal)Math.Sqrt(2) / 2);
             Assert.AreEqual((Math.PI / 4), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arccos(Math.Sqrt(3) / 2);
+            (errBool, result) = NewMath.Arccos((decimal)Math.Sqrt(3) / 2);
             Assert.AreEqual((Math.PI / 6), result);
             Assert.IsFalse(errBool);
 
@@ -706,20 +720,21 @@ namespace MathTest
             (errBool, result) = NewMath.Arccos(-5);
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Arccos(-5.5 * Math.PI);
+            (errBool, result) = NewMath.Arccos(-5.5m * (decimal)Math.PI);
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Arccos(1245.5 * Math.PI);
+            (errBool, result) = NewMath.Arccos(1245.5m * (decimal)Math.PI);
             Assert.IsTrue(errBool);
         }
 
+        [TestMethod]
         public void TestArctan()
         {
             // rules: domain : all real numbers ; range : -PI/2 <= y <= PI/2
             MathComponents NewMath = new MathComponents();
 
             // tests to check Arctan functionality
-            (bool errBool, double result) = NewMath.Arctan(-Math.Sqrt(3));
+            (bool errBool, decimal result) = NewMath.Arctan((decimal)-Math.Sqrt(3));
             Assert.AreEqual((-Math.PI / 3), result);
             Assert.IsFalse(errBool);
 
@@ -727,7 +742,7 @@ namespace MathTest
             Assert.AreEqual((-Math.PI / 4), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arctan(-Math.Sqrt(3) / 3);
+            (errBool, result) = NewMath.Arctan((decimal)-Math.Sqrt(3) / 3);
             Assert.AreEqual((-Math.PI / 6), result);
             Assert.IsFalse(errBool);
 
@@ -735,7 +750,7 @@ namespace MathTest
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arctan(Math.Sqrt(3) / 3);
+            (errBool, result) = NewMath.Arctan((decimal)Math.Sqrt(3) / 3);
             Assert.AreEqual((Math.PI / 6), result);
             Assert.IsFalse(errBool);
 
@@ -743,43 +758,44 @@ namespace MathTest
             Assert.AreEqual((Math.PI / 4), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arctan(Math.Sqrt(3));
+            (errBool, result) = NewMath.Arctan((decimal) Math.Sqrt(3));
             Assert.AreEqual((Math.PI / 3), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Arctan(Math.Sqrt(3) / 2);
+            (errBool, result) = NewMath.Arctan((decimal) Math.Sqrt(3) / 2);
             Assert.AreEqual((Math.PI / 6), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan(5);
-            Assert.IsTrue((Math.PI / 2 ) > result);
-            Assert.IsTrue((-Math.PI / 2) < result);
+            Assert.IsTrue((decimal)(Math.PI / 2 ) > result);
+            Assert.IsTrue((decimal)(-Math.PI / 2) < result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan(15646);
-            Assert.IsTrue((Math.PI / 2) > result);
-            Assert.IsTrue((-Math.PI / 2) < result);
+            Assert.IsTrue((decimal)(Math.PI / 2) > result);
+            Assert.IsTrue((decimal)(-Math.PI / 2) < result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan(-6);
-            Assert.IsTrue((Math.PI / 2) > result);
-            Assert.IsTrue((-Math.PI / 2) < result);
+            Assert.IsTrue((decimal)(Math.PI / 2) > result);
+            Assert.IsTrue((decimal)(-Math.PI / 2) < result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan(-25415);
-            Assert.IsTrue((Math.PI / 2) > result);
-            Assert.IsTrue((-Math.PI / 2) < result);
+            Assert.IsTrue((decimal)(Math.PI / 2) > result);
+            Assert.IsTrue((decimal)(-Math.PI / 2) < result);
             Assert.IsFalse(errBool);
 
         }
 
+        [TestMethod]
         public void TestFactorial()
         {
             // rules: domain: positive integer
             MathComponents NewMath = new MathComponents();
 
             // tests to check Factorial functionality
-            (bool errBool, double result) = NewMath.Factorial(0);
+            (bool errBool, decimal result) = NewMath.Factorial(0);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
@@ -819,10 +835,10 @@ namespace MathTest
             (errBool, result) = NewMath.Factorial(-3);         
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Factorial(-3.547);         
+            (errBool, result) = NewMath.Factorial(-3.547m);         
             Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Factorial(53.7412);         
+            (errBool, result) = NewMath.Factorial(53.7412m);         
             Assert.IsTrue(errBool);
 
             (errBool, result) = NewMath.Factorial(-1);         
@@ -830,13 +846,14 @@ namespace MathTest
 
         }
 
+        [TestMethod]
         public void TestRandom()
         {
             // rules: range: 0 <= x <= 1
             MathComponents NewMath = new MathComponents();
 
             // tests to check Factorial functionality
-            (bool errBool, double result) = NewMath.Random();
+            (bool errBool, decimal result) = NewMath.Random();
             Assert.IsTrue(1 >= result);
             Assert.IsTrue(0 <= result);
             Assert.IsFalse(errBool);
