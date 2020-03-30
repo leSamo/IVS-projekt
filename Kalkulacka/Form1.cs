@@ -86,6 +86,7 @@ namespace Kalkulacka
             listPanel.Add(shiftClickedPanel);
             listPanel[index].BringToFront();
             DisplayedM.Visible = false;
+            textBox1.SelectionStart = textBox1.Text.Length;
         }
 
         private void shiftClicked_Click(object sender, EventArgs e)
@@ -166,8 +167,12 @@ namespace Kalkulacka
         {
             if (erase)
             {
-                textBox1.Text = "";
+                ZeroClear();
                 erase = false;
+            }
+            if (textBox1.Text == "0")
+            {
+                Clear();
             }
             Button button = (Button)sender;
             string btnName = button.Name;
@@ -268,7 +273,7 @@ namespace Kalkulacka
             else
             {
                 convValid = decimal.TryParse(textBox1.Text, out firstNum);
-                textBox1.Text = "";
+                Clear();
                 operationPerformed = "substraction";
             }
         }
@@ -372,12 +377,12 @@ namespace Kalkulacka
             if (textBox1.Text != "" && firstNum == 0)
             {
                 convValid = decimal.TryParse(textBox1.Text, out firstNum);
-                textBox1.Text = "";
+                erase = true;
             }
             else if (textBox1.Text != "" && firstNum != 0)
             {
                 Valid_Chk(Calculate());
-                textBox1.Text = "";
+                erase = true;
             }
         }
 
@@ -390,7 +395,7 @@ namespace Kalkulacka
             bool parseCheck = decimal.TryParse(textBox1.Text, out decimal input);
             if (erase)
             {
-                textBox1.Text = "";
+                ZeroClear();
                 erase = false;
             }
 
@@ -407,10 +412,14 @@ namespace Kalkulacka
                     if (textBox1.Text != "")
                     {
                         textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                        if (textBox1.Text == "")
+                        {
+                            ZeroClear();
+                        }
                     }
                     break;
                 case "AC":
-                    textBox1.Text = "";
+                    ZeroClear();
                     break;
                 case "equals":
                     if (firstNum != 0)
@@ -482,7 +491,10 @@ namespace Kalkulacka
                     //TODO
                     break;
             }
-            erase = true;
+            if (instantOp != "del")
+            {
+                erase = true;
+            }
             if (checkNeeded)
             {
                 Valid_Chk(result);
@@ -577,6 +589,16 @@ namespace Kalkulacka
                     DisplayedM.Visible = true;
                 }
             }
+        }
+
+        public void ZeroClear()
+        {
+            textBox1.Text = "0";
+        }
+
+        public void Clear()
+        {
+            textBox1.Text = "";
         }
     }
 }
