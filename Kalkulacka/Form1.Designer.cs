@@ -553,6 +553,7 @@
             this.tan.Size = new System.Drawing.Size(70, 70);
             this.tan.TabIndex = 35;
             this.tan.UseVisualStyleBackColor = false;
+            this.tan.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // Power2
             // 
@@ -574,6 +575,7 @@
             this.Power2.Size = new System.Drawing.Size(70, 70);
             this.Power2.TabIndex = 28;
             this.Power2.UseVisualStyleBackColor = false;
+            this.Power2.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // powerX
             // 
@@ -595,6 +597,7 @@
             this.powerX.Size = new System.Drawing.Size(70, 70);
             this.powerX.TabIndex = 30;
             this.powerX.UseVisualStyleBackColor = false;
+            this.powerX.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // MRC
             // 
@@ -638,6 +641,7 @@
             this.pi.Size = new System.Drawing.Size(70, 70);
             this.pi.TabIndex = 33;
             this.pi.UseVisualStyleBackColor = false;
+            this.pi.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // sin
             // 
@@ -659,6 +663,7 @@
             this.sin.Size = new System.Drawing.Size(70, 70);
             this.sin.TabIndex = 26;
             this.sin.UseVisualStyleBackColor = false;
+            this.sin.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // off
             // 
@@ -702,6 +707,7 @@
             this.log.TabIndex = 31;
             this.log.Text = "log";
             this.log.UseVisualStyleBackColor = false;
+            this.log.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // factorial
             // 
@@ -723,6 +729,7 @@
             this.factorial.Size = new System.Drawing.Size(70, 70);
             this.factorial.TabIndex = 34;
             this.factorial.UseVisualStyleBackColor = false;
+            this.factorial.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // Mplus
             // 
@@ -766,6 +773,7 @@
             this.root2.Size = new System.Drawing.Size(70, 70);
             this.root2.TabIndex = 36;
             this.root2.UseVisualStyleBackColor = false;
+            this.root2.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // ln
             // 
@@ -787,6 +795,7 @@
             this.ln.TabIndex = 32;
             this.ln.Text = "ln";
             this.ln.UseVisualStyleBackColor = false;
+            this.ln.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // cos
             // 
@@ -808,6 +817,7 @@
             this.cos.Size = new System.Drawing.Size(70, 70);
             this.cos.TabIndex = 37;
             this.cos.UseVisualStyleBackColor = false;
+            this.cos.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // Mminus
             // 

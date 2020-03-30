@@ -306,7 +306,7 @@ namespace Kalkulacka
             string instantOp = button.Name;
             (bool, decimal) result = (true, 0);
             bool checkNeeded = false;
-            decimal input = decimal.Parse(textBox1.Text);
+            bool parseCheck = decimal.TryParse(textBox1.Text, out decimal input);
 
             switch (instantOp)
             {
@@ -318,7 +318,10 @@ namespace Kalkulacka
                     checkNeeded = true;
                     break;
                 case "del":
-                    textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                    if (textBox1.Text != "")
+                    {
+                        textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                    }
                     break;
                 case "AC":
                     textBox1.Text = "";
