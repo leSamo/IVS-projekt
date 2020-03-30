@@ -122,7 +122,7 @@
             this.num0.TabIndex = 12;
             this.num0.Text = "0";
             this.num0.UseVisualStyleBackColor = false;
-            this.num0.Click += new System.EventHandler(this.num0_Click);
+            this.num0.Click += new System.EventHandler(this.Number_click);
             // 
             // num9
             // 
@@ -143,7 +143,7 @@
             this.num9.TabIndex = 9;
             this.num9.Text = "9";
             this.num9.UseVisualStyleBackColor = false;
-            this.num9.Click += new System.EventHandler(this.num9_Click);
+            this.num9.Click += new System.EventHandler(this.Number_click);
             // 
             // num8
             // 
@@ -164,7 +164,7 @@
             this.num8.TabIndex = 8;
             this.num8.Text = "8";
             this.num8.UseVisualStyleBackColor = false;
-            this.num8.Click += new System.EventHandler(this.num8_Click);
+            this.num8.Click += new System.EventHandler(this.Number_click);
             // 
             // num7
             // 
@@ -185,7 +185,7 @@
             this.num7.TabIndex = 7;
             this.num7.Text = "7";
             this.num7.UseVisualStyleBackColor = false;
-            this.num7.Click += new System.EventHandler(this.num7_Click);
+            this.num7.Click += new System.EventHandler(this.Number_click);
             // 
             // num6
             // 
@@ -206,7 +206,7 @@
             this.num6.TabIndex = 6;
             this.num6.Text = "6";
             this.num6.UseVisualStyleBackColor = false;
-            this.num6.Click += new System.EventHandler(this.num6_Click);
+            this.num6.Click += new System.EventHandler(this.Number_click);
             // 
             // num5
             // 
@@ -227,7 +227,7 @@
             this.num5.TabIndex = 5;
             this.num5.Text = "5";
             this.num5.UseVisualStyleBackColor = false;
-            this.num5.Click += new System.EventHandler(this.num5_Click);
+            this.num5.Click += new System.EventHandler(this.Number_click);
             // 
             // num4
             // 
@@ -248,7 +248,7 @@
             this.num4.TabIndex = 4;
             this.num4.Text = "4";
             this.num4.UseVisualStyleBackColor = false;
-            this.num4.Click += new System.EventHandler(this.num4_Click);
+            this.num4.Click += new System.EventHandler(this.Number_click);
             // 
             // num3
             // 
@@ -269,7 +269,7 @@
             this.num3.TabIndex = 3;
             this.num3.Text = "3";
             this.num3.UseVisualStyleBackColor = false;
-            this.num3.Click += new System.EventHandler(this.num3_Click);
+            this.num3.Click += new System.EventHandler(this.Number_click);
             // 
             // num2
             // 
@@ -290,7 +290,7 @@
             this.num2.TabIndex = 2;
             this.num2.Text = "2";
             this.num2.UseVisualStyleBackColor = false;
-            this.num2.Click += new System.EventHandler(this.num2_Click);
+            this.num2.Click += new System.EventHandler(this.Number_click);
             // 
             // num1
             // 
@@ -311,7 +311,7 @@
             this.num1.TabIndex = 1;
             this.num1.Text = "1";
             this.num1.UseVisualStyleBackColor = false;
-            this.num1.Click += new System.EventHandler(this.num1_Click);
+            this.num1.Click += new System.EventHandler(this.Number_click);
             // 
             // ANS
             // 
@@ -597,7 +597,7 @@
             this.powerX.Size = new System.Drawing.Size(70, 70);
             this.powerX.TabIndex = 30;
             this.powerX.UseVisualStyleBackColor = false;
-            this.powerX.Click += new System.EventHandler(this.InstantOp_Click);
+            this.powerX.Click += new System.EventHandler(this.operation_Click);
             // 
             // MRC
             // 
@@ -927,6 +927,7 @@
             this.arctan.Size = new System.Drawing.Size(70, 70);
             this.arctan.TabIndex = 35;
             this.arctan.UseVisualStyleBackColor = false;
+            this.arctan.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // multiplication10
             // 
@@ -948,6 +949,7 @@
             this.multiplication10.Size = new System.Drawing.Size(70, 70);
             this.multiplication10.TabIndex = 31;
             this.multiplication10.UseVisualStyleBackColor = false;
+            this.multiplication10.Click += new System.EventHandler(this.operation_Click);
             // 
             // MminusShift
             // 
@@ -991,6 +993,7 @@
             this.arccos.Size = new System.Drawing.Size(70, 70);
             this.arccos.TabIndex = 30;
             this.arccos.UseVisualStyleBackColor = false;
+            this.arccos.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // MplusShift
             // 
@@ -1034,6 +1037,7 @@
             this.logDec.Size = new System.Drawing.Size(70, 70);
             this.logDec.TabIndex = 34;
             this.logDec.UseVisualStyleBackColor = false;
+            this.logDec.Click += new System.EventHandler(this.operation_Click);
             // 
             // MRCShift
             // 
@@ -1077,6 +1081,7 @@
             this.PowerXMinus1.Size = new System.Drawing.Size(70, 70);
             this.PowerXMinus1.TabIndex = 32;
             this.PowerXMinus1.UseVisualStyleBackColor = false;
+            this.PowerXMinus1.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // Power3
             // 
@@ -1098,6 +1103,7 @@
             this.Power3.Size = new System.Drawing.Size(70, 70);
             this.Power3.TabIndex = 28;
             this.Power3.UseVisualStyleBackColor = false;
+            this.Power3.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // root
             // 
@@ -1119,6 +1125,7 @@
             this.root.Size = new System.Drawing.Size(70, 70);
             this.root.TabIndex = 33;
             this.root.UseVisualStyleBackColor = false;
+            this.root.Click += new System.EventHandler(this.operation_Click);
             // 
             // euler
             // 
@@ -1140,6 +1147,7 @@
             this.euler.Size = new System.Drawing.Size(70, 70);
             this.euler.TabIndex = 36;
             this.euler.UseVisualStyleBackColor = false;
+            this.euler.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // root3
             // 
@@ -1161,6 +1169,7 @@
             this.root3.Size = new System.Drawing.Size(70, 70);
             this.root3.TabIndex = 35;
             this.root3.UseVisualStyleBackColor = false;
+            this.root3.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // arcsin
             // 
@@ -1182,7 +1191,7 @@
             this.arcsin.Size = new System.Drawing.Size(70, 70);
             this.arcsin.TabIndex = 26;
             this.arcsin.UseVisualStyleBackColor = false;
-            this.arcsin.Click += new System.EventHandler(this.operation_Click);
+            this.arcsin.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // addition
             // 

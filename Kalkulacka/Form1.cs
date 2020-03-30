@@ -14,6 +14,7 @@ namespace Kalkulacka
         decimal firstNum = 0;
         decimal MEM = 0;
         decimal ans = 0;
+        bool erase = false;
         //private object txt_Result;
 
 
@@ -30,7 +31,7 @@ namespace Kalkulacka
 
         private void length (char d)
         {
-            if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
+            /*if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
             {
                 if (textBox1.Text.Length > 10)
                 {
@@ -58,8 +59,26 @@ namespace Kalkulacka
             else
             {
                 textBox1.Text = textBox1.Text + d;
-            }
+            }*/
             
+            if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
+            {
+                if(textBox1.Text.Length <= 10)
+                {
+                    textBox1.Text = textBox1.Text + d;
+                }
+            }
+            else if (textBox1.Text.Contains("-") || textBox1.Text.Contains(","))
+            {
+                if (textBox1.Text.Length <= 9)
+                {
+                    textBox1.Text = textBox1.Text + d;
+                }
+            }
+            else if (textBox1.Text.Length <= 8)
+            {
+                textBox1.Text = textBox1.Text + d;
+            }
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -93,7 +112,7 @@ namespace Kalkulacka
             this.Close();
         }
 
-        private void num0_Click(object sender, EventArgs e)
+       /* private void num0_Click(object sender, EventArgs e)
         {
             length('0');
         }
@@ -141,39 +160,101 @@ namespace Kalkulacka
         private void num9_Click(object sender, EventArgs e)
         {
             length('9');
+        }*/
+
+        private void Number_click(object sender, EventArgs e)
+        {
+            if (erase)
+            {
+                textBox1.Text = "";
+                erase = false;
+            }
+            Button button = (Button)sender;
+            string btnName = button.Name;
+
+            switch (btnName)
+            {
+                case "num0":
+                    length('0');
+                    break;
+                case "num1":
+                    length('1');
+                    break;
+                case "num2":
+                    length('2');
+                    break;
+                case "num3":
+                    length('3');
+                    break;
+                case "num4":
+                    length('4');
+                    break;
+                case "num5":
+                    length('5');
+                    break;
+                case "num6":
+                    length('6');
+                    break;
+                case "num7":
+                    length('7');
+                    break;
+                case "num8":
+                    length('8');
+                    break;
+                case "num9":
+                    length('9');
+                    break;
+            }
         }
 
         private void decPoint_Click(object sender, EventArgs e)
         {
+            /* if (textBox1.Text.Contains(","))
+             {
 
-            if (textBox1.Text.Contains(","))
-            {
+             }
+             else if (textBox1.Text == "" || textBox1.Text == "-")
+             {
+                 textBox1.Text = textBox1.Text + "0,";
+             }
+             else if (textBox1.Text.Contains("-"))
+             {
+                 if (textBox1.Text.Length > 9)
+                 {
 
-            }
-            else if (textBox1.Text == "" || textBox1.Text == "-")
+                 }
+                 else
+                 {
+                     textBox1.Text = textBox1.Text + ",";
+                 }
+             }
+             else if (textBox1.Text.Length > 8)
+             {
+
+             }
+             else
+             {
+                 textBox1.Text = textBox1.Text + ",";
+             }*/
+
+            if (!textBox1.Text.Contains(","))
             {
-                textBox1.Text = textBox1.Text + "0,";
-            }
-            else if (textBox1.Text.Contains("-"))
-            {
-                if (textBox1.Text.Length > 9)
+                if (textBox1.Text == "" || textBox1.Text == "-")
                 {
-                    
+                    textBox1.Text = textBox1.Text + "0,";
                 }
-                else
+                else if (textBox1.Text.Contains("-"))
+                {
+                    if (textBox1.Text.Length <= 9)
+                    {
+                        textBox1.Text = textBox1.Text + ",";
+                    }
+                }
+                else if (textBox1.Text.Length <= 8)
                 {
                     textBox1.Text = textBox1.Text + ",";
                 }
             }
-            else if (textBox1.Text.Length > 8)
-            {
-
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + ",";
-            }
-
           
         }
 
@@ -307,6 +388,11 @@ namespace Kalkulacka
             (bool, decimal) result = (true, 0);
             bool checkNeeded = false;
             bool parseCheck = decimal.TryParse(textBox1.Text, out decimal input);
+            if (erase)
+            {
+                textBox1.Text = "";
+                erase = false;
+            }
 
             switch (instantOp)
             {
@@ -396,6 +482,7 @@ namespace Kalkulacka
                     //TODO
                     break;
             }
+            erase = true;
             if (checkNeeded)
             {
                 Valid_Chk(result);
