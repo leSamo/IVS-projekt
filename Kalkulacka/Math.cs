@@ -18,6 +18,14 @@ namespace MathComponentsNS
         static decimal PI = PI;
         static decimal E = E;
 #pragma warning restore CS1717
+
+        // truncates result to fit calc screen 
+        // if more than 9 whole places error/scientific notation
+        // if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max
+        public (bool, decimal) TruncateToFit(decimal a)
+        {
+            return empty;
+        }
             
         // a + b  
         public (bool, decimal) Add(decimal a, decimal b)
@@ -80,6 +88,7 @@ namespace MathComponentsNS
             return (false, res);
         }
 
+        // will return result with 5 decimal places precision
         public (bool, decimal) Sin(decimal a)
         {
             double res = Math.Sin((double)a);
@@ -87,6 +96,7 @@ namespace MathComponentsNS
             return (false, ress);
         }
 
+        // will return result with 5 decimal places precision
         public (bool, decimal) Cos(decimal a)
         {
             double res = Math.Cos((double)a);
@@ -94,6 +104,7 @@ namespace MathComponentsNS
             return (false, ress);
         }
 
+        // will return result with 5 decimal places precision
         public (bool, decimal) Tan(decimal a)
         {
             double b = (double)a;
@@ -121,14 +132,16 @@ namespace MathComponentsNS
         }
 
         // expect a to be non-negative integer
+        // expect number not greater than 12
         public (bool, decimal) Factorial(decimal a)
         {
             if (a % 1 != 0 || a < 0) return error;
             else if (a == 0) return (false, 1);
-            else return Factorial(a - 1);
+            else return (false, a * Factorial(a - 1).Item2);
         }
 
         // generates random double between 0 - 1
+        // will return result with 5 decimal places precision
         public (bool, decimal) Random()
         {
             decimal res = (decimal) new Random().NextDouble();
