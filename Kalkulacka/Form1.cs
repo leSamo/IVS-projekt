@@ -273,7 +273,7 @@ namespace Kalkulacka
             else
             {
                 convValid = decimal.TryParse(textBox1.Text, out firstNum);
-                Clear();
+                erase = true;
                 operationPerformed = "substraction";
             }
         }
