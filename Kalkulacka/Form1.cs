@@ -9,7 +9,7 @@ namespace Kalkulacka
     {
         List<Panel> listPanel = new List<Panel>();
         MathComponentsNS.MathComponents newMath = new MathComponentsNS.MathComponents();
-        int index;
+        bool shiftClicked = false;
         string operationPerformed = "";
         decimal firstNum = 0;
         decimal MEM = 0;
@@ -84,31 +84,30 @@ namespace Kalkulacka
         {
             listPanel.Add(shiftUnclickedPanel);
             listPanel.Add(shiftClickedPanel);
-            listPanel[index].BringToFront();
+            listPanel[0].BringToFront();
             DisplayedM.Visible = false;
             textBox1.SelectionStart = textBox1.Text.Length;
         }
 
-        private void shiftClicked_Click(object sender, EventArgs e)
+        private void shift_Click(object sender, EventArgs e)
         {
-            if (index > 0)
-                listPanel[--index].BringToFront();
+            if (shiftClicked)
+            {
+                listPanel[0].BringToFront();
+                shift.BackColor = MRC.BackColor = Mplus.BackColor = Mminus.BackColor = off.BackColor = Color.FromArgb(115, 0, 3);
+                shift.FlatAppearance.MouseOverBackColor = MRC.FlatAppearance.MouseOverBackColor = Mplus.FlatAppearance.MouseOverBackColor = Mminus.FlatAppearance.MouseOverBackColor = off.FlatAppearance.MouseOverBackColor = Color.FromArgb(68, 0, 2);
+                shiftClicked = false;
+            }
+            else
+            {
+                listPanel[1].BringToFront();
+                shift.BackColor = MRC.BackColor = Mplus.BackColor = Mminus.BackColor = off.BackColor = Color.FromArgb(68, 0, 2);
+                shift.FlatAppearance.MouseOverBackColor = MRC.FlatAppearance.MouseOverBackColor = Mplus.FlatAppearance.MouseOverBackColor = Mminus.FlatAppearance.MouseOverBackColor = off.FlatAppearance.MouseOverBackColor = Color.FromArgb(115, 0, 3);
+                shiftClicked = true;
+            }
         }
-
-        private void shiftUnclicked_Click(object sender, EventArgs e)
-        {
-            if (index < listPanel.Count - 1)
-                listPanel[++index].BringToFront();
-        }
-
-     
         
         private void off_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void off_shift_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -170,10 +169,12 @@ namespace Kalkulacka
                 ZeroClear();
                 erase = false;
             }
+
             if (textBox1.Text == "0")
             {
                 Clear();
             }
+            
             Button button = (Button)sender;
             string btnName = button.Name;
 
@@ -365,6 +366,7 @@ namespace Kalkulacka
             {
                 textBox1.Text = result.Item2.ToString();
                 firstNum = ans = result.Item2;
+                erase = true;
 
             }
         }
@@ -491,7 +493,7 @@ namespace Kalkulacka
                     //TODO
                     break;
             }
-            if (instantOp != "del")
+            if (instantOp != "del" && firstNum != 0)
             {
                 erase = true;
             }
@@ -541,11 +543,6 @@ namespace Kalkulacka
 
         private void Mplus_Click(object sender, EventArgs e)
         {
-            MplusShift_Click(sender, e);
-        }
-
-        private void MplusShift_Click(object sender, EventArgs e)
-        {
             if (textBox1.Text != "")
             {
                 MEM += decimal.Parse(textBox1.Text);
@@ -558,24 +555,16 @@ namespace Kalkulacka
                     DisplayedM.Visible = true;
                 }
             }
-        }
-
-        private void MRCShift_Click(object sender, EventArgs e)
-        {
-            MRC_Click(sender, e);
+            erase = true;
         }
 
         private void MRC_Click(object sender, EventArgs e)
         {
             textBox1.Text = MEM.ToString();
+            erase = true;
         }
 
         private void Mminus_Click(object sender, EventArgs e)
-        {
-            MminusShift_Click(sender, e);
-        }
-
-        private void MminusShift_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
             {
@@ -589,6 +578,7 @@ namespace Kalkulacka
                     DisplayedM.Visible = true;
                 }
             }
+            erase = true;
         }
 
         public void ZeroClear()
