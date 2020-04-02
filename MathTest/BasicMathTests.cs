@@ -523,7 +523,7 @@ namespace MathTest
             Assert.AreEqual(RoundOff(0.845098040014256830m), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(‭0.99999999m, 0.00000001m);
+            (errBool, result) = NewMath.Logarithm(0.99999999m, 0.00000001m);
             //Assert.AreEqual(RoundOff(1842068065.1848961m), result);
             Assert.IsTrue(errBool);
 

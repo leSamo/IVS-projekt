@@ -22,30 +22,41 @@ namespace MathComponentsNS
         // truncates result to fit calc screen 
         // if more than 9 whole places error/scientific notation
         // if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max
-        public (bool, decimal) TruncateToFit(decimal a)
+        public (bool, decimal) TruncateToFit((bool, decimal) a)
         {
-            return empty;
+            if (a.Item1) return error;
+            int wholeDigits = (int) Math.Floor(1 + Math.Log10((double) Math.Abs(a.Item2)));
+            if (wholeDigits > 9) return error;
+            else if (a.Item2 == 0)
+            {
+                return (false, 0);
+            }
+            else
+            {
+                decimal result = (decimal)(Math.Truncate((double)a.Item2 * Math.Pow(10, 9 - wholeDigits)) / Math.Pow(10, 9 - wholeDigits));
+                return (false, result);
+            }
         }
             
         // a + b  
         public (bool, decimal) Add(decimal a, decimal b)
         {
             decimal res = a + b;
-            return (false, res);
+            return TruncateToFit((false, res));
         }
 
         // a - b
         public (bool, decimal) Subtract(decimal a, decimal b)
         {
             decimal res = a - b;
-            return (false, res);
+            return TruncateToFit((false, res));
         }
 
         // a * b
         public (bool, decimal) Multiply(decimal a, decimal b)
         {
             decimal res = a * b;
-            return (false, res);
+            return TruncateToFit((false, res));
         }
 
         // a / b
@@ -55,11 +66,12 @@ namespace MathComponentsNS
             if (b == 0) return error;
 
             decimal res = a / b;
-            return (false, res);
+            return TruncateToFit((false, res));
         }
 
         // a^b
         // 0^0 expect error
+        // binary exp algo: https://cp-algorithms.com/algebra/binary-exp.html
         public (bool, decimal) Exponentiate(decimal b, decimal e)
         {
             if (b == 0 && e == 0) return error;
@@ -70,6 +82,7 @@ namespace MathComponentsNS
 
         // ath root of b
         // negative radicant expect error
+        // Newton's method: https://www.geeksforgeeks.org/n-th-root-number/
         public (bool, decimal) Root(decimal d, decimal r)
         {
             if (r < 0 || d == 0) return error;
@@ -135,7 +148,7 @@ namespace MathComponentsNS
         // expect number not greater than 12
         public (bool, decimal) Factorial(decimal a)
         {
-            if (a % 1 != 0 || a < 0) return error;
+            if (a % 1 != 0 || a < 0 || a > 12) return error;
             else if (a == 0) return (false, 1);
             else return (false, a * Factorial(a - 1).Item2);
         }

@@ -21,7 +21,6 @@ namespace Kalkulacka
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void funkciaNaVyuzitie ()
@@ -267,7 +266,7 @@ namespace Kalkulacka
         private void subtraction_Click(object sender, EventArgs e)
         {
             bool convValid;
-            if ( textBox1.Text == "")
+            if (textBox1.Text == "0")
             {
                 textBox1.Text = "-";
             }
@@ -359,7 +358,7 @@ namespace Kalkulacka
         {
             if (result.Item1)
             {
-                textBox1.Text = "CHYBA!";
+                textBox1.Text = "Error";
                 //TODO error handler
             }
             else
