@@ -7,7 +7,7 @@ namespace MathComponentsNS
 {
     public class MathComponents
     {
-        // all functions return (bool, double) tuple where first operand is set to true when there 
+        // all functions return (bool, decimal) tuple where first operand is set to true when there 
         // is an error (e.g. out of bounds, division by zero), second is result
 
         // placeholder 

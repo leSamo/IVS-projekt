@@ -7,70 +7,87 @@ namespace MathTest
     [TestClass]
     public class BasicMathTests
     {
+
+        // Function to round-off the number 
+        public static decimal RoundOff(decimal value)
+        {
+            double valuee = Convert.ToDouble(value);
+            if (valuee == 0.0) return value;
+            bool neg = value < 0;
+            if (neg) valuee = -valuee;
+            double m10 = Math.Log10(valuee);
+            double scale = Math.Pow(10, Math.Floor(m10) - 9 + 1);
+            valuee = Math.Floor(valuee / scale) * scale;
+            if (neg) valuee = -valuee;
+            value = Convert.ToDecimal(valuee);
+            return value;
+        }
+
         [TestMethod]
         public void TestAddition()
         {
-            // no rules for addition
+            // no mathematical rules for addition
             MathComponents NewMath = new MathComponents();
 
             // tests to check addition functionality
             (bool errBool, decimal result) = NewMath.Add(1, 1);
-            Assert.AreEqual(2, result);
+            Assert.AreEqual(RoundOff(2), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(0, 0);
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(RoundOff(0), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(1.00m, 1.00m);
-            Assert.AreEqual(2, result);
+            Assert.AreEqual(RoundOff(2), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(-1, -1);
-            Assert.AreEqual(-2, result);
+            Assert.AreEqual(RoundOff(-2), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(0.7m, 0.3m);
-            Assert.AreEqual(1, result);
+            Assert.AreEqual(RoundOff(1), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(7.65m, -2.65m);
-            Assert.AreEqual(5, result);
+            Assert.AreEqual(RoundOff(5), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(0.58647m, 5.789524114m);
-            Assert.AreEqual(6.375994114m, result);
+            // test length of returning value (max 9 significant digits)
+            (errBool, result) = NewMath.Add(0.58647m, 5.78952411m);
+            Assert.AreEqual(RoundOff(6.37599411m), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(-1115475465, 1115475465);
-            Assert.AreEqual(0, result);
+            (errBool, result) = NewMath.Add(-111547546, 111547546);
+            Assert.AreEqual(RoundOff(0), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(5687412.85m, -85456297);
-            Assert.AreEqual(-79768884.15m, result);
+            Assert.AreEqual(RoundOff(-79768884.15m), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(0.2554157752m, 5.7458936245m);
-            Assert.AreEqual(6.0013093997m, result);
+            (errBool, result) = NewMath.Add(0.25541577m, 5.74589362m);
+            Assert.AreEqual(RoundOff(6.00130939m), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(123456789.123456789m, 987654321.987654321m);
-            Assert.AreEqual(1111111111.11111111m, result);
+            (errBool, result) = NewMath.Add(123456789, 0.98765432m);
+            Assert.AreEqual(RoundOff(123456789.98765432m), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Add(-5555555555, -0.5555555555m);
-            Assert.AreEqual(-5555555555.5555555555m, result);
-            Assert.IsFalse(errBool);
-
-            (errBool, result) = NewMath.Add(50, 1000000000);
-            Assert.AreEqual(1000000050, result);
-            Assert.IsFalse(errBool);
+            (errBool, result) = NewMath.Add(-555555555, -555555555);
+            //Assert.AreEqual(RoundOff(-1111111110), result);
+            Assert.IsTrue(errBool);
+            
+            (errBool, result) = NewMath.Add(900000000, 900000000);
+            //Assert.AreEqual(RoundOff(1800000000), result);
+            Assert.IsTrue(errBool);                                   
         }
 
         [TestMethod]
         public void TestSubtraction()
         {
-            // no rules for subtraction
+            // no mathematical rules for subtraction
             MathComponents NewMath = new MathComponents();
 
             // tests to check subtracion functionality
@@ -106,35 +123,40 @@ namespace MathTest
             Assert.AreEqual(-3, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Subtract(0.58647m, 5.789524114m);
-            Assert.AreEqual(-5.203054114m, result);
+            // test length of returning value (max 9 significant digits)
+            (errBool, result) = NewMath.Subtract(0.58647m, 5.78952411m);
+            Assert.AreEqual(RoundOff(-5.20305411m), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Subtract(1115475465, 1115475465);
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(RoundOff(0), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Subtract(5687412.85m, 85456297);
-            Assert.AreEqual(-79768884.15m, result);
+            Assert.AreEqual(RoundOff(-79768884.15m), result);
+            Assert.IsFalse(errBool);
+            
+            (errBool, result) = NewMath.Subtract(9652145.2m, -9912.4567m);
+            Assert.AreEqual(RoundOff(9662057.6567m), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Subtract(9992879524, -999514265);
-            Assert.AreEqual(10992393789m, result);
+            (errBool, result) = NewMath.Subtract(0.99999999m, -0.99999999m);
+            Assert.AreEqual(RoundOff(1.99999998m), result);
             Assert.IsFalse(errBool);
+            
+            (errBool, result) = NewMath.Subtract(999287952, -999514265);
+            //Assert.AreEqual(RoundOff(1998802217), result);
+            Assert.IsTrue(errBool);
 
-            (errBool, result) = NewMath.Subtract(999652145.2m, -99912.45621321546543m);
-            Assert.AreEqual(999752057.65621321546543m, result);
-            Assert.IsFalse(errBool);
-
-            (errBool, result) = NewMath.Subtract(0m, -999888777.666555444333222111m);
-            Assert.AreEqual(999888777.666555444333222111m, result);
-            Assert.IsFalse(errBool);
+            (errBool, result) = NewMath.Subtract(900000000, -900000000);
+            //Assert.AreEqual(RoundOff(1800000000), result);
+            Assert.IsTrue(errBool);
         }
 
         [TestMethod]
         public void TestMultiplication()
         {
-            //no rules for multiplication
+            //no mathematical rules for multiplication
             MathComponents NewMath = new MathComponents();
 
             // tests to check multiplication functionality
@@ -174,25 +196,30 @@ namespace MathTest
             Assert.AreEqual(-72, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Multiply(423135487211, 4771231);
-            Assert.AreEqual(2018877153781226741, result);
-            Assert.IsFalse(errBool);
-
-            (errBool, result) = NewMath.Multiply(0.5125479645m, 5.4521m);
-            Assert.AreEqual(2.79446275725045m, result);
-            Assert.IsFalse(errBool);
-
             (errBool, result) = NewMath.Multiply(10, -0.5m);
             Assert.AreEqual(-5, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Multiply(-562012454, -0.000005m);
-            Assert.AreEqual(2810.06227m, result);
+            // test length of returning value (max 9 significant digits)            
+            (errBool, result) = NewMath.Multiply(0.5125479645m, 5.4521m);
+            Assert.AreEqual(RoundOff(2.79446275725045m), result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Multiply(12345.54321m, 1);
-            Assert.AreEqual(12345.54321m, result);
+            (errBool, result) = NewMath.Multiply(-999454, -9.000005m);
+            Assert.AreEqual(RoundOff(8995090.99727m), result);
             Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Multiply(0.55555555m, 0.9999999m);
+            Assert.AreEqual(RoundOff(0.555555494444445m), result);
+            Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Multiply(423135487, 47712318);
+            //Assert.AreEqual(RoundOff(20188774912828866‬), result);
+            Assert.IsTrue(errBool);
+
+            (errBool, result) = NewMath.Multiply(54545454, 808.80855m);
+            //Assert.AreEqual(RoundOff(44116829558.8317), result);
+            Assert.IsTrue(errBool);
         }
 
         [TestMethod]
@@ -222,7 +249,7 @@ namespace MathTest
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Divide(11659.33584m, 0.25416m);
+            (errBool, result) = NewMath.Divide(11656.5834m, 0.2541m);
             Assert.AreEqual(45874, result);
             Assert.IsFalse(errBool);
 
@@ -234,7 +261,7 @@ namespace MathTest
             Assert.AreEqual(456123.5m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Divide(6.25m, 0.05m);
+            (errBool, result) = NewMath.Divide(-6.25m, -0.05m);
             Assert.AreEqual(125, result);
             Assert.IsFalse(errBool);
 
@@ -250,6 +277,24 @@ namespace MathTest
             Assert.IsTrue(errBool);
 
             (errBool, result) = NewMath.Divide(0, 0);
+            Assert.IsTrue(errBool);
+
+            
+            // test length of returning value (max 9 significant digits)
+            (errBool, result) = NewMath.Divide(555555.55m, 5.222222m);
+            Assert.AreEqual(RoundOff(106382.9821865098m), result);
+            Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Divide(3216546, 123.456m);
+            Assert.AreEqual(RoundOff(26054.1893468118195m), result);
+            Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Divide(999999999, 0.5m);
+            //Assert.AreEqual(RoundOff(1999999998m), result);
+            Assert.IsTrue(errBool);
+
+            (errBool, result) = NewMath.Divide(898989898, 0.005m);
+            //Assert.AreEqual(RoundOff(179797979600), result);
             Assert.IsTrue(errBool);
         }
 
@@ -288,7 +333,7 @@ namespace MathTest
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Exponentiate(1234847151.151884485m, 0);
+            (errBool, result) = NewMath.Exponentiate(123456.151m, 0);
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
@@ -300,14 +345,35 @@ namespace MathTest
             Assert.AreEqual(1024, result);
             Assert.IsFalse(errBool);
 
+            (errBool, result) = NewMath.Exponentiate(12, 8);
+            Assert.AreEqual(429981696, result);
+            Assert.IsFalse(errBool);
+
             // System overflow exception
             // (errBool, result) = NewMath.Exponentiate(-8, -0.4m);
             // Assert.AreEqual(0, result);
             // Assert.IsFalse(errBool);
 
-            //test undefined option
+            // test undefined option
             (errBool, result) = NewMath.Exponentiate(0, 0);
             Assert.IsTrue(errBool);
+
+            // test length of returning value (max 9 significant digits)
+            (errBool, result) = NewMath.Exponentiate(2, 0.3m);
+            Assert.AreEqual(RoundOff(1.23114441334491628449m), result);
+            Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Exponentiate(0.5m, 10);
+            Assert.AreEqual(RoundOff(0.0009765625m), result);
+            Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Exponentiate(15, 12);
+            //Assert.AreEqual(RoundOff(129746337890625), result);
+            Assert.IsTrue(errBool);
+
+            (errBool, result) = NewMath.Exponentiate(8, 12);
+            //Assert.AreEqual(RoundOff(68719476736‬), result);
+            Assert.IsTrue(errBool); 
         }
 
         [TestMethod]
@@ -341,16 +407,16 @@ namespace MathTest
             Assert.AreEqual(0.015625m, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Root(0.1m, 10);
-            Assert.AreEqual(10000000000, result);
+            (errBool, result) = NewMath.Root(0.5m, 10);
+            Assert.AreEqual(100, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Root(6, 107918163081);
+            (errBool, result) = NewMath.Root(4, 22667121);
             Assert.AreEqual(69, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Root(0.5m, 125865);
-            Assert.AreEqual(15841998225, result);
+            (errBool, result) = NewMath.Root(0.5m, 12586);
+            Assert.AreEqual(158407396, result);
             Assert.IsFalse(errBool);
 
             // test undefined values
@@ -365,6 +431,29 @@ namespace MathTest
 
             (errBool, result) = NewMath.Root(2.4m, -23.25874m);
             Assert.IsTrue(errBool);
+
+            // test length of returning value (max 9 significant digits)
+            (errBool, result) = NewMath.Root(2, 0.3m);
+            Assert.AreEqual(RoundOff(0.5477225575051661m), result);
+            Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Root(3, 5);
+            Assert.AreEqual(RoundOff(1.7099759466766m), result);
+            Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Root(0.3m, 65);
+            Assert.AreEqual(RoundOff(1104191.8114525m), result);
+            Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Root(0.5m, 50000);
+            //Assert.AreEqual(RoundOff(2500000000), result);
+            Assert.IsTrue(errBool);
+
+            (errBool, result) = NewMath.Root(0.2m, 600);
+            //Assert.AreEqual(RoundOff(77760000000000‬), result);
+            Assert.IsTrue(errBool);
+
+
         }
 
         [TestMethod]
@@ -398,12 +487,12 @@ namespace MathTest
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(5512476855.125485m, 1);
+            (errBool, result) = NewMath.Logarithm(551247.1254m, 1);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(0.5m, 0.0009765625m);
-            Assert.AreEqual(10, result);
+            (errBool, result) = NewMath.Logarithm(0.5m, 0.00390625m);
+            Assert.AreEqual(8, result);
             Assert.IsFalse(errBool);
 
             // test undefined values
@@ -424,6 +513,20 @@ namespace MathTest
 
             (errBool, result) = NewMath.Logarithm(-125.12m, -457.25m);
             Assert.IsTrue(errBool);
+
+            // test length of returning value (max 9 significant digits)
+            (errBool, result) = NewMath.Logarithm((decimal)Math.E, 8);
+            Assert.AreEqual(RoundOff(2.079441541679m), result);
+            Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Logarithm((decimal)10, 4);
+            Assert.AreEqual(RoundOff(0.845098040014256830m), result);
+            Assert.IsFalse(errBool);
+
+            (errBool, result) = NewMath.Logarithm(‭0.99999999m, 0.00000001m);
+            //Assert.AreEqual(RoundOff(1842068065.1848961m), result);
+            Assert.IsTrue(errBool);
+
         }
 
         [TestMethod]
@@ -432,7 +535,7 @@ namespace MathTest
             decimal var1 = (decimal)(Math.Round(Math.Sqrt(2) / 2 * 1e10d) / 1e10d);
             decimal var2 = (decimal)(Math.Round(Math.Sqrt(3) / 2 * 1e10d) / 1e10d);
 
-            // no rules for sinus
+            // no mathematical rules for sinus
             // tests are in RAD
             MathComponents NewMath = new MathComponents();
 
@@ -492,7 +595,7 @@ namespace MathTest
             decimal var1 = (decimal)(Math.Round(Math.Sqrt(2) / 2 * 1e10d) / 1e10d);
             decimal var2 = (decimal)(Math.Round(Math.Sqrt(3) / 2 * 1e10d) / 1e10d);
 
-            // no rules for cosinus
+            // no mathematical rules for cosinus
             MathComponents NewMath = new MathComponents();
 
             // tests to check Cos functionality
@@ -823,13 +926,17 @@ namespace MathTest
             Assert.AreEqual(39916800, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Factorial(17);
-            Assert.AreEqual(355687428096000, result);
+            (errBool, result) = NewMath.Factorial(12);
+            Assert.AreEqual(479001600, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Factorial(10);
-            Assert.AreEqual(3628800, result);
-            Assert.IsFalse(errBool);
+            (errBool, result) = NewMath.Factorial(13);
+            //Assert.AreEqual(6227020800, result);
+            Assert.IsTrue(errBool);
+
+            (errBool, result) = NewMath.Factorial(17);
+            //Assert.AreEqual(355687428096000, result);
+            Assert.IsTrue(errBool);
 
             // test indefined values
             (errBool, result) = NewMath.Factorial(-3);         
