@@ -77,7 +77,7 @@ namespace MathComponentsNS
             if (b == 0 && e == 0) return error;
 
             decimal res = (decimal)System.Math.Pow((double)b, (double)e);
-            return (false, res);
+            return TruncateToFit((false, res));
         }
 
         // ath root of b
@@ -88,7 +88,7 @@ namespace MathComponentsNS
             if (r < 0 || d == 0) return error;
 
             decimal res = (decimal)System.Math.Pow((double)r, 1f/(double)d);
-            return (false, res);
+            return TruncateToFit((false, res));
         }
 
         // log of a with base of b
@@ -98,7 +98,7 @@ namespace MathComponentsNS
         {
             if (b <= 0 || b == 1 || a <= 0) return error;
             decimal res = (decimal)System.Math.Log((double)a, (double)b);
-            return (false, res);
+            return TruncateToFit((false, res));
         }
 
         // will return result with 5 decimal places precision
@@ -106,7 +106,7 @@ namespace MathComponentsNS
         {
             double res = Math.Sin((double)a);
             decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
-            return (false, ress);
+            return TruncateToFit((false, ress));
         }
 
         // will return result with 5 decimal places precision
@@ -114,7 +114,7 @@ namespace MathComponentsNS
         {
             double res = Math.Cos((double)a);
             decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
-            return (false, ress);
+            return TruncateToFit((false, ress));
         }
 
         // will return result with 5 decimal places precision
@@ -124,7 +124,7 @@ namespace MathComponentsNS
             if (b % Math.PI == Math.PI / 2d) return error;
             double res = Math.Tan((double)a);
             decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
-            return (false, ress);
+            return TruncateToFit((false, ress));
         }
 
         // expect a to be between -1 and 1
