@@ -71,12 +71,25 @@ namespace MathComponentsNS
 
         // a^b
         // 0^0 expect error
+        // non-integer exponent or base expect error
         // binary exp algo: https://cp-algorithms.com/algebra/binary-exp.html
         public (bool, decimal) Exponentiate(decimal b, decimal e)
         {
-            if (b == 0 && e == 0) return error;
+            if (b % 1 != 0 || e % 1 != 0 || (b == 0 && e == 0)) return error;
 
-            decimal res = (decimal)System.Math.Pow((double)b, (double)e);
+            // decimal res = (decimal)System.Math.Pow((double)b, (double)e);
+
+            int res = 1;
+            int expo = (int)e;
+            int bas = (int)b;
+            while (expo > 0)
+            {
+                if (expo % 2 == 1)
+                    res = res * bas;
+                bas = bas * bas;
+                expo >>= 1;
+            }
+
             return TruncateToFit((false, res));
         }
 
@@ -102,22 +115,40 @@ namespace MathComponentsNS
         }
 
         // will return result with 5 decimal places precision
+        // Taylor series: https://www.homeschoolmath.net/teaching/sine_calculator.php
+        // sin x = x − x^3/3! + x^5/5! − x^7/7! + ...
         public (bool, decimal) Sin(decimal a)
         {
-            double res = Math.Sin((double)a);
-            decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
-            return TruncateToFit((false, ress));
+            //double res = Math.Sin((double)a);
+            //decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
+            decimal res = a;
+            res -= Exponentiate(a, 3).Item2 / Factorial(3).Item2;
+            res += Exponentiate(a, 5).Item2 / Factorial(5).Item2;
+            res -= Exponentiate(a, 7).Item2 / Factorial(7).Item2;
+            res += Exponentiate(a, 9).Item2 / Factorial(9).Item2;
+            Console.WriteLine(res);
+
+            return TruncateToFit((false, res));
         }
 
         // will return result with 5 decimal places precision
+        // Taylor series
+        // cos x = 1 − x^2/2! + x^4/4! − x^6/6! + ...
         public (bool, decimal) Cos(decimal a)
         {
-            double res = Math.Cos((double)a);
-            decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
-            return TruncateToFit((false, ress));
+            //double res = Math.Cos((double)a);
+            //decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
+
+            decimal res = 1;
+            res -= Exponentiate(a, 2).Item2 / Factorial(2).Item2;
+            res += Exponentiate(a, 4).Item2 / Factorial(4).Item2;
+            res -= Exponentiate(a, 6).Item2 / Factorial(6).Item2;
+            res += Exponentiate(a, 8).Item2 / Factorial(8).Item2;
+            return TruncateToFit((false, res));
         }
 
         // will return result with 5 decimal places precision
+        // tan x = sin x / cos x
         public (bool, decimal) Tan(decimal a)
         {
             double b = (double)a;
@@ -128,6 +159,7 @@ namespace MathComponentsNS
         }
 
         // expect a to be between -1 and 1
+        // https://dsp.stackexchange.com/questions/25770/looking-for-an-arcsin-algorithm
         public (bool, decimal) Arcsin(decimal a)
         {
             return empty;
