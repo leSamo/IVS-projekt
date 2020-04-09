@@ -504,6 +504,7 @@
             this.shift.Size = new System.Drawing.Size(70, 70);
             this.shift.TabIndex = 27;
             this.shift.Text = "SHIFT";
+            this.shift.UseVisualStyleBackColor = false;
             // 
             // shiftUnclickedPanel
             // 

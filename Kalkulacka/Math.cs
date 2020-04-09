@@ -1,4 +1,7 @@
 ﻿//using System.Math;
+/**
+@file
+*/
 
 
 using System;
@@ -7,6 +10,10 @@ namespace MathComponentsNS
 {
     public class MathComponents
     {
+
+        /**
+         * doplnit
+         */
         // all functions return (bool, decimal) tuple where first operand is set to true when there 
         // is an error (e.g. out of bounds, division by zero), second is result
 
@@ -14,14 +21,21 @@ namespace MathComponentsNS
         static (bool, decimal) empty;
         (bool, decimal) error = (true, 0);
 
-#pragma warning disable CS1717 // Assignment made to same variable
+#pragma warning disable CS1717
+        /**
+        * @brief Assignment made to same variable
+        */
         static decimal PI = PI;
         static decimal E = E;
 #pragma warning restore CS1717
 
-        // truncates result to fit calc screen 
-        // if more than 9 whole places error/scientific notation
-        // if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max
+
+       
+        /**
+         * @return error/scientific notation if more than 9 whole places
+         * @brief  truncates result to fit calc screen
+         * @brief if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max 
+         */
         public (bool, decimal) TruncateToFit((bool, decimal) a)
         {
             if (a.Item1) return error;
@@ -37,30 +51,46 @@ namespace MathComponentsNS
                 return (false, result);
             }
         }
-            
-        // a + b  
+
+        /**
+         * @param[in] decimal a
+         * @param[in] decimal b
+         * @return result of a - b
+         */
         public (bool, decimal) Add(decimal a, decimal b)
         {
             decimal res = a + b;
             return TruncateToFit((false, res));
         }
 
-        // a - b
+        /**
+          * @param[in] decimal a
+          * @param[in] decimal b
+          * @return result of a - b
+          */
         public (bool, decimal) Subtract(decimal a, decimal b)
         {
             decimal res = a - b;
             return TruncateToFit((false, res));
         }
 
-        // a * b
+        /**
+          * @param[in] decimal a
+          * @param[in] decimal b
+          * @return result of a * b 
+          */
         public (bool, decimal) Multiply(decimal a, decimal b)
         {
             decimal res = a * b;
             return TruncateToFit((false, res));
         }
 
-        // a / b
-        // division by zero expect error
+        /**
+         * @param[in] decimal a
+         * @param[in] decimal b
+         * @return result of a / b
+         * @return error if division by zero
+         */
         public (bool, decimal) Divide(decimal a, decimal b)
         {
             if (b == 0) return error;
@@ -69,10 +99,16 @@ namespace MathComponentsNS
             return TruncateToFit((false, res));
         }
 
-        // a^b
-        // 0^0 expect error
-        // non-integer exponent or base expect error
-        // binary exp algo: https://cp-algorithms.com/algebra/binary-exp.html
+       
+        /**
+         *  @brief non-integer exponent or base expect error
+         *  @brief binary exp algo: https://cp-algorithms.com/algebra/binary-exp.html
+         *  @param[in] decimal a
+         *  @param[in] decimal b
+         *  @return result of a^b
+         *  @return error if 0^0
+         *  
+         */
         public (bool, decimal) Exponentiate(decimal b, decimal e)
         {
             if (b % 1 != 0 || e % 1 != 0 || (b == 0 && e == 0)) return error;
