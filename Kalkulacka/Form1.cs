@@ -33,37 +33,7 @@ namespace Kalkulacka
         }
 
         private void length (char d)
-        {
-            /*if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
-            {
-                if (textBox1.Text.Length > 10)
-                {
-
-                }
-                else{
-                    textBox1.Text = textBox1.Text + d;
-                }
-            }
-            else if (textBox1.Text.Contains("-") || textBox1.Text.Contains(","))
-            { 
-                if (textBox1.Text.Length > 9)
-                {
-
-                }
-                else
-                {
-                    textBox1.Text = textBox1.Text + d;
-                }
-            }
-            else if (textBox1.Text.Length > 8)
-            {
-             
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + d;
-            }*/
-            
+        {   
             if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
             {
                 if(textBox1.Text.Length <= 10)
@@ -114,56 +84,6 @@ namespace Kalkulacka
         {
             this.Close();
         }
-
-       /* private void num0_Click(object sender, EventArgs e)
-        {
-            length('0');
-        }
-
-        private void num1_Click(object sender, EventArgs e)
-        {
-            length('1');
-        }
-
-        private void num2_Click(object sender, EventArgs e)
-        {
-            length('2');
-        }
-
-        private void num3_Click(object sender, EventArgs e)
-        {
-            length('3');
-        }
-
-        private void num4_Click(object sender, EventArgs e)
-        {
-            length('4');
-        }
-
-        private void num5_Click(object sender, EventArgs e)
-        {
-            length('5');
-        }
-
-        private void num6_Click(object sender, EventArgs e)
-        {
-            length('6');
-        }
-
-        private void num7_Click(object sender, EventArgs e)
-        {
-            length('7');
-        }
-
-        private void num8_Click(object sender, EventArgs e)
-        {
-            length('8');
-        }
-
-        private void num9_Click(object sender, EventArgs e)
-        {
-            length('9');
-        }*/
 
         private void Number_click(object sender, EventArgs e)
         {
@@ -417,7 +337,7 @@ namespace Kalkulacka
                     if (textBox1.Text != "")
                     {
                         textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
-                        if (textBox1.Text == "")
+                        if (textBox1.Text == "" || textBox1.Text == "Erro")
                         {
                             ZeroClear();
                         }
