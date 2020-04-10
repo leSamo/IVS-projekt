@@ -16,9 +16,11 @@ namespace Kalkulacka
         bool shiftClicked = false;
         string operationPerformed = "";
         decimal firstNum = 0;
+        decimal secondNum = 0;
         decimal MEM = 0;
         decimal ans = 0;
         bool erase = false;
+        bool repeatEq = false;
         //private object txt_Result;
 
 
@@ -37,40 +39,10 @@ namespace Kalkulacka
 
         /**
          * @brief Function chcecking length 
-         * @param[in] char d
+         * @param[in] char d (clicked number or character)
          */
         private void length (char d)
-        {
-            /*if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
-            {
-                if (textBox1.Text.Length > 10)
-                {
-
-                }
-                else{
-                    textBox1.Text = textBox1.Text + d;
-                }
-            }
-            else if (textBox1.Text.Contains("-") || textBox1.Text.Contains(","))
-            { 
-                if (textBox1.Text.Length > 9)
-                {
-
-                }
-                else
-                {
-                    textBox1.Text = textBox1.Text + d;
-                }
-            }
-            else if (textBox1.Text.Length > 8)
-            {
-             
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + d;
-            }*/
-            
+        {   
             if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
             {
                 if(textBox1.Text.Length <= 10)
@@ -90,6 +62,11 @@ namespace Kalkulacka
                 textBox1.Text = textBox1.Text + d;
             }
         }
+
+        /**
+         * @brief Panel function
+         * for extended functions of calculator
+         */
         private void Form1_Load(object sender, EventArgs e)
         {
             listPanel.Add(shiftUnclickedPanel);
@@ -99,6 +76,10 @@ namespace Kalkulacka
             textBox1.SelectionStart = textBox1.Text.Length;
         }
 
+        /**
+         * @brief Function for switching panel
+         * after click on SHIFT the panel will change
+         */
         private void shift_Click(object sender, EventArgs e)
         {
             if (shiftClicked)
@@ -116,7 +97,11 @@ namespace Kalkulacka
                 shiftClicked = true;
             }
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 77f3a30bf4a835e790f07b161843d0cfd82a96d0
         /**
          * @brief Function of switching off the application
          * @return close of calculator
@@ -126,58 +111,14 @@ namespace Kalkulacka
             this.Close();
         }
 
-       /* private void num0_Click(object sender, EventArgs e)
-        {
-            length('0');
-        }
-
-        private void num1_Click(object sender, EventArgs e)
-        {
-            length('1');
-        }
-
-        private void num2_Click(object sender, EventArgs e)
-        {
-            length('2');
-        }
-
-        private void num3_Click(object sender, EventArgs e)
-        {
-            length('3');
-        }
-
-        private void num4_Click(object sender, EventArgs e)
-        {
-            length('4');
-        }
-
-        private void num5_Click(object sender, EventArgs e)
-        {
-            length('5');
-        }
-
-        private void num6_Click(object sender, EventArgs e)
-        {
-            length('6');
-        }
-
-        private void num7_Click(object sender, EventArgs e)
-        {
-            length('7');
-        }
-
-        private void num8_Click(object sender, EventArgs e)
-        {
-            length('8');
-        }
-
-        private void num9_Click(object sender, EventArgs e)
-        {
-            length('9');
-        }*/
-
+        /**
+         * @brief Function for cliked number
+         * chcecking length
+         * @return number in TextBox
+         */
         private void Number_click(object sender, EventArgs e)
         {
+            repeatEq = false;
             if (erase)
             {
                 ZeroClear();
@@ -227,36 +168,12 @@ namespace Kalkulacka
             }
         }
 
+        /**
+         * @brief Function for Decimal point
+         * only one allowed
+         */
         private void decPoint_Click(object sender, EventArgs e)
         {
-            /* if (textBox1.Text.Contains(","))
-             {
-
-             }
-             else if (textBox1.Text == "" || textBox1.Text == "-")
-             {
-                 textBox1.Text = textBox1.Text + "0,";
-             }
-             else if (textBox1.Text.Contains("-"))
-             {
-                 if (textBox1.Text.Length > 9)
-                 {
-
-                 }
-                 else
-                 {
-                     textBox1.Text = textBox1.Text + ",";
-                 }
-             }
-             else if (textBox1.Text.Length > 8)
-             {
-
-             }
-             else
-             {
-                 textBox1.Text = textBox1.Text + ",";
-             }*/
-
             if (!textBox1.Text.Contains(","))
             {
                 if (textBox1.Text == "" || textBox1.Text == "-")
@@ -278,6 +195,10 @@ namespace Kalkulacka
           
         }
 
+        /**
+         * @brief Function for negative numbers if text box contains only zero
+         * @brief Function for subctraction of numbers
+         */
         private void subtraction_Click(object sender, EventArgs e)
         {
             bool convValid;
@@ -293,6 +214,9 @@ namespace Kalkulacka
             }
         }
 
+        /**
+         * uprav popis, lebo nemam ani sajny
+         */
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -369,6 +293,10 @@ namespace Kalkulacka
             }
         }
 
+        /**
+         * @brief Function for checking successful result
+         * @return result if everything is good
+         */
         public void Valid_Chk((bool, decimal) result)                //Funkce pro kontrolu úspěšného dokončení výpočtu a případného vypsání výsledku
         {
             if (result.Item1)
@@ -385,6 +313,9 @@ namespace Kalkulacka
             }
         }
 
+        /**
+         * 
+         */
         private void operation_Click(object sender, EventArgs e)    //Určení stisknuté operace, uložení vstupu, vymazání textboxu
         {
             bool convValid;
@@ -428,7 +359,7 @@ namespace Kalkulacka
                     if (textBox1.Text != "")
                     {
                         textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
-                        if (textBox1.Text == "")
+                        if (textBox1.Text == "" || textBox1.Text == "Erro")
                         {
                             ZeroClear();
                         }
@@ -441,8 +372,7 @@ namespace Kalkulacka
                     if (firstNum != 0)
                     {
                         Valid_Chk(Calculate());
-                        operationPerformed = "";
-                        firstNum = 0;
+                        repeatEq = true;
                     }
                     break;
                 case "sin":
@@ -521,7 +451,10 @@ namespace Kalkulacka
         {
             bool convValid;
             (bool, decimal) result = (true, 0);
-            convValid = decimal.TryParse(textBox1.Text, out decimal secondNum);
+            if (!repeatEq)
+            {
+                convValid = decimal.TryParse(textBox1.Text, out secondNum);
+            }
 
             switch (operationPerformed)
             {
