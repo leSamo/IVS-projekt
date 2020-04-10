@@ -1,5 +1,5 @@
 ﻿/**
-@file
+* @file
 */
 
 using System;
@@ -27,11 +27,18 @@ namespace Kalkulacka
             InitializeComponent();
         }
 
+        /**
+         * @brief Function for memory
+         */
         private void funkciaNaVyuzitie ()
         {
             DisplayedM.ForeColor = Color.Black;
         }
 
+        /**
+         * @brief Function chcecking length 
+         * @param[in] char d
+         */
         private void length (char d)
         {   
             if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
@@ -79,7 +86,11 @@ namespace Kalkulacka
                 shiftClicked = true;
             }
         }
-        
+
+        /**
+         * @brief Function of switching off the application
+         * @return close of calculator
+         */
         private void off_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -138,34 +149,6 @@ namespace Kalkulacka
 
         private void decPoint_Click(object sender, EventArgs e)
         {
-            /* if (textBox1.Text.Contains(","))
-             {
-
-             }
-             else if (textBox1.Text == "" || textBox1.Text == "-")
-             {
-                 textBox1.Text = textBox1.Text + "0,";
-             }
-             else if (textBox1.Text.Contains("-"))
-             {
-                 if (textBox1.Text.Length > 9)
-                 {
-
-                 }
-                 else
-                 {
-                     textBox1.Text = textBox1.Text + ",";
-                 }
-             }
-             else if (textBox1.Text.Length > 8)
-             {
-
-             }
-             else
-             {
-                 textBox1.Text = textBox1.Text + ",";
-             }*/
-
             if (!textBox1.Text.Contains(","))
             {
                 if (textBox1.Text == "" || textBox1.Text == "-")
