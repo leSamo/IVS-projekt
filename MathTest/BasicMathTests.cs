@@ -210,7 +210,7 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Multiply(0.55555555m, 0.9999999m);
-            Assert.AreEqual(RoundOff(0.555555494444445m), result);
+            Assert.AreEqual(RoundOff(0.55555549m), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Multiply(423135487, 47712318);
@@ -322,7 +322,7 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Exponentiate(-8, -4);
-            Assert.AreEqual(0.000244140625m, result);
+            Assert.AreEqual(0.00024414m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Exponentiate(2.00m, 2.00m);
@@ -364,7 +364,7 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Exponentiate(0.5m, 10);
-            Assert.AreEqual(RoundOff(0.0009765625m), result);
+            Assert.AreEqual(RoundOff(0.00097656m), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Exponentiate(15, 12);
@@ -434,7 +434,7 @@ namespace MathTest
 
             // test length of returning value (max 9 significant digits)
             (errBool, result) = NewMath.Root(2, 0.3m);
-            Assert.AreEqual(RoundOff(0.5477225575051661m), result);
+            Assert.AreEqual(RoundOff(0.54772255m), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Root(3, 5);
@@ -726,19 +726,19 @@ namespace MathTest
 
             // tests to check Arcsin functionality
             (bool errBool, decimal result) = NewMath.Arcsin(-1);
-            Assert.AreEqual((-Math.PI / 2), result);
+            Assert.AreEqual(-1.57079632m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arcsin((decimal)-Math.Sqrt(3) / 2);
-            Assert.AreEqual((-Math.PI / 3), result);
+            Assert.AreEqual(-1.04719755m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arcsin((decimal)-Math.Sqrt(2) / 2);
-            Assert.AreEqual((-Math.PI / 4), result);
+            Assert.AreEqual(-0.78539816m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arcsin(-0.5m);
-            Assert.AreEqual((-Math.PI / 6), result);
+            Assert.AreEqual(-0.52359877m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arcsin(0);
@@ -746,19 +746,19 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arcsin(0.5m);
-            Assert.AreEqual((Math.PI / 6), result);
+            Assert.AreEqual(0.52359877m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arcsin((decimal)Math.Sqrt(2) / 2);
-            Assert.AreEqual((Math.PI / 4), result);
+            Assert.AreEqual(0.78539816m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arcsin((decimal)Math.Sqrt(3) / 2);
-            Assert.AreEqual((Math.PI / 3), result);
+            Assert.AreEqual(1.04719755m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arcsin(1);
-            Assert.AreEqual((Math.PI / 2), result);
+            Assert.AreEqual(1.57079632m, result);
             Assert.IsFalse(errBool);
 
             //test undefined values
@@ -784,39 +784,39 @@ namespace MathTest
 
             // tests to check Arccos functionality
             (bool errBool, decimal result) = NewMath.Arccos(-1);
-            Assert.AreEqual((Math.PI), result);
+            Assert.AreEqual(3.14159265m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arccos((decimal)-Math.Sqrt(3) / 2);
-            Assert.AreEqual(( (5 * Math.PI) / 6), result);
+            Assert.AreEqual(2.61799387m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arccos((decimal)-Math.Sqrt(2) / 2);
-            Assert.AreEqual(((3 * Math.PI) / 4), result);
+            Assert.AreEqual(2.35619449m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arccos(-0.5m);
-            Assert.AreEqual(((2 * Math.PI) / 3), result);
+            Assert.AreEqual(2.09439510m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arccos(0);
-            Assert.AreEqual((Math.PI / 2), result);
+            Assert.AreEqual(1.57079632m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arccos(0.5m);
-            Assert.AreEqual((Math.PI / 3), result);
+            Assert.AreEqual(1.04719755m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arccos((decimal)Math.Sqrt(2) / 2);
-            Assert.AreEqual((Math.PI / 4), result);
+            Assert.AreEqual(0.78539816m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arccos((decimal)Math.Sqrt(3) / 2);
-            Assert.AreEqual((Math.PI / 6), result);
+            Assert.AreEqual(0.52359877m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arccos(1);
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(0m, result);
             Assert.IsFalse(errBool);
 
             //test undefined values
@@ -841,15 +841,15 @@ namespace MathTest
 
             // tests to check Arctan functionality
             (bool errBool, decimal result) = NewMath.Arctan((decimal)-Math.Sqrt(3));
-            Assert.AreEqual((-Math.PI / 3), result);
+            Assert.AreEqual(RoundOff((decimal)(-Math.PI / 3)), result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan(-1);
-            Assert.AreEqual((-Math.PI / 4), result);
+            Assert.AreEqual(-0.78539816m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan((decimal)-Math.Sqrt(3) / 3);
-            Assert.AreEqual((-Math.PI / 6), result);
+            Assert.AreEqual(-0.52359877m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan(0);
@@ -857,19 +857,15 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan((decimal)Math.Sqrt(3) / 3);
-            Assert.AreEqual((Math.PI / 6), result);
+            Assert.AreEqual(0.52359877m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan(1);
-            Assert.AreEqual((Math.PI / 4), result);
+            Assert.AreEqual(0.78539816m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan((decimal) Math.Sqrt(3));
-            Assert.AreEqual((Math.PI / 3), result);
-            Assert.IsFalse(errBool);
-
-            (errBool, result) = NewMath.Arctan((decimal) Math.Sqrt(3) / 2);
-            Assert.AreEqual((Math.PI / 6), result);
+            Assert.AreEqual(1.04719755m, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Arctan(5);
