@@ -101,11 +101,11 @@ namespace MathComponentsNS
          *  @param[in] decimal a
          *  @param[in] decimal b
          *  @return result of a^b
-         *  @return error if 0^0
+         *  @return error if 0^0 or 0^-1
          */
         public (bool, decimal) Exponentiate(decimal b, decimal e)
         {
-            if (b == 0 && e == 0) return error;
+            if ((b == 0 && e == 0) || (b == 0 && e == -1)) return error;
             if (e == 0) return (false, 1m);
             /*
             if (e < 0)
@@ -286,12 +286,11 @@ namespace MathComponentsNS
         /**
         * @brief Function of random number
         * generates random decimal number between 0 inclusive to 1 exclusive
-        * @return result with 5 decimal places precision (?)
         */
         public (bool, decimal) Random()
         {
             decimal res = (decimal)new Random().NextDouble();
-            return (false, res);
+            return TruncateToFit((false, res));
         }
     }
 }
