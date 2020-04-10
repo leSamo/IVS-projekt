@@ -16,9 +16,11 @@ namespace Kalkulacka
         bool shiftClicked = false;
         string operationPerformed = "";
         decimal firstNum = 0;
+        decimal secondNum = 0;
         decimal MEM = 0;
         decimal ans = 0;
         bool erase = false;
+        bool repeatEq = false;
         //private object txt_Result;
 
 
@@ -98,6 +100,7 @@ namespace Kalkulacka
 
         private void Number_click(object sender, EventArgs e)
         {
+            repeatEq = false;
             if (erase)
             {
                 ZeroClear();
@@ -333,8 +336,7 @@ namespace Kalkulacka
                     if (firstNum != 0)
                     {
                         Valid_Chk(Calculate());
-                        operationPerformed = "";
-                        firstNum = 0;
+                        repeatEq = true;
                     }
                     break;
                 case "sin":
@@ -413,7 +415,10 @@ namespace Kalkulacka
         {
             bool convValid;
             (bool, decimal) result = (true, 0);
-            convValid = decimal.TryParse(textBox1.Text, out decimal secondNum);
+            if (!repeatEq)
+            {
+                convValid = decimal.TryParse(textBox1.Text, out secondNum);
+            }
 
             switch (operationPerformed)
             {
