@@ -1,5 +1,5 @@
 ﻿/**
-@file
+* @file
 */
 
 using System;
@@ -16,9 +16,11 @@ namespace Kalkulacka
         bool shiftClicked = false;
         string operationPerformed = "";
         decimal firstNum = 0;
+        decimal secondNum = 0;
         decimal MEM = 0;
         decimal ans = 0;
         bool erase = false;
+        bool repeatEq = false;
         //private object txt_Result;
 
 
@@ -27,43 +29,20 @@ namespace Kalkulacka
             InitializeComponent();
         }
 
+        /**
+         * @brief Function for memory
+         */
         private void funkciaNaVyuzitie ()
         {
             DisplayedM.ForeColor = Color.Black;
         }
 
+        /**
+         * @brief Function chcecking length 
+         * @param[in] char d
+         */
         private void length (char d)
-        {
-            /*if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
-            {
-                if (textBox1.Text.Length > 10)
-                {
-
-                }
-                else{
-                    textBox1.Text = textBox1.Text + d;
-                }
-            }
-            else if (textBox1.Text.Contains("-") || textBox1.Text.Contains(","))
-            { 
-                if (textBox1.Text.Length > 9)
-                {
-
-                }
-                else
-                {
-                    textBox1.Text = textBox1.Text + d;
-                }
-            }
-            else if (textBox1.Text.Length > 8)
-            {
-             
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + d;
-            }*/
-            
+        {   
             if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
             {
                 if(textBox1.Text.Length <= 10)
@@ -109,64 +88,19 @@ namespace Kalkulacka
                 shiftClicked = true;
             }
         }
-        
+
+        /**
+         * @brief Function of switching off the application
+         * @return close of calculator
+         */
         private void off_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-       /* private void num0_Click(object sender, EventArgs e)
-        {
-            length('0');
-        }
-
-        private void num1_Click(object sender, EventArgs e)
-        {
-            length('1');
-        }
-
-        private void num2_Click(object sender, EventArgs e)
-        {
-            length('2');
-        }
-
-        private void num3_Click(object sender, EventArgs e)
-        {
-            length('3');
-        }
-
-        private void num4_Click(object sender, EventArgs e)
-        {
-            length('4');
-        }
-
-        private void num5_Click(object sender, EventArgs e)
-        {
-            length('5');
-        }
-
-        private void num6_Click(object sender, EventArgs e)
-        {
-            length('6');
-        }
-
-        private void num7_Click(object sender, EventArgs e)
-        {
-            length('7');
-        }
-
-        private void num8_Click(object sender, EventArgs e)
-        {
-            length('8');
-        }
-
-        private void num9_Click(object sender, EventArgs e)
-        {
-            length('9');
-        }*/
-
         private void Number_click(object sender, EventArgs e)
         {
+            repeatEq = false;
             if (erase)
             {
                 ZeroClear();
@@ -218,34 +152,6 @@ namespace Kalkulacka
 
         private void decPoint_Click(object sender, EventArgs e)
         {
-            /* if (textBox1.Text.Contains(","))
-             {
-
-             }
-             else if (textBox1.Text == "" || textBox1.Text == "-")
-             {
-                 textBox1.Text = textBox1.Text + "0,";
-             }
-             else if (textBox1.Text.Contains("-"))
-             {
-                 if (textBox1.Text.Length > 9)
-                 {
-
-                 }
-                 else
-                 {
-                     textBox1.Text = textBox1.Text + ",";
-                 }
-             }
-             else if (textBox1.Text.Length > 8)
-             {
-
-             }
-             else
-             {
-                 textBox1.Text = textBox1.Text + ",";
-             }*/
-
             if (!textBox1.Text.Contains(","))
             {
                 if (textBox1.Text == "" || textBox1.Text == "-")
@@ -417,7 +323,7 @@ namespace Kalkulacka
                     if (textBox1.Text != "")
                     {
                         textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
-                        if (textBox1.Text == "")
+                        if (textBox1.Text == "" || textBox1.Text == "Erro")
                         {
                             ZeroClear();
                         }
@@ -430,8 +336,7 @@ namespace Kalkulacka
                     if (firstNum != 0)
                     {
                         Valid_Chk(Calculate());
-                        operationPerformed = "";
-                        firstNum = 0;
+                        repeatEq = true;
                     }
                     break;
                 case "sin":
@@ -510,7 +415,10 @@ namespace Kalkulacka
         {
             bool convValid;
             (bool, decimal) result = (true, 0);
-            convValid = decimal.TryParse(textBox1.Text, out decimal secondNum);
+            if (!repeatEq)
+            {
+                convValid = decimal.TryParse(textBox1.Text, out secondNum);
+            }
 
             switch (operationPerformed)
             {
