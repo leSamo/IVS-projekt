@@ -6,11 +6,10 @@
 
 using System;
 
-namespace MathComponentsNS {
-
+namespace MathComponentsNS 
+{
     public class MathComponents
     {
-
         /**
          * doplnit
          */
@@ -19,10 +18,7 @@ namespace MathComponentsNS {
 
         (bool, decimal) error = (true, 0);
 
-#pragma warning disable CS1717
-        /**
-        * @brief Assignment made to same variable
-        */
+#pragma warning disable CS1717 // Assignment made to same variable
         static decimal PI = PI;
         static decimal E = E;
 #pragma warning restore CS1717
@@ -32,7 +28,7 @@ namespace MathComponentsNS {
         /**
          * @return error/scientific notation if more than 9 whole places
          * @brief  truncates result to fit calc screen
-         * @brief if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max 
+         * if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max 
          */
         public (bool, decimal) TruncateToFit((bool, decimal) a)
         {
@@ -51,6 +47,7 @@ namespace MathComponentsNS {
         }
 
         /**
+         * @brief Addition operation function 
          * @param[in] decimal a
          * @param[in] decimal b
          * @return result of a - b
@@ -62,6 +59,7 @@ namespace MathComponentsNS {
         }
 
         /**
+          * @brief Subtraction operation function 
           * @param[in] decimal a
           * @param[in] decimal b
           * @return result of a - b
@@ -73,6 +71,7 @@ namespace MathComponentsNS {
         }
 
         /**
+          * @brief Multiplication operation function
           * @param[in] decimal a
           * @param[in] decimal b
           * @return result of a * b 
@@ -84,6 +83,7 @@ namespace MathComponentsNS {
         }
 
         /**
+         * @brief Division operation function
          * @param[in] decimal a
          * @param[in] decimal b
          * @return result of a / b
@@ -99,7 +99,7 @@ namespace MathComponentsNS {
 
        
         /**
-         *  @brief non-integer exponent or base expect error
+         *  non-integer exponent or base expect error
          *  @brief binary exp algo: https://cp-algorithms.com/algebra/binary-exp.html
          *  @param[in] decimal a
          *  @param[in] decimal b
@@ -123,8 +123,14 @@ namespace MathComponentsNS {
             return TruncateToFit((false, res));
         }
 
-        // ath root of b
-        // negative radicant expect error
+        /**
+         * @brief Funtion of root to ath
+         * @param[in] decimal d
+         * @param[in] decimal radicant r
+         * @return ath root of b 
+         * @return error if negative radicant
+         * Newton's method: https://www.geeksforgeeks.org/n-th-root-number/
+         */
         public (bool, decimal) Root(decimal d, decimal r)
         {
             if (r < 0 || d == 0) return error;
@@ -133,9 +139,14 @@ namespace MathComponentsNS {
             return TruncateToFit((false, res));
         }
 
-        // log of a with base of b
-        // expect base positive and different from 1
-        // expect log-argument positive
+        /**
+         * @param[in] decimal a
+         * @param[in] decimal b
+         * @brief Logarithm function
+         * expect log-argument positive
+         * expect base positive and different from 1
+         * @return log of a with base of b
+         */
         public (bool, decimal) Logarithm(decimal a, decimal b)
         {
             if (b <= 0 || b == 1 || a <= 0) return error;
@@ -143,9 +154,12 @@ namespace MathComponentsNS {
             return TruncateToFit((false, res));
         }
 
-        // will return result with 5 decimal places precision
-        // Taylor series: https://www.homeschoolmath.net/teaching/sine_calculator.php
-        // sin x = x − x^3/3! + x^5/5! − x^7/7! + ...
+        /**
+         * @param[in] decimal a
+         * @brief sine function
+         * sin x = x − x^3/3! + x^5/5! − x^7/7! + ...
+         * @return  result with 5 decimal places precision
+         */
         public (bool, decimal) Sin(decimal a)
         {
             //double res = Math.Sin((double)a);
@@ -160,9 +174,13 @@ namespace MathComponentsNS {
             return TruncateToFit((false, res));
         }
 
-        // will return result with 5 decimal places precision
-        // Taylor series
-        // cos x = 1 − x^2/2! + x^4/4! − x^6/6! + ...
+        /**
+         * @brief Function cosine
+         * @param[in] decimal a
+         * Taylor series
+         * cos x = 1 − x^2/2! + x^4/4! − x^6/6! + ...
+         * @return  result with 5 decimal places precision 
+         */
         public (bool, decimal) Cos(decimal a)
         {
             //double res = Math.Cos((double)a);
@@ -176,8 +194,12 @@ namespace MathComponentsNS {
             return TruncateToFit((false, res));
         }
 
-        // will return result with 5 decimal places precision
-        // tan x = sin x / cos x
+        /**
+        * @brief Function tangent
+        * @param[in] decimal a
+        * tan x = sin x / cos x
+        * @return  result with 5 decimal places precision 
+        */
         public (bool, decimal) Tan(decimal a)
         {
             double b = (double)a;
@@ -187,25 +209,49 @@ namespace MathComponentsNS {
             return TruncateToFit((false, ress));
         }
 
-        // expect a to be between -1 and 1
+        /**
+        * @brief Function arcsin
+        * @param[in] decimal a
+        * expect a to be between -1 and 1
+        * https://dsp.stackexchange.com/questions/25770/looking-for-an-arcsin-algorithm
+        * @return  result with 5 decimal places precision 
+        */
         public (bool, decimal) Arcsin(decimal a)
         {
             return error;
         }
 
-        // expect a to be between -1 and 1
+        /**
+        * @brief Function arccos
+        * @param[in] decimal a
+        * expect a to be between -1 and 1
+        * @return  result with 5 decimal places precision 
+        */
         public (bool, decimal) Arccos(decimal a)
         {
             return error;
         }
 
+        /**
+          * @brief Function arctan
+          * @param[in] decimal a
+          * 
+          * @return  result with 5 decimal places precision 
+          */
         public (bool, decimal) Arctan(decimal a)
         {
             return error;
         }
 
-        // expect a to be non-negative integer
-        // expect number not greater than 12
+        /**
+          * @brief Factorial operation function
+          * @param[in] decimal a
+          * expect a to be non-negative integer
+          * expect number not greater than 12
+          * @return error if a is negative integer
+          * @return error if a is greater than 12
+          * @return error if a has decimal point
+          */
         public (bool, decimal) Factorial(decimal a)
         {
             if (a % 1 != 0 || a < 0 || a > 12) return error;
@@ -213,8 +259,11 @@ namespace MathComponentsNS {
             else return (false, a * Factorial(a - 1).Item2);
         }
 
-        // generates random double between 0 - 1
-        // will return result with 5 decimal places precision
+        /**
+        * @brief Function of random number
+        * generates random double between 0 - 1
+        * @return  result with 5 decimal places precision 
+        */
         public (bool, decimal) Random()
         {
             decimal res = (decimal) new Random().NextDouble();
