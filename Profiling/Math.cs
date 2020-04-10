@@ -4,7 +4,7 @@
 
 using System;
 
-namespace MathComponentsNS 
+namespace MathComponentsNS
 {
     public class MathComponents
     {
@@ -26,11 +26,16 @@ namespace MathComponentsNS
         public (bool, decimal) TruncateToFit((bool, decimal) a)
         {
             if (a.Item1) return error;
-            int wholeDigits = (int) Math.Floor(1 + Math.Log10((double) Math.Abs(a.Item2)));
+            int wholeDigits = (int)Math.Floor(1 + Math.Log10((double)Math.Abs(a.Item2)));
             if (wholeDigits > 9) return error;
             else if (a.Item2 == 0)
             {
                 return (false, 0);
+            }
+            else if (Math.Abs(a.Item2) < 10)
+            {
+                decimal result = (decimal)(Math.Truncate((double)a.Item2 * 10e7) / 10e7);
+                return (false, result);
             }
             else
             {
@@ -102,6 +107,7 @@ namespace MathComponentsNS
         {
             if (b == 0 && e == 0) return error;
             if (e == 0) return (false, 1m);
+            /*
             if (e < 0)
             {
                 (bool, decimal) part = Divide(1m, b);
@@ -109,6 +115,7 @@ namespace MathComponentsNS
                 b = part.Item2;
                 e = -e;
             }
+            */
 
             decimal res = (decimal)Math.Pow((double)b, (double)e);
             return TruncateToFit((false, res));
@@ -125,7 +132,7 @@ namespace MathComponentsNS
         {
             if (r < 0 || d == 0) return error;
 
-            decimal res = (decimal)System.Math.Pow((double)r, 1d/(double)d);
+            decimal res = (decimal)System.Math.Pow((double)r, 1d / (double)d);
             return TruncateToFit((false, res));
         }
 
@@ -156,10 +163,15 @@ namespace MathComponentsNS
             //double res = Math.Sin((double)a);
             //decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
             decimal res = a;
-            res -= Exponentiate(a, 3).Item2 / Factorial(3).Item2;
-            res += Exponentiate(a, 5).Item2 / Factorial(5).Item2;
-            res -= Exponentiate(a, 7).Item2 / Factorial(7).Item2;
-            res += Exponentiate(a, 9).Item2 / Factorial(9).Item2;
+            res -= Exponentiate(a, 3).Item2 / UnconstrainedFactorial(3).Item2;
+            res += Exponentiate(a, 5).Item2 / UnconstrainedFactorial(5).Item2;
+            res -= Exponentiate(a, 7).Item2 / UnconstrainedFactorial(7).Item2;
+            res += Exponentiate(a, 9).Item2 / UnconstrainedFactorial(9).Item2;
+            res -= Exponentiate(a, 11).Item2 / UnconstrainedFactorial(11).Item2;
+            res += Exponentiate(a, 13).Item2 / UnconstrainedFactorial(13).Item2;
+            res -= Exponentiate(a, 15).Item2 / UnconstrainedFactorial(15).Item2;
+            res += Exponentiate(a, 17).Item2 / UnconstrainedFactorial(17).Item2;
+            res -= Exponentiate(a, 19).Item2 / UnconstrainedFactorial(19).Item2;
 
             return TruncateToFit((false, res));
         }
@@ -177,10 +189,16 @@ namespace MathComponentsNS
             //decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
 
             decimal res = 1;
-            res -= Exponentiate(a, 2).Item2 / Factorial(2).Item2;
-            res += Exponentiate(a, 4).Item2 / Factorial(4).Item2;
-            res -= Exponentiate(a, 6).Item2 / Factorial(6).Item2;
-            res += Exponentiate(a, 8).Item2 / Factorial(8).Item2;
+            res -= Exponentiate(a, 2).Item2 / UnconstrainedFactorial(2).Item2;
+            res += Exponentiate(a, 4).Item2 / UnconstrainedFactorial(4).Item2;
+            res -= Exponentiate(a, 6).Item2 / UnconstrainedFactorial(6).Item2;
+            res += Exponentiate(a, 8).Item2 / UnconstrainedFactorial(8).Item2;
+            res -= Exponentiate(a, 10).Item2 / UnconstrainedFactorial(10).Item2;
+            res += Exponentiate(a, 12).Item2 / UnconstrainedFactorial(12).Item2;
+            res -= Exponentiate(a, 14).Item2 / UnconstrainedFactorial(14).Item2;
+            res += Exponentiate(a, 16).Item2 / UnconstrainedFactorial(16).Item2;
+            res -= Exponentiate(a, 18).Item2 / UnconstrainedFactorial(18).Item2;
+
             return TruncateToFit((false, res));
         }
 
@@ -194,18 +212,20 @@ namespace MathComponentsNS
         {
             double b = (double)a;
             if (b % Math.PI == Math.PI / 2d) return error;
-            decimal res = (decimal) Math.Tan((double)a);
+            decimal res = (decimal)Math.Tan((double)a);
             return TruncateToFit((false, res));
         }
 
         /**
         * @brief Function arcsin
         * @param[in] decimal a
-        * @return result with 5 decimal places precision 
+        * @return result with 5 decimal places precision (?)
+        * expect value between -pi/2 and pi/2 
         */
         public (bool, decimal) Arcsin(decimal a)
         {
-            decimal res = (decimal) Math.Asin((double)a);
+            if (a < -1.57079632679m || a > 1.57079632679m) return error;
+            decimal res = (decimal)Math.Asin((double)a);
             return TruncateToFit((false, res));
         }
 
@@ -213,9 +233,11 @@ namespace MathComponentsNS
         * @brief Function arccos
         * @param[in] decimal a
         * @return result with 5 decimal places precision (?)
+        * expect value between -1 and 1
         */
         public (bool, decimal) Arccos(decimal a)
         {
+            if (a < -1 || a > 1) return error;
             decimal res = (decimal)Math.Acos((double)a);
             return TruncateToFit((false, res));
         }
@@ -234,7 +256,7 @@ namespace MathComponentsNS
         /**
           * @brief Factorial operation function
           * @param[in] decimal a
-          * expect number  non-negative integer not greater than 12
+          * expect number non-negative integer not greater than 12
           * @return error if a is negative integer
           * @return error if a is greater than 12
           * @return error if a has decimal point
@@ -247,13 +269,28 @@ namespace MathComponentsNS
         }
 
         /**
+          * @brief Factorial operation function without upper limit
+          * helper function, don't use in calculator
+          * @param[in] decimal a
+          * expect number non-negative integer
+          * @return error if a is negative integer
+          * @return error if a has decimal point
+          */
+        public (bool, decimal) UnconstrainedFactorial(decimal a)
+        {
+            if (a % 1 != 0 || a < 0) return error;
+            else if (a == 0) return (false, 1);
+            else return (false, a * UnconstrainedFactorial(a - 1).Item2);
+        }
+
+        /**
         * @brief Function of random number
         * generates random decimal number between 0 inclusive to 1 exclusive
         * @return result with 5 decimal places precision (?)
         */
         public (bool, decimal) Random()
         {
-            decimal res = (decimal) new Random().NextDouble();
+            decimal res = (decimal)new Random().NextDouble();
             return (false, res);
         }
     }

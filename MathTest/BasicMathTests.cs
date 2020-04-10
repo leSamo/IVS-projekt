@@ -467,7 +467,7 @@ namespace MathTest
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(5, 25);
+            (errBool, result) = NewMath.Logarithm(25, 5);
             Assert.AreEqual(2, result);
             Assert.IsFalse(errBool);
 
@@ -475,28 +475,25 @@ namespace MathTest
             Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(25, 390625);
+            (errBool, result) = NewMath.Logarithm(390625, 25);
             Assert.AreEqual(4, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(6.00m, 216.000m);
+            (errBool, result) = NewMath.Logarithm(216m, 6.00m);
             Assert.AreEqual(3, result);
             Assert.IsFalse(errBool);
 
-            (errBool, result) = NewMath.Logarithm(5666257, 1);
-            Assert.AreEqual(0, result);
-            Assert.IsFalse(errBool);
-
-            (errBool, result) = NewMath.Logarithm(551247.1254m, 1);
-            Assert.AreEqual(0, result);
-            Assert.IsFalse(errBool);
-
-            (errBool, result) = NewMath.Logarithm(0.5m, 0.00390625m);
+            (errBool, result) = NewMath.Logarithm(0.00390625m, 0.5m);
             Assert.AreEqual(8, result);
             Assert.IsFalse(errBool);
 
+            // test length of returning value (max 9 significant digits)
+            (errBool, result) = NewMath.Logarithm(8, (decimal)Math.E);
+            Assert.AreEqual(RoundOff(2.079441541679m), result);
+            Assert.IsFalse(errBool);
+
             // test undefined values
-            (errBool, result) = NewMath.Logarithm(1, 4585.2555m);
+            (errBool, result) = NewMath.Logarithm(4585.2555m, 1m);
             Assert.IsTrue(errBool);
 
             (errBool, result) = NewMath.Logarithm(-0.5874m, 14);
@@ -513,20 +510,6 @@ namespace MathTest
 
             (errBool, result) = NewMath.Logarithm(-125.12m, -457.25m);
             Assert.IsTrue(errBool);
-
-            // test length of returning value (max 9 significant digits)
-            (errBool, result) = NewMath.Logarithm((decimal)Math.E, 8);
-            Assert.AreEqual(RoundOff(2.079441541679m), result);
-            Assert.IsFalse(errBool);
-
-            (errBool, result) = NewMath.Logarithm((decimal)10, 4);
-            Assert.AreEqual(RoundOff(0.845098040014256830m), result);
-            Assert.IsFalse(errBool);
-
-            (errBool, result) = NewMath.Logarithm(0.99999999m, 0.00000001m);
-            //Assert.AreEqual(RoundOff(1842068065.1848961m), result);
-            Assert.IsTrue(errBool);
-
         }
 
         [TestMethod]
