@@ -46,9 +46,9 @@ namespace MathComponentsNS
 
         /**
         * @brief Addition operation function 
-        * @param[in] decimal a
-        * @param[in] decimal b
-        * @return result of a - b
+        * @param[in] decimal first addend (a)
+        * @param[in] decimal second addend (b)
+        * @return sum (result of a + b)
         */
         public (bool, decimal) Add(decimal a, decimal b)
         {
@@ -58,9 +58,9 @@ namespace MathComponentsNS
 
         /**
          * @brief Subtraction operation function 
-         * @param[in] decimal a
-         * @param[in] decimal b
-         * @return result of a - b
+         * @param[in] decimal minuend (a)
+         * @param[in] decimal subtrahend (b)
+         * @return difference (result of a - b)
          */
         public (bool, decimal) Subtract(decimal a, decimal b)
         {
@@ -70,9 +70,9 @@ namespace MathComponentsNS
 
         /**
          * @brief Multiplication operation function
-         * @param[in] decimal a
-         * @param[in] decimal b
-         * @return result of a * b 
+         * @param[in] decimal first factor (a)
+         * @param[in] decimal second factor (b)
+         * @return product (result of a * b) 
          */
         public (bool, decimal) Multiply(decimal a, decimal b)
         {
@@ -82,10 +82,10 @@ namespace MathComponentsNS
 
         /**
          * @brief Division operation function
-         * @param[in] decimal a
-         * @param[in] decimal b
-         * @return result of a / b
-         * @return error if division by zero
+         * @param[in] decimal dividend (a)
+         * @param[in] decimal divisor (b)
+         * @return quotient (result of a / b)
+         * @return error if divisor is zero
          */
         public (bool, decimal) Divide(decimal a, decimal b)
         {
@@ -96,11 +96,11 @@ namespace MathComponentsNS
         }
 
 
-        /**i
+        /**
          *  non-integer exponent or base expect error (?)
-         *  @param[in] decimal a
-         *  @param[in] decimal b
-         *  @return result of a^b
+         *  @param[in] decimal base (b)
+         *  @param[in] decimal exponent (e)
+         *  @return result of b^e
          *  @return error if 0^0 or 0^-1
          */
         public (bool, decimal) Exponentiate(decimal b, decimal e)
@@ -123,8 +123,8 @@ namespace MathComponentsNS
 
         /**
          * @brief Funtion of root to ath
-         * @param[in] decimal d
-         * @param[in] decimal radicant r
+         * @param[in] decimal degree d
+         * @param[in] decimal radicand r
          * @return ath root of b 
          * @return error if negative radicant
          */
@@ -137,8 +137,8 @@ namespace MathComponentsNS
         }
 
         /**
-         * @param[in] decimal a
-         * @param[in] decimal b
+         * @param[in] decimal argument (a)
+         * @param[in] decimal base (b)
          * @brief Logarithm function
          * expect log-argument positive
          * expect base positive and different from 1
@@ -180,7 +180,7 @@ namespace MathComponentsNS
          * @brief Function cosine
          * using Taylor series algorithm
          * cos x = 1 − x^2/2! + x^4/4! − x^6/6! + ...
-         * @param[in] decimal a
+         * @param[in] decimal number a
          * @return result with 5 decimal places precision (?)
          */
         public (bool, decimal) Cos(decimal a)
@@ -204,7 +204,7 @@ namespace MathComponentsNS
 
         /**
         * @brief Function tangent
-        * @param[in] decimal a
+        * @param[in] decimal number a
         * tan x = sin x / cos x
         * @return result with 5 decimal places precision (?)
         */
@@ -218,7 +218,7 @@ namespace MathComponentsNS
 
         /**
         * @brief Function arcsin
-        * @param[in] decimal a
+        * @param[in] decimal number a
         * @return result with 5 decimal places precision (?)
         * expect value between -pi/2 and pi/2 
         */
@@ -231,7 +231,7 @@ namespace MathComponentsNS
 
         /**
         * @brief Function arccos
-        * @param[in] decimal a
+        * @param[in] decimal number a
         * @return result with 5 decimal places precision (?)
         * expect value between -1 and 1
         */
@@ -244,7 +244,7 @@ namespace MathComponentsNS
 
         /**
           * @brief Function arctan
-          * @param[in] decimal a
+          * @param[in] decimal number a
           * @return result with 5 decimal places precision (?)
           */
         public (bool, decimal) Arctan(decimal a)
@@ -255,7 +255,7 @@ namespace MathComponentsNS
 
         /**
           * @brief Factorial operation function
-          * @param[in] decimal a
+          * @param[in] decimal number a
           * expect number non-negative integer not greater than 12
           * @return error if a is negative integer
           * @return error if a is greater than 12
@@ -271,7 +271,7 @@ namespace MathComponentsNS
         /**
           * @brief Factorial operation function without upper limit
           * helper function, don't use in calculator
-          * @param[in] decimal a
+          * @param[in] decimal number a
           * expect number non-negative integer
           * @return error if a is negative integer
           * @return error if a has decimal point

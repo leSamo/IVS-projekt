@@ -314,7 +314,9 @@ namespace Kalkulacka
         }
 
         /**
-         * 
+         * @brief Function for  setting the right operation
+         * save input
+         * erase textbox
          */
         private void operation_Click(object sender, EventArgs e)    //Určení stisknuté operace, uložení vstupu, vymazání textboxu
         {
@@ -333,6 +335,9 @@ namespace Kalkulacka
             }
         }
 
+        /**
+         * nemam šajnu
+         */
         private void InstantOp_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -447,6 +452,9 @@ namespace Kalkulacka
             }
         }
 
+        /**
+         * @brief Function for ????
+         */
         public (bool, decimal) Calculate()
         {
             bool convValid;
@@ -488,6 +496,10 @@ namespace Kalkulacka
             return result;
         }
 
+        /**
+         * @brief Function for addition
+         * if memory is empty do nieco
+         */
         private void Mplus_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
@@ -505,12 +517,19 @@ namespace Kalkulacka
             erase = true;
         }
 
+        /**
+         * Function for saving to memory
+         */
         private void MRC_Click(object sender, EventArgs e)
         {
             textBox1.Text = MEM.ToString();
             erase = true;
         }
 
+        /**
+         * @brief Function for substitute
+         * if memory is empty, do nieco
+         */
         private void Mminus_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
@@ -528,11 +547,17 @@ namespace Kalkulacka
             erase = true;
         }
 
+        /**
+         * zero always at start
+         */
         public void ZeroClear()
         {
             textBox1.Text = "0";
         }
 
+        /**
+         * neviem
+         */
         public void Clear()
         {
             textBox1.Text = "";
