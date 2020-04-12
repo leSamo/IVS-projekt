@@ -1,4 +1,4 @@
-﻿/**
+/**
 * @file
 */
 
@@ -97,11 +97,7 @@ namespace Kalkulacka
                 shiftClicked = true;
             }
         }
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 77f3a30bf4a835e790f07b161843d0cfd82a96d0
         /**
          * @brief Function of switching off the application
          * @return close of calculator
