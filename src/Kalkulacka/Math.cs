@@ -1,4 +1,4 @@
-﻿/**
+/**
 * @file
 */
 
@@ -13,10 +13,8 @@ namespace MathComponentsNS
 
         (bool, decimal) error = (true, 0);
 
-#pragma warning disable CS1717 // Assignment made to same variable
-        static decimal PI = PI;
-        static decimal E = E;
-#pragma warning restore CS1717
+        public (bool, decimal) constPI = (false, (decimal)Math.PI);
+        public (bool, decimal) constE = (false, (decimal)Math.E);
 
         /**
          * @return error/scientific notation if more than 9 whole places (?)

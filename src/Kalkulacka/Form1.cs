@@ -393,7 +393,7 @@ namespace Kalkulacka
                     checkNeeded = true;
                     break;
                 case "pi":
-                    //TODO (no access to PI)
+                    // result = newMath.constPI;
                     break;
                 case "log":
                     result = newMath.Logarithm(10, input);
@@ -435,7 +435,7 @@ namespace Kalkulacka
                     checkNeeded = true;
                     break;
                 case "euler":
-                    //TODO
+                    //result = newMath.constE;
                     break;
             }
             if (instantOp != "del" && firstNum != 0)
