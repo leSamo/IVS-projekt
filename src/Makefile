@@ -1,23 +1,34 @@
-# Makefile for: IVS projekt 2 - KalkulaËka - tÌm Orient Express - 2019/20
+# Makefile for: IVS projekt 2 - Kalkulaƒçka - t√≠m Orient Express - 2019/20
 # 2020-04-08
 
 
+CWD=$(shell cd)\..
+Visual_Stuio_dir="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild"
+tmp_name=xoleks00_xfindr00_xkromp00_xkruzi04
+zip_name=xoleks00_xfindr00_xkromp00_xkruzi04.zip
 
-
-# (spustÌ progam)
+# (spust√≠ progam)
 all: 
+	cd $(Visual_Stuio_dir) & Current\Bin\MSBuild.exe "$(CWD)\src\Kalkulacka\Kalkulacka.sln" /t:Build & $(CWD)\Kalkulacka\obj\Debug\Kalkulacka.exe
 
-# (zabalÌ projekt tak, aby mohl b˝t odevzd·n)
-pack: 
+# (zabal√≠ projekt tak, aby mohl b√Ωt odevzd√°n)
+pack: 	
+	cd .. & cd .. & if exist "$(tmp_name)" rmdir "$(tmp_name)" /s /q
+	cd .. & cd .. & mkdir $(tmp_name) & cd $(tmp_name) & mkdir repo & mkdir doc & mkdir install
+	cd .. & cd .. & xcopy /s IVS-projekt xoleks00_xfindr00_xkromp00_xkruzi04\repo 
 
-# (smaûe vöechny soubory, co nemajÌ b˝t odevzd·ny)
+	
+#powershell Compress-Archive -Path C:\Users\Admin\Documents\IVS\IVS-projekt\xoleks00_xfindr00_xkromp00_xkruzi04 -DestinationPath C:\Users\Admin\Documents\IVS\IVS-projekt\ahoj.zip
+# (sma≈æe v≈°echny soubory, co nemaj√≠ b√Ωt odevzd√°ny)
 clean: 
 
-# (spustÌ program)
+# (spust√≠ program)
 run: 
+	cd $(Visual_Stuio_dir) & Current\Bin\MSBuild.exe "$(CWD)\src\Kalkulacka\Kalkulacka.sln" /t:Build & $(CWD)\src\Kalkulacka\obj\Debug\Kalkulacka.exe
 
-# (spustÌ program pro v˝poËet smÏrodatnÈ odchylky s uk·zkov˝m testovacÌm vstupem)
+# (spust√≠ program pro v√Ωpoƒçet smƒõrodatn√© odchylky s uk√°zkov√Ωm testovac√≠m vstupem)
 profile: 
+	cd $(CWD) & Profiling\bin\Release\Profiling.exe < data.txt
 
-# (vypÌöe n·povÏdu s popisem, co je pot¯eba udÏlat p¯ed spuötÏnÌm programu)
+# (vyp√≠≈°e n√°povƒõdu s popisem, co je pot≈ôeba udƒõlat p≈ôed spu≈°tƒõn√≠m programu)
 help: 
