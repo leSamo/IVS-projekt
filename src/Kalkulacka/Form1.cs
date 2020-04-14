@@ -108,7 +108,7 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for cliked number
+         * @brief Function for clicked number
          * chcecking length
          * @return number in TextBox
          */
@@ -211,7 +211,7 @@ namespace Kalkulacka
         }
 
         /**
-         * uprav popis, lebo nemam ani sajny
+         * Function to check if there is enough space in textbox for writing pressed key (WIP)
          */
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
