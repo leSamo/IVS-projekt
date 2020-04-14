@@ -211,7 +211,7 @@ namespace Kalkulacka
         }
 
         /**
-         * Function to check if there is enough space in textbox for writing pressed key (WIP)
+         * @brief Function to check if there is enough space in textbox for writing pressed key (WIP)
          */
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -332,7 +332,9 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for resolving buttons, that should work and count instantly (basically unary operations and binary operations with known constant)
+         * @brief Function for resolving buttons
+         * should work and count instantly 
+         * basically unary operations and binary operations with known constant
          */
         private void InstantOp_Click(object sender, EventArgs e)
         {
@@ -518,7 +520,7 @@ namespace Kalkulacka
         }
 
         /**
-         * Function for recalling memory
+         * @brief Function for recalling memory
          */
         private void MRC_Click(object sender, EventArgs e)
         {
@@ -548,7 +550,7 @@ namespace Kalkulacka
         }
 
         /**
-         * Function for clearing textbox to zero-state
+         * @brief Function for clearing textbox to zero-state
          */
         public void ZeroClear()
         {
@@ -556,7 +558,7 @@ namespace Kalkulacka
         }
 
         /**
-         * Fuction for clearing textbox to NULL-state
+         * @brief Fuction for clearing textbox to NULL-state
          */
         public void Clear()
         {
