@@ -302,7 +302,7 @@ namespace Kalkulacka
             }
             else
             {
-                textBox1.Text = result.Item2.ToString();
+                textBox1.Text = result.Item2.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
                 firstNum = ans = result.Item2;
                 erase = true;
 
@@ -310,7 +310,7 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for  setting the right operation
+         * @brief Function for setting the right operation
          * save input
          * erase textbox
          */
@@ -393,7 +393,8 @@ namespace Kalkulacka
                     checkNeeded = true;
                     break;
                 case "pi":
-                    textBox1.Text = newMath.TruncateToFit(newMath.constPI).Item2.ToString();
+                    result = newMath.TruncateToFit(newMath.constPI);
+                    checkNeeded = true;
                     break;
                 case "log":
                     result = newMath.Logarithm(10, input);
