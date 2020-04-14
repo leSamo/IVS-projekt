@@ -332,7 +332,7 @@ namespace Kalkulacka
         }
 
         /**
-         * nemam šajnu
+         * @brief Function for resolving buttons, that should work and count instantly (basically unary operations and binary operations with known constant)
          */
         private void InstantOp_Click(object sender, EventArgs e)
         {
@@ -341,11 +341,11 @@ namespace Kalkulacka
             (bool, decimal) result = (true, 0);
             bool checkNeeded = false;
             bool parseCheck = decimal.TryParse(textBox1.Text, out decimal input);
-            if (erase)
+            /*if (erase)
             {
                 ZeroClear();
                 erase = false;
-            }
+            }*/
 
             switch (instantOp)
             {
@@ -393,7 +393,7 @@ namespace Kalkulacka
                     checkNeeded = true;
                     break;
                 case "pi":
-                    // result = newMath.constPI;
+                    textBox1.Text = newMath.TruncateToFit(newMath.constPI).Item2.ToString();
                     break;
                 case "log":
                     result = newMath.Logarithm(10, input);
@@ -408,7 +408,8 @@ namespace Kalkulacka
                     checkNeeded = true;
                     break;
                 case "ln":
-                    //TODO (no access to e)
+                    result = newMath.Logarithm(newMath.constE.Item2, input);
+                    checkNeeded = true;
                     break;
                 case "arcsin":
                     result = newMath.Arcsin(input);
@@ -435,12 +436,14 @@ namespace Kalkulacka
                     checkNeeded = true;
                     break;
                 case "euler":
-                    //result = newMath.constE;
+                    result = newMath.Exponentiate(newMath.constE.Item2, input);
+                    checkNeeded = true;
                     break;
             }
             if (instantOp != "del" && firstNum != 0)
             {
                 erase = true;
+                firstNum = 0;
             }
             if (checkNeeded)
             {
@@ -449,7 +452,7 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for ????
+         * @brief Function for calculating binary operations
          */
         public (bool, decimal) Calculate()
         {
@@ -478,7 +481,7 @@ namespace Kalkulacka
                     result = newMath.Exponentiate(firstNum, secondNum);
                     break;
                 case "multiplication10":
-                    //TODO (missing function in lib for easy solve)
+                    result = newMath.Multiply(firstNum, newMath.Exponentiate(10, secondNum).Item2);
                     break;
                 case "logDec":
                     result = newMath.Logarithm(secondNum, firstNum);
@@ -493,8 +496,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for addition
-         * if memory is empty do nieco
+         * @brief Function for addition to memory
+         * Memory icon control
          */
         private void Mplus_Click(object sender, EventArgs e)
         {
@@ -514,7 +517,7 @@ namespace Kalkulacka
         }
 
         /**
-         * Function for saving to memory
+         * Function for recalling memory
          */
         private void MRC_Click(object sender, EventArgs e)
         {
@@ -523,8 +526,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for substitute
-         * if memory is empty, do nieco
+         * @brief Function for substracting from memory
+         * Memory icon control
          */
         private void Mminus_Click(object sender, EventArgs e)
         {
@@ -544,7 +547,7 @@ namespace Kalkulacka
         }
 
         /**
-         * zero always at start
+         * Function for clearing textbox to zero-state
          */
         public void ZeroClear()
         {
@@ -552,7 +555,7 @@ namespace Kalkulacka
         }
 
         /**
-         * neviem
+         * Fuction for clearing textbox to NULL-state
          */
         public void Clear()
         {
