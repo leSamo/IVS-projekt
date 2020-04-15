@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['calculate_148',['Calculate',['../class_kalkulacka_1_1_form1.html#a76cbd1a2f68a7a6318e6dae219f7e3d1',1,'Kalkulacka::Form1']]],
-  ['clear_149',['Clear',['../class_kalkulacka_1_1_form1.html#ae08f84579a3261d9377e4ebdaa2e3581',1,'Kalkulacka::Form1']]],
-  ['cos_150',['Cos',['../class_math_components_n_s_1_1_math_components.html#a0d281f65666964a777eee4c4ba355e85',1,'MathComponentsNS.MathComponents.Cos(decimal a)'],['../class_math_components_n_s_1_1_math_components.html#a0d281f65666964a777eee4c4ba355e85',1,'MathComponentsNS.MathComponents.Cos(decimal a)']]]
+  ['decpoint_5fclick_44',['decPoint_Click',['../class_kalkulacka_1_1_form1.html#a9342c735a0cf68253caa62a6b20c74c1',1,'Kalkulacka::Form1']]],
+  ['dispose_45',['Dispose',['../class_kalkulacka_1_1_form1.html#a105977692e6e1327f7d713c9efb02be4',1,'Kalkulacka::Form1']]]
 ];

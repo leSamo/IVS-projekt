@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['kalkulacka_130',['Kalkulacka',['../namespace_kalkulacka.html',1,'']]],
-  ['properties_131',['Properties',['../namespace_kalkulacka_1_1_properties.html',1,'Kalkulacka']]]
+  ['kalkulacka_36',['Kalkulacka',['../namespace_kalkulacka.html',1,'']]],
+  ['properties_37',['Properties',['../namespace_kalkulacka_1_1_properties.html',1,'Kalkulacka']]]
 ];
