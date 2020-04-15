@@ -302,12 +302,18 @@ namespace Kalkulacka
         private void operation_Click(object sender, EventArgs e)    //Určení stisknuté operace, uložení vstupu, vymazání textboxu
         {
             bool convValid;
+            bool opChange = false;
             Button button = (Button)sender;
+            if (operationPerformed != button.Name)
+            {
+                opChange = true;
+            }
             operationPerformed = button.Name;
-            if (textBox1.Text != "" && firstNum == 0)
+            if ((textBox1.Text != "" && firstNum == 0) || opChange)
             { 
                 convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out firstNum);
                 erase = true;
+                opChange = false;
             }
             else if (textBox1.Text != "" && firstNum != 0)
             {
