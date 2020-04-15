@@ -305,8 +305,8 @@ namespace Kalkulacka
             Button button = (Button)sender;
             operationPerformed = button.Name;
             if (textBox1.Text != "" && firstNum == 0)
-            {
-                convValid = decimal.TryParse(textBox1.Text, out firstNum);
+            { 
+                convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out firstNum);
                 erase = true;
             }
             else if (textBox1.Text != "" && firstNum != 0)
@@ -361,6 +361,11 @@ namespace Kalkulacka
                         Valid_Chk(Calculate());
                         repeatEq = true;
                     }
+                    else if (repeatEq)
+                    {
+                        parseCheck = decimal.TryParse(textBox1.Text.Replace(',', '.'), out firstNum);
+                        Valid_Chk(Calculate());
+                    }
                     break;
                 case "sin":
                     result = newMath.Sin(input);
@@ -379,8 +384,7 @@ namespace Kalkulacka
                     checkNeeded = true;
                     break;
                 case "pi":
-                    result = newMath.TruncateToFit(newMath.constPI);
-                    checkNeeded = true;
+                    textBox1.Text = newMath.TruncateToFit(newMath.constPI).Item2.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
                     break;
                 case "log":
                     result = newMath.Logarithm(10, input);
@@ -448,7 +452,7 @@ namespace Kalkulacka
             (bool, decimal) result = (true, 0);
             if (!repeatEq)
             {
-                convValid = decimal.TryParse(textBox1.Text, out secondNum);
+                convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out secondNum);
             }
 
             switch (operationPerformed)
