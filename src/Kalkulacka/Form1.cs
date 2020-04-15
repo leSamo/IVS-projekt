@@ -1,5 +1,6 @@
 /**
-* @file
+* @file Form1.cs
+* @brief File responsible for handling calculator UI and integrating functions from math lib
 */
 
 using System;
@@ -23,23 +24,26 @@ namespace Kalkulacka
         bool repeatEq = false;
         //private object txt_Result;
 
-
         public Form1()
         {
             InitializeComponent();
         }
 
         /**
-         * @brief Function for memory
+         * @brief Init function for UI setup
          */
-        private void funkciaNaVyuzitie ()
+        private void Form1_Load(object sender, EventArgs e)
         {
-            DisplayedM.ForeColor = Color.Black;
+            listPanel.Add(shiftUnclickedPanel);
+            listPanel.Add(shiftClickedPanel);
+            listPanel[0].BringToFront();
+            DisplayedM.Visible = false;
+            textBox1.SelectionStart = textBox1.Text.Length;
         }
 
         /**
-         * @brief Function chcecking length 
-         * @param[in] char d (clicked number or character)
+         * @brief Function checking length and appending char if possible
+         * @param[in] char d (character to be appended)
          */
         private void length (char d)
         {   
@@ -63,22 +67,9 @@ namespace Kalkulacka
             }
         }
 
-        /**
-         * @brief Panel function
-         * for extended functions of calculator
-         */
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            listPanel.Add(shiftUnclickedPanel);
-            listPanel.Add(shiftClickedPanel);
-            listPanel[0].BringToFront();
-            DisplayedM.Visible = false;
-            textBox1.SelectionStart = textBox1.Text.Length;
-        }
 
         /**
-         * @brief Function for switching panel
-         * after click on SHIFT the panel will change
+         * @brief Function for switching panel after click on SHIFT
          */
         private void shift_Click(object sender, EventArgs e)
         {
@@ -99,8 +90,7 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function of switching off the application
-         * @return close of calculator
+         * @brief Function for switching off the application
          */
         private void off_Click(object sender, EventArgs e)
         {
@@ -108,9 +98,7 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for clicked number
-         * chcecking length
-         * @return number in TextBox
+         * @brief Number button click handler
          */
         private void Number_click(object sender, EventArgs e)
         {
@@ -165,8 +153,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for Decimal point
-         * only one allowed
+         * @brief Decimal point button handler
+         * Only one decimal point allowed
          */
         private void decPoint_Click(object sender, EventArgs e)
         {
@@ -192,8 +180,7 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for negative numbers if text box contains only zero
-         * @brief Function for subctraction of numbers
+         * @brief Minus sign click handler
          */
         private void subtraction_Click(object sender, EventArgs e)
         {
@@ -290,10 +277,10 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for checking successful result
-         * @return result if everything is good
+         * @brief Function for checking validity of result
+         * Sets text box to result if all correct or error
          */
-        public void Valid_Chk((bool, decimal) result)                //Funkce pro kontrolu úspěšného dokončení výpočtu a případného vypsání výsledku
+        public void Valid_Chk((bool, decimal) result)
         {
             if (result.Item1)
             {
@@ -310,9 +297,7 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for setting the right operation
-         * save input
-         * erase textbox
+         * @brief Function for handling operation click
          */
         private void operation_Click(object sender, EventArgs e)    //Určení stisknuté operace, uložení vstupu, vymazání textboxu
         {
@@ -332,9 +317,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for resolving buttons
-         * should work and count instantly 
-         * basically unary operations and binary operations with known constant
+         * @brief Function for applying unary operations
+         * Integrated with math lib
          */
         private void InstantOp_Click(object sender, EventArgs e)
         {
@@ -455,7 +439,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for calculating binary operations
+         * @brief Function for applying unary operations
+         * Integrated with math lib
          */
         public (bool, decimal) Calculate()
         {
@@ -529,7 +514,7 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for substracting from memory
+         * @brief Function for subtracting memory
          * Memory icon control
          */
         private void Mminus_Click(object sender, EventArgs e)

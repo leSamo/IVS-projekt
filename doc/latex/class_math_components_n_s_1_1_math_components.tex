@@ -78,16 +78,9 @@ decimal \mbox{\hyperlink{class_math_components_n_s_1_1_math_components_abb753ac8
 \begin{DoxyCompactList}\small\item\em truncates result to fit calc screen if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max \end{DoxyCompactList}\item 
 decimal \mbox{\hyperlink{class_math_components_n_s_1_1_math_components_a5e086ec94994dc0afd129921b0307a83}{error}} = (true, 0)
 \item 
-decimal \mbox{\hyperlink{class_math_components_n_s_1_1_math_components_a39d337c2c5c1bdfc96a0756594d4dd95}{const\+PI}} = (false, (decimal)Math.\+PI)
+decimal \mbox{\hyperlink{class_math_components_n_s_1_1_math_components_aa75f73a243d56641cf01dbfe79157800}{const\+PI}} = (false, (decimal)Math.\+PI)
 \item 
-decimal \mbox{\hyperlink{class_math_components_n_s_1_1_math_components_adf31090e8396210d11e550ff4b4d9908}{constE}} = (false, (decimal)Math.\+E)
-\end{DoxyCompactItemize}
-\doxysubsection*{Static Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-static decimal \mbox{\hyperlink{class_math_components_n_s_1_1_math_components_acf960e30457d5ddf1cc6c965291976e3}{PI}} = PI
-\item 
-static decimal \mbox{\hyperlink{class_math_components_n_s_1_1_math_components_ab5fe1b4e77c04be1cd3944c111f90858}{E}} = E
+decimal \mbox{\hyperlink{class_math_components_n_s_1_1_math_components_ae8c70937e9c86e4e60f81d5575ca955c}{constE}} = (false, (decimal)Math.\+E)
 \end{DoxyCompactItemize}
 
 
@@ -478,159 +471,25 @@ error if a has decimal point
 \begin{DoxyReturn}{Returns}
 error if a is negative integer 
 
-error if a has decimal point
+error if a has decimal point 
 \end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a \\
-\hline
-\mbox{\texttt{ in}}  & {\em decimal} & b \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-result of a -\/ b
-\end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a \\
-\hline
-\mbox{\texttt{ in}}  & {\em decimal} & b \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-result of a $\ast$ b
-\end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a \\
-\hline
-\mbox{\texttt{ in}}  & {\em decimal} & b \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-result of a / b 
-
-error if division by zero
-\end{DoxyReturn}
-i non-\/integer exponent or base expect error (?) 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a \\
-\hline
-\mbox{\texttt{ in}}  & {\em decimal} & b \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-result of a$^\wedge$b 
-
-error if 0$^\wedge$0
-\end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & d \\
-\hline
-\mbox{\texttt{ in}}  & {\em decimal} & radicant r \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-ath root of b 
-
-error if negative radicant
-\end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a \\
-\hline
-\mbox{\texttt{ in}}  & {\em decimal} & b \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-log of a with base of b
-\end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-result with 5 decimal places precision (?)
-\end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a tan x = sin x / cos x \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-result with 5 decimal places precision (?)
-\end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-result with 5 decimal places precision (?) expect value between -\/pi/2 and pi/2
-\end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-result with 5 decimal places precision (?) expect value between -\/1 and 1
-\end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a expect number non-\/negative integer not greater than 12 \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-error if a is negative integer 
-
-error if a is greater than 12 
-
-error if a has decimal point
-\end{DoxyReturn}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & a expect number non-\/negative integer \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-error if a is negative integer 
-
-error if a has decimal point
-
-result with 5 decimal places precision (?) 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_math_components_n_s_1_1_math_components_adf31090e8396210d11e550ff4b4d9908}\label{class_math_components_n_s_1_1_math_components_adf31090e8396210d11e550ff4b4d9908}} 
+\mbox{\Hypertarget{class_math_components_n_s_1_1_math_components_ae8c70937e9c86e4e60f81d5575ca955c}\label{class_math_components_n_s_1_1_math_components_ae8c70937e9c86e4e60f81d5575ca955c}} 
 \index{MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}!constE@{constE}}
 \index{constE@{constE}!MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}}
 \doxysubsubsection{\texorpdfstring{constE}{constE}}
 {\footnotesize\ttfamily decimal Math\+Components\+N\+S.\+Math\+Components.\+constE = (false, (decimal)Math.\+E)\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_math_components_n_s_1_1_math_components_a39d337c2c5c1bdfc96a0756594d4dd95}\label{class_math_components_n_s_1_1_math_components_a39d337c2c5c1bdfc96a0756594d4dd95}} 
+\mbox{\Hypertarget{class_math_components_n_s_1_1_math_components_aa75f73a243d56641cf01dbfe79157800}\label{class_math_components_n_s_1_1_math_components_aa75f73a243d56641cf01dbfe79157800}} 
 \index{MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}!constPI@{constPI}}
 \index{constPI@{constPI}!MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}}
 \doxysubsubsection{\texorpdfstring{constPI}{constPI}}
 {\footnotesize\ttfamily decimal Math\+Components\+N\+S.\+Math\+Components.\+const\+PI = (false, (decimal)Math.\+PI)\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_math_components_n_s_1_1_math_components_ab5fe1b4e77c04be1cd3944c111f90858}\label{class_math_components_n_s_1_1_math_components_ab5fe1b4e77c04be1cd3944c111f90858}} 
-\index{MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}!E@{E}}
-\index{E@{E}!MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}}
-\doxysubsubsection{\texorpdfstring{E}{E}}
-{\footnotesize\ttfamily decimal Math\+Components\+N\+S.\+Math\+Components.\+E = E\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_math_components_n_s_1_1_math_components_a5e086ec94994dc0afd129921b0307a83}\label{class_math_components_n_s_1_1_math_components_a5e086ec94994dc0afd129921b0307a83}} 
 \index{MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}!error@{error}}
 \index{error@{error}!MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}}
 \doxysubsubsection{\texorpdfstring{error}{error}}
 {\footnotesize\ttfamily decimal Math\+Components\+N\+S.\+Math\+Components.\+error = (true, 0)\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_math_components_n_s_1_1_math_components_acf960e30457d5ddf1cc6c965291976e3}\label{class_math_components_n_s_1_1_math_components_acf960e30457d5ddf1cc6c965291976e3}} 
-\index{MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}!PI@{PI}}
-\index{PI@{PI}!MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}}
-\doxysubsubsection{\texorpdfstring{PI}{PI}}
-{\footnotesize\ttfamily decimal Math\+Components\+N\+S.\+Math\+Components.\+PI = PI\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 

@@ -1,5 +1,8 @@
 /**
-* @file
+* @file Math.cs
+* @brief File responsible for implementing math operations and constants
+* all functions return (bool, decimal) tuple where first operand is set to true if there 
+* is an error (e.g. out of bounds, division by zero), second is result
 */
 
 using System;
@@ -8,8 +11,7 @@ namespace MathComponentsNS
 {
     public class MathComponents
     {
-        // all functions return (bool, decimal) tuple where first operand is set to true when there 
-        // is an error (e.g. out of bounds, division by zero), second is result
+
 
         (bool, decimal) error = (true, 0);
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resources_2edesigner_2ecs_149',['Resources.Designer.cs',['../_resources_8_designer_8cs.html',1,'']]]
+  ['settings_2edesigner_2ecs_143',['Settings.Designer.cs',['../_settings_8_designer_8cs.html',1,'']]]
 ];

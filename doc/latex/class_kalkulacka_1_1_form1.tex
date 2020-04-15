@@ -12,7 +12,7 @@ Inheritance diagram for Kalkulacka.\+Form1\+:\begin{figure}[H]
 \mbox{\hyperlink{class_kalkulacka_1_1_form1_aa412bcd0a5f9a1fc4822e563800e65b1}{Form1}} ()
 \item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_ae214e46c363b7455cacf8eda0b3e2582}{Valid\+\_\+\+Chk}} ((\mbox{\hyperlink{class_kalkulacka_1_1_form1_a478cb79a61c022080b2629fba29abd9d}{bool}}, decimal) result)
-\begin{DoxyCompactList}\small\item\em Function for checking successful result. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function for checking validity of result Sets text box to result if all correct or error. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a89166e36a883af21390ab60d3d6ebaa8}{Zero\+Clear}} ()
 \begin{DoxyCompactList}\small\item\em Function for clearing textbox to zero-\/state. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_ae08f84579a3261d9377e4ebdaa2e3581}{Clear}} ()
@@ -21,7 +21,7 @@ void \mbox{\hyperlink{class_kalkulacka_1_1_form1_ae08f84579a3261d9377e4ebdaa2e35
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_kalkulacka_1_1_form1_a478cb79a61c022080b2629fba29abd9d}{bool}}
-\begin{DoxyCompactList}\small\item\em Function for calculating binary operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function for applying unary operations Integrated with math lib. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,28 +30,26 @@ override void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a105977692e6e1327f7d71
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_kalkulacka_1_1_form1_aea236af788f28303f50329e9a33ca7fd}{funkcia\+Na\+Vyuzitie}} ()
-\begin{DoxyCompactList}\small\item\em Function for memory. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a163e867a3bb4bf245a9829e19aaea288}{length}} (char d)
-\begin{DoxyCompactList}\small\item\em Function chcecking length. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_aeced8a2a65461ea555f04156eba310c8}{Form1\+\_\+\+Load}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Panel function for extended functions of calculator. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Init function for UI setup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a163e867a3bb4bf245a9829e19aaea288}{length}} (char d)
+\begin{DoxyCompactList}\small\item\em Function checking length and appending char if possible. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a2d74bd3dc9136aeab3a970feaac95469}{shift\+\_\+\+Click}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Function for switching panel after click on S\+H\+I\+FT the panel will change. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function for switching panel after click on S\+H\+I\+FT. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_aab0fdc68d8d0ab377319c03e2e39dce6}{off\+\_\+\+Click}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Function of switching off the application. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function for switching off the application. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a9c294d4fcbebeb69f33cfd2ef5416b52}{Number\+\_\+click}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Function for clicked number chcecking length. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Number button click handler. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a9342c735a0cf68253caa62a6b20c74c1}{dec\+Point\+\_\+\+Click}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Function for Decimal point only one allowed. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Decimal point button handler Only one decimal point allowed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a5e395a0291fa222503e066f758e1380c}{subtraction\+\_\+\+Click}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Function for negative numbers if text box contains only zero. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Minus sign click handler. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_aa877d5f7232f16f047a996284acaecbb}{text\+Box1\+\_\+\+Key\+Press}} (object sender, Key\+Press\+Event\+Args e)
 \begin{DoxyCompactList}\small\item\em Function to check if there is enough space in textbox for writing pressed key (W\+IP) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a5b5380c82615c616a6e903034b5acf5c}{operation\+\_\+\+Click}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Function for setting the right operation save input erase textbox. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function for handling operation click. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a2f41523aa61ff329fc5c62d34a446cd0}{Instant\+Op\+\_\+\+Click}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Function for resolving buttons should work and count instantly basically unary operations and binary operations with known constant. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function for applying unary operations Integrated with math lib. \end{DoxyCompactList}\item 
 decimal \mbox{\hyperlink{class_kalkulacka_1_1_form1_a76cbd1a2f68a7a6318e6dae219f7e3d1}{Calculate}} ()
 \item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_ac1b0b9921228e73cc9da3d6f8958ba1d}{Mplus\+\_\+\+Click}} (object sender, Event\+Args e)
@@ -59,7 +57,7 @@ void \mbox{\hyperlink{class_kalkulacka_1_1_form1_ac1b0b9921228e73cc9da3d6f8958ba
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a291598d9a9e6afc3dd38c9e58bcf80b6}{M\+R\+C\+\_\+\+Click}} (object sender, Event\+Args e)
 \begin{DoxyCompactList}\small\item\em Function for recalling memory. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_a53820709941b321ccdb67597f4bac8d3}{Mminus\+\_\+\+Click}} (object sender, Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Function for substracting from memory Memory icon control. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function for subtracting memory Memory icon control. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kalkulacka_1_1_form1_ab2c35bd44bcbb4ab1d0c82b1d9573af3}{Initialize\+Component}} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
@@ -221,7 +219,7 @@ Fuction for clearing textbox to N\+U\+L\+L-\/state.
 
 
 
-Function for Decimal point only one allowed. 
+Decimal point button handler Only one decimal point allowed. 
 
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_a105977692e6e1327f7d713c9efb02be4}\label{class_kalkulacka_1_1_form1_a105977692e6e1327f7d713c9efb02be4}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!Dispose@{Dispose}}
@@ -246,17 +244,7 @@ Clean up any resources being used.
 
 
 
-Panel function for extended functions of calculator. 
-
-\mbox{\Hypertarget{class_kalkulacka_1_1_form1_aea236af788f28303f50329e9a33ca7fd}\label{class_kalkulacka_1_1_form1_aea236af788f28303f50329e9a33ca7fd}} 
-\index{Kalkulacka.Form1@{Kalkulacka.Form1}!funkciaNaVyuzitie@{funkciaNaVyuzitie}}
-\index{funkciaNaVyuzitie@{funkciaNaVyuzitie}!Kalkulacka.Form1@{Kalkulacka.Form1}}
-\doxysubsubsection{\texorpdfstring{funkciaNaVyuzitie()}{funkciaNaVyuzitie()}}
-{\footnotesize\ttfamily void Kalkulacka.\+Form1.\+funkcia\+Na\+Vyuzitie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
-
-
-
-Function for memory. 
+Init function for UI setup. 
 
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_ab2c35bd44bcbb4ab1d0c82b1d9573af3}\label{class_kalkulacka_1_1_form1_ab2c35bd44bcbb4ab1d0c82b1d9573af3}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!InitializeComponent@{InitializeComponent}}
@@ -276,7 +264,7 @@ Required method for Designer support -\/ do not modify the contents of this meth
 
 
 
-Function for resolving buttons should work and count instantly basically unary operations and binary operations with known constant. 
+Function for applying unary operations Integrated with math lib. 
 
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_a163e867a3bb4bf245a9829e19aaea288}\label{class_kalkulacka_1_1_form1_a163e867a3bb4bf245a9829e19aaea288}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!length@{length}}
@@ -286,11 +274,11 @@ Function for resolving buttons should work and count instantly basically unary o
 
 
 
-Function chcecking length. 
+Function checking length and appending char if possible. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em char} & d (clicked number or character) \\
+\mbox{\texttt{ in}}  & {\em char} & d (character to be appended) \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_a53820709941b321ccdb67597f4bac8d3}\label{class_kalkulacka_1_1_form1_a53820709941b321ccdb67597f4bac8d3}} 
@@ -301,7 +289,7 @@ Function chcecking length.
 
 
 
-Function for substracting from memory Memory icon control. 
+Function for subtracting memory Memory icon control. 
 
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_ac1b0b9921228e73cc9da3d6f8958ba1d}\label{class_kalkulacka_1_1_form1_ac1b0b9921228e73cc9da3d6f8958ba1d}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!Mplus\_Click@{Mplus\_Click}}
@@ -331,11 +319,8 @@ Function for recalling memory.
 
 
 
-Function for clicked number chcecking length. 
+Number button click handler. 
 
-\begin{DoxyReturn}{Returns}
-number in Text\+Box 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_aab0fdc68d8d0ab377319c03e2e39dce6}\label{class_kalkulacka_1_1_form1_aab0fdc68d8d0ab377319c03e2e39dce6}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!off\_Click@{off\_Click}}
 \index{off\_Click@{off\_Click}!Kalkulacka.Form1@{Kalkulacka.Form1}}
@@ -344,11 +329,8 @@ number in Text\+Box
 
 
 
-Function of switching off the application. 
+Function for switching off the application. 
 
-\begin{DoxyReturn}{Returns}
-close of calculator 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_a5b5380c82615c616a6e903034b5acf5c}\label{class_kalkulacka_1_1_form1_a5b5380c82615c616a6e903034b5acf5c}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!operation\_Click@{operation\_Click}}
 \index{operation\_Click@{operation\_Click}!Kalkulacka.Form1@{Kalkulacka.Form1}}
@@ -357,7 +339,7 @@ close of calculator
 
 
 
-Function for setting the right operation save input erase textbox. 
+Function for handling operation click. 
 
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_a2d74bd3dc9136aeab3a970feaac95469}\label{class_kalkulacka_1_1_form1_a2d74bd3dc9136aeab3a970feaac95469}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!shift\_Click@{shift\_Click}}
@@ -367,7 +349,7 @@ Function for setting the right operation save input erase textbox.
 
 
 
-Function for switching panel after click on S\+H\+I\+FT the panel will change. 
+Function for switching panel after click on S\+H\+I\+FT. 
 
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_a5e395a0291fa222503e066f758e1380c}\label{class_kalkulacka_1_1_form1_a5e395a0291fa222503e066f758e1380c}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!subtraction\_Click@{subtraction\_Click}}
@@ -377,9 +359,9 @@ Function for switching panel after click on S\+H\+I\+FT the panel will change.
 
 
 
-Function for negative numbers if text box contains only zero. 
+Minus sign click handler. 
 
-Function for subctraction of numbers \mbox{\Hypertarget{class_kalkulacka_1_1_form1_aa877d5f7232f16f047a996284acaecbb}\label{class_kalkulacka_1_1_form1_aa877d5f7232f16f047a996284acaecbb}} 
+\mbox{\Hypertarget{class_kalkulacka_1_1_form1_aa877d5f7232f16f047a996284acaecbb}\label{class_kalkulacka_1_1_form1_aa877d5f7232f16f047a996284acaecbb}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!textBox1\_KeyPress@{textBox1\_KeyPress}}
 \index{textBox1\_KeyPress@{textBox1\_KeyPress}!Kalkulacka.Form1@{Kalkulacka.Form1}}
 \doxysubsubsection{\texorpdfstring{textBox1\_KeyPress()}{textBox1\_KeyPress()}}
@@ -397,11 +379,8 @@ Function to check if there is enough space in textbox for writing pressed key (W
 
 
 
-Function for checking successful result. 
+Function for checking validity of result Sets text box to result if all correct or error. 
 
-\begin{DoxyReturn}{Returns}
-result if everything is good 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_a89166e36a883af21390ab60d3d6ebaa8}\label{class_kalkulacka_1_1_form1_a89166e36a883af21390ab60d3d6ebaa8}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!ZeroClear@{ZeroClear}}
 \index{ZeroClear@{ZeroClear}!Kalkulacka.Form1@{Kalkulacka.Form1}}
@@ -465,7 +444,7 @@ Function for clearing textbox to zero-\/state.
 
 
 
-Function for calculating binary operations. 
+Function for applying unary operations Integrated with math lib. 
 
 \mbox{\Hypertarget{class_kalkulacka_1_1_form1_a200a6780c51a093ca8f77a117af452af}\label{class_kalkulacka_1_1_form1_a200a6780c51a093ca8f77a117af452af}} 
 \index{Kalkulacka.Form1@{Kalkulacka.Form1}!components@{components}}
