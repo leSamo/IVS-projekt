@@ -63,9 +63,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _10 {
+        internal static System.Drawing.Bitmap acos {
             get {
-                object obj = ResourceManager.GetObject("10", resourceCulture);
+                object obj = ResourceManager.GetObject("acos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,19 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arccos {
+        internal static System.Drawing.Bitmap asin {
             get {
-                object obj = ResourceManager.GetObject("arccos", resourceCulture);
+                object obj = ResourceManager.GetObject("asin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap atan {
+            get {
+                object obj = ResourceManager.GetObject("atan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +103,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cosinus {
+        internal static System.Drawing.Bitmap cubeRoot {
             get {
-                object obj = ResourceManager.GetObject("cosinus", resourceCulture);
+                object obj = ResourceManager.GetObject("cubeRoot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +113,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cosinus1 {
+        internal static System.Drawing.Bitmap decLog {
             get {
-                object obj = ResourceManager.GetObject("cosinus1", resourceCulture);
+                object obj = ResourceManager.GetObject("decLog", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +123,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cosinus11 {
+        internal static System.Drawing.Bitmap ePow {
             get {
-                object obj = ResourceManager.GetObject("cosinus11", resourceCulture);
+                object obj = ResourceManager.GetObject("ePow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +133,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cosinus2 {
+        internal static System.Drawing.Bitmap genLog {
             get {
-                object obj = ResourceManager.GetObject("cosinus2", resourceCulture);
+                object obj = ResourceManager.GetObject("genLog", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +143,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap e {
+        internal static System.Drawing.Bitmap genRoot {
             get {
-                object obj = ResourceManager.GetObject("e", resourceCulture);
+                object obj = ResourceManager.GetObject("genRoot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,199 +153,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap e1 {
+        internal static System.Drawing.Bitmap mag {
             get {
-                object obj = ResourceManager.GetObject("e1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ee {
-            get {
-                object obj = ResourceManager.GetObject("ee", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap krat {
-            get {
-                object obj = ResourceManager.GetObject("krat", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap krat1 {
-            get {
-                object obj = ResourceManager.GetObject("krat1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap krat2 {
-            get {
-                object obj = ResourceManager.GetObject("krat2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap krat3 {
-            get {
-                object obj = ResourceManager.GetObject("krat3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap krat4 {
-            get {
-                object obj = ResourceManager.GetObject("krat4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap krat5 {
-            get {
-                object obj = ResourceManager.GetObject("krat5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap kratt {
-            get {
-                object obj = ResourceManager.GetObject("kratt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap kratttttt {
-            get {
-                object obj = ResourceManager.GetObject("kratttttt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap log {
-            get {
-                object obj = ResourceManager.GetObject("log", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logg {
-            get {
-                object obj = ResourceManager.GetObject("logg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap loggg {
-            get {
-                object obj = ResourceManager.GetObject("loggg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap odmnina {
-            get {
-                object obj = ResourceManager.GetObject("odmnina", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap odmnina2 {
-            get {
-                object obj = ResourceManager.GetObject("odmnina2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap odmnina3 {
-            get {
-                object obj = ResourceManager.GetObject("odmnina3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap odmoc {
-            get {
-                object obj = ResourceManager.GetObject("odmoc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap odmoc1 {
-            get {
-                object obj = ResourceManager.GetObject("odmoc1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap odmoc2 {
-            get {
-                object obj = ResourceManager.GetObject("odmoc2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap odmoc3 {
-            get {
-                object obj = ResourceManager.GetObject("odmoc3", resourceCulture);
+                object obj = ResourceManager.GetObject("mag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,69 +173,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pi1 {
-            get {
-                object obj = ResourceManager.GetObject("pi1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pi2 {
-            get {
-                object obj = ResourceManager.GetObject("pi2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap pi3 {
             get {
                 object obj = ResourceManager.GetObject("pi3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap plus {
-            get {
-                object obj = ResourceManager.GetObject("plus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pluss {
-            get {
-                object obj = ResourceManager.GetObject("pluss", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap plusss {
-            get {
-                object obj = ResourceManager.GetObject("plusss", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap plusssssssssssss {
-            get {
-                object obj = ResourceManager.GetObject("plusssssssssssss", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,49 +193,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sin1 {
+        internal static System.Drawing.Bitmap squareRoot {
             get {
-                object obj = ResourceManager.GetObject("sin1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sin11 {
-            get {
-                object obj = ResourceManager.GetObject("sin11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sinus {
-            get {
-                object obj = ResourceManager.GetObject("sinus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sinuss {
-            get {
-                object obj = ResourceManager.GetObject("sinuss", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sinuss1 {
-            get {
-                object obj = ResourceManager.GetObject("sinuss1", resourceCulture);
+                object obj = ResourceManager.GetObject("squareRoot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,9 +213,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tan1 {
+        internal static System.Drawing.Bitmap xCubed {
             get {
-                object obj = ResourceManager.GetObject("tan1", resourceCulture);
+                object obj = ResourceManager.GetObject("xCubed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -503,9 +223,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tlacidlo_tuk {
+        internal static System.Drawing.Bitmap xFact {
             get {
-                object obj = ResourceManager.GetObject("tlacidlo_tuk", resourceCulture);
+                object obj = ResourceManager.GetObject("xFact", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -513,9 +233,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tlacidlo_ukaz {
+        internal static System.Drawing.Bitmap xInv {
             get {
-                object obj = ResourceManager.GetObject("tlacidlo_ukaz", resourceCulture);
+                object obj = ResourceManager.GetObject("xInv", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -523,9 +243,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tlacidlook {
+        internal static System.Drawing.Bitmap xPow {
             get {
-                object obj = ResourceManager.GetObject("tlacidlook", resourceCulture);
+                object obj = ResourceManager.GetObject("xPow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -533,89 +253,9 @@ namespace Kalkulacka.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap x {
+        internal static System.Drawing.Bitmap xSquared {
             get {
-                object obj = ResourceManager.GetObject("x", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap x1 {
-            get {
-                object obj = ResourceManager.GetObject("x1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap x2 {
-            get {
-                object obj = ResourceManager.GetObject("x2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap x21 {
-            get {
-                object obj = ResourceManager.GetObject("x21", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap x22 {
-            get {
-                object obj = ResourceManager.GetObject("x22", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap x3 {
-            get {
-                object obj = ResourceManager.GetObject("x3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap x31 {
-            get {
-                object obj = ResourceManager.GetObject("x31", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap xvy {
-            get {
-                object obj = ResourceManager.GetObject("xvy", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap xx {
-            get {
-                object obj = ResourceManager.GetObject("xx", resourceCulture);
+                object obj = ResourceManager.GetObject("xSquared", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

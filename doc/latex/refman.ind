@@ -1,0 +1,457 @@
+\begin{theindex}
+
+  \item {AC}
+    \subitem {Kalkulacka.Form1}, \hyperpage{21}
+  \item {Add}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{30}
+  \item {addition}
+    \subitem {Kalkulacka.Form1}, \hyperpage{21}
+  \item {ANS}
+    \subitem {Kalkulacka.Form1}, \hyperpage{21}
+  \item {ans}
+    \subitem {Kalkulacka.Form1}, \hyperpage{21}
+  \item {Arccos}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{30}
+  \item {arccos}
+    \subitem {Kalkulacka.Form1}, \hyperpage{21}
+  \item {Arcsin}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{30, 31}
+  \item {arcsin}
+    \subitem {Kalkulacka.Form1}, \hyperpage{22}
+  \item {Arctan}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{31}
+  \item {arctan}
+    \subitem {Kalkulacka.Form1}, \hyperpage{22}
+
+  \indexspace
+
+  \item {bool}
+    \subitem {Kalkulacka.Form1}, \hyperpage{22}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{35}
+
+  \indexspace
+
+  \item {Calculate}
+    \subitem {Kalkulacka.Form1}, \hyperpage{17}
+  \item {Clear}
+    \subitem {Kalkulacka.Form1}, \hyperpage{17}
+  \item {components}
+    \subitem {Kalkulacka.Form1}, \hyperpage{22}
+  \item {constE}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{41}
+  \item {constPI}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{41}
+  \item {Cos}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{31}
+  \item {cos}
+    \subitem {Kalkulacka.Form1}, \hyperpage{22}
+
+  \indexspace
+
+  \item {decPoint}
+    \subitem {Kalkulacka.Form1}, \hyperpage{22}
+  \item {decPoint\_Click}
+    \subitem {Kalkulacka.Form1}, \hyperpage{17}
+  \item {del}
+    \subitem {Kalkulacka.Form1}, \hyperpage{22}
+  \item {DisplayedM}
+    \subitem {Kalkulacka.Form1}, \hyperpage{23}
+  \item {Dispose}
+    \subitem {Kalkulacka.Form1}, \hyperpage{17}
+  \item {Divide}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{31}
+  \item {division}
+    \subitem {Kalkulacka.Form1}, \hyperpage{23}
+
+  \indexspace
+
+  \item {E}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{41}
+  \item {equals}
+    \subitem {Kalkulacka.Form1}, \hyperpage{23}
+  \item {erase}
+    \subitem {Kalkulacka.Form1}, \hyperpage{23}
+  \item {error}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{41}
+  \item {euler}
+    \subitem {Kalkulacka.Form1}, \hyperpage{23}
+  \item {Exponentiate}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{32}
+
+  \indexspace
+
+  \item {Factorial}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{32}
+  \item {factorial}
+    \subitem {Kalkulacka.Form1}, \hyperpage{23}
+  \item {firstNum}
+    \subitem {Kalkulacka.Form1}, \hyperpage{23}
+  \item {Form1}
+    \subitem {Kalkulacka.Form1}, \hyperpage{17}
+  \item {Form1\_Load}
+    \subitem {Kalkulacka.Form1}, \hyperpage{18}
+  \item {funkciaNaVyuzitie}
+    \subitem {Kalkulacka.Form1}, \hyperpage{18}
+
+  \indexspace
+
+  \item {InitializeComponent}
+    \subitem {Kalkulacka.Form1}, \hyperpage{18}
+  \item {InstantOp\_Click}
+    \subitem {Kalkulacka.Form1}, \hyperpage{18}
+
+  \indexspace
+
+  \item {Kalkulacka}, \hyperpage{9}
+  \item {Kalkulacka.ButtonEclipse}, \hyperpage{14}
+    \subitem {OnPaint}, \hyperpage{14}
+  \item {Kalkulacka.Form1}, \hyperpage{14}
+    \subitem {AC}, \hyperpage{21}
+    \subitem {addition}, \hyperpage{21}
+    \subitem {ANS}, \hyperpage{21}
+    \subitem {ans}, \hyperpage{21}
+    \subitem {arccos}, \hyperpage{21}
+    \subitem {arcsin}, \hyperpage{22}
+    \subitem {arctan}, \hyperpage{22}
+    \subitem {bool}, \hyperpage{22}
+    \subitem {Calculate}, \hyperpage{17}
+    \subitem {Clear}, \hyperpage{17}
+    \subitem {components}, \hyperpage{22}
+    \subitem {cos}, \hyperpage{22}
+    \subitem {decPoint}, \hyperpage{22}
+    \subitem {decPoint\_Click}, \hyperpage{17}
+    \subitem {del}, \hyperpage{22}
+    \subitem {DisplayedM}, \hyperpage{23}
+    \subitem {Dispose}, \hyperpage{17}
+    \subitem {division}, \hyperpage{23}
+    \subitem {equals}, \hyperpage{23}
+    \subitem {erase}, \hyperpage{23}
+    \subitem {euler}, \hyperpage{23}
+    \subitem {factorial}, \hyperpage{23}
+    \subitem {firstNum}, \hyperpage{23}
+    \subitem {Form1}, \hyperpage{17}
+    \subitem {Form1\_Load}, \hyperpage{18}
+    \subitem {funkciaNaVyuzitie}, \hyperpage{18}
+    \subitem {InitializeComponent}, \hyperpage{18}
+    \subitem {InstantOp\_Click}, \hyperpage{18}
+    \subitem {length}, \hyperpage{18}
+    \subitem {listPanel}, \hyperpage{23}
+    \subitem {ln}, \hyperpage{24}
+    \subitem {log}, \hyperpage{24}
+    \subitem {logDec}, \hyperpage{24}
+    \subitem {MEM}, \hyperpage{24}
+    \subitem {Mminus}, \hyperpage{24}
+    \subitem {Mminus\_Click}, \hyperpage{19}
+    \subitem {Mplus}, \hyperpage{24}
+    \subitem {Mplus\_Click}, \hyperpage{19}
+    \subitem {MRC}, \hyperpage{24}
+    \subitem {MRC\_Click}, \hyperpage{19}
+    \subitem {multiplication}, \hyperpage{24}
+    \subitem {multiplication10}, \hyperpage{25}
+    \subitem {newMath}, \hyperpage{25}
+    \subitem {num0}, \hyperpage{25}
+    \subitem {num1}, \hyperpage{25}
+    \subitem {num2}, \hyperpage{25}
+    \subitem {num3}, \hyperpage{25}
+    \subitem {num4}, \hyperpage{25}
+    \subitem {num5}, \hyperpage{26}
+    \subitem {num6}, \hyperpage{26}
+    \subitem {num7}, \hyperpage{26}
+    \subitem {num8}, \hyperpage{26}
+    \subitem {num9}, \hyperpage{26}
+    \subitem {Number\_click}, \hyperpage{19}
+    \subitem {off}, \hyperpage{26}
+    \subitem {off\_Click}, \hyperpage{19}
+    \subitem {operation\_Click}, \hyperpage{20}
+    \subitem {operationPerformed}, \hyperpage{26}
+    \subitem {pi}, \hyperpage{26}
+    \subitem {Power2}, \hyperpage{27}
+    \subitem {Power3}, \hyperpage{27}
+    \subitem {powerX}, \hyperpage{27}
+    \subitem {PowerXMinus1}, \hyperpage{27}
+    \subitem {RAND}, \hyperpage{27}
+    \subitem {repeatEq}, \hyperpage{27}
+    \subitem {root}, \hyperpage{27}
+    \subitem {root2}, \hyperpage{27}
+    \subitem {root3}, \hyperpage{28}
+    \subitem {secondNum}, \hyperpage{28}
+    \subitem {shift}, \hyperpage{28}
+    \subitem {shift\_Click}, \hyperpage{20}
+    \subitem {shiftClicked}, \hyperpage{28}
+    \subitem {shiftClickedPanel}, \hyperpage{28}
+    \subitem {shiftUnclickedPanel}, \hyperpage{28}
+    \subitem {sin}, \hyperpage{28}
+    \subitem {subtraction}, \hyperpage{28}
+    \subitem {subtraction\_Click}, \hyperpage{20}
+    \subitem {tan}, \hyperpage{29}
+    \subitem {textBox1}, \hyperpage{29}
+    \subitem {textBox1\_KeyPress}, \hyperpage{20}
+    \subitem {Valid\_Chk}, \hyperpage{20}
+    \subitem {ZeroClear}, \hyperpage{21}
+  \item {Kalkulacka.Program}, \hyperpage{42}
+    \subitem {Main}, \hyperpage{42}
+  \item {Kalkulacka.Properties}, \hyperpage{9}
+  \item {Kalkulacka/Class1.cs}, \hyperpage{43}
+  \item {Kalkulacka/Form1.cs}, \hyperpage{43}
+  \item {Kalkulacka/Form1.Designer.cs}, \hyperpage{43}
+  \item {Kalkulacka/Math.cs}, \hyperpage{44}
+  \item {Kalkulacka/Program.cs}, \hyperpage{44}
+  \item {Kalkulacka/Properties/AssemblyInfo.cs}, \hyperpage{45}
+  \item {Kalkulacka/Properties/Resources.Designer.cs}, \hyperpage{45}
+  \item {Kalkulacka/Properties/Settings.Designer.cs}, \hyperpage{45}
+
+  \indexspace
+
+  \item {length}
+    \subitem {Kalkulacka.Form1}, \hyperpage{18}
+  \item {listPanel}
+    \subitem {Kalkulacka.Form1}, \hyperpage{23}
+  \item {ln}
+    \subitem {Kalkulacka.Form1}, \hyperpage{24}
+  \item {log}
+    \subitem {Kalkulacka.Form1}, \hyperpage{24}
+  \item {Logarithm}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{32}
+  \item {logDec}
+    \subitem {Kalkulacka.Form1}, \hyperpage{24}
+
+  \indexspace
+
+  \item {Main}
+    \subitem {Kalkulacka.Program}, \hyperpage{42}
+    \subitem {Profiling.Program}, \hyperpage{42}
+  \item {MathComponentsNS}, \hyperpage{9}
+  \item {MathComponentsNS.MathComponents}, \hyperpage{29}
+    \subitem {Add}, \hyperpage{30}
+    \subitem {Arccos}, \hyperpage{30}
+    \subitem {Arcsin}, \hyperpage{30, 31}
+    \subitem {Arctan}, \hyperpage{31}
+    \subitem {bool}, \hyperpage{35}
+    \subitem {constE}, \hyperpage{41}
+    \subitem {constPI}, \hyperpage{41}
+    \subitem {Cos}, \hyperpage{31}
+    \subitem {Divide}, \hyperpage{31}
+    \subitem {E}, \hyperpage{41}
+    \subitem {error}, \hyperpage{41}
+    \subitem {Exponentiate}, \hyperpage{32}
+    \subitem {Factorial}, \hyperpage{32}
+    \subitem {Logarithm}, \hyperpage{32}
+    \subitem {Multiply}, \hyperpage{33}
+    \subitem {PI}, \hyperpage{42}
+    \subitem {Random}, \hyperpage{33}
+    \subitem {Root}, \hyperpage{33}
+    \subitem {Sin}, \hyperpage{34}
+    \subitem {Subtract}, \hyperpage{34}
+    \subitem {Tan}, \hyperpage{34}
+    \subitem {TruncateToFit}, \hyperpage{35}
+    \subitem {UnconstrainedFactorial}, \hyperpage{35}
+  \item {MathTest}, \hyperpage{9}
+  \item {MathTest.BasicMathTests}, \hyperpage{11}
+    \subitem {RoundOff}, \hyperpage{11}
+    \subitem {TestAddition}, \hyperpage{11}
+    \subitem {TestArccos}, \hyperpage{12}
+    \subitem {TestArcsin}, \hyperpage{12}
+    \subitem {TestArctan}, \hyperpage{12}
+    \subitem {TestCos}, \hyperpage{12}
+    \subitem {TestDivision}, \hyperpage{12}
+    \subitem {TestExponentiation}, \hyperpage{12}
+    \subitem {TestFactorial}, \hyperpage{12}
+    \subitem {TestLogarithm}, \hyperpage{12}
+    \subitem {TestMultiplication}, \hyperpage{13}
+    \subitem {TestRandom}, \hyperpage{13}
+    \subitem {TestRoot}, \hyperpage{13}
+    \subitem {TestSin}, \hyperpage{13}
+    \subitem {TestSubtraction}, \hyperpage{13}
+    \subitem {TestTan}, \hyperpage{13}
+  \item {MathTest/BasicMathTests.cs}, \hyperpage{45}
+  \item {MathTest/obj/Debug/netcoreapp3.1/MathTest.AssemblyInfo.cs}, 
+		\hyperpage{45}
+  \item {MathTest/obj/Release/netcoreapp3.1/MathTest.AssemblyInfo.cs}, 
+		\hyperpage{45}
+  \item {MathTest/obj/x64/Release/netcoreapp3.1/MathTest.AssemblyInfo.cs}, 
+		\hyperpage{45}
+  \item {MEM}
+    \subitem {Kalkulacka.Form1}, \hyperpage{24}
+  \item {Mminus}
+    \subitem {Kalkulacka.Form1}, \hyperpage{24}
+  \item {Mminus\_Click}
+    \subitem {Kalkulacka.Form1}, \hyperpage{19}
+  \item {Mplus}
+    \subitem {Kalkulacka.Form1}, \hyperpage{24}
+  \item {Mplus\_Click}
+    \subitem {Kalkulacka.Form1}, \hyperpage{19}
+  \item {MRC}
+    \subitem {Kalkulacka.Form1}, \hyperpage{24}
+  \item {MRC\_Click}
+    \subitem {Kalkulacka.Form1}, \hyperpage{19}
+  \item {multiplication}
+    \subitem {Kalkulacka.Form1}, \hyperpage{24}
+  \item {multiplication10}
+    \subitem {Kalkulacka.Form1}, \hyperpage{25}
+  \item {Multiply}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{33}
+
+  \indexspace
+
+  \item {newMath}
+    \subitem {Kalkulacka.Form1}, \hyperpage{25}
+  \item {num0}
+    \subitem {Kalkulacka.Form1}, \hyperpage{25}
+  \item {num1}
+    \subitem {Kalkulacka.Form1}, \hyperpage{25}
+  \item {num2}
+    \subitem {Kalkulacka.Form1}, \hyperpage{25}
+  \item {num3}
+    \subitem {Kalkulacka.Form1}, \hyperpage{25}
+  \item {num4}
+    \subitem {Kalkulacka.Form1}, \hyperpage{25}
+  \item {num5}
+    \subitem {Kalkulacka.Form1}, \hyperpage{26}
+  \item {num6}
+    \subitem {Kalkulacka.Form1}, \hyperpage{26}
+  \item {num7}
+    \subitem {Kalkulacka.Form1}, \hyperpage{26}
+  \item {num8}
+    \subitem {Kalkulacka.Form1}, \hyperpage{26}
+  \item {num9}
+    \subitem {Kalkulacka.Form1}, \hyperpage{26}
+  \item {Number\_click}
+    \subitem {Kalkulacka.Form1}, \hyperpage{19}
+
+  \indexspace
+
+  \item {off}
+    \subitem {Kalkulacka.Form1}, \hyperpage{26}
+  \item {off\_Click}
+    \subitem {Kalkulacka.Form1}, \hyperpage{19}
+  \item {OnPaint}
+    \subitem {Kalkulacka.ButtonEclipse}, \hyperpage{14}
+  \item {operation\_Click}
+    \subitem {Kalkulacka.Form1}, \hyperpage{20}
+  \item {operationPerformed}
+    \subitem {Kalkulacka.Form1}, \hyperpage{26}
+
+  \indexspace
+
+  \item {PI}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{42}
+  \item {pi}
+    \subitem {Kalkulacka.Form1}, \hyperpage{26}
+  \item {Power2}
+    \subitem {Kalkulacka.Form1}, \hyperpage{27}
+  \item {Power3}
+    \subitem {Kalkulacka.Form1}, \hyperpage{27}
+  \item {powerX}
+    \subitem {Kalkulacka.Form1}, \hyperpage{27}
+  \item {PowerXMinus1}
+    \subitem {Kalkulacka.Form1}, \hyperpage{27}
+  \item {Profiling}, \hyperpage{9}
+  \item {Profiling.Program}, \hyperpage{42}
+    \subitem {Main}, \hyperpage{42}
+  \item {Profiling/Math.cs}, \hyperpage{44}
+  \item {Profiling/Program.cs}, \hyperpage{44}
+  \item {Profiling/Properties/AssemblyInfo.cs}, \hyperpage{45}
+
+  \indexspace
+
+  \item {RAND}
+    \subitem {Kalkulacka.Form1}, \hyperpage{27}
+  \item {Random}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{33}
+  \item {repeatEq}
+    \subitem {Kalkulacka.Form1}, \hyperpage{27}
+  \item {Root}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{33}
+  \item {root}
+    \subitem {Kalkulacka.Form1}, \hyperpage{27}
+  \item {root2}
+    \subitem {Kalkulacka.Form1}, \hyperpage{27}
+  \item {root3}
+    \subitem {Kalkulacka.Form1}, \hyperpage{28}
+  \item {RoundOff}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{11}
+
+  \indexspace
+
+  \item {secondNum}
+    \subitem {Kalkulacka.Form1}, \hyperpage{28}
+  \item {shift}
+    \subitem {Kalkulacka.Form1}, \hyperpage{28}
+  \item {shift\_Click}
+    \subitem {Kalkulacka.Form1}, \hyperpage{20}
+  \item {shiftClicked}
+    \subitem {Kalkulacka.Form1}, \hyperpage{28}
+  \item {shiftClickedPanel}
+    \subitem {Kalkulacka.Form1}, \hyperpage{28}
+  \item {shiftUnclickedPanel}
+    \subitem {Kalkulacka.Form1}, \hyperpage{28}
+  \item {Sin}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{34}
+  \item {sin}
+    \subitem {Kalkulacka.Form1}, \hyperpage{28}
+  \item {Subtract}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{34}
+  \item {subtraction}
+    \subitem {Kalkulacka.Form1}, \hyperpage{28}
+  \item {subtraction\_Click}
+    \subitem {Kalkulacka.Form1}, \hyperpage{20}
+
+  \indexspace
+
+  \item {Tan}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{34}
+  \item {tan}
+    \subitem {Kalkulacka.Form1}, \hyperpage{29}
+  \item {TestAddition}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{11}
+  \item {TestArccos}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{12}
+  \item {TestArcsin}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{12}
+  \item {TestArctan}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{12}
+  \item {TestCos}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{12}
+  \item {TestDivision}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{12}
+  \item {TestExponentiation}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{12}
+  \item {TestFactorial}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{12}
+  \item {TestLogarithm}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{12}
+  \item {TestMultiplication}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{13}
+  \item {TestRandom}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{13}
+  \item {TestRoot}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{13}
+  \item {TestSin}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{13}
+  \item {TestSubtraction}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{13}
+  \item {TestTan}
+    \subitem {MathTest.BasicMathTests}, \hyperpage{13}
+  \item {textBox1}
+    \subitem {Kalkulacka.Form1}, \hyperpage{29}
+  \item {textBox1\_KeyPress}
+    \subitem {Kalkulacka.Form1}, \hyperpage{20}
+  \item {TruncateToFit}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{35}
+
+  \indexspace
+
+  \item {UnconstrainedFactorial}
+    \subitem {MathComponentsNS.MathComponents}, \hyperpage{35}
+
+  \indexspace
+
+  \item {Valid\_Chk}
+    \subitem {Kalkulacka.Form1}, \hyperpage{20}
+
+  \indexspace
+
+  \item {ZeroClear}
+    \subitem {Kalkulacka.Form1}, \hyperpage{21}
+
+\end{theindex}
