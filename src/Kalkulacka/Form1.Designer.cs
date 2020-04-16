@@ -1,4 +1,4 @@
-﻿namespace Kalkulacka
+namespace Kalkulacka
 {
     partial class Form1
     {
@@ -50,17 +50,21 @@
             this.del = new System.Windows.Forms.Button();
             this.shift = new System.Windows.Forms.Button();
             this.shiftUnclickedPanel = new System.Windows.Forms.Panel();
+            this.tan = new System.Windows.Forms.Button();
+            this.Power2 = new System.Windows.Forms.Button();
+            this.powerX = new System.Windows.Forms.Button();
             this.MRC = new System.Windows.Forms.Button();
+            this.pi = new System.Windows.Forms.Button();
+            this.sin = new System.Windows.Forms.Button();
             this.off = new System.Windows.Forms.Button();
             this.log = new System.Windows.Forms.Button();
+            this.factorial = new System.Windows.Forms.Button();
             this.Mplus = new System.Windows.Forms.Button();
+            this.root2 = new System.Windows.Forms.Button();
             this.ln = new System.Windows.Forms.Button();
+            this.cos = new System.Windows.Forms.Button();
             this.Mminus = new System.Windows.Forms.Button();
             this.shiftClickedPanel = new System.Windows.Forms.Panel();
-            this.addition = new System.Windows.Forms.Button();
-            this.multiplication = new System.Windows.Forms.Button();
-            this.DisplayedM = new System.Windows.Forms.Label();
-            this.tan = new System.Windows.Forms.Button();
             this.arctan = new System.Windows.Forms.Button();
             this.arcsin = new System.Windows.Forms.Button();
             this.root3 = new System.Windows.Forms.Button();
@@ -71,13 +75,9 @@
             this.Power3 = new System.Windows.Forms.Button();
             this.PowerXMinus1 = new System.Windows.Forms.Button();
             this.logDec = new System.Windows.Forms.Button();
-            this.Power2 = new System.Windows.Forms.Button();
-            this.powerX = new System.Windows.Forms.Button();
-            this.pi = new System.Windows.Forms.Button();
-            this.sin = new System.Windows.Forms.Button();
-            this.factorial = new System.Windows.Forms.Button();
-            this.root2 = new System.Windows.Forms.Button();
-            this.cos = new System.Windows.Forms.Button();
+            this.addition = new System.Windows.Forms.Button();
+            this.multiplication = new System.Windows.Forms.Button();
+            this.DisplayedM = new System.Windows.Forms.Label();
             this.shiftUnclickedPanel.SuspendLayout();
             this.shiftClickedPanel.SuspendLayout();
             this.SuspendLayout();
@@ -529,6 +529,72 @@
             this.shiftUnclickedPanel.Size = new System.Drawing.Size(354, 213);
             this.shiftUnclickedPanel.TabIndex = 28;
             // 
+            // tan
+            // 
+            this.tan.BackColor = System.Drawing.Color.DimGray;
+            this.tan.BackgroundImage = global::Kalkulacka.Properties.Resources.tan;
+            this.tan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tan.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tan.FlatAppearance.BorderSize = 0;
+            this.tan.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.tan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.tan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.tan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tan.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tan.ForeColor = System.Drawing.Color.LightGray;
+            this.tan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.tan.Location = new System.Drawing.Point(142, 71);
+            this.tan.Name = "tan";
+            this.tan.Size = new System.Drawing.Size(70, 70);
+            this.tan.TabIndex = 35;
+            this.tan.UseVisualStyleBackColor = false;
+            this.tan.Click += new System.EventHandler(this.InstantOp_Click);
+            // 
+            // Power2
+            // 
+            this.Power2.BackColor = System.Drawing.Color.DimGray;
+            this.Power2.BackgroundImage = global::Kalkulacka.Properties.Resources.xSquared;
+            this.Power2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Power2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Power2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Power2.FlatAppearance.BorderSize = 0;
+            this.Power2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.Power2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.Power2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.Power2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Power2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Power2.ForeColor = System.Drawing.Color.LightGray;
+            this.Power2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Power2.Location = new System.Drawing.Point(71, 142);
+            this.Power2.Name = "Power2";
+            this.Power2.Size = new System.Drawing.Size(70, 70);
+            this.Power2.TabIndex = 28;
+            this.Power2.UseVisualStyleBackColor = false;
+            this.Power2.Click += new System.EventHandler(this.InstantOp_Click);
+            // 
+            // powerX
+            // 
+            this.powerX.BackColor = System.Drawing.Color.DimGray;
+            this.powerX.BackgroundImage = global::Kalkulacka.Properties.Resources.xPow;
+            this.powerX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.powerX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.powerX.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.powerX.FlatAppearance.BorderSize = 0;
+            this.powerX.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.powerX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.powerX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.powerX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.powerX.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.powerX.ForeColor = System.Drawing.Color.LightGray;
+            this.powerX.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.powerX.Location = new System.Drawing.Point(142, 142);
+            this.powerX.Name = "powerX";
+            this.powerX.Size = new System.Drawing.Size(70, 70);
+            this.powerX.TabIndex = 30;
+            this.powerX.UseVisualStyleBackColor = false;
+            this.powerX.Click += new System.EventHandler(this.operation_Click);
+            // 
             // MRC
             // 
             this.MRC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
@@ -550,6 +616,50 @@
             this.MRC.Text = "MRC";
             this.MRC.UseVisualStyleBackColor = false;
             this.MRC.Click += new System.EventHandler(this.MRC_Click);
+            // 
+            // pi
+            // 
+            this.pi.BackColor = System.Drawing.Color.DimGray;
+            this.pi.BackgroundImage = global::Kalkulacka.Properties.Resources.pi;
+            this.pi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pi.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.pi.FlatAppearance.BorderSize = 0;
+            this.pi.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.pi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.pi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.pi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pi.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pi.ForeColor = System.Drawing.Color.LightGray;
+            this.pi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pi.Location = new System.Drawing.Point(284, 71);
+            this.pi.Name = "pi";
+            this.pi.Size = new System.Drawing.Size(70, 70);
+            this.pi.TabIndex = 33;
+            this.pi.UseVisualStyleBackColor = false;
+            this.pi.Click += new System.EventHandler(this.PI_Click);
+            // 
+            // sin
+            // 
+            this.sin.BackColor = System.Drawing.Color.DimGray;
+            this.sin.BackgroundImage = global::Kalkulacka.Properties.Resources.sin;
+            this.sin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.sin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.sin.FlatAppearance.BorderSize = 0;
+            this.sin.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.sin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.sin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.sin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sin.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sin.ForeColor = System.Drawing.Color.LightGray;
+            this.sin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.sin.Location = new System.Drawing.Point(0, 71);
+            this.sin.Name = "sin";
+            this.sin.Size = new System.Drawing.Size(70, 70);
+            this.sin.TabIndex = 26;
+            this.sin.UseVisualStyleBackColor = false;
+            this.sin.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // off
             // 
@@ -595,6 +705,28 @@
             this.log.UseVisualStyleBackColor = false;
             this.log.Click += new System.EventHandler(this.InstantOp_Click);
             // 
+            // factorial
+            // 
+            this.factorial.BackColor = System.Drawing.Color.DimGray;
+            this.factorial.BackgroundImage = global::Kalkulacka.Properties.Resources.xFact;
+            this.factorial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.factorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.factorial.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.factorial.FlatAppearance.BorderSize = 0;
+            this.factorial.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.factorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.factorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.factorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.factorial.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.factorial.ForeColor = System.Drawing.Color.LightGray;
+            this.factorial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.factorial.Location = new System.Drawing.Point(213, 71);
+            this.factorial.Name = "factorial";
+            this.factorial.Size = new System.Drawing.Size(70, 70);
+            this.factorial.TabIndex = 34;
+            this.factorial.UseVisualStyleBackColor = false;
+            this.factorial.Click += new System.EventHandler(this.InstantOp_Click);
+            // 
             // Mplus
             // 
             this.Mplus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
@@ -617,6 +749,28 @@
             this.Mplus.UseVisualStyleBackColor = false;
             this.Mplus.Click += new System.EventHandler(this.Mplus_Click);
             // 
+            // root2
+            // 
+            this.root2.BackColor = System.Drawing.Color.DimGray;
+            this.root2.BackgroundImage = global::Kalkulacka.Properties.Resources.squareRoot;
+            this.root2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.root2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.root2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.root2.FlatAppearance.BorderSize = 0;
+            this.root2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.root2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.root2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.root2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.root2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.root2.ForeColor = System.Drawing.Color.LightGray;
+            this.root2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.root2.Location = new System.Drawing.Point(213, 142);
+            this.root2.Name = "root2";
+            this.root2.Size = new System.Drawing.Size(70, 70);
+            this.root2.TabIndex = 36;
+            this.root2.UseVisualStyleBackColor = false;
+            this.root2.Click += new System.EventHandler(this.InstantOp_Click);
+            // 
             // ln
             // 
             this.ln.BackColor = System.Drawing.Color.DimGray;
@@ -638,6 +792,28 @@
             this.ln.Text = "ln";
             this.ln.UseVisualStyleBackColor = false;
             this.ln.Click += new System.EventHandler(this.InstantOp_Click);
+            // 
+            // cos
+            // 
+            this.cos.BackColor = System.Drawing.Color.DimGray;
+            this.cos.BackgroundImage = global::Kalkulacka.Properties.Resources.cos;
+            this.cos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.cos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cos.FlatAppearance.BorderSize = 0;
+            this.cos.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.cos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.cos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.cos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cos.ForeColor = System.Drawing.Color.LightGray;
+            this.cos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.cos.Location = new System.Drawing.Point(71, 71);
+            this.cos.Name = "cos";
+            this.cos.Size = new System.Drawing.Size(70, 70);
+            this.cos.TabIndex = 37;
+            this.cos.UseVisualStyleBackColor = false;
+            this.cos.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // Mminus
             // 
@@ -677,84 +853,6 @@
             this.shiftClickedPanel.Name = "shiftClickedPanel";
             this.shiftClickedPanel.Size = new System.Drawing.Size(354, 142);
             this.shiftClickedPanel.TabIndex = 29;
-            // 
-            // addition
-            // 
-            this.addition.BackColor = System.Drawing.Color.LightGray;
-            this.addition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addition.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addition.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.addition.FlatAppearance.BorderSize = 0;
-            this.addition.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.addition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.addition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.addition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addition.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.addition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
-            this.addition.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.addition.Location = new System.Drawing.Point(214, 431);
-            this.addition.Name = "addition";
-            this.addition.Size = new System.Drawing.Size(70, 70);
-            this.addition.TabIndex = 20;
-            this.addition.Text = "+";
-            this.addition.UseVisualStyleBackColor = false;
-            this.addition.Click += new System.EventHandler(this.operation_Click);
-            // 
-            // multiplication
-            // 
-            this.multiplication.BackColor = System.Drawing.Color.LightGray;
-            this.multiplication.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.multiplication.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.multiplication.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.multiplication.FlatAppearance.BorderSize = 0;
-            this.multiplication.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.multiplication.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.multiplication.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.multiplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.multiplication.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.multiplication.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
-            this.multiplication.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.multiplication.Location = new System.Drawing.Point(214, 360);
-            this.multiplication.Name = "multiplication";
-            this.multiplication.Size = new System.Drawing.Size(70, 70);
-            this.multiplication.TabIndex = 18;
-            this.multiplication.Text = "×";
-            this.multiplication.UseVisualStyleBackColor = false;
-            this.multiplication.Click += new System.EventHandler(this.operation_Click);
-            // 
-            // DisplayedM
-            // 
-            this.DisplayedM.AutoSize = true;
-            this.DisplayedM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(225)))));
-            this.DisplayedM.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DisplayedM.ForeColor = System.Drawing.Color.Gray;
-            this.DisplayedM.Location = new System.Drawing.Point(2, 3);
-            this.DisplayedM.Name = "DisplayedM";
-            this.DisplayedM.Size = new System.Drawing.Size(24, 19);
-            this.DisplayedM.TabIndex = 30;
-            this.DisplayedM.Text = "M";
-            // 
-            // tan
-            // 
-            this.tan.BackColor = System.Drawing.Color.DimGray;
-            this.tan.BackgroundImage = global::Kalkulacka.Properties.Resources.tan;
-            this.tan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.tan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tan.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.tan.FlatAppearance.BorderSize = 0;
-            this.tan.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.tan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.tan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.tan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tan.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tan.ForeColor = System.Drawing.Color.LightGray;
-            this.tan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.tan.Location = new System.Drawing.Point(142, 71);
-            this.tan.Name = "tan";
-            this.tan.Size = new System.Drawing.Size(70, 70);
-            this.tan.TabIndex = 35;
-            this.tan.UseVisualStyleBackColor = false;
-            this.tan.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // arctan
             // 
@@ -976,159 +1074,61 @@
             this.logDec.UseVisualStyleBackColor = false;
             this.logDec.Click += new System.EventHandler(this.operation_Click);
             // 
-            // Power2
+            // addition
             // 
-            this.Power2.BackColor = System.Drawing.Color.DimGray;
-            this.Power2.BackgroundImage = global::Kalkulacka.Properties.Resources.xSquared;
-            this.Power2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Power2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Power2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Power2.FlatAppearance.BorderSize = 0;
-            this.Power2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.Power2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.Power2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.Power2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Power2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Power2.ForeColor = System.Drawing.Color.LightGray;
-            this.Power2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Power2.Location = new System.Drawing.Point(71, 142);
-            this.Power2.Name = "Power2";
-            this.Power2.Size = new System.Drawing.Size(70, 70);
-            this.Power2.TabIndex = 28;
-            this.Power2.UseVisualStyleBackColor = false;
-            this.Power2.Click += new System.EventHandler(this.InstantOp_Click);
+            this.addition.BackColor = System.Drawing.Color.LightGray;
+            this.addition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addition.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addition.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.addition.FlatAppearance.BorderSize = 0;
+            this.addition.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.addition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.addition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.addition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addition.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.addition.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.addition.Location = new System.Drawing.Point(214, 431);
+            this.addition.Name = "addition";
+            this.addition.Size = new System.Drawing.Size(70, 70);
+            this.addition.TabIndex = 20;
+            this.addition.Text = "+";
+            this.addition.UseVisualStyleBackColor = false;
+            this.addition.Click += new System.EventHandler(this.operation_Click);
             // 
-            // powerX
+            // multiplication
             // 
-            this.powerX.BackColor = System.Drawing.Color.DimGray;
-            this.powerX.BackgroundImage = global::Kalkulacka.Properties.Resources.xPow;
-            this.powerX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.powerX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.powerX.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.powerX.FlatAppearance.BorderSize = 0;
-            this.powerX.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.powerX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.powerX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.powerX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.powerX.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.powerX.ForeColor = System.Drawing.Color.LightGray;
-            this.powerX.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.powerX.Location = new System.Drawing.Point(142, 142);
-            this.powerX.Name = "powerX";
-            this.powerX.Size = new System.Drawing.Size(70, 70);
-            this.powerX.TabIndex = 30;
-            this.powerX.UseVisualStyleBackColor = false;
-            this.powerX.Click += new System.EventHandler(this.operation_Click);
+            this.multiplication.BackColor = System.Drawing.Color.LightGray;
+            this.multiplication.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.multiplication.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.multiplication.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.multiplication.FlatAppearance.BorderSize = 0;
+            this.multiplication.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.multiplication.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.multiplication.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.multiplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.multiplication.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.multiplication.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.multiplication.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.multiplication.Location = new System.Drawing.Point(214, 360);
+            this.multiplication.Name = "multiplication";
+            this.multiplication.Size = new System.Drawing.Size(70, 70);
+            this.multiplication.TabIndex = 18;
+            this.multiplication.Text = "×";
+            this.multiplication.UseVisualStyleBackColor = false;
+            this.multiplication.Click += new System.EventHandler(this.operation_Click);
             // 
-            // pi
+            // DisplayedM
             // 
-            this.pi.BackColor = System.Drawing.Color.DimGray;
-            this.pi.BackgroundImage = global::Kalkulacka.Properties.Resources.pi;
-            this.pi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pi.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.pi.FlatAppearance.BorderSize = 0;
-            this.pi.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.pi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.pi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.pi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pi.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.pi.ForeColor = System.Drawing.Color.LightGray;
-            this.pi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.pi.Location = new System.Drawing.Point(284, 71);
-            this.pi.Name = "pi";
-            this.pi.Size = new System.Drawing.Size(70, 70);
-            this.pi.TabIndex = 33;
-            this.pi.UseVisualStyleBackColor = false;
-            this.pi.Click += new System.EventHandler(this.InstantOp_Click);
-            // 
-            // sin
-            // 
-            this.sin.BackColor = System.Drawing.Color.DimGray;
-            this.sin.BackgroundImage = global::Kalkulacka.Properties.Resources.sin;
-            this.sin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.sin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sin.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.sin.FlatAppearance.BorderSize = 0;
-            this.sin.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.sin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.sin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.sin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sin.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sin.ForeColor = System.Drawing.Color.LightGray;
-            this.sin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.sin.Location = new System.Drawing.Point(0, 71);
-            this.sin.Name = "sin";
-            this.sin.Size = new System.Drawing.Size(70, 70);
-            this.sin.TabIndex = 26;
-            this.sin.UseVisualStyleBackColor = false;
-            this.sin.Click += new System.EventHandler(this.InstantOp_Click);
-            // 
-            // factorial
-            // 
-            this.factorial.BackColor = System.Drawing.Color.DimGray;
-            this.factorial.BackgroundImage = global::Kalkulacka.Properties.Resources.xFact;
-            this.factorial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.factorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.factorial.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.factorial.FlatAppearance.BorderSize = 0;
-            this.factorial.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.factorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.factorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.factorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.factorial.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.factorial.ForeColor = System.Drawing.Color.LightGray;
-            this.factorial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.factorial.Location = new System.Drawing.Point(213, 71);
-            this.factorial.Name = "factorial";
-            this.factorial.Size = new System.Drawing.Size(70, 70);
-            this.factorial.TabIndex = 34;
-            this.factorial.UseVisualStyleBackColor = false;
-            this.factorial.Click += new System.EventHandler(this.InstantOp_Click);
-            // 
-            // root2
-            // 
-            this.root2.BackColor = System.Drawing.Color.DimGray;
-            this.root2.BackgroundImage = global::Kalkulacka.Properties.Resources.squareRoot;
-            this.root2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.root2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.root2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.root2.FlatAppearance.BorderSize = 0;
-            this.root2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.root2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.root2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.root2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.root2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.root2.ForeColor = System.Drawing.Color.LightGray;
-            this.root2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.root2.Location = new System.Drawing.Point(213, 142);
-            this.root2.Name = "root2";
-            this.root2.Size = new System.Drawing.Size(70, 70);
-            this.root2.TabIndex = 36;
-            this.root2.UseVisualStyleBackColor = false;
-            this.root2.Click += new System.EventHandler(this.InstantOp_Click);
-            // 
-            // cos
-            // 
-            this.cos.BackColor = System.Drawing.Color.DimGray;
-            this.cos.BackgroundImage = global::Kalkulacka.Properties.Resources.cos;
-            this.cos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.cos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.cos.FlatAppearance.BorderSize = 0;
-            this.cos.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.cos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.cos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.cos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cos.ForeColor = System.Drawing.Color.LightGray;
-            this.cos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cos.Location = new System.Drawing.Point(71, 71);
-            this.cos.Name = "cos";
-            this.cos.Size = new System.Drawing.Size(70, 70);
-            this.cos.TabIndex = 37;
-            this.cos.UseVisualStyleBackColor = false;
-            this.cos.Click += new System.EventHandler(this.InstantOp_Click);
+            this.DisplayedM.AutoSize = true;
+            this.DisplayedM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(225)))));
+            this.DisplayedM.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.DisplayedM.ForeColor = System.Drawing.Color.Gray;
+            this.DisplayedM.Location = new System.Drawing.Point(2, 3);
+            this.DisplayedM.Name = "DisplayedM";
+            this.DisplayedM.Size = new System.Drawing.Size(24, 19);
+            this.DisplayedM.TabIndex = 30;
+            this.DisplayedM.Text = "M";
             // 
             // Form1
             // 

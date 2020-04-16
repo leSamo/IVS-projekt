@@ -22,6 +22,7 @@ namespace Kalkulacka
         decimal ans = 0;
         bool erase = false;
         bool repeatEq = false;
+        bool opClick = false;
         //private object txt_Result;
 
         public Form1()
@@ -103,6 +104,7 @@ namespace Kalkulacka
         private void Number_click(object sender, EventArgs e)
         {
             repeatEq = false;
+            opClick = false;
             if (erase)
             {
                 ZeroClear();
@@ -302,24 +304,20 @@ namespace Kalkulacka
         private void operation_Click(object sender, EventArgs e)    //Určení stisknuté operace, uložení vstupu, vymazání textboxu
         {
             bool convValid;
-            bool opChange = false;
             Button button = (Button)sender;
-            if (operationPerformed != button.Name)
-            {
-                opChange = true;
-            }
-            operationPerformed = button.Name;
-            if ((textBox1.Text != "" && firstNum == 0) || opChange)
+            
+            if ((textBox1.Text != "" && firstNum == 0) || opClick)
             { 
                 convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out firstNum);
                 erase = true;
-                opChange = false;
             }
             else if (textBox1.Text != "" && firstNum != 0)
             {
                 Valid_Chk(Calculate());
                 erase = true;
             }
+            operationPerformed = button.Name;
+            opClick = true;
         }
 
         /**
@@ -332,7 +330,7 @@ namespace Kalkulacka
             string instantOp = button.Name;
             (bool, decimal) result = (true, 0);
             bool checkNeeded = false;
-            bool parseCheck = decimal.TryParse(textBox1.Text, out decimal input);
+            bool parseCheck = decimal.TryParse(textBox1.Text.Replace(',', '.'), out decimal input);
             /*if (erase)
             {
                 ZeroClear();
@@ -389,9 +387,6 @@ namespace Kalkulacka
                     result = newMath.Factorial(input);
                     checkNeeded = true;
                     break;
-                case "pi":
-                    textBox1.Text = newMath.TruncateToFit(newMath.constPI).Item2.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
-                    break;
                 case "log":
                     result = newMath.Logarithm(10, input);
                     checkNeeded = true;
@@ -437,7 +432,7 @@ namespace Kalkulacka
                     checkNeeded = true;
                     break;
             }
-            if (instantOp != "del" && firstNum != 0)
+            if (instantOp != "del" && instantOp!="pi" && firstNum != 0)
             {
                 erase = true;
                 firstNum = 0;
@@ -501,7 +496,7 @@ namespace Kalkulacka
         {
             if (textBox1.Text != "")
             {
-                MEM += decimal.Parse(textBox1.Text);
+                MEM += decimal.Parse(textBox1.Text.Replace(',', '.'));
                 if (MEM == 0)
                 {
                     DisplayedM.Visible = false;
@@ -519,7 +514,7 @@ namespace Kalkulacka
          */
         private void MRC_Click(object sender, EventArgs e)
         {
-            textBox1.Text = MEM.ToString();
+            textBox1.Text = MEM.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
             erase = true;
         }
 
@@ -531,7 +526,7 @@ namespace Kalkulacka
         {
             if (textBox1.Text != "")
             {
-                MEM -= decimal.Parse(textBox1.Text);
+                MEM -= decimal.Parse(textBox1.Text.Replace(',', '.'));
                 if (MEM == 0)
                 {
                     DisplayedM.Visible = false;
@@ -558,6 +553,12 @@ namespace Kalkulacka
         public void Clear()
         {
             textBox1.Text = "";
+        }
+
+        private void PI_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = newMath.TruncateToFit(newMath.constPI).Item2.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
+            opClick = false;
         }
     }
 }
