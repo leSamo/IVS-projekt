@@ -160,8 +160,8 @@ namespace MathComponentsNS
          */
         public (bool, decimal) Sin(decimal a)
         {
-            //double res = Math.Sin((double)a);
-            //decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
+            decimal res = (decimal) Math.Sin((double)a);
+            /*
             decimal res = a;
             res -= Exponentiate(a, 3).Item2 / UnconstrainedFactorial(3).Item2;
             res += Exponentiate(a, 5).Item2 / UnconstrainedFactorial(5).Item2;
@@ -172,6 +172,7 @@ namespace MathComponentsNS
             res -= Exponentiate(a, 15).Item2 / UnconstrainedFactorial(15).Item2;
             res += Exponentiate(a, 17).Item2 / UnconstrainedFactorial(17).Item2;
             res -= Exponentiate(a, 19).Item2 / UnconstrainedFactorial(19).Item2;
+            */
 
             return TruncateToFit((false, res));
         }
@@ -185,9 +186,9 @@ namespace MathComponentsNS
          */
         public (bool, decimal) Cos(decimal a)
         {
-            //double res = Math.Cos((double)a);
+            decimal res = (decimal)Math.Cos((double)a);
             //decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
-
+            /*
             decimal res = 1;
             res -= Exponentiate(a, 2).Item2 / UnconstrainedFactorial(2).Item2;
             res += Exponentiate(a, 4).Item2 / UnconstrainedFactorial(4).Item2;
@@ -198,6 +199,7 @@ namespace MathComponentsNS
             res -= Exponentiate(a, 14).Item2 / UnconstrainedFactorial(14).Item2;
             res += Exponentiate(a, 16).Item2 / UnconstrainedFactorial(16).Item2;
             res -= Exponentiate(a, 18).Item2 / UnconstrainedFactorial(18).Item2;
+            */
 
             return TruncateToFit((false, res));
         }
