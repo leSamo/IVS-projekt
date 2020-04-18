@@ -21,7 +21,7 @@ namespace MathComponentsNS
         /**
          * @return error/scientific notation if more than 9 whole places (?)
          * @brief truncates result to fit calc screen
-         * if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max 
+         * @brief if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max 
          */
         public (bool, decimal) TruncateToFit((bool, decimal) a)
         {
@@ -97,7 +97,7 @@ namespace MathComponentsNS
 
 
         /**
-         *  non-integer exponent or base expect error (?)
+         *  @brief non-integer exponent or base expect error (?)
          *  @param[in] decimal base (b)
          *  @param[in] decimal exponent (e)
          *  @return result of b^e
@@ -140,8 +140,8 @@ namespace MathComponentsNS
          * @param[in] decimal argument (a)
          * @param[in] decimal base (b)
          * @brief Logarithm function
-         * expect log-argument positive
-         * expect base positive and different from 1
+         * @brief expect log-argument positive
+         * @brief expect base positive and different from 1
          * @return log of a with base of b
          */
         public (bool, decimal) Logarithm(decimal a, decimal b)
@@ -153,9 +153,9 @@ namespace MathComponentsNS
 
         /**
          * @brief sine function
-         * using Taylor series algorithm
-         * sin x = x − x^3/3! + x^5/5! − x^7/7! + ...
-          @param[in] decimal a
+         * @brief using Taylor series algorithm
+         * @brief sin x = x − x^3/3! + x^5/5! − x^7/7! + ...
+         * @param[in] decimal a
          * @return  result with 5 decimal places precision
          */
         public (bool, decimal) Sin(decimal a)
@@ -179,8 +179,8 @@ namespace MathComponentsNS
 
         /**
          * @brief Function cosine
-         * using Taylor series algorithm
-         * cos x = 1 − x^2/2! + x^4/4! − x^6/6! + ...
+         * @brief using Taylor series algorithm
+         * @brief cos x = 1 − x^2/2! + x^4/4! − x^6/6! + ...
          * @param[in] decimal number a
          * @return result with 5 decimal places precision (?)
          */
@@ -207,7 +207,7 @@ namespace MathComponentsNS
         /**
         * @brief Function tangent
         * @param[in] decimal number a
-        * tan x = sin x / cos x
+        * @brief tan x = sin x / cos x
         * @return result with 5 decimal places precision (?)
         */
         public (bool, decimal) Tan(decimal a)
@@ -235,7 +235,7 @@ namespace MathComponentsNS
         * @brief Function arccos
         * @param[in] decimal number a
         * @return result with 5 decimal places precision (?)
-        * expect value between -1 and 1
+        * @brief expect value between -1 and 1
         */
         public (bool, decimal) Arccos(decimal a)
         {
@@ -258,7 +258,7 @@ namespace MathComponentsNS
         /**
           * @brief Factorial operation function
           * @param[in] decimal number a
-          * expect number non-negative integer not greater than 12
+          * @brief expect number non-negative integer not greater than 12
           * @return error if a is negative integer
           * @return error if a is greater than 12
           * @return error if a has decimal point
@@ -272,9 +272,9 @@ namespace MathComponentsNS
 
         /**
           * @brief Factorial operation function without upper limit
-          * helper function, don't use in calculator
+          * @brief helper function, don't use in calculator
           * @param[in] decimal number a
-          * expect number non-negative integer
+          * @brief expect number non-negative integer
           * @return error if a is negative integer
           * @return error if a has decimal point
           */
@@ -287,7 +287,7 @@ namespace MathComponentsNS
 
         /**
         * @brief Function of random number
-        * generates random decimal number between 0 inclusive to 1 exclusive
+        * @brief generates random decimal number between 0 inclusive to 1 exclusive
         */
         public (bool, decimal) Random()
         {

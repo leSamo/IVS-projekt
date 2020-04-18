@@ -156,7 +156,7 @@ namespace Kalkulacka
 
         /**
          * @brief Decimal point button handler
-         * Only one decimal point allowed
+         * @brief Only one decimal point allowed
          */
         private void decPoint_Click(object sender, EventArgs e)
         {
@@ -280,7 +280,7 @@ namespace Kalkulacka
 
         /**
          * @brief Function for checking validity of result
-         * Sets text box to result if all correct or error
+         * @brief  Sets text box to result if all correct or error
          */
         public void Valid_Chk((bool, decimal) result)
         {
@@ -322,7 +322,7 @@ namespace Kalkulacka
 
         /**
          * @brief Function for applying unary operations
-         * Integrated with math lib
+         * @brief Integrated with math lib
          */
         private void InstantOp_Click(object sender, EventArgs e)
         {
@@ -445,7 +445,7 @@ namespace Kalkulacka
 
         /**
          * @brief Function for applying unary operations
-         * Integrated with math lib
+         * @brief Integrated with math lib
          */
         public (bool, decimal) Calculate()
         {
@@ -491,7 +491,7 @@ namespace Kalkulacka
 
         /**
          * @brief Function for addition to memory
-         * Memory icon control
+         * @brief Memory icon control
          */
         private void Mplus_Click(object sender, EventArgs e)
         {
@@ -521,7 +521,7 @@ namespace Kalkulacka
 
         /**
          * @brief Function for subtracting memory
-         * Memory icon control
+         * @brief Memory icon control
          */
         private void Mminus_Click(object sender, EventArgs e)
         {

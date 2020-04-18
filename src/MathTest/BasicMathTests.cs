@@ -1,5 +1,7 @@
 /**
- * @file
+ * @file BasicMathTests.cs
+ * @brief File of tests for checking if calculator calutates right
+ * @author Michal Findra
  */
 
 using MathComponentsNS;
@@ -38,7 +40,7 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check addition functionality
-         * testing if length is max 9 significant digits
+         * @brief  testing if length is max 9 significant digits
          */
         public void TestAddition()
         {
@@ -103,7 +105,7 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check subtracion functionality
-         *  testing if length is max 9 significant digits
+         *  @brief testing if length is max 9 significant digits
          */
         public void TestSubtraction()
         {
@@ -176,7 +178,7 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check multiplication functionality
-         *  testing if length is max 9 significant digits
+         * @brief  testing if length is max 9 significant digits
          */
         public void TestMultiplication()
         {
@@ -248,8 +250,8 @@ namespace MathTest
 
         /**
          * @brief Tests to check division functionality
-         * division by zero is not possible
-         * testing if length is max 9 significant digits
+         * @brief division by zero is not possible
+         * @brief testing if length is max 9 significant digits
          */
         [TestMethod]
         public void TestDivision()
@@ -330,8 +332,8 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check exponential functionality
-         *  0^0 is undefined
-         *  testing if length is max 9 significant digits
+         * @brief  0^0 is undefined
+         * @brief  testing if length is max 9 significant digits
          */
         public void TestExponentiation()
         {
@@ -413,8 +415,8 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check root functionality
-         *  root only from positive numbers
-         *  testing if length is max 9 significant digits
+         * @brief  root only from positive numbers
+         * @brief  testing if length is max 9 significant digits
          */
         public void TestRoot()
         {
@@ -498,9 +500,9 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check Logarithm functionality
-         * base must be positive and different from 1
-         * argument must be positive
-         * testing if length is max 9 significant digits
+         * @brief  base must be positive and different from 1
+         * @brief argument must be positive
+         * @brief testing if length is max 9 significant digits
          */
         public void TestLogarithm()
         {
@@ -560,7 +562,7 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check Sin functionality
-         * tests are in RAD
+         * @brief tests are in RAD
          */
         public void TestSin()
         {
@@ -693,7 +695,7 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check Tangens functionality
-         * tangens is undefined in ( PI / 2 + k * PI )
+         * @brief tangens is undefined in ( PI / 2 + k * PI )
          */
         public void TestTan()
         {
@@ -760,8 +762,8 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to chcek Arcsin functionality
-         * domain is -1 <= x <= 1 
-         * range is -PI/2 <= y <= PI/2
+         * @brief domain is -1 <= x <= 1 
+         * @brief range is -PI/2 <= y <= PI/2
          */
         public void TestArcsin()
         {
@@ -823,8 +825,8 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check Arccos functionality
-         * domain is -1 <= x <= 1 
-         * range is 0 <= y <= PI
+         * @brief  domain is -1 <= x <= 1 
+         * @brief range is 0 <= y <= PI
          */
         public void TestArccos()
         {
@@ -885,8 +887,8 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check Arctan functionality
-         *  domain are all real numbers 
-         *  range is -PI/2 <= y <= PI/2
+         * @brief  domain are all real numbers 
+         * @brief  range is -PI/2 <= y <= PI/2
          */
         public void TestArctan()
         {
@@ -947,7 +949,7 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check Factorial functionality
-         * domain is positive integer
+         * @brief  domain is positive integer
          */
         public void TestFactorial()
         {
@@ -1013,7 +1015,7 @@ namespace MathTest
         [TestMethod]
         /**
          * @brief Tests to check Factorial functionality
-         * range is 0 <= x <= 1
+         * @brief  range is 0 <= x <= 1
          */
         public void TestRandom()
         {
