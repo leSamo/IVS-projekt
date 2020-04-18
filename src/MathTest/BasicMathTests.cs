@@ -1,4 +1,8 @@
-﻿using MathComponentsNS;
+/**
+ * @file
+ */
+
+using MathComponentsNS;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -8,7 +12,9 @@ namespace MathTest
     public class BasicMathTests
     {
 
-        // Function to round-off the number 
+        /**
+         * @brief Function to round-off the number 
+         */
         public static decimal RoundOff(decimal value)
         {
             double valuee = Convert.ToDouble(value);
@@ -24,6 +30,10 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check addition functionality
+         * testing if length is max 9 significant digits
+         */
         public void TestAddition()
         {
             // no mathematical rules for addition
@@ -85,6 +95,10 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check subtracion functionality
+         *  testing if length is max 9 significant digits
+         */
         public void TestSubtraction()
         {
             // no mathematical rules for subtraction
@@ -154,6 +168,10 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check multiplication functionality
+         *  testing if length is max 9 significant digits
+         */
         public void TestMultiplication()
         {
             //no mathematical rules for multiplication
@@ -222,6 +240,11 @@ namespace MathTest
             Assert.IsTrue(errBool);
         }
 
+        /**
+         * @brief Tests to check division functionality
+         * division by zero is not possible
+         * testing if length is max 9 significant digits
+         */
         [TestMethod]
         public void TestDivision()
         {
@@ -299,6 +322,11 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check exponential functionality
+         *  0^0 is undefined
+         *  testing if length is max 9 significant digits
+         */
         public void TestExponentiation()
         {
             // rules: 0^0 is undefined
@@ -377,6 +405,11 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check root functionality
+         *  root only from positive numbers
+         *  testing if length is max 9 significant digits
+         */
         public void TestRoot()
         {
             // rules: root only from positive numbers
@@ -457,6 +490,12 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check Logarithm functionality
+         * base must be positive and different from 1
+         * argument must be positive
+         * testing if length is max 9 significant digits
+         */
         public void TestLogarithm()
         {
             // rules: base positive and different from 1; argument positive
@@ -513,6 +552,10 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check Sin functionality
+         * tests are in RAD
+         */
         public void TestSin()
         {
             decimal var1 = (decimal)(Math.Round(Math.Sqrt(2) / 2 * 1e10d) / 1e10d);
@@ -576,6 +619,9 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check Cos functionality
+         */
         public void TestCos()
         {
             decimal var1 = (decimal)(Math.Round(Math.Sqrt(2) / 2 * 1e10d) / 1e10d);
@@ -639,6 +685,10 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check Tangens functionality
+         * tangens is undefined in ( PI / 2 + k * PI )
+         */
         public void TestTan()
         {
             decimal var1 = (decimal)(Math.Round(Math.Sqrt(3) * 1e10d) / 1e10d);
@@ -647,7 +697,7 @@ namespace MathTest
             // rules: tangens is undefined in ( PI / 2 + k * PI )
             MathComponents NewMath = new MathComponents();
 
-            // tests toi check Tangens functionality
+            // tests to check Tangens functionality
             (bool errBool, decimal result) = NewMath.Tan(5 * (decimal)Math.PI);
             Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
@@ -702,6 +752,11 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to chcek Arcsin functionality
+         * domain is -1 <= x <= 1 
+         * range is -PI/2 <= y <= PI/2
+         */
         public void TestArcsin()
         {
             // rules: domain : -1 <= x <= 1 ; range : -PI/2 <= y <= PI/2
@@ -760,6 +815,11 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check Arccos functionality
+         * domain is -1 <= x <= 1 
+         * range is 0 <= y <= PI
+         */
         public void TestArccos()
         {
             // rules: domain : -1 <= x <= 1 ; range : 0 <= y <= PI
@@ -817,6 +877,11 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check Arctan functionality
+         *  domain are all real numbers 
+         *  range is -PI/2 <= y <= PI/2
+         */
         public void TestArctan()
         {
             // rules: domain : all real numbers ; range : -PI/2 <= y <= PI/2
@@ -874,6 +939,10 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check Factorial functionality
+         * domain is positive integer
+         */
         public void TestFactorial()
         {
             // rules: domain: positive integer
@@ -936,6 +1005,10 @@ namespace MathTest
         }
 
         [TestMethod]
+        /**
+         * @brief Tests to check Factorial functionality
+         * range is 0 <= x <= 1
+         */
         public void TestRandom()
         {
             // rules: range: 0 <= x <= 1
