@@ -483,6 +483,7 @@ namespace Kalkulacka
                     result = newMath.Root(secondNum, firstNum);
                     break;
                 default:
+                    result = (false, firstNum);
                     break;
             }
             return result;
