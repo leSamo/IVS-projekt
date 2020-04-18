@@ -16,17 +16,23 @@ namespace MathTest
          * @brief Function to round-off the number 
          */
         public static decimal RoundOff(decimal value)
-        {
-            double valuee = Convert.ToDouble(value);
-            if (valuee == 0.0) return value;
-            bool neg = value < 0;
-            if (neg) valuee = -valuee;
-            double m10 = Math.Log10(valuee);
-            double scale = Math.Pow(10, Math.Floor(m10) - 9 + 1);
-            valuee = Math.Floor(valuee / scale) * scale;
-            if (neg) valuee = -valuee;
-            value = Convert.ToDecimal(valuee);
-            return value;
+        {           
+            int wholeDigits = (int)Math.Floor(1 + Math.Log10((double)Math.Abs(value)));            
+            if (value == 0)
+            {
+                return (0);
+            }
+            else if (Math.Abs(value) < 10)
+            {
+                decimal result = (decimal)(Math.Truncate((double)value * 10e7) / 10e7);
+                return (result);
+            }
+            else
+            {
+                decimal result = (decimal)(Math.Truncate((double)value * Math.Pow(10, 9 - wholeDigits)) / Math.Pow(10, 9 - wholeDigits));
+                return (result);
+            }
+
         }
 
         [TestMethod]
@@ -41,27 +47,27 @@ namespace MathTest
 
             // tests to check addition functionality
             (bool errBool, decimal result) = NewMath.Add(1, 1);
-            Assert.AreEqual(RoundOff(2), result);
+            Assert.AreEqual(2, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(0, 0);
-            Assert.AreEqual(RoundOff(0), result);
+            Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(1.00m, 1.00m);
-            Assert.AreEqual(RoundOff(2), result);
+            Assert.AreEqual(2, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(-1, -1);
-            Assert.AreEqual(RoundOff(-2), result);
+            Assert.AreEqual(-2, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(0.7m, 0.3m);
-            Assert.AreEqual(RoundOff(1), result);
+            Assert.AreEqual(1, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(7.65m, -2.65m);
-            Assert.AreEqual(RoundOff(5), result);
+            Assert.AreEqual(5, result);
             Assert.IsFalse(errBool);
 
             // test length of returning value (max 9 significant digits)
@@ -70,7 +76,7 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(-111547546, 111547546);
-            Assert.AreEqual(RoundOff(0), result);
+            Assert.AreEqual(0, result);
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Add(5687412.85m, -85456297);
@@ -558,8 +564,8 @@ namespace MathTest
          */
         public void TestSin()
         {
-            decimal var1 = (decimal)(Math.Round(Math.Sqrt(2) / 2 * 1e10d) / 1e10d);
-            decimal var2 = (decimal)(Math.Round(Math.Sqrt(3) / 2 * 1e10d) / 1e10d);
+            decimal var1 = RoundOff((decimal)((Math.Sqrt(2) / 2 * 1e10d) / 1e10d));
+            decimal var2 = RoundOff((decimal)((Math.Sqrt(3) / 2 * 1e10d) / 1e10d));
 
             // no mathematical rules for sinus
             // tests are in RAD
@@ -624,8 +630,8 @@ namespace MathTest
          */
         public void TestCos()
         {
-            decimal var1 = (decimal)(Math.Round(Math.Sqrt(2) / 2 * 1e10d) / 1e10d);
-            decimal var2 = (decimal)(Math.Round(Math.Sqrt(3) / 2 * 1e10d) / 1e10d);
+            decimal var1 = RoundOff((decimal)((Math.Sqrt(2) / 2 * 1e10d) / 1e10d));
+            decimal var2 = RoundOff((decimal)((Math.Sqrt(3) / 2 * 1e10d) / 1e10d));                 
 
             // no mathematical rules for cosinus
             MathComponents NewMath = new MathComponents();
@@ -644,7 +650,7 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Cos((2/3m) * (decimal)Math.PI);
-            Assert.AreEqual(-0.5m, result);
+            Assert.AreEqual(-0.5m, Decimal.Round(result,7));
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Cos((6/3m) * (decimal)Math.PI);
@@ -691,8 +697,8 @@ namespace MathTest
          */
         public void TestTan()
         {
-            decimal var1 = (decimal)(Math.Round(Math.Sqrt(3) * 1e10d) / 1e10d);
-            decimal var2 = (decimal)(Math.Round(Math.Sqrt(3) / 3 * 1e10d) / 1e10d);
+            decimal var1 = RoundOff((decimal)((Math.Sqrt(3) * 1e10d) / 1e10d));
+            decimal var2 = RoundOff((decimal)(Math.Round(Math.Sqrt(3) / 3 * 1e10d) / 1e10d));
 
             // rules: tangens is undefined in ( PI / 2 + k * PI )
             MathComponents NewMath = new MathComponents();
@@ -703,7 +709,7 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Tan(2.25m * (decimal)Math.PI);
-            Assert.AreEqual(1, result);
+            Assert.AreEqual(1, Decimal.Round(result,7));
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Tan(4.75m * (decimal)Math.PI);
@@ -727,7 +733,7 @@ namespace MathTest
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Tan((-13 / 4m) * (decimal)Math.PI);
-            Assert.AreEqual(-1, result);
+            Assert.AreEqual(-1, Decimal.Round(result,7));
             Assert.IsFalse(errBool);
 
             (errBool, result) = NewMath.Tan(6651 * (decimal)Math.PI);
