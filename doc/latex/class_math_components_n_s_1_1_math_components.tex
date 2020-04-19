@@ -109,7 +109,7 @@ decimal {\bfseries Random} ()
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_math_components_n_s_1_1_math_components_a0a4dedccd74f5db92cb776842688b454}{bool}}
-\begin{DoxyCompactList}\small\item\em truncates result to fit calc screen if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em truncates result to fit calc screen \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_math_components_n_s_1_1_math_components_a5e086ec94994dc0afd129921b0307a83}\label{class_math_components_n_s_1_1_math_components_a5e086ec94994dc0afd129921b0307a83}} 
 decimal {\bfseries error} = (true, 0)
 \item 
@@ -121,7 +121,7 @@ decimal {\bfseries constE} = (false, (decimal)Math.\+E)
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Member Data Documentation}
+\doxysubsection{Field Documentation}
 \mbox{\Hypertarget{class_math_components_n_s_1_1_math_components_a0a4dedccd74f5db92cb776842688b454}\label{class_math_components_n_s_1_1_math_components_a0a4dedccd74f5db92cb776842688b454}} 
 \index{MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}!bool@{bool}}
 \index{bool@{bool}!MathComponentsNS.MathComponents@{MathComponentsNS.MathComponents}}
@@ -130,11 +130,23 @@ decimal {\bfseries constE} = (false, (decimal)Math.\+E)
 
 
 
-truncates result to fit calc screen if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max 
+truncates result to fit calc screen 
 
 Function of random number generates random decimal number between 0 inclusive to 1 exclusive.
 
 Factorial operation function without upper limit helper function, don\textquotesingle{}t use in calculator.
+
+Function cosine using Taylor series algorithm cos x = 1 − x$^\wedge$2/2! + x$^\wedge$4/4! − x$^\wedge$6/6! + ...
+
+sine function using Taylor series algorithm sin x = x − x$^\wedge$3/3! + x$^\wedge$5/5! − x$^\wedge$7/7! + ...
+
+Logarithm function expect log-\/argument positive expect base positive and different from 1.
+
+truncates result to fit calc screen if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max
+
+Function of random number.
+
+Factorial operation function without upper limit.
 
 Factorial operation function.
 
@@ -146,13 +158,15 @@ Function arcsin.
 
 Function tangent.
 
-Function cosine using Taylor series algorithm cos x = 1 − x$^\wedge$2/2! + x$^\wedge$4/4! − x$^\wedge$6/6! + ...
+Function cosine.
 
-sine function using Taylor series algorithm sin x = x − x$^\wedge$3/3! + x$^\wedge$5/5! − x$^\wedge$7/7! + ...
+sine function
 
-Logarithm function expect log-\/argument positive expect base positive and different from 1.
+Logarithm function.
 
 Funtion of root to ath.
+
+non-\/integer exponent or base expect error (?)
 
 Division operation function.
 
@@ -165,6 +179,8 @@ Addition operation function.
 \begin{DoxyReturn}{Returns}
 error/scientific notation if more than 9 whole places (?)
 \end{DoxyReturn}
+if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max
+
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em decimal} & first addend (a) \\
@@ -207,7 +223,7 @@ quotient (result of a / b)
 
 error if divisor is zero
 \end{DoxyReturn}
-non-\/integer exponent or base expect error (?) 
+
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em decimal} & base (b) \\
 \hline
@@ -235,13 +251,17 @@ error if negative radicant
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em decimal} & argument (a) \\
 \hline
-\mbox{\texttt{ in}}  & {\em decimal} & base (b) \\
+\mbox{\texttt{ in}}  & {\em decimal} & base (b)\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+expect log-\/argument positive
+
+expect base positive and different from 1 \begin{DoxyReturn}{Returns}
 log of a with base of b
 \end{DoxyReturn}
+using Taylor series algorithm
 
+sin x = x − x$^\wedge$3/3! + x$^\wedge$5/5! − x$^\wedge$7/7! + ... 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em decimal} & a \\
 \hline
@@ -249,7 +269,9 @@ log of a with base of b
 \begin{DoxyReturn}{Returns}
 result with 5 decimal places precision
 \end{DoxyReturn}
+using Taylor series algorithm
 
+cos x = 1 − x$^\wedge$2/2! + x$^\wedge$4/4! − x$^\wedge$6/6! + ... 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em decimal} & number a \\
 \hline
@@ -259,10 +281,10 @@ result with 5 decimal places precision (?)
 \end{DoxyReturn}
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & number a tan x = sin x / cos x \\
+\mbox{\texttt{ in}}  & {\em decimal} & number a\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+tan x = sin x / cos x \begin{DoxyReturn}{Returns}
 result with 5 decimal places precision (?)
 \end{DoxyReturn}
 
@@ -279,19 +301,74 @@ result with 5 decimal places precision (?) expect value between -\/pi/2 and pi/2
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-result with 5 decimal places precision (?) expect value between -\/1 and 1
+result with 5 decimal places precision (?)
 \end{DoxyReturn}
+expect value between -\/1 and 1
+
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em decimal} & number a expect number non-\/negative integer not greater than 12 \\
+\mbox{\texttt{ in}}  & {\em decimal} & number a \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+result with 5 decimal places precision (?)
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em decimal} & number a\\
+\hline
+\end{DoxyParams}
+expect number non-\/negative integer not greater than 12 \begin{DoxyReturn}{Returns}
 error if a is negative integer 
 
 error if a is greater than 12 
 
 error if a has decimal point
+\end{DoxyReturn}
+helper function, don\textquotesingle{}t use in calculator 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em decimal} & number a\\
+\hline
+\end{DoxyParams}
+expect number non-\/negative integer \begin{DoxyReturn}{Returns}
+error if a is negative integer 
+
+error if a has decimal point
+\end{DoxyReturn}
+generates random decimal number between 0 inclusive to 1 exclusive
+
+\begin{DoxyReturn}{Returns}
+error/scientific notation if more than 9 whole places (?)
+\end{DoxyReturn}
+non-\/integer exponent or base expect error (?) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em decimal} & base (b) \\
+\hline
+\mbox{\texttt{ in}}  & {\em decimal} & exponent (e) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result of b$^\wedge$e 
+
+error if 0$^\wedge$0 or 0$^\wedge$-\/1
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em decimal} & argument (a) \\
+\hline
+\mbox{\texttt{ in}}  & {\em decimal} & base (b) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+log of a with base of b
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em decimal} & a \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result with 5 decimal places precision
 \end{DoxyReturn}
 
 \begin{DoxyParams}[1]{Parameters}

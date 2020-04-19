@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mathcomponents_34',['MathComponents',['../class_math_components_n_s_1_1_math_components.html',1,'MathComponentsNS']]]
+  ['info_54',['Info',['../class_kalkulacka_1_1_info.html',1,'Kalkulacka']]]
 ];

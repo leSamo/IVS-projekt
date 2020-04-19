@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['textbox1_5fkeypress_29',['textBox1_KeyPress',['../class_kalkulacka_1_1_form1.html#aa877d5f7232f16f047a996284acaecbb',1,'Kalkulacka::Form1']]]
+  ['roundoff_32',['RoundOff',['../class_math_test_1_1_basic_math_tests.html#a5a3f95c22ee91ba9b091908e744e04ab',1,'MathTest::BasicMathTests']]]
 ];

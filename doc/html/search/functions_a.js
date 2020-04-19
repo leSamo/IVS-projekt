@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['valid_5fchk_60',['Valid_Chk',['../class_kalkulacka_1_1_form1.html#ae214e46c363b7455cacf8eda0b3e2582',1,'Kalkulacka::Form1']]]
+  ['shift_5fclick_81',['shift_Click',['../class_kalkulacka_1_1_form1.html#a2d74bd3dc9136aeab3a970feaac95469',1,'Kalkulacka::Form1']]]
 ];

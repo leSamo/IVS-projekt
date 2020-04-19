@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unconstrainedfactorial_123',['UnconstrainedFactorial',['../class_math_components_n_s_1_1_math_components.html#a98d28ef1ce4a38ae9ebba1d1ef62b6a5',1,'MathComponentsNS.MathComponents.UnconstrainedFactorial(decimal a)'],['../class_math_components_n_s_1_1_math_components.html#a98d28ef1ce4a38ae9ebba1d1ef62b6a5',1,'MathComponentsNS.MathComponents.UnconstrainedFactorial(decimal a)']]]
+  ['zeroclear_51',['ZeroClear',['../class_kalkulacka_1_1_form1.html#a89166e36a883af21390ab60d3d6ebaa8',1,'Kalkulacka::Form1']]]
 ];

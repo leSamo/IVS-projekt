@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['shift_5fclick_27',['shift_Click',['../class_kalkulacka_1_1_form1.html#a2d74bd3dc9136aeab3a970feaac95469',1,'Kalkulacka::Form1']]],
-  ['subtraction_5fclick_28',['subtraction_Click',['../class_kalkulacka_1_1_form1.html#a5e395a0291fa222503e066f758e1380c',1,'Kalkulacka::Form1']]]
+  ['question_5fclick_31',['question_Click',['../class_kalkulacka_1_1_form1.html#a58bf4d453eb3c56e87b196286d9e2fef',1,'Kalkulacka::Form1']]]
 ];
