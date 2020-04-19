@@ -78,6 +78,7 @@ namespace Kalkulacka
             this.addition = new System.Windows.Forms.Button();
             this.multiplication = new System.Windows.Forms.Button();
             this.DisplayedM = new System.Windows.Forms.Label();
+            this.question = new System.Windows.Forms.Button();
             this.shiftUnclickedPanel.SuspendLayout();
             this.shiftClickedPanel.SuspendLayout();
             this.SuspendLayout();
@@ -1130,6 +1131,23 @@ namespace Kalkulacka
             this.DisplayedM.TabIndex = 30;
             this.DisplayedM.Text = "M";
             // 
+            // question
+            // 
+            this.question.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.question.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(225)))));
+            this.question.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.question.FlatAppearance.BorderSize = 0;
+            this.question.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.question.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.question.ForeColor = System.Drawing.Color.Gray;
+            this.question.Location = new System.Drawing.Point(1, 49);
+            this.question.Name = "question";
+            this.question.Size = new System.Drawing.Size(22, 26);
+            this.question.TabIndex = 31;
+            this.question.Text = "?";
+            this.question.UseVisualStyleBackColor = false;
+            this.question.Click += new System.EventHandler(this.question_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.equals;
@@ -1137,6 +1155,7 @@ namespace Kalkulacka
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(356, 573);
+            this.Controls.Add(this.question);
             this.Controls.Add(this.DisplayedM);
             this.Controls.Add(this.shiftClickedPanel);
             this.Controls.Add(this.shiftUnclickedPanel);
@@ -1229,6 +1248,7 @@ namespace Kalkulacka
         private System.Windows.Forms.Button tan;
         private System.Windows.Forms.Button arctan;
         private System.Windows.Forms.Label DisplayedM;
+        private System.Windows.Forms.Button question;
     }
 }
 

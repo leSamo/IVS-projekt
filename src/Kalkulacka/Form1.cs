@@ -559,5 +559,15 @@ namespace Kalkulacka
             textBox1.Text = newMath.TruncateToFit(newMath.constPI).Item2.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
             opClick = false;
         }
+
+        /**
+         * @brief Button to open a new window with informations
+         * @return New window
+         */
+        private void question_Click(object sender, EventArgs e)
+        {
+            Info openForm = new Info();
+            openForm.Show();
+        }
     }
 }
