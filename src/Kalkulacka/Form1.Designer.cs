@@ -61,14 +61,14 @@ namespace Kalkulacka
             this.factorial = new System.Windows.Forms.Button();
             this.Mplus = new System.Windows.Forms.Button();
             this.root2 = new System.Windows.Forms.Button();
-            this.ln = new System.Windows.Forms.Button();
+            this.negate = new System.Windows.Forms.Button();
             this.cos = new System.Windows.Forms.Button();
             this.Mminus = new System.Windows.Forms.Button();
             this.shiftClickedPanel = new System.Windows.Forms.Panel();
             this.arctan = new System.Windows.Forms.Button();
             this.arcsin = new System.Windows.Forms.Button();
             this.root3 = new System.Windows.Forms.Button();
-            this.multiplication10 = new System.Windows.Forms.Button();
+            this.ln = new System.Windows.Forms.Button();
             this.euler = new System.Windows.Forms.Button();
             this.root = new System.Windows.Forms.Button();
             this.arccos = new System.Windows.Forms.Button();
@@ -395,7 +395,7 @@ namespace Kalkulacka
             this.subtraction.TabIndex = 19;
             this.subtraction.Text = "-";
             this.subtraction.UseVisualStyleBackColor = false;
-            this.subtraction.Click += new System.EventHandler(this.subtraction_Click);
+            this.subtraction.Click += new System.EventHandler(this.operation_Click);
             // 
             // RAND
             // 
@@ -521,7 +521,7 @@ namespace Kalkulacka
             this.shiftUnclickedPanel.Controls.Add(this.factorial);
             this.shiftUnclickedPanel.Controls.Add(this.Mplus);
             this.shiftUnclickedPanel.Controls.Add(this.root2);
-            this.shiftUnclickedPanel.Controls.Add(this.ln);
+            this.shiftUnclickedPanel.Controls.Add(this.negate);
             this.shiftUnclickedPanel.Controls.Add(this.cos);
             this.shiftUnclickedPanel.Controls.Add(this.Mminus);
             this.shiftUnclickedPanel.Location = new System.Drawing.Point(1, 76);
@@ -771,27 +771,27 @@ namespace Kalkulacka
             this.root2.UseVisualStyleBackColor = false;
             this.root2.Click += new System.EventHandler(this.InstantOp_Click);
             // 
-            // ln
+            // negate
             // 
-            this.ln.BackColor = System.Drawing.Color.DimGray;
-            this.ln.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ln.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ln.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.ln.FlatAppearance.BorderSize = 0;
-            this.ln.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.ln.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.ln.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.ln.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ln.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ln.ForeColor = System.Drawing.Color.LightGray;
-            this.ln.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ln.Location = new System.Drawing.Point(284, 142);
-            this.ln.Name = "ln";
-            this.ln.Size = new System.Drawing.Size(70, 70);
-            this.ln.TabIndex = 32;
-            this.ln.Text = "ln";
-            this.ln.UseVisualStyleBackColor = false;
-            this.ln.Click += new System.EventHandler(this.InstantOp_Click);
+            this.negate.BackColor = System.Drawing.Color.DimGray;
+            this.negate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.negate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.negate.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.negate.FlatAppearance.BorderSize = 0;
+            this.negate.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.negate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.negate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.negate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.negate.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.negate.ForeColor = System.Drawing.Color.LightGray;
+            this.negate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.negate.Location = new System.Drawing.Point(284, 142);
+            this.negate.Name = "negate";
+            this.negate.Size = new System.Drawing.Size(70, 70);
+            this.negate.TabIndex = 32;
+            this.negate.Text = "+/-";
+            this.negate.UseVisualStyleBackColor = false;
+            this.negate.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // cos
             // 
@@ -842,7 +842,7 @@ namespace Kalkulacka
             this.shiftClickedPanel.Controls.Add(this.arctan);
             this.shiftClickedPanel.Controls.Add(this.arcsin);
             this.shiftClickedPanel.Controls.Add(this.root3);
-            this.shiftClickedPanel.Controls.Add(this.multiplication10);
+            this.shiftClickedPanel.Controls.Add(this.ln);
             this.shiftClickedPanel.Controls.Add(this.euler);
             this.shiftClickedPanel.Controls.Add(this.root);
             this.shiftClickedPanel.Controls.Add(this.arccos);
@@ -920,27 +920,27 @@ namespace Kalkulacka
             this.root3.UseVisualStyleBackColor = false;
             this.root3.Click += new System.EventHandler(this.InstantOp_Click);
             // 
-            // multiplication10
+            // ln
             // 
-            this.multiplication10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.multiplication10.BackgroundImage = global::Kalkulacka.Properties.Resources.pi3;
-            this.multiplication10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.multiplication10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.multiplication10.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.multiplication10.FlatAppearance.BorderSize = 0;
-            this.multiplication10.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.multiplication10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.multiplication10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.multiplication10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.multiplication10.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.multiplication10.ForeColor = System.Drawing.Color.LightGray;
-            this.multiplication10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.multiplication10.Location = new System.Drawing.Point(284, 0);
-            this.multiplication10.Name = "multiplication10";
-            this.multiplication10.Size = new System.Drawing.Size(70, 70);
-            this.multiplication10.TabIndex = 31;
-            this.multiplication10.UseVisualStyleBackColor = false;
-            this.multiplication10.Click += new System.EventHandler(this.operation_Click);
+            this.ln.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.ln.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ln.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ln.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ln.FlatAppearance.BorderSize = 0;
+            this.ln.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.ln.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.ln.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.ln.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ln.Font = new System.Drawing.Font("Century Gothic", 12.75F);
+            this.ln.ForeColor = System.Drawing.Color.LightGray;
+            this.ln.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ln.Location = new System.Drawing.Point(284, 0);
+            this.ln.Name = "ln";
+            this.ln.Size = new System.Drawing.Size(70, 70);
+            this.ln.TabIndex = 31;
+            this.ln.Text = "ln";
+            this.ln.UseVisualStyleBackColor = false;
+            this.ln.Click += new System.EventHandler(this.InstantOp_Click);
             // 
             // euler
             // 
@@ -1210,13 +1210,13 @@ namespace Kalkulacka
         private System.Windows.Forms.Button Power3;
         private System.Windows.Forms.Button powerX;
         private System.Windows.Forms.Button log;
-        private System.Windows.Forms.Button ln;
+        private System.Windows.Forms.Button negate;
         private System.Windows.Forms.Button pi;
         private System.Windows.Forms.Button factorial;
         private System.Windows.Forms.Button root2;
         private System.Windows.Forms.Button cos;
         private System.Windows.Forms.Button arccos;
-        private System.Windows.Forms.Button multiplication10;
+        private System.Windows.Forms.Button ln;
         private System.Windows.Forms.Button PowerXMinus1;
         private System.Windows.Forms.Button root;
         private System.Windows.Forms.Button logDec;

@@ -182,24 +182,6 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Minus sign click handler
-         */
-        private void subtraction_Click(object sender, EventArgs e)
-        {
-            bool convValid;
-            if (textBox1.Text == "0")
-            {
-                textBox1.Text = "-";
-            }
-            else
-            {
-                convValid = decimal.TryParse(textBox1.Text, out firstNum);
-                erase = true;
-                operationPerformed = "substraction";
-            }
-        }
-
-        /**
          * @brief Function to check if there is enough space in textbox for writing pressed key (WIP)
          */
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -431,8 +413,24 @@ namespace Kalkulacka
                     result = newMath.Exponentiate(newMath.constE.Item2, input);
                     checkNeeded = true;
                     break;
+                case "negate":
+                    if (textBox1.Text != "0" && !opClick && textBox1.Text != "Error")
+                    {
+                        if (!textBox1.Text.Contains("-"))
+                        {
+                            if ((textBox1.Text.Contains(",") && textBox1.Text.Length <= 10) || textBox1.Text.Length <= 9)
+                            {
+                                textBox1.Text = textBox1.Text.Insert(0, "-");
+                            }
+                        }
+                        else
+                        {
+                            textBox1.Text = textBox1.Text.Remove(0, 1);
+                        }
+                    }
+                    break;
             }
-            if (instantOp != "del" && instantOp!="pi" && firstNum != 0)
+            if (instantOp != "del" && instantOp!="pi" && firstNum != 0 && instantOp!="negate")
             {
                 erase = true;
                 firstNum = 0;
@@ -461,7 +459,7 @@ namespace Kalkulacka
                 case "addition":
                     result = newMath.Add(firstNum, secondNum);
                     break;
-                case "substraction":
+                case "subtraction":
                     result = newMath.Subtract(firstNum, secondNum);
                     break;
                 case "multiplication":
