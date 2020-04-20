@@ -282,6 +282,7 @@ namespace Kalkulacka
             {
                 textBox1.Text = "Error";
                 //TODO error handler
+                erase = true;
             }
             else
             {
@@ -393,7 +394,7 @@ namespace Kalkulacka
                     break;
 
                 case "log":
-                    result = newMath.Logarithm(10, input);
+                    result = newMath.Logarithm(input, 10);
                     checkNeeded = true;
                     break;
 
@@ -408,7 +409,7 @@ namespace Kalkulacka
                     break;
 
                 case "ln":
-                    result = newMath.Logarithm(newMath.constE, input);
+                    result = newMath.Logarithm(input, newMath.constE);
                     checkNeeded = true;
                     break;
 
@@ -512,7 +513,7 @@ namespace Kalkulacka
                     break;
 
                 case "logDec":
-                    result = newMath.Logarithm(secondNum, firstNum);
+                    result = newMath.Logarithm(firstNum, secondNum);
                     break;
 
                 case "root":
