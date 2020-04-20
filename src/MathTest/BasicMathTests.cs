@@ -93,6 +93,7 @@ namespace MathTest
             Assert.AreEqual(RoundOff(123456789.98765432m), result);
             Assert.IsFalse(errBool);
 
+            // test error handling
             (errBool, result) = NewMath.Add(-555555555, -555555555);
             //Assert.AreEqual(RoundOff(-1111111110), result);
             Assert.IsTrue(errBool);
@@ -166,6 +167,7 @@ namespace MathTest
             Assert.AreEqual(RoundOff(1.99999998m), result);
             Assert.IsFalse(errBool);
             
+            // test error handling
             (errBool, result) = NewMath.Subtract(999287952, -999514265);
             //Assert.AreEqual(RoundOff(1998802217), result);
             Assert.IsTrue(errBool);
@@ -239,6 +241,7 @@ namespace MathTest
             Assert.AreEqual(RoundOff(0.55555549m), result);
             Assert.IsFalse(errBool);
 
+            // test error handling
             (errBool, result) = NewMath.Multiply(423135487, 47712318);
             //Assert.AreEqual(RoundOff(20188774912828866‬), result);
             Assert.IsTrue(errBool);
@@ -309,7 +312,6 @@ namespace MathTest
 
             (errBool, result) = NewMath.Divide(0, 0);
             Assert.IsTrue(errBool);
-
             
             // test length of returning value (max 9 significant digits)
             (errBool, result) = NewMath.Divide(555555.55m, 5.222222m);
@@ -320,6 +322,7 @@ namespace MathTest
             Assert.AreEqual(RoundOff(26054.1893468118195m), result);
             Assert.IsFalse(errBool);
 
+            // test error handling
             (errBool, result) = NewMath.Divide(999999999, 0.5m);
             //Assert.AreEqual(RoundOff(1999999998m), result);
             Assert.IsTrue(errBool);
@@ -385,11 +388,6 @@ namespace MathTest
             Assert.AreEqual(429981696, result);
             Assert.IsFalse(errBool);
 
-            // System overflow exception
-            // (errBool, result) = NewMath.Exponentiate(-8, -0.4m);
-            // Assert.AreEqual(0, result);
-            // Assert.IsFalse(errBool);
-
             // test undefined option
             (errBool, result) = NewMath.Exponentiate(0, 0);
             Assert.IsTrue(errBool);
@@ -403,6 +401,7 @@ namespace MathTest
             Assert.AreEqual(RoundOff(0.00097656m), result);
             Assert.IsFalse(errBool);
 
+            // test error handling
             (errBool, result) = NewMath.Exponentiate(15, 12);
             //Assert.AreEqual(RoundOff(129746337890625), result);
             Assert.IsTrue(errBool);
@@ -486,6 +485,7 @@ namespace MathTest
             Assert.AreEqual(RoundOff(1104191.8114525m), result);
             Assert.IsFalse(errBool);
 
+            // test error handling
             (errBool, result) = NewMath.Root(0.5m, 50000);
             //Assert.AreEqual(RoundOff(2500000000), result);
             Assert.IsTrue(errBool);
@@ -493,8 +493,6 @@ namespace MathTest
             (errBool, result) = NewMath.Root(0.2m, 600);
             //Assert.AreEqual(RoundOff(77760000000000‬), result);
             Assert.IsTrue(errBool);
-
-
         }
 
         [TestMethod]
@@ -574,12 +572,9 @@ namespace MathTest
             MathComponents NewMath = new MathComponents();
 
             // tests to check Sin functionality
-
-            (bool errBool, decimal result) = NewMath.Sin(1 * (decimal)Math.PI);
-            /*
+            (bool errBool, decimal result) = NewMath.Sin(1 * (decimal)Math.PI);            
             Assert.AreEqual(0, result);
-            Assert.IsFalse(errBool);
-            */
+            Assert.IsFalse(errBool);            
 
             (errBool, result) = NewMath.Sin(2 * (decimal)Math.PI);
             Assert.AreEqual(0, result);
@@ -746,8 +741,7 @@ namespace MathTest
             Assert.AreEqual(-1, result);
             Assert.IsFalse(errBool);
 
-            //test undefined values
-            /*
+            //test undefined values            
             (errBool, result) = NewMath.Tan(0.5m * (decimal)Math.PI);          
             Assert.IsTrue(errBool);
 
@@ -755,8 +749,7 @@ namespace MathTest
             Assert.IsTrue(errBool);
 
             (errBool, result) = NewMath.Tan(1245.5m * (decimal)Math.PI);          
-            Assert.IsTrue(errBool);
-            */
+            Assert.IsTrue(errBool);            
         }
 
         [TestMethod]
@@ -819,7 +812,6 @@ namespace MathTest
 
             (errBool, result) = NewMath.Arcsin(1245.5m * (decimal)Math.PI);
             Assert.IsTrue(errBool);
-
         }
 
         [TestMethod]
