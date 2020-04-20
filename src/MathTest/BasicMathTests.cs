@@ -816,7 +816,7 @@ namespace MathTest
 
         [TestMethod]
         /**
-         * @brief Tests to check Arccos functionality
+         * @brief Tests to check Arccos functionality 
          * @brief  domain is -1 <= x <= 1 
          * @brief range is 0 <= y <= PI
          */
