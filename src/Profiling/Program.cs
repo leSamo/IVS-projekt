@@ -1,3 +1,11 @@
+/* @file Program.cs
+ * @author Samuel Olekšák
+ * @brief Profiling console app calculating standard deviating from set of numbers
+ * Expecting input from stdin with numbers separated by newline
+ * Outputs single number - standard deviating of input set
+ * Using operations from math library 
+ */
+
 using MathComponentsNS;
 using System;
 
@@ -5,20 +13,21 @@ namespace Profiling
 {
     internal class Program
     {
+        /* @brief Loads numbers from input, accumulates their sum, sum of their squares and their count; calculated standard deviation and prints it
+         */
         private static int Main(string[] args)
         {
             MathComponents math = new MathComponents();
 
             bool conversionSuccessful;
             string input;
-            decimal currentNumber = 0;
             decimal linearAccumulator = 0;
             decimal quadraticAccumulator = 0;
             int count = 0;
 
             while (!string.IsNullOrEmpty(input = Console.ReadLine()))
             {
-                conversionSuccessful = Decimal.TryParse(input, out currentNumber);
+                conversionSuccessful = Decimal.TryParse(input, out decimal currentNumber);
                 if (!conversionSuccessful)
                 {
                     Console.WriteLine("Conversion error");
@@ -26,36 +35,55 @@ namespace Profiling
                 }
                 count++;
                 linearAccumulator += currentNumber;
-                // TODO: error handling
-                quadraticAccumulator += math.Exponentiate(currentNumber, 2).Item2;
+                quadraticAccumulator += CheckNull(math.Exponentiate(currentNumber, 2));
             }
 
-            // TODO: error handling
-            decimal average = math.Divide(1, count).Item2;
-            average = math.Multiply(average, linearAccumulator).Item2;
+            if (count < 2)
+            {
+                Console.WriteLine("Minimum of 2 numbers required");
+                return -1;
+            }
 
-            decimal deviationLeft = math.Subtract(count, 1).Item2;
-            deviationLeft = math.Divide(1, deviationLeft).Item2;
+            decimal average = CheckNull(math.Divide(1, count));
+            average = CheckNull(math.Multiply(average, linearAccumulator));
 
-            decimal deviationRight = math.Exponentiate(average, 2).Item2;
-            deviationRight = math.Multiply(count, deviationRight).Item2;
-            deviationRight = math.Subtract(quadraticAccumulator, deviationRight).Item2;
+            decimal deviationLeft = CheckNull(math.Subtract(count, 1));
+            deviationLeft = CheckNull(math.Divide(1, deviationLeft));
 
-            decimal deviation = math.Multiply(deviationLeft, deviationRight).Item2;
-            deviation = math.Root(2, deviation).Item2;
+            decimal deviationRight = CheckNull(math.Exponentiate(average, 2));
+            deviationRight = CheckNull(math.Multiply(count, deviationRight));
+            deviationRight = CheckNull(math.Subtract(quadraticAccumulator, deviationRight));
 
-            /* DEBUG INFO */
+            decimal deviation = CheckNull(math.Multiply(deviationLeft, deviationRight));
+            deviation = CheckNull(math.Root(2, deviation));
+
+            /* DEBUG INFO
             Console.WriteLine("N: " + count);
             Console.WriteLine("sum x: " + linearAccumulator);
             Console.WriteLine("sum x^2: " + quadraticAccumulator);
             Console.WriteLine("average x: " + average);
-            /* END INFO */
+            // END INFO */
 
             Console.WriteLine(deviation);
-            // remove this vvv
-            Console.ReadLine();
+            
+            // Console.ReadLine();
 
             return 0;
+        }
+
+        /* @brief Checks if number received from math lib isn't null which would mean an error occured
+         * @param[in] input - nullable decimal which contains either result or null
+         * @returns non-nullable decimal with result of halts program in case of error
+         */ 
+        private static decimal CheckNull(decimal? input)
+        {
+            if (input == null)
+            {
+                Console.WriteLine("Math error");
+                Environment.Exit(-1);
+            }
+
+            return input ?? 0;
         }
     }
 }

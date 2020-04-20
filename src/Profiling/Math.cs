@@ -1,7 +1,7 @@
 /**
 * @file Math.cs
 * @brief File responsible for implementing math operations and constants
-* all functions return (bool, decimal) tuple where first operand is set to true if there
+* all functions return nullable decimal
 * is an error (e.g. out of bounds, division by zero), second is result
 */
 
@@ -11,35 +11,35 @@ namespace MathComponentsNS
 {
     public class MathComponents
     {
-        private (bool, decimal) error = (true, 0);
+        private decimal? error = null;
 
-        public (bool, decimal) constPI = (false, (decimal)Math.PI);
-        public (bool, decimal) constE = (false, (decimal)Math.E);
+        public decimal constPI = (decimal)Math.PI;
+        public decimal constE = (decimal)Math.E;
 
         /**
          * @return error/scientific notation if more than 9 whole places (?)
          * @brief truncates result to fit calc screen
-         * if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max
+         * @brief if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max
          */
 
-        public (bool, decimal) TruncateToFit((bool, decimal) a)
+        public decimal? TruncateToFit(decimal a)
         {
-            if (a.Item1) return error;
-            int wholeDigits = (int)Math.Floor(1 + Math.Log10((double)Math.Abs(a.Item2)));
+            int wholeDigits = (int)Math.Floor(1 + Math.Log10((double)Math.Abs(a)));
+
             if (wholeDigits > 9) return error;
-            else if (a.Item2 == 0)
+            else if (a == 0)
             {
-                return (false, 0);
+                return 0;
             }
-            else if (Math.Abs(a.Item2) < 10)
+            else if (Math.Abs(a) < 10)
             {
-                decimal result = (decimal)(Math.Truncate((double)a.Item2 * 10e7) / 10e7);
-                return (false, result);
+                decimal? result = (decimal)(Math.Truncate((double)a * 10e7) / 10e7);
+                return result;
             }
             else
             {
-                decimal result = (decimal)(Math.Truncate((double)a.Item2 * Math.Pow(10, 9 - wholeDigits)) / Math.Pow(10, 9 - wholeDigits));
-                return (false, result);
+                decimal? result = (decimal)(Math.Truncate((double)a * Math.Pow(10, 9 - wholeDigits)) / Math.Pow(10, 9 - wholeDigits));
+                return result;
             }
         }
 
@@ -50,10 +50,10 @@ namespace MathComponentsNS
         * @return sum (result of a + b)
         */
 
-        public (bool, decimal) Add(decimal a, decimal b)
+        public decimal? Add(decimal a, decimal b)
         {
             decimal res = a + b;
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
@@ -63,10 +63,10 @@ namespace MathComponentsNS
          * @return difference (result of a - b)
          */
 
-        public (bool, decimal) Subtract(decimal a, decimal b)
+        public decimal? Subtract(decimal a, decimal b)
         {
             decimal res = a - b;
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
@@ -76,10 +76,10 @@ namespace MathComponentsNS
          * @return product (result of a * b)
          */
 
-        public (bool, decimal) Multiply(decimal a, decimal b)
+        public decimal? Multiply(decimal a, decimal b)
         {
             decimal res = a * b;
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
@@ -90,30 +90,30 @@ namespace MathComponentsNS
          * @return error if divisor is zero
          */
 
-        public (bool, decimal) Divide(decimal a, decimal b)
+        public decimal? Divide(decimal a, decimal b)
         {
             if (b == 0) return error;
 
             decimal res = a / b;
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
-         *  non-integer exponent or base expect error (?)
+         *  @brief non-integer exponent or base expect error (?)
          *  @param[in] decimal base (b)
          *  @param[in] decimal exponent (e)
          *  @return result of b^e
          *  @return error if 0^0 or 0^-1
          */
 
-        public (bool, decimal) Exponentiate(decimal b, decimal e)
+        public decimal? Exponentiate(decimal b, decimal e)
         {
             if ((b == 0 && e == 0) || (b == 0 && e == -1)) return error;
-            if (e == 0) return (false, 1m);
+            if (e == 0) return (1m);
             /*
             if (e < 0)
             {
-                (bool, decimal) part = Divide(1m, b);
+                decimal? part = Divide(1m, b);
                 if (part.Item1) return error;
                 b = part.Item2;
                 e = -e;
@@ -121,7 +121,7 @@ namespace MathComponentsNS
             */
 
             decimal res = (decimal)Math.Pow((double)b, (double)e);
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
@@ -132,42 +132,42 @@ namespace MathComponentsNS
          * @return error if negative radicant
          */
 
-        public (bool, decimal) Root(decimal d, decimal r)
+        public decimal? Root(decimal d, decimal r)
         {
             if (r < 0 || d == 0) return error;
 
             decimal res = (decimal)System.Math.Pow((double)r, 1d / (double)d);
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
          * @param[in] decimal argument (a)
          * @param[in] decimal base (b)
          * @brief Logarithm function
-         * expect log-argument positive
-         * expect base positive and different from 1
+         * @brief expect log-argument positive
+         * @brief expect base positive and different from 1
          * @return log of a with base of b
          */
 
-        public (bool, decimal) Logarithm(decimal a, decimal b)
+        public decimal? Logarithm(decimal a, decimal b)
         {
             if (b <= 0 || b == 1 || a <= 0) return error;
             decimal res = (decimal)System.Math.Log((double)a, (double)b);
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
          * @brief sine function
-         * using Taylor series algorithm
-         * sin x = x − x^3/3! + x^5/5! − x^7/7! + ...
-          @param[in] decimal a
+         * @brief using Taylor series algorithm
+         * @brief sin x = x − x^3/3! + x^5/5! − x^7/7! + ...
+         * @param[in] decimal a
          * @return  result with 5 decimal places precision
          */
 
-        public (bool, decimal) Sin(decimal a)
+        public decimal? Sin(decimal a)
         {
-            //double res = Math.Sin((double)a);
-            //decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
+            decimal res = (decimal)Math.Sin((double)a);
+            /*
             decimal res = a;
             res -= Exponentiate(a, 3).Item2 / UnconstrainedFactorial(3).Item2;
             res += Exponentiate(a, 5).Item2 / UnconstrainedFactorial(5).Item2;
@@ -178,23 +178,24 @@ namespace MathComponentsNS
             res -= Exponentiate(a, 15).Item2 / UnconstrainedFactorial(15).Item2;
             res += Exponentiate(a, 17).Item2 / UnconstrainedFactorial(17).Item2;
             res -= Exponentiate(a, 19).Item2 / UnconstrainedFactorial(19).Item2;
+            */
 
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
          * @brief Function cosine
-         * using Taylor series algorithm
-         * cos x = 1 − x^2/2! + x^4/4! − x^6/6! + ...
+         * @brief using Taylor series algorithm
+         * @brief cos x = 1 − x^2/2! + x^4/4! − x^6/6! + ...
          * @param[in] decimal number a
          * @return result with 5 decimal places precision (?)
          */
 
-        public (bool, decimal) Cos(decimal a)
+        public decimal? Cos(decimal a)
         {
-            //double res = Math.Cos((double)a);
+            decimal res = (decimal)Math.Cos((double)a);
             //decimal ress = (decimal)(Math.Round(res * 1e10d) / 1e10d);
-
+            /*
             decimal res = 1;
             res -= Exponentiate(a, 2).Item2 / UnconstrainedFactorial(2).Item2;
             res += Exponentiate(a, 4).Item2 / UnconstrainedFactorial(4).Item2;
@@ -205,23 +206,24 @@ namespace MathComponentsNS
             res -= Exponentiate(a, 14).Item2 / UnconstrainedFactorial(14).Item2;
             res += Exponentiate(a, 16).Item2 / UnconstrainedFactorial(16).Item2;
             res -= Exponentiate(a, 18).Item2 / UnconstrainedFactorial(18).Item2;
+            */
 
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
         * @brief Function tangent
         * @param[in] decimal number a
-        * tan x = sin x / cos x
+        * @brief tan x = sin x / cos x
         * @return result with 5 decimal places precision (?)
         */
 
-        public (bool, decimal) Tan(decimal a)
+        public decimal? Tan(decimal a)
         {
             double b = (double)a;
             if (b % Math.PI == Math.PI / 2d) return error;
             decimal res = (decimal)Math.Tan((double)a);
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
@@ -231,25 +233,25 @@ namespace MathComponentsNS
         * expect value between -pi/2 and pi/2
         */
 
-        public (bool, decimal) Arcsin(decimal a)
+        public decimal? Arcsin(decimal a)
         {
             if (a < -1.57079632679m || a > 1.57079632679m) return error;
             decimal res = (decimal)Math.Asin((double)a);
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
         * @brief Function arccos
         * @param[in] decimal number a
         * @return result with 5 decimal places precision (?)
-        * expect value between -1 and 1
+        * @brief expect value between -1 and 1
         */
 
-        public (bool, decimal) Arccos(decimal a)
+        public decimal? Arccos(decimal a)
         {
             if (a < -1 || a > 1) return error;
             decimal res = (decimal)Math.Acos((double)a);
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
@@ -258,53 +260,53 @@ namespace MathComponentsNS
           * @return result with 5 decimal places precision (?)
           */
 
-        public (bool, decimal) Arctan(decimal a)
+        public decimal? Arctan(decimal a)
         {
             decimal res = (decimal)Math.Atan((double)a);
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
 
         /**
           * @brief Factorial operation function
           * @param[in] decimal number a
-          * expect number non-negative integer not greater than 12
+          * @brief expect number non-negative integer not greater than 12
           * @return error if a is negative integer
           * @return error if a is greater than 12
           * @return error if a has decimal point
           */
 
-        public (bool, decimal) Factorial(decimal a)
+        public decimal? Factorial(decimal a)
         {
             if (a % 1 != 0 || a < 0 || a > 12) return error;
-            else if (a == 0) return (false, 1);
-            else return (false, a * Factorial(a - 1).Item2);
+            else if (a == 0) return (1);
+            else return (a * Factorial(a - 1));
         }
 
         /**
           * @brief Factorial operation function without upper limit
-          * helper function, don't use in calculator
+          * @brief helper function, don't use in calculator
           * @param[in] decimal number a
-          * expect number non-negative integer
+          * @brief expect number non-negative integer
           * @return error if a is negative integer
           * @return error if a has decimal point
           */
 
-        public (bool, decimal) UnconstrainedFactorial(decimal a)
+        public decimal? UnconstrainedFactorial(decimal a)
         {
             if (a % 1 != 0 || a < 0) return error;
-            else if (a == 0) return (false, 1);
-            else return (false, a * UnconstrainedFactorial(a - 1).Item2);
+            else if (a == 0) return 1;
+            else return (a * UnconstrainedFactorial(a - 1));
         }
 
         /**
         * @brief Function of random number
-        * generates random decimal number between 0 inclusive to 1 exclusive
+        * @brief generates random decimal number between 0 inclusive to 1 exclusive
         */
 
-        public (bool, decimal) Random()
+        public decimal? Random()
         {
             decimal res = (decimal)new Random().NextDouble();
-            return TruncateToFit((false, res));
+            return TruncateToFit(res);
         }
     }
 }
