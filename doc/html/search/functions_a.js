@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['shift_5fclick_81',['shift_Click',['../class_kalkulacka_1_1_form1.html#a2d74bd3dc9136aeab3a970feaac95469',1,'Kalkulacka::Form1']]]
+  ['unconstrainedfactorial_97',['UnconstrainedFactorial',['../class_math_components_n_s_1_1_math_components.html#a72aef64cb49f18f46748343c7cd2aee8',1,'MathComponentsNS::MathComponents']]]
 ];

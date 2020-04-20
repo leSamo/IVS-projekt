@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['roundoff_32',['RoundOff',['../class_math_test_1_1_basic_math_tests.html#a5a3f95c22ee91ba9b091908e744e04ab',1,'MathTest::BasicMathTests']]]
+  ['sin_29',['Sin',['../class_math_components_n_s_1_1_math_components.html#a720482fb9bbfaf518980774acc42c1b1',1,'MathComponentsNS::MathComponents']]],
+  ['subtract_30',['Subtract',['../class_math_components_n_s_1_1_math_components.html#aa74136f08fedbc1728a46dfc3b2b8aaa',1,'MathComponentsNS::MathComponents']]]
 ];

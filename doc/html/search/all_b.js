@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['question_5fclick_31',['question_Click',['../class_kalkulacka_1_1_form1.html#a58bf4d453eb3c56e87b196286d9e2fef',1,'Kalkulacka::Form1']]]
+  ['random_26',['Random',['../class_math_components_n_s_1_1_math_components.html#a205ba973efe8d50c181a066a85198081',1,'MathComponentsNS::MathComponents']]],
+  ['root_27',['Root',['../class_math_components_n_s_1_1_math_components.html#a331dc4a44e5d83bd405c09c114a70f17',1,'MathComponentsNS::MathComponents']]],
+  ['roundoff_28',['RoundOff',['../class_math_test_1_1_basic_math_tests.html#a58c9b52a3f03961732a03b042a865bd0',1,'MathTest::BasicMathTests']]]
 ];

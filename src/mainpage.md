@@ -1,12 +1,21 @@
 @mainpage IVS Project #2 Documentation
-@section Practical Aspects of Software Design
+@subsection  Practical Practical Aspects of Software Design
 Project number 2 - Calculator
-2019/2020
-Team Orient Express
-@authors xoleks00, xfindr00, xkromp00, xkruzi04
 
-@section 
-Enviroment is made in:
+2019/2020
+
+Team Orient Express
+@subsection Authors Authors:
+
+ xoleks00 - Samuel Olekšák
+
+ xfindr00 - Michal Findra 
+
+ xkromp00 - Emma Krompaščíková
+
+ xkruzi04 - Filip Kružík
+
+@subsection  Enviroment Enviroment:
 
 Windows 64-bit
 
@@ -14,12 +23,10 @@ Visual Studio
 
 .NET Framework 4.6
 
-Jazyk C#
+C# Language 
 
-This is what our project looks like
-
+\image{inline} html calculator.png
 
 ![](calculator.png)
-
-https://github.com/leSamo/IVS-projekt
+Github link: https://github.com/leSamo/IVS-projekt
 

@@ -1,3 +1,8 @@
+/*
+ * @file Program.cs
+ * @brief Entry point for the application
+ */
+
 using System;
 using System.Windows.Forms;
 

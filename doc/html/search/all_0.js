@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['basicmathtests_0',['BasicMathTests',['../class_math_test_1_1_basic_math_tests.html',1,'MathTest']]],
-  ['basicmathtests_2ecs_1',['BasicMathTests.cs',['../_basic_math_tests_8cs.html',1,'']]],
-  ['bool_2',['bool',['../class_kalkulacka_1_1_form1.html#a478cb79a61c022080b2629fba29abd9d',1,'Kalkulacka.Form1.bool()'],['../class_math_components_n_s_1_1_math_components.html#a0a4dedccd74f5db92cb776842688b454',1,'MathComponentsNS.MathComponents.bool()']]]
+  ['add_0',['Add',['../class_math_components_n_s_1_1_math_components.html#aff777940978dd613d5b39e2d4397c9ba',1,'MathComponentsNS::MathComponents']]],
+  ['arccos_1',['Arccos',['../class_math_components_n_s_1_1_math_components.html#a636d61ad81327675f58d1c074074f3ab',1,'MathComponentsNS::MathComponents']]],
+  ['arcsin_2',['Arcsin',['../class_math_components_n_s_1_1_math_components.html#a3d38cc14b1bae162a8b01ce702e5c1b6',1,'MathComponentsNS::MathComponents']]],
+  ['arctan_3',['Arctan',['../class_math_components_n_s_1_1_math_components.html#a0429d14430e1462702d5b03f3bd6585c',1,'MathComponentsNS::MathComponents']]]
 ];

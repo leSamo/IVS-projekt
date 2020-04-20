@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['question_5fclick_79',['question_Click',['../class_kalkulacka_1_1_form1.html#a58bf4d453eb3c56e87b196286d9e2fef',1,'Kalkulacka::Form1']]]
+  ['sin_78',['Sin',['../class_math_components_n_s_1_1_math_components.html#a720482fb9bbfaf518980774acc42c1b1',1,'MathComponentsNS::MathComponents']]],
+  ['subtract_79',['Subtract',['../class_math_components_n_s_1_1_math_components.html#aa74136f08fedbc1728a46dfc3b2b8aaa',1,'MathComponentsNS::MathComponents']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['number_5fclick_26',['Number_click',['../class_kalkulacka_1_1_form1.html#a9c294d4fcbebeb69f33cfd2ef5416b52',1,'Kalkulacka::Form1']]]
+  ['logarithm_18',['Logarithm',['../class_math_components_n_s_1_1_math_components.html#a9c734d0f4b3c7871ce22e5132c415a59',1,'MathComponentsNS::MathComponents']]]
 ];

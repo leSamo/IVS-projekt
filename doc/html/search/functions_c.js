@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['valid_5fchk_98',['Valid_Chk',['../class_kalkulacka_1_1_form1.html#ae214e46c363b7455cacf8eda0b3e2582',1,'Kalkulacka::Form1']]]
+  ['zeroclear_99',['ZeroClear',['../class_kalkulacka_1_1_form1.html#a89166e36a883af21390ab60d3d6ebaa8',1,'Kalkulacka::Form1']]]
 ];

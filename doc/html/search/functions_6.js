@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['number_5fclick_76',['Number_click',['../class_kalkulacka_1_1_form1.html#a9c294d4fcbebeb69f33cfd2ef5416b52',1,'Kalkulacka::Form1']]]
+  ['multiply_74',['Multiply',['../class_math_components_n_s_1_1_math_components.html#a29f6d9a9c944e390d9780be4a18a54a5',1,'MathComponentsNS::MathComponents']]]
 ];
