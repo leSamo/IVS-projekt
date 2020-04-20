@@ -616,5 +616,10 @@ namespace Kalkulacka
             Info openForm = new Info();
             openForm.Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
