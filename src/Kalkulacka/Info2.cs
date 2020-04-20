@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Kalkulacka
 {
-    public partial class Info : Form
+    public partial class Info2 : Form
     {
-        public Info()
+        public Info2()
         {
             InitializeComponent();
         }
@@ -20,12 +20,6 @@ namespace Kalkulacka
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void next1_Click(object sender, EventArgs e)
-        {
-            Info2 openForm = new Info2();
-            openForm.Show();
         }
     }
 }
