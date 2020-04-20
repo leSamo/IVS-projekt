@@ -1,7 +1,7 @@
 /**
 * @file Math.cs
 * @brief File responsible for implementing math operations and constants
-* all functions return (bool, decimal) tuple where first operand is set to true if there 
+* all functions return (bool, decimal) tuple where first operand is set to true if there
 * is an error (e.g. out of bounds, division by zero), second is result
 */
 
@@ -11,9 +11,7 @@ namespace MathComponentsNS
 {
     public class MathComponents
     {
-
-
-        (bool, decimal) error = (true, 0);
+        private (bool, decimal) error = (true, 0);
 
         public (bool, decimal) constPI = (false, (decimal)Math.PI);
         public (bool, decimal) constE = (false, (decimal)Math.E);
@@ -21,8 +19,9 @@ namespace MathComponentsNS
         /**
          * @return error/scientific notation if more than 9 whole places (?)
          * @brief truncates result to fit calc screen
-         * if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max 
+         * if less than 9 whole, leave all whole and truncate decimal to sum up to 9 max
          */
+
         public (bool, decimal) TruncateToFit((bool, decimal) a)
         {
             if (a.Item1) return error;
@@ -45,11 +44,12 @@ namespace MathComponentsNS
         }
 
         /**
-        * @brief Addition operation function 
+        * @brief Addition operation function
         * @param[in] decimal first addend (a)
         * @param[in] decimal second addend (b)
         * @return sum (result of a + b)
         */
+
         public (bool, decimal) Add(decimal a, decimal b)
         {
             decimal res = a + b;
@@ -57,11 +57,12 @@ namespace MathComponentsNS
         }
 
         /**
-         * @brief Subtraction operation function 
+         * @brief Subtraction operation function
          * @param[in] decimal minuend (a)
          * @param[in] decimal subtrahend (b)
          * @return difference (result of a - b)
          */
+
         public (bool, decimal) Subtract(decimal a, decimal b)
         {
             decimal res = a - b;
@@ -72,8 +73,9 @@ namespace MathComponentsNS
          * @brief Multiplication operation function
          * @param[in] decimal first factor (a)
          * @param[in] decimal second factor (b)
-         * @return product (result of a * b) 
+         * @return product (result of a * b)
          */
+
         public (bool, decimal) Multiply(decimal a, decimal b)
         {
             decimal res = a * b;
@@ -87,6 +89,7 @@ namespace MathComponentsNS
          * @return quotient (result of a / b)
          * @return error if divisor is zero
          */
+
         public (bool, decimal) Divide(decimal a, decimal b)
         {
             if (b == 0) return error;
@@ -95,7 +98,6 @@ namespace MathComponentsNS
             return TruncateToFit((false, res));
         }
 
-
         /**
          *  non-integer exponent or base expect error (?)
          *  @param[in] decimal base (b)
@@ -103,6 +105,7 @@ namespace MathComponentsNS
          *  @return result of b^e
          *  @return error if 0^0 or 0^-1
          */
+
         public (bool, decimal) Exponentiate(decimal b, decimal e)
         {
             if ((b == 0 && e == 0) || (b == 0 && e == -1)) return error;
@@ -125,9 +128,10 @@ namespace MathComponentsNS
          * @brief Funtion of root to ath
          * @param[in] decimal degree d
          * @param[in] decimal radicand r
-         * @return ath root of b 
+         * @return ath root of b
          * @return error if negative radicant
          */
+
         public (bool, decimal) Root(decimal d, decimal r)
         {
             if (r < 0 || d == 0) return error;
@@ -144,6 +148,7 @@ namespace MathComponentsNS
          * expect base positive and different from 1
          * @return log of a with base of b
          */
+
         public (bool, decimal) Logarithm(decimal a, decimal b)
         {
             if (b <= 0 || b == 1 || a <= 0) return error;
@@ -158,6 +163,7 @@ namespace MathComponentsNS
           @param[in] decimal a
          * @return  result with 5 decimal places precision
          */
+
         public (bool, decimal) Sin(decimal a)
         {
             //double res = Math.Sin((double)a);
@@ -183,6 +189,7 @@ namespace MathComponentsNS
          * @param[in] decimal number a
          * @return result with 5 decimal places precision (?)
          */
+
         public (bool, decimal) Cos(decimal a)
         {
             //double res = Math.Cos((double)a);
@@ -208,6 +215,7 @@ namespace MathComponentsNS
         * tan x = sin x / cos x
         * @return result with 5 decimal places precision (?)
         */
+
         public (bool, decimal) Tan(decimal a)
         {
             double b = (double)a;
@@ -220,8 +228,9 @@ namespace MathComponentsNS
         * @brief Function arcsin
         * @param[in] decimal number a
         * @return result with 5 decimal places precision (?)
-        * expect value between -pi/2 and pi/2 
+        * expect value between -pi/2 and pi/2
         */
+
         public (bool, decimal) Arcsin(decimal a)
         {
             if (a < -1.57079632679m || a > 1.57079632679m) return error;
@@ -235,6 +244,7 @@ namespace MathComponentsNS
         * @return result with 5 decimal places precision (?)
         * expect value between -1 and 1
         */
+
         public (bool, decimal) Arccos(decimal a)
         {
             if (a < -1 || a > 1) return error;
@@ -247,6 +257,7 @@ namespace MathComponentsNS
           * @param[in] decimal number a
           * @return result with 5 decimal places precision (?)
           */
+
         public (bool, decimal) Arctan(decimal a)
         {
             decimal res = (decimal)Math.Atan((double)a);
@@ -261,6 +272,7 @@ namespace MathComponentsNS
           * @return error if a is greater than 12
           * @return error if a has decimal point
           */
+
         public (bool, decimal) Factorial(decimal a)
         {
             if (a % 1 != 0 || a < 0 || a > 12) return error;
@@ -276,6 +288,7 @@ namespace MathComponentsNS
           * @return error if a is negative integer
           * @return error if a has decimal point
           */
+
         public (bool, decimal) UnconstrainedFactorial(decimal a)
         {
             if (a % 1 != 0 || a < 0) return error;
@@ -287,6 +300,7 @@ namespace MathComponentsNS
         * @brief Function of random number
         * generates random decimal number between 0 inclusive to 1 exclusive
         */
+
         public (bool, decimal) Random()
         {
             decimal res = (decimal)new Random().NextDouble();

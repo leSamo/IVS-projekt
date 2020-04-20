@@ -1,11 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kalkulacka
@@ -20,23 +14,6 @@ namespace Kalkulacka
             InitializeComponent();
         }
 
-        //vymazat
-        private void Info_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        //vymazat
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-         //vymazat toto
-        private void next1_Click(object sender, EventArgs e)
-        {
-            Info2 openForm = new Info2();
-            openForm.Show();
-        }
         private void Info_Load_1(object sender, EventArgs e)
         {
             listPanel.Add(panel_info_1);
