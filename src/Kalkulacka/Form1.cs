@@ -12,17 +12,17 @@ namespace Kalkulacka
 {
     public partial class Form1 : Form
     {
-        List<Panel> listPanel = new List<Panel>();
-        MathComponentsNS.MathComponents newMath = new MathComponentsNS.MathComponents();
-        bool shiftClicked = false;
-        string operationPerformed = "";
-        decimal firstNum = 0;
-        decimal secondNum = 0;
-        decimal MEM = 0;
-        decimal ans = 0;
-        bool erase = false;
-        bool repeatEq = false;
-        bool opClick = false;
+        private List<Panel> listPanel = new List<Panel>();
+        private MathComponentsNS.MathComponents newMath = new MathComponentsNS.MathComponents();
+        private bool shiftClicked = false;
+        private string operationPerformed = "";
+        private decimal firstNum = 0;
+        private decimal secondNum = 0;
+        private decimal MEM = 0;
+        private decimal ans = 0;
+        private bool erase = false;
+        private bool repeatEq = false;
+        private bool opClick = false;
         //private object txt_Result;
 
         public Form1()
@@ -33,6 +33,7 @@ namespace Kalkulacka
         /**
          * @brief Init function for UI setup
          */
+
         private void Form1_Load(object sender, EventArgs e)
         {
             listPanel.Add(shiftUnclickedPanel);
@@ -46,11 +47,12 @@ namespace Kalkulacka
          * @brief Function checking length and appending char if possible
          * @param[in] char d (character to be appended)
          */
-        private void length (char d)
-        {   
+
+        private void length(char d)
+        {
             if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
             {
-                if(textBox1.Text.Length <= 10)
+                if (textBox1.Text.Length <= 10)
                 {
                     textBox1.Text = textBox1.Text + d;
                 }
@@ -68,10 +70,10 @@ namespace Kalkulacka
             }
         }
 
-
         /**
          * @brief Function for switching panel after click on SHIFT
          */
+
         private void shift_Click(object sender, EventArgs e)
         {
             if (shiftClicked)
@@ -93,6 +95,7 @@ namespace Kalkulacka
         /**
          * @brief Function for switching off the application
          */
+
         private void off_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -101,6 +104,7 @@ namespace Kalkulacka
         /**
          * @brief Number button click handler
          */
+
         private void Number_click(object sender, EventArgs e)
         {
             repeatEq = false;
@@ -115,7 +119,7 @@ namespace Kalkulacka
             {
                 Clear();
             }
-            
+
             Button button = (Button)sender;
             string btnName = button.Name;
 
@@ -124,30 +128,39 @@ namespace Kalkulacka
                 case "num0":
                     length('0');
                     break;
+
                 case "num1":
                     length('1');
                     break;
+
                 case "num2":
                     length('2');
                     break;
+
                 case "num3":
                     length('3');
                     break;
+
                 case "num4":
                     length('4');
                     break;
+
                 case "num5":
                     length('5');
                     break;
+
                 case "num6":
                     length('6');
                     break;
+
                 case "num7":
                     length('7');
                     break;
+
                 case "num8":
                     length('8');
                     break;
+
                 case "num9":
                     length('9');
                     break;
@@ -158,6 +171,7 @@ namespace Kalkulacka
          * @brief Decimal point button handler
          * @brief Only one decimal point allowed
          */
+
         private void decPoint_Click(object sender, EventArgs e)
         {
             if (!textBox1.Text.Contains(","))
@@ -178,31 +192,29 @@ namespace Kalkulacka
                     textBox1.Text = textBox1.Text + ",";
                 }
             }
-          
         }
 
         /**
          * @brief Function to check if there is enough space in textbox for writing pressed key (WIP)
          */
+
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-           /* Char chr = e.KeyChar;
-            if (!Char.IsDigit(chr) && chr != 8 && chr != ',' && chr != '-')
-            {
-                e.Handled = true;
-            }*/
+            /*Char chr = e.KeyChar;
+             if (!Char.IsDigit(chr) && chr != 8 && chr != ',' && chr != '-')
+             {
+                 e.Handled = true;
+             }*/
 
             if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
             {
                 if (textBox1.Text.Length > 10)
                 {
-
                 }
                 else
                 {
                     Char chr = e.KeyChar;
-                    if (!Char.IsDigit(chr) && chr != 8 )
+                    if (!Char.IsDigit(chr) && chr != 8)
                     {
                         e.Handled = true;
                     }
@@ -212,18 +224,17 @@ namespace Kalkulacka
             {
                 if (textBox1.Text.Length > 9)
                 {
-
                 }
                 else
                 {
                     Char chr = e.KeyChar;
-                    if (!Char.IsDigit(chr) && chr != 8 && chr !=',')
+                    if (!Char.IsDigit(chr) && chr != 8 && chr != ',')
                     {
                         e.Handled = true;
                     }
                 }
             }
-            else if ( textBox1.Text.Contains(","))
+            else if (textBox1.Text.Contains(","))
             {
                 if (textBox1.Text.Length > 9)
                 {
@@ -264,32 +275,34 @@ namespace Kalkulacka
          * @brief Function for checking validity of result
          * @brief  Sets text box to result if all correct or error
          */
-        public void Valid_Chk((bool, decimal) result)
+
+        public void Valid_Chk(decimal? result)
         {
-            if (result.Item1)
+            if (result == null)
             {
                 textBox1.Text = "Error";
                 //TODO error handler
             }
             else
             {
-                textBox1.Text = result.Item2.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
-                firstNum = ans = result.Item2;
+                decimal resultt = result ?? 0;
+                textBox1.Text = resultt.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
+                firstNum = ans = resultt;
                 erase = true;
-
             }
         }
 
         /**
          * @brief Function for handling operation click
          */
+
         private void operation_Click(object sender, EventArgs e)    //Určení stisknuté operace, uložení vstupu, vymazání textboxu
         {
             bool convValid;
             Button button = (Button)sender;
-            
+
             if ((textBox1.Text != "" && firstNum == 0) || opClick)
-            { 
+            {
                 convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out firstNum);
                 erase = true;
             }
@@ -306,11 +319,12 @@ namespace Kalkulacka
          * @brief Function for applying unary operations
          * @brief Integrated with math lib
          */
+
         private void InstantOp_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             string instantOp = button.Name;
-            (bool, decimal) result = (true, 0);
+            decimal? result = 0;
             bool checkNeeded = false;
             bool parseCheck = decimal.TryParse(textBox1.Text.Replace(',', '.'), out decimal input);
             /*if (erase)
@@ -324,10 +338,12 @@ namespace Kalkulacka
                 case "ANS":
                     textBox1.Text = ans.ToString();
                     break;
+
                 case "RAND":
                     result = newMath.Random();
                     checkNeeded = true;
                     break;
+
                 case "del":
                     if (textBox1.Text != "")
                     {
@@ -338,9 +354,11 @@ namespace Kalkulacka
                         }
                     }
                     break;
+
                 case "AC":
                     ZeroClear();
                     break;
+
                 case "equals":
                     if (firstNum != 0)
                     {
@@ -353,66 +371,82 @@ namespace Kalkulacka
                         Valid_Chk(Calculate());
                     }
                     break;
+
                 case "sin":
                     result = newMath.Sin(input);
                     checkNeeded = true;
                     break;
+
                 case "cos":
                     result = newMath.Cos(input);
                     checkNeeded = true;
                     break;
+
                 case "tan":
                     result = newMath.Tan(input);
                     checkNeeded = true;
                     break;
+
                 case "factorial":
                     result = newMath.Factorial(input);
                     checkNeeded = true;
                     break;
+
                 case "log":
                     result = newMath.Logarithm(10, input);
                     checkNeeded = true;
                     break;
+
                 case "Power2":
                     result = newMath.Exponentiate(input, 2);
                     checkNeeded = true;
                     break;
+
                 case "root2":
                     result = newMath.Root(2, input);
                     checkNeeded = true;
                     break;
+
                 case "ln":
-                    result = newMath.Logarithm(newMath.constE.Item2, input);
+                    result = newMath.Logarithm(newMath.constE, input);
                     checkNeeded = true;
                     break;
+
                 case "arcsin":
                     result = newMath.Arcsin(input);
                     checkNeeded = true;
                     break;
+
                 case "arccos":
                     result = newMath.Arccos(input);
                     checkNeeded = true;
                     break;
+
                 case "arctan":
                     result = newMath.Arctan(input);
                     checkNeeded = true;
                     break;
+
                 case "PowerXMinus1":
                     result = newMath.Exponentiate(input, -1);
                     checkNeeded = true;
                     break;
+
                 case "Power3":
                     result = newMath.Exponentiate(input, 3);
                     checkNeeded = true;
                     break;
+
                 case "root3":
                     result = newMath.Root(3, input);
                     checkNeeded = true;
                     break;
+
                 case "euler":
-                    result = newMath.Exponentiate(newMath.constE.Item2, input);
+                    result = newMath.Exponentiate(newMath.constE, input);
                     checkNeeded = true;
                     break;
+
                 case "negate":
                     if (textBox1.Text != "0" && !opClick && textBox1.Text != "Error")
                     {
@@ -430,7 +464,7 @@ namespace Kalkulacka
                     }
                     break;
             }
-            if (instantOp != "del" && instantOp!="pi" && firstNum != 0 && instantOp!="negate")
+            if (instantOp != "del" && instantOp != "pi" && firstNum != 0 && instantOp != "negate")
             {
                 erase = true;
                 firstNum = 0;
@@ -445,10 +479,11 @@ namespace Kalkulacka
          * @brief Function for applying unary operations
          * @brief Integrated with math lib
          */
-        public (bool, decimal) Calculate()
+
+        public decimal? Calculate()
         {
             bool convValid;
-            (bool, decimal) result = (true, 0);
+            decimal? result = 0;
             if (!repeatEq)
             {
                 convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out secondNum);
@@ -459,31 +494,36 @@ namespace Kalkulacka
                 case "addition":
                     result = newMath.Add(firstNum, secondNum);
                     break;
+
                 case "subtraction":
                     result = newMath.Subtract(firstNum, secondNum);
                     break;
+
                 case "multiplication":
                     result = newMath.Multiply(firstNum, secondNum);
                     break;
+
                 case "division":
                     result = newMath.Divide(firstNum, secondNum);
                     break;
+
                 case "powerX":
                     result = newMath.Exponentiate(firstNum, secondNum);
                     break;
-                case "multiplication10":
-                    result = newMath.Multiply(firstNum, newMath.Exponentiate(10, secondNum).Item2);
-                    break;
+
                 case "logDec":
                     result = newMath.Logarithm(secondNum, firstNum);
                     break;
+
                 case "root":
                     result = newMath.Root(secondNum, firstNum);
                     break;
+
                 default:
-                    result = (false, firstNum);
+                    result = firstNum;
                     break;
             }
+
             return result;
         }
 
@@ -491,6 +531,7 @@ namespace Kalkulacka
          * @brief Function for addition to memory
          * @brief Memory icon control
          */
+
         private void Mplus_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
@@ -511,6 +552,7 @@ namespace Kalkulacka
         /**
          * @brief Function for recalling memory
          */
+
         private void MRC_Click(object sender, EventArgs e)
         {
             textBox1.Text = MEM.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
@@ -521,6 +563,7 @@ namespace Kalkulacka
          * @brief Function for subtracting memory
          * @brief Memory icon control
          */
+
         private void Mminus_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
@@ -541,6 +584,7 @@ namespace Kalkulacka
         /**
          * @brief Function for clearing textbox to zero-state
          */
+
         public void ZeroClear()
         {
             textBox1.Text = "0";
@@ -549,6 +593,7 @@ namespace Kalkulacka
         /**
          * @brief Fuction for clearing textbox to NULL-state
          */
+
         public void Clear()
         {
             textBox1.Text = "";
@@ -556,7 +601,8 @@ namespace Kalkulacka
 
         private void PI_Click(object sender, EventArgs e)
         {
-            textBox1.Text = newMath.TruncateToFit(newMath.constPI).Item2.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
+            decimal pii = newMath.TruncateToFit(newMath.constPI) ?? 0;
+            textBox1.Text = pii.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
             opClick = false;
         }
 
@@ -564,6 +610,7 @@ namespace Kalkulacka
          * @brief Button to open a new window with informations
          * @return New window
          */
+
         private void question_Click(object sender, EventArgs e)
         {
             Info openForm = new Info();
