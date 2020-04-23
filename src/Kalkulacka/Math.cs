@@ -1,8 +1,9 @@
 /**
 * @file Math.cs
+* @author Samuel Olekšák
 * @brief File responsible for implementing math operations and constants
-* all functions return nullable decimal
-* is an error (e.g. out of bounds, division by zero), second is result
+* @return all functions return nullable decimal
+* @brief null represents an error (e.g. out of bounds, division by zero), non-null value is result
 */
 
 using System;

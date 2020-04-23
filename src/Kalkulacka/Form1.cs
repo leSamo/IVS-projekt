@@ -1,5 +1,6 @@
 /**
 * @file Form1.cs
+* @author Emma Krompaščíková and Filip Kružík
 * @brief File responsible for handling calculator UI and integrating functions from math lib
 */
 

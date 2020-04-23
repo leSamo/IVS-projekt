@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kalkulacka_17',['Kalkulacka',['../namespace_kalkulacka.html',1,'']]]
+  ['kalkulacka_19',['Kalkulacka',['../namespace_kalkulacka.html',1,'']]]
 ];

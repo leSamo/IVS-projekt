@@ -25,7 +25,6 @@ Visual Studio
 
 C# Language 
 
-\image{inline} html calculator.png
 
 ![](calculator.png)
 Github link: https://github.com/leSamo/IVS-projekt

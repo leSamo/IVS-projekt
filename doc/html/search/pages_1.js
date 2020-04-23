@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainpage_101',['mainpage',['../md__kalkulacka_mainpage.html',1,'']]]
+  ['mainpage_105',['mainpage',['../md__kalkulacka_mainpage.html',1,'']]]
 ];
