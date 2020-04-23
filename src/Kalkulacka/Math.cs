@@ -120,8 +120,16 @@ namespace MathComponentsNS
                 e = -e;
             }
             */
+            decimal res = 0;
 
-            decimal res = (decimal)Math.Pow((double)b, (double)e);
+            try
+            {
+                res = (decimal)Math.Pow((double)b, (double)e);
+            }
+            catch (OverflowException exception)
+            {
+                return error;
+            }
             return TruncateToFit(res);
         }
 
