@@ -21,6 +21,7 @@ namespace Kalkulacka
         private decimal secondNum = 0;
         private decimal MEM = 0;
         private decimal ans = 0;
+        private decimal tempSecondNum = 0;
         private bool erase = false;
         private bool repeatEq = false;
         private bool opClick = false;
@@ -305,12 +306,13 @@ namespace Kalkulacka
         {
             bool convValid;
             Button button = (Button)sender;
+            repeatEq = false;
 
             if (useAns)
             {
                 firstNum = ans;
             }
-            else if ((textBox1.Text != "" && firstNum == 0) || opClick)
+            if ((textBox1.Text != "" && firstNum == 0) || opClick)
             {
                 convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out firstNum);
                 erase = true;
@@ -390,6 +392,7 @@ namespace Kalkulacka
                         Valid_Chk(Calculate());
                     }
                     skipCheck = true;
+                    useAns = false;
                     break;
 
                 case "sin":
@@ -501,7 +504,12 @@ namespace Kalkulacka
         {
             bool convValid;
             decimal? result = 0;
-            if (!repeatEq)
+            
+            if (repeatEq)
+            {
+                secondNum = tempSecondNum;
+            }
+            else
             {
                 convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out secondNum);
             }
@@ -540,7 +548,11 @@ namespace Kalkulacka
                     result = firstNum;
                     break;
             }
-
+            if (secondNum != 0)
+            {
+                tempSecondNum = secondNum;
+                secondNum = 0;
+            }
             return result;
         }
 
