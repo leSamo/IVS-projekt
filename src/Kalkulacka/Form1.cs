@@ -24,6 +24,7 @@ namespace Kalkulacka
         private bool erase = false;
         private bool repeatEq = false;
         private bool opClick = false;
+        private bool useAns = false;
         //private object txt_Result;
 
         public Form1()
@@ -118,6 +119,7 @@ namespace Kalkulacka
 
             if (textBox1.Text == "0")
             {
+                useAns = false;
                 Clear();
             }
 
@@ -289,7 +291,9 @@ namespace Kalkulacka
             {
                 decimal resultt = result ?? 0;
                 textBox1.Text = resultt.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
-                firstNum = ans = resultt;
+                ans = resultt;
+                firstNum = 0;
+                useAns = true;
                 erase = true;
             }
         }
@@ -303,7 +307,11 @@ namespace Kalkulacka
             bool convValid;
             Button button = (Button)sender;
 
-            if ((textBox1.Text != "" && firstNum == 0) || opClick)
+            if (useAns)
+            {
+                firstNum = ans;
+            }
+            else if ((textBox1.Text != "" && firstNum == 0) || opClick)
             {
                 convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out firstNum);
                 erase = true;
@@ -327,7 +335,8 @@ namespace Kalkulacka
             Button button = (Button)sender;
             string instantOp = button.Name;
             decimal? result = 0;
-            bool checkNeeded = false;
+            decimal resultt = 0;
+            bool skipCheck = false;
             bool parseCheck = decimal.TryParse(textBox1.Text.Replace(',', '.'), out decimal input);
             /*if (erase)
             {
@@ -339,11 +348,11 @@ namespace Kalkulacka
             {
                 case "ANS":
                     textBox1.Text = ans.ToString();
+                    skipCheck = true;
                     break;
 
                 case "RAND":
                     result = newMath.Random();
-                    checkNeeded = true;
                     break;
 
                 case "del":
@@ -355,10 +364,12 @@ namespace Kalkulacka
                             ZeroClear();
                         }
                     }
+                    skipCheck = true;
                     break;
 
                 case "AC":
                     ZeroClear();
+                    skipCheck = true;
                     break;
 
                 case "equals":
@@ -372,81 +383,67 @@ namespace Kalkulacka
                         parseCheck = decimal.TryParse(textBox1.Text.Replace(',', '.'), out firstNum);
                         Valid_Chk(Calculate());
                     }
+                    skipCheck = true;
                     break;
 
                 case "sin":
                     result = newMath.Sin(input);
-                    checkNeeded = true;
                     break;
 
                 case "cos":
                     result = newMath.Cos(input);
-                    checkNeeded = true;
                     break;
 
                 case "tan":
                     result = newMath.Tan(input);
-                    checkNeeded = true;
                     break;
 
                 case "factorial":
                     result = newMath.Factorial(input);
-                    checkNeeded = true;
                     break;
 
                 case "log":
                     result = newMath.Logarithm(input, 10);
-                    checkNeeded = true;
                     break;
 
                 case "Power2":
                     result = newMath.Exponentiate(input, 2);
-                    checkNeeded = true;
                     break;
 
                 case "root2":
                     result = newMath.Root(2, input);
-                    checkNeeded = true;
                     break;
 
                 case "ln":
                     result = newMath.Logarithm(input, newMath.constE);
-                    checkNeeded = true;
                     break;
 
                 case "arcsin":
                     result = newMath.Arcsin(input);
-                    checkNeeded = true;
                     break;
 
                 case "arccos":
                     result = newMath.Arccos(input);
-                    checkNeeded = true;
                     break;
 
                 case "arctan":
                     result = newMath.Arctan(input);
-                    checkNeeded = true;
                     break;
 
                 case "PowerXMinus1":
                     result = newMath.Exponentiate(input, -1);
-                    checkNeeded = true;
                     break;
 
                 case "Power3":
                     result = newMath.Exponentiate(input, 3);
-                    checkNeeded = true;
                     break;
 
                 case "root3":
                     result = newMath.Root(3, input);
-                    checkNeeded = true;
                     break;
 
                 case "euler":
                     result = newMath.Exponentiate(newMath.constE, input);
-                    checkNeeded = true;
                     break;
 
                 case "negate":
@@ -464,16 +461,28 @@ namespace Kalkulacka
                             textBox1.Text = textBox1.Text.Remove(0, 1);
                         }
                     }
+                    useAns = false;
+                    skipCheck = true;
                     break;
             }
             if (instantOp != "del" && instantOp != "pi" && firstNum != 0 && instantOp != "negate")
             {
                 erase = true;
-                firstNum = 0;
+                //firstNum = 0;
             }
-            if (checkNeeded)
+            if (!skipCheck)
             {
-                Valid_Chk(result);
+                if (result != null)
+                {
+                    resultt = result ?? 0;
+                    textBox1.Text = resultt.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
+                    ans = resultt;
+                }
+                else
+                {
+                    textBox1.Text = "Error";
+                    erase = true;
+                }
             }
         }
 
