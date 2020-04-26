@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['tan_84',['Tan',['../class_math_components_n_s_1_1_math_components.html#aa3d1ceca140d2388dcf1a1b4a0f293ad',1,'MathComponentsNS::MathComponents']]],
+  ['tan_84',['Tan',['../class_math_components_n_s_1_1_math_components.html#aa3d1ceca140d2388dcf1a1b4a0f293ad',1,'MathComponentsNS.MathComponents.Tan(decimal a)'],['../class_math_components_n_s_1_1_math_components.html#aa3d1ceca140d2388dcf1a1b4a0f293ad',1,'MathComponentsNS.MathComponents.Tan(decimal a)']]],
   ['testaddition_85',['TestAddition',['../class_math_test_1_1_basic_math_tests.html#ae8680244a3cacd0ed148cbd1eae4b6ec',1,'MathTest::BasicMathTests']]],
   ['testarccos_86',['TestArccos',['../class_math_test_1_1_basic_math_tests.html#aef05d44590639a30d83a850c255328ab',1,'MathTest::BasicMathTests']]],
   ['testarcsin_87',['TestArcsin',['../class_math_test_1_1_basic_math_tests.html#ae6c4b95ba0dfc766246f0df01dde9c56',1,'MathTest::BasicMathTests']]],
@@ -16,5 +16,5 @@ var searchData=
   ['testsin_97',['TestSin',['../class_math_test_1_1_basic_math_tests.html#aecf8a483b43aca164144dd340936e8d3',1,'MathTest::BasicMathTests']]],
   ['testsubtraction_98',['TestSubtraction',['../class_math_test_1_1_basic_math_tests.html#ac3630c20b9d5fc682330dbbfbf16e25d',1,'MathTest::BasicMathTests']]],
   ['testtan_99',['TestTan',['../class_math_test_1_1_basic_math_tests.html#ad985e6ad661b65cc11c3380616bb0815',1,'MathTest::BasicMathTests']]],
-  ['truncatetofit_100',['TruncateToFit',['../class_math_components_n_s_1_1_math_components.html#a5f57b86e1819bbabc7d6f8b2a540d638',1,'MathComponentsNS::MathComponents']]]
+  ['truncatetofit_100',['TruncateToFit',['../class_math_components_n_s_1_1_math_components.html#a5f57b86e1819bbabc7d6f8b2a540d638',1,'MathComponentsNS.MathComponents.TruncateToFit(decimal a)'],['../class_math_components_n_s_1_1_math_components.html#a5f57b86e1819bbabc7d6f8b2a540d638',1,'MathComponentsNS.MathComponents.TruncateToFit(decimal a)']]]
 ];
