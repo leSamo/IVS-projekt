@@ -1,6 +1,11 @@
-/**
+/**********
+* IVS - project 2 - Calculator
+* Team Orient Express
+* Ac. y. 2019/20
+***********
 * @file Form1.cs
-* @author Emma Krompaščíková and Filip Kružík
+* @author Emma Krompaščíková
+* @author Filip Kružík
 * @brief File responsible for handling calculator UI and integrating functions from math lib
 */
 
@@ -36,7 +41,6 @@ namespace Kalkulacka
         /**
          * @brief Init function for UI setup
          */
-
         private void Form1_Load(object sender, EventArgs e)
         {
             listPanel.Add(shiftUnclickedPanel);
@@ -47,10 +51,9 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function checking length and appending char if possible
+         * @brief Checks length and appends char if possible
          * @param[in] char d (character to be appended)
          */
-
         private void length(char d)
         {
             if (textBox1.Text.Contains("-") && textBox1.Text.Contains(","))
@@ -74,9 +77,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for switching panel after click on SHIFT
+         * @brief Switches panel after pressing SHIFT
          */
-
         private void shift_Click(object sender, EventArgs e)
         {
             if (shiftClicked)
@@ -96,18 +98,16 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for switching off the application
+         * @brief Turns off the application
          */
-
         private void off_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         /**
-         * @brief Number button click handler
+         * @brief Digit button press handler
          */
-
         private void Number_click(object sender, EventArgs e)
         {
             repeatEq = false;
@@ -172,9 +172,7 @@ namespace Kalkulacka
 
         /**
          * @brief Decimal point button handler
-         * @brief Only one decimal point allowed
          */
-
         private void decPoint_Click(object sender, EventArgs e)
         {
             if (!textBox1.Text.Contains(","))
@@ -198,9 +196,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function to check if there is enough space in textbox for writing pressed key (WIP)
+         * @brief Function to check if there is enough space in textbox for applying pressed key (WIP)
          */
-
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             /*Char chr = e.KeyChar;
@@ -275,10 +272,9 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for checking validity of result
-         * @brief  Sets text box to result if all correct or error
+         * @brief Checking validity of result
+         * Sets text box to result if all correct or to "Error" if not
          */
-
         public void Valid_Chk(decimal? result)
         {
             if (result == null)
@@ -299,9 +295,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for handling operation click
+         * @brief Operation button press handler
          */
-
         private void operation_Click(object sender, EventArgs e)    //Určení stisknuté operace, uložení vstupu, vymazání textboxu
         {
             bool convValid;
@@ -328,8 +323,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for applying unary operations
-         * @brief Integrated with math lib
+         * @brief Unary operations handler
+         * Integrated with math lib
          */
 
         private void InstantOp_Click(object sender, EventArgs e)
@@ -496,10 +491,9 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for applying unary operations
-         * @brief Integrated with math lib
+         * @brief Binary operations handler
+         * Integrated with math lib
          */
-
         public decimal? Calculate()
         {
             bool convValid;
@@ -557,10 +551,9 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for addition to memory
-         * @brief Memory icon control
+         * @brief Addition to memory handler
+         * Controls memory icon
          */
-
         private void Mplus_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
@@ -579,9 +572,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for recalling memory
+         * @brief Memory recall handler
          */
-
         private void MRC_Click(object sender, EventArgs e)
         {
             textBox1.Text = MEM.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
@@ -589,10 +581,9 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for subtracting memory
-         * @brief Memory icon control
+         * @brief Subtracts memory
+         * Memory icon control
          */
-
         private void Mminus_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
@@ -611,23 +602,24 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Function for clearing textbox to zero-state
+         * @brief Clears output to 0
          */
-
         public void ZeroClear()
         {
             textBox1.Text = "0";
         }
 
         /**
-         * @brief Fuction for clearing textbox to NULL-state
+         * @brief Clears output to NULL
          */
-
         public void Clear()
         {
             textBox1.Text = "";
         }
 
+        /**
+         * @brief pi button click handler
+         */
         private void PI_Click(object sender, EventArgs e)
         {
             decimal pii = newMath.TruncateToFit(newMath.constPI) ?? 0;
@@ -636,10 +628,8 @@ namespace Kalkulacka
         }
 
         /**
-         * @brief Button to open a new window with informations
-         * @return New window
+         * @brief Opens new window with help
          */
-
         private void question_Click(object sender, EventArgs e)
         {
             Info openForm = new Info();
