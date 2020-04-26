@@ -119,7 +119,6 @@ namespace Kalkulacka
 
             if (textBox1.Text == "0")
             {
-                useAns = false;
                 Clear();
             }
 
@@ -320,6 +319,7 @@ namespace Kalkulacka
             {
                 Valid_Chk(Calculate());
                 erase = true;
+                useAns = true;
             }
             operationPerformed = button.Name;
             opClick = true;
@@ -369,10 +369,16 @@ namespace Kalkulacka
 
                 case "AC":
                     ZeroClear();
+                    useAns = false;
                     skipCheck = true;
+                    operationPerformed = "";
                     break;
 
                 case "equals":
+                    if (useAns)
+                    {
+                        firstNum = ans;
+                    }
                     if (firstNum != 0)
                     {
                         Valid_Chk(Calculate());
