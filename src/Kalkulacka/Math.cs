@@ -1,4 +1,8 @@
-/**
+/**********
+* IVS - project 2 - Calculator
+* Team Orient Express
+* Ac. y. 2019/20
+***********
 * @file Math.cs
 * @author Samuel Olekšák
 * @brief File responsible for implementing math operations and constants

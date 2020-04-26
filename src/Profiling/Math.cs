@@ -1,8 +1,13 @@
-/**
+/**********
+* IVS - project 2 - Calculator
+* Team Orient Express
+* Ac. y. 2019/20
+***********
 * @file Math.cs
+* @author Samuel Olekšák
 * @brief File responsible for implementing math operations and constants
-* all functions return nullable decimal
-* is an error (e.g. out of bounds, division by zero), second is result
+* @return all functions return nullable decimal
+* @brief null represents an error (e.g. out of bounds, division by zero), non-null value is result
 */
 
 using System;
@@ -119,8 +124,16 @@ namespace MathComponentsNS
                 e = -e;
             }
             */
+            decimal res = 0;
 
-            decimal res = (decimal)Math.Pow((double)b, (double)e);
+            try
+            {
+                res = (decimal)Math.Pow((double)b, (double)e);
+            }
+            catch (OverflowException exception)
+            {
+                return error;
+            }
             return TruncateToFit(res);
         }
 

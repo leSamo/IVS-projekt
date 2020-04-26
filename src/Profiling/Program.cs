@@ -1,10 +1,15 @@
-/* @file Program.cs
- * @author Samuel Olekšák
- * @brief Profiling console app calculating standard deviating from set of numbers
- * Expecting input from stdin with numbers separated by newline
- * Outputs single number - standard deviating of input set
- * Using operations from math library 
- */
+/**********
+* IVS - project 2 - Calculator
+* Team Orient Express
+* Ac. y. 2019/20
+***********
+* @file Program.cs
+* @author Samuel Olekšák
+* @brief Profiling console app calculating standard deviating from set of numbers
+* Expecting input from stdin with numbers separated by newline
+* Outputs single number - standard deviating of input set
+* Using operations from math library 
+*/
 
 using MathComponentsNS;
 using System;
