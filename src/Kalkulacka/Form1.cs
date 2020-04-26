@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Kalkulacka
 {
@@ -309,7 +310,7 @@ namespace Kalkulacka
             }
             if ((textBox1.Text != "" && firstNum == 0) || opClick)
             {
-                convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out firstNum);
+                convValid = decimal.TryParse(textBox1.Text, NumberStyles.Any, System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"), out firstNum);
                 erase = true;
             }
             else if (textBox1.Text != "" && firstNum != 0)
@@ -334,7 +335,7 @@ namespace Kalkulacka
             decimal? result = 0;
             decimal resultt = 0;
             bool skipCheck = false;
-            bool parseCheck = decimal.TryParse(textBox1.Text.Replace(',', '.'), out decimal input);
+            bool parseCheck = decimal.TryParse(textBox1.Text, NumberStyles.Any, System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"), out decimal input);
             /*if (erase)
             {
                 ZeroClear();
@@ -383,7 +384,7 @@ namespace Kalkulacka
                     }
                     else if (repeatEq)
                     {
-                        parseCheck = decimal.TryParse(textBox1.Text.Replace(',', '.'), out firstNum);
+                        parseCheck = decimal.TryParse(textBox1.Text, NumberStyles.Any, System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"), out firstNum);
                         Valid_Chk(Calculate());
                     }
                     skipCheck = true;
@@ -504,8 +505,8 @@ namespace Kalkulacka
                 secondNum = tempSecondNum;
             }
             else
-            {
-                convValid = decimal.TryParse(textBox1.Text.Replace(',', '.'), out secondNum);
+            { 
+                    convValid = decimal.TryParse(textBox1.Text, NumberStyles.Any, System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"), out secondNum);
             }
 
             switch (operationPerformed)
