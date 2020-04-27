@@ -16,13 +16,19 @@ all:
 pack: 	
 	cd .. & cd .. & if exist "$(tmp_name)" rmdir "$(tmp_name)" /s /q
 	cd .. & cd .. & mkdir $(tmp_name) & cd $(tmp_name) & mkdir repo & mkdir doc & mkdir install
+	cd .. & cd .. & xcopy /s IVS-projekt\deploy $(tmp_name)\install /Q > nul
+	cd .. & cd .. & xcopy /s IVS-projekt\dokumentace.pdf $(tmp_name)\doc /Q > nul
+	make clean
 	cd .. & cd .. & xcopy /s IVS-projekt $(tmp_name)\repo /Q > nul
-	cd .. & cd .. & xcopy /s 
 	cd .. & cd .. & powershell Compress-Archive -Path $(tmp_name) -DestinationPath $(zip_name) 
+	cd .. & cd .. & if exist "$(tmp_name)" rmdir "$(tmp_name)" /s /q
 
 # (smaže všechny soubory, co nemají být odevzdány)
-clean: 
+clean:
+	cd .. & if exist "deploy" rmdir "deploy" /s /q
+	cd .. & if exist "dokumentace.pdf" del "dokumentace.pdf" /s /q
 
+    
 # (spustí program)
 run: 
 	cd $(Visual_Stuio_dir) & Current\Bin\MSBuild.exe "$(CWD)\Kalkulacka\Kalkulacka.sln" /t:Build & $(CWD)\src\Kalkulacka\obj\Debug\Kalkulacka.exe
