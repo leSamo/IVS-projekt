@@ -350,11 +350,14 @@ namespace Kalkulacka
             {
                 case "ANS":
                     textBox1.Text = ans.ToString();
+                    opClick = false;
+                    useAns = false;
                     skipCheck = true;
                     break;
 
                 case "RAND":
                     result = newMath.Random();
+                    opClick = false;
                     break;
 
                 case "del":
@@ -494,7 +497,11 @@ namespace Kalkulacka
                     erase = true;
                 }
             }
-            numChk = false;
+            if (instantOp != "RAND" && instantOp != "ANS" && instantOp != "negate" && instantOp != "del")
+            {
+                numChk = false;
+            }
+            
         }
 
         /**
