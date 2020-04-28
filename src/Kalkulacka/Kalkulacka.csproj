@@ -322,5 +322,41 @@
   <ItemGroup>
     <None Include="Resources\info4.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHIFT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mminus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mplus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MRC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ln.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logaritmus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logaritmuss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DEL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jeden.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -47,10 +47,9 @@ namespace Kalkulacka
             this.RAND = new System.Windows.Forms.Button();
             this.equals = new System.Windows.Forms.Button();
             this.AC = new System.Windows.Forms.Button();
-            this.del = new System.Windows.Forms.Button();
-            this.shift = new System.Windows.Forms.Button();
             this.shiftUnclickedPanel = new System.Windows.Forms.Panel();
             this.tan = new System.Windows.Forms.Button();
+            this.shift = new System.Windows.Forms.Button();
             this.Power2 = new System.Windows.Forms.Button();
             this.powerX = new System.Windows.Forms.Button();
             this.MRC = new System.Windows.Forms.Button();
@@ -79,6 +78,7 @@ namespace Kalkulacka
             this.multiplication = new System.Windows.Forms.Button();
             this.DisplayedM = new System.Windows.Forms.Label();
             this.question = new System.Windows.Forms.Button();
+            this.del = new System.Windows.Forms.Button();
             this.shiftUnclickedPanel.SuspendLayout();
             this.shiftClickedPanel.SuspendLayout();
             this.SuspendLayout();
@@ -87,13 +87,14 @@ namespace Kalkulacka
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(225)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.textBox1.HideSelection = false;
             this.textBox1.Location = new System.Drawing.Point(1, 1);
+            this.textBox1.MaximumSize = new System.Drawing.Size(999, 999);
             this.textBox1.MaxLength = 11;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(354, 74);
+            this.textBox1.Size = new System.Drawing.Size(354, 65);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -113,12 +114,12 @@ namespace Kalkulacka
             this.num0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.num0.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.num0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.num0.Image = global::Kalkulacka.Properties.Resources.nula;
             this.num0.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.num0.Location = new System.Drawing.Point(1, 502);
+            this.num0.Location = new System.Drawing.Point(1, 493);
             this.num0.Name = "num0";
             this.num0.Size = new System.Drawing.Size(70, 70);
             this.num0.TabIndex = 12;
-            this.num0.Text = "0";
             this.num0.UseVisualStyleBackColor = false;
             this.num0.Click += new System.EventHandler(this.Number_click);
             // 
@@ -135,11 +136,11 @@ namespace Kalkulacka
             this.num9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.num9.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.num9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.num9.Location = new System.Drawing.Point(143, 289);
+            this.num9.Image = global::Kalkulacka.Properties.Resources.devat;
+            this.num9.Location = new System.Drawing.Point(143, 280);
             this.num9.Name = "num9";
             this.num9.Size = new System.Drawing.Size(70, 70);
             this.num9.TabIndex = 9;
-            this.num9.Text = "9";
             this.num9.UseVisualStyleBackColor = false;
             this.num9.Click += new System.EventHandler(this.Number_click);
             // 
@@ -156,11 +157,11 @@ namespace Kalkulacka
             this.num8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.num8.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.num8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.num8.Location = new System.Drawing.Point(72, 289);
+            this.num8.Image = global::Kalkulacka.Properties.Resources.osem;
+            this.num8.Location = new System.Drawing.Point(72, 280);
             this.num8.Name = "num8";
             this.num8.Size = new System.Drawing.Size(70, 70);
             this.num8.TabIndex = 8;
-            this.num8.Text = "8";
             this.num8.UseVisualStyleBackColor = false;
             this.num8.Click += new System.EventHandler(this.Number_click);
             // 
@@ -177,11 +178,11 @@ namespace Kalkulacka
             this.num7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.num7.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.num7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.num7.Location = new System.Drawing.Point(1, 289);
+            this.num7.Image = global::Kalkulacka.Properties.Resources.sedem;
+            this.num7.Location = new System.Drawing.Point(1, 280);
             this.num7.Name = "num7";
             this.num7.Size = new System.Drawing.Size(70, 70);
             this.num7.TabIndex = 7;
-            this.num7.Text = "7";
             this.num7.UseVisualStyleBackColor = false;
             this.num7.Click += new System.EventHandler(this.Number_click);
             // 
@@ -198,11 +199,11 @@ namespace Kalkulacka
             this.num6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.num6.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.num6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.num6.Location = new System.Drawing.Point(143, 360);
+            this.num6.Image = global::Kalkulacka.Properties.Resources.sest;
+            this.num6.Location = new System.Drawing.Point(143, 351);
             this.num6.Name = "num6";
             this.num6.Size = new System.Drawing.Size(70, 70);
             this.num6.TabIndex = 6;
-            this.num6.Text = "6";
             this.num6.UseVisualStyleBackColor = false;
             this.num6.Click += new System.EventHandler(this.Number_click);
             // 
@@ -219,11 +220,11 @@ namespace Kalkulacka
             this.num5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.num5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.num5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.num5.Location = new System.Drawing.Point(72, 360);
+            this.num5.Image = global::Kalkulacka.Properties.Resources.pat;
+            this.num5.Location = new System.Drawing.Point(72, 351);
             this.num5.Name = "num5";
             this.num5.Size = new System.Drawing.Size(70, 70);
             this.num5.TabIndex = 5;
-            this.num5.Text = "5";
             this.num5.UseVisualStyleBackColor = false;
             this.num5.Click += new System.EventHandler(this.Number_click);
             // 
@@ -240,11 +241,11 @@ namespace Kalkulacka
             this.num4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.num4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.num4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.num4.Location = new System.Drawing.Point(1, 360);
+            this.num4.Image = global::Kalkulacka.Properties.Resources.styri;
+            this.num4.Location = new System.Drawing.Point(1, 351);
             this.num4.Name = "num4";
             this.num4.Size = new System.Drawing.Size(70, 70);
             this.num4.TabIndex = 4;
-            this.num4.Text = "4";
             this.num4.UseVisualStyleBackColor = false;
             this.num4.Click += new System.EventHandler(this.Number_click);
             // 
@@ -261,11 +262,11 @@ namespace Kalkulacka
             this.num3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.num3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.num3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.num3.Location = new System.Drawing.Point(143, 431);
+            this.num3.Image = global::Kalkulacka.Properties.Resources.tri;
+            this.num3.Location = new System.Drawing.Point(143, 422);
             this.num3.Name = "num3";
             this.num3.Size = new System.Drawing.Size(70, 70);
             this.num3.TabIndex = 3;
-            this.num3.Text = "3";
             this.num3.UseVisualStyleBackColor = false;
             this.num3.Click += new System.EventHandler(this.Number_click);
             // 
@@ -282,11 +283,11 @@ namespace Kalkulacka
             this.num2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.num2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.num2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.num2.Location = new System.Drawing.Point(72, 431);
+            this.num2.Image = global::Kalkulacka.Properties.Resources.dva;
+            this.num2.Location = new System.Drawing.Point(72, 422);
             this.num2.Name = "num2";
             this.num2.Size = new System.Drawing.Size(70, 70);
             this.num2.TabIndex = 2;
-            this.num2.Text = "2";
             this.num2.UseVisualStyleBackColor = false;
             this.num2.Click += new System.EventHandler(this.Number_click);
             // 
@@ -303,11 +304,11 @@ namespace Kalkulacka
             this.num1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.num1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.num1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.num1.Location = new System.Drawing.Point(1, 431);
+            this.num1.Image = global::Kalkulacka.Properties.Resources.jeden;
+            this.num1.Location = new System.Drawing.Point(1, 422);
             this.num1.Name = "num1";
             this.num1.Size = new System.Drawing.Size(70, 70);
             this.num1.TabIndex = 1;
-            this.num1.Text = "1";
             this.num1.UseVisualStyleBackColor = false;
             this.num1.Click += new System.EventHandler(this.Number_click);
             // 
@@ -324,12 +325,12 @@ namespace Kalkulacka
             this.ANS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ANS.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ANS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.ANS.Image = global::Kalkulacka.Properties.Resources.ans;
             this.ANS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ANS.Location = new System.Drawing.Point(143, 502);
+            this.ANS.Location = new System.Drawing.Point(143, 493);
             this.ANS.Name = "ANS";
             this.ANS.Size = new System.Drawing.Size(70, 70);
             this.ANS.TabIndex = 13;
-            this.ANS.Text = "ANS";
             this.ANS.UseVisualStyleBackColor = false;
             this.ANS.Click += new System.EventHandler(this.InstantOp_Click);
             // 
@@ -346,12 +347,12 @@ namespace Kalkulacka
             this.decPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.decPoint.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.decPoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.decPoint.Image = global::Kalkulacka.Properties.Resources.ciarka;
             this.decPoint.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.decPoint.Location = new System.Drawing.Point(72, 502);
+            this.decPoint.Location = new System.Drawing.Point(72, 493);
             this.decPoint.Name = "decPoint";
             this.decPoint.Size = new System.Drawing.Size(70, 70);
             this.decPoint.TabIndex = 14;
-            this.decPoint.Text = ",";
             this.decPoint.UseVisualStyleBackColor = false;
             this.decPoint.Click += new System.EventHandler(this.decPoint_Click);
             // 
@@ -368,12 +369,12 @@ namespace Kalkulacka
             this.division.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.division.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.division.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.division.Image = global::Kalkulacka.Properties.Resources.deleneee;
             this.division.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.division.Location = new System.Drawing.Point(285, 360);
+            this.division.Location = new System.Drawing.Point(285, 351);
             this.division.Name = "division";
             this.division.Size = new System.Drawing.Size(70, 70);
             this.division.TabIndex = 17;
-            this.division.Text = "÷";
             this.division.UseVisualStyleBackColor = false;
             this.division.Click += new System.EventHandler(this.operation_Click);
             // 
@@ -390,12 +391,12 @@ namespace Kalkulacka
             this.subtraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.subtraction.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.subtraction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.subtraction.Image = global::Kalkulacka.Properties.Resources.misusko;
             this.subtraction.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.subtraction.Location = new System.Drawing.Point(285, 431);
+            this.subtraction.Location = new System.Drawing.Point(285, 422);
             this.subtraction.Name = "subtraction";
             this.subtraction.Size = new System.Drawing.Size(70, 70);
             this.subtraction.TabIndex = 19;
-            this.subtraction.Text = "-";
             this.subtraction.UseVisualStyleBackColor = false;
             this.subtraction.Click += new System.EventHandler(this.operation_Click);
             // 
@@ -412,12 +413,12 @@ namespace Kalkulacka
             this.RAND.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RAND.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.RAND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.RAND.Image = global::Kalkulacka.Properties.Resources.rand;
             this.RAND.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.RAND.Location = new System.Drawing.Point(214, 502);
+            this.RAND.Location = new System.Drawing.Point(214, 493);
             this.RAND.Name = "RAND";
             this.RAND.Size = new System.Drawing.Size(70, 70);
             this.RAND.TabIndex = 21;
-            this.RAND.Text = "RAND";
             this.RAND.UseVisualStyleBackColor = false;
             this.RAND.Click += new System.EventHandler(this.InstantOp_Click);
             // 
@@ -434,12 +435,12 @@ namespace Kalkulacka
             this.equals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.equals.Font = new System.Drawing.Font("Century Gothic", 15.5F);
             this.equals.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.equals.Image = global::Kalkulacka.Properties.Resources.sarovna;
             this.equals.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.equals.Location = new System.Drawing.Point(285, 502);
+            this.equals.Location = new System.Drawing.Point(285, 493);
             this.equals.Name = "equals";
             this.equals.Size = new System.Drawing.Size(70, 70);
             this.equals.TabIndex = 22;
-            this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = false;
             this.equals.Click += new System.EventHandler(this.InstantOp_Click);
             // 
@@ -456,58 +457,14 @@ namespace Kalkulacka
             this.AC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AC.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.AC.ForeColor = System.Drawing.Color.LightGray;
+            this.AC.Image = global::Kalkulacka.Properties.Resources.AC;
             this.AC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.AC.Location = new System.Drawing.Point(285, 289);
+            this.AC.Location = new System.Drawing.Point(285, 280);
             this.AC.Name = "AC";
             this.AC.Size = new System.Drawing.Size(70, 70);
             this.AC.TabIndex = 23;
-            this.AC.Text = "AC";
             this.AC.UseVisualStyleBackColor = false;
             this.AC.Click += new System.EventHandler(this.InstantOp_Click);
-            // 
-            // del
-            // 
-            this.del.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
-            this.del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.del.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.del.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.del.FlatAppearance.BorderSize = 0;
-            this.del.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.del.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
-            this.del.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
-            this.del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.del.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.del.ForeColor = System.Drawing.Color.LightGray;
-            this.del.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.del.Location = new System.Drawing.Point(214, 289);
-            this.del.Name = "del";
-            this.del.Size = new System.Drawing.Size(70, 70);
-            this.del.TabIndex = 24;
-            this.del.Text = "DEL";
-            this.del.UseVisualStyleBackColor = false;
-            this.del.Click += new System.EventHandler(this.InstantOp_Click);
-            // 
-            // shift
-            // 
-            this.shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
-            this.shift.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.shift.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shift.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.shift.FlatAppearance.BorderSize = 0;
-            this.shift.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.shift.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
-            this.shift.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
-            this.shift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.shift.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.shift.ForeColor = System.Drawing.Color.LightGray;
-            this.shift.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.shift.Location = new System.Drawing.Point(0, 0);
-            this.shift.Name = "shift";
-            this.shift.Size = new System.Drawing.Size(70, 70);
-            this.shift.TabIndex = 27;
-            this.shift.Text = "SHIFT";
-            this.shift.UseVisualStyleBackColor = false;
-            this.shift.Click += new System.EventHandler(this.shift_Click);
             // 
             // shiftUnclickedPanel
             // 
@@ -526,7 +483,7 @@ namespace Kalkulacka
             this.shiftUnclickedPanel.Controls.Add(this.negate);
             this.shiftUnclickedPanel.Controls.Add(this.cos);
             this.shiftUnclickedPanel.Controls.Add(this.Mminus);
-            this.shiftUnclickedPanel.Location = new System.Drawing.Point(1, 76);
+            this.shiftUnclickedPanel.Location = new System.Drawing.Point(1, 67);
             this.shiftUnclickedPanel.Name = "shiftUnclickedPanel";
             this.shiftUnclickedPanel.Size = new System.Drawing.Size(354, 213);
             this.shiftUnclickedPanel.TabIndex = 28;
@@ -552,6 +509,28 @@ namespace Kalkulacka
             this.tan.TabIndex = 35;
             this.tan.UseVisualStyleBackColor = false;
             this.tan.Click += new System.EventHandler(this.InstantOp_Click);
+            // 
+            // shift
+            // 
+            this.shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.shift.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.shift.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shift.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.shift.FlatAppearance.BorderSize = 0;
+            this.shift.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.shift.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
+            this.shift.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
+            this.shift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shift.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.shift.ForeColor = System.Drawing.Color.LightGray;
+            this.shift.Image = global::Kalkulacka.Properties.Resources.SHIFT;
+            this.shift.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.shift.Location = new System.Drawing.Point(0, 0);
+            this.shift.Name = "shift";
+            this.shift.Size = new System.Drawing.Size(70, 70);
+            this.shift.TabIndex = 27;
+            this.shift.UseVisualStyleBackColor = false;
+            this.shift.Click += new System.EventHandler(this.shift_Click);
             // 
             // Power2
             // 
@@ -610,12 +589,12 @@ namespace Kalkulacka
             this.MRC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MRC.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MRC.ForeColor = System.Drawing.Color.LightGray;
+            this.MRC.Image = global::Kalkulacka.Properties.Resources.MRC;
             this.MRC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.MRC.Location = new System.Drawing.Point(71, 0);
             this.MRC.Name = "MRC";
             this.MRC.Size = new System.Drawing.Size(70, 70);
             this.MRC.TabIndex = 41;
-            this.MRC.Text = "MRC";
             this.MRC.UseVisualStyleBackColor = false;
             this.MRC.Click += new System.EventHandler(this.MRC_Click);
             // 
@@ -676,12 +655,12 @@ namespace Kalkulacka
             this.off.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.off.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.off.ForeColor = System.Drawing.Color.LightGray;
+            this.off.Image = global::Kalkulacka.Properties.Resources.off;
             this.off.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.off.Location = new System.Drawing.Point(284, 0);
             this.off.Name = "off";
             this.off.Size = new System.Drawing.Size(70, 70);
             this.off.TabIndex = 42;
-            this.off.Text = "OFF";
             this.off.UseVisualStyleBackColor = false;
             this.off.Click += new System.EventHandler(this.off_Click);
             // 
@@ -698,12 +677,12 @@ namespace Kalkulacka
             this.log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.log.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.log.ForeColor = System.Drawing.Color.LightGray;
+            this.log.Image = global::Kalkulacka.Properties.Resources.logaritmuss;
             this.log.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.log.Location = new System.Drawing.Point(0, 142);
             this.log.Name = "log";
             this.log.Size = new System.Drawing.Size(70, 70);
             this.log.TabIndex = 31;
-            this.log.Text = "log";
             this.log.UseVisualStyleBackColor = false;
             this.log.Click += new System.EventHandler(this.InstantOp_Click);
             // 
@@ -742,12 +721,12 @@ namespace Kalkulacka
             this.Mplus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mplus.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Mplus.ForeColor = System.Drawing.Color.LightGray;
+            this.Mplus.Image = global::Kalkulacka.Properties.Resources.Mplus;
             this.Mplus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Mplus.Location = new System.Drawing.Point(142, 0);
             this.Mplus.Name = "Mplus";
             this.Mplus.Size = new System.Drawing.Size(70, 70);
             this.Mplus.TabIndex = 40;
-            this.Mplus.Text = "M+";
             this.Mplus.UseVisualStyleBackColor = false;
             this.Mplus.Click += new System.EventHandler(this.Mplus_Click);
             // 
@@ -786,12 +765,12 @@ namespace Kalkulacka
             this.negate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.negate.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.negate.ForeColor = System.Drawing.Color.LightGray;
+            this.negate.Image = global::Kalkulacka.Properties.Resources.pm;
             this.negate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.negate.Location = new System.Drawing.Point(284, 142);
             this.negate.Name = "negate";
             this.negate.Size = new System.Drawing.Size(70, 70);
             this.negate.TabIndex = 32;
-            this.negate.Text = "+/-";
             this.negate.UseVisualStyleBackColor = false;
             this.negate.Click += new System.EventHandler(this.InstantOp_Click);
             // 
@@ -830,12 +809,12 @@ namespace Kalkulacka
             this.Mminus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mminus.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Mminus.ForeColor = System.Drawing.Color.LightGray;
+            this.Mminus.Image = global::Kalkulacka.Properties.Resources.Mminus;
             this.Mminus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Mminus.Location = new System.Drawing.Point(213, 0);
             this.Mminus.Name = "Mminus";
             this.Mminus.Size = new System.Drawing.Size(70, 70);
             this.Mminus.TabIndex = 39;
-            this.Mminus.Text = "M-";
             this.Mminus.UseVisualStyleBackColor = false;
             this.Mminus.Click += new System.EventHandler(this.Mminus_Click);
             // 
@@ -851,7 +830,7 @@ namespace Kalkulacka
             this.shiftClickedPanel.Controls.Add(this.Power3);
             this.shiftClickedPanel.Controls.Add(this.PowerXMinus1);
             this.shiftClickedPanel.Controls.Add(this.logDec);
-            this.shiftClickedPanel.Location = new System.Drawing.Point(1, 147);
+            this.shiftClickedPanel.Location = new System.Drawing.Point(1, 138);
             this.shiftClickedPanel.Name = "shiftClickedPanel";
             this.shiftClickedPanel.Size = new System.Drawing.Size(354, 142);
             this.shiftClickedPanel.TabIndex = 29;
@@ -935,12 +914,12 @@ namespace Kalkulacka
             this.ln.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ln.Font = new System.Drawing.Font("Century Gothic", 12.75F);
             this.ln.ForeColor = System.Drawing.Color.LightGray;
+            this.ln.Image = global::Kalkulacka.Properties.Resources.ln;
             this.ln.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ln.Location = new System.Drawing.Point(284, 0);
             this.ln.Name = "ln";
             this.ln.Size = new System.Drawing.Size(70, 70);
             this.ln.TabIndex = 31;
-            this.ln.Text = "ln";
             this.ln.UseVisualStyleBackColor = false;
             this.ln.Click += new System.EventHandler(this.InstantOp_Click);
             // 
@@ -1089,12 +1068,12 @@ namespace Kalkulacka
             this.addition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addition.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.addition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.addition.Image = global::Kalkulacka.Properties.Resources.plusko;
             this.addition.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.addition.Location = new System.Drawing.Point(214, 431);
+            this.addition.Location = new System.Drawing.Point(214, 422);
             this.addition.Name = "addition";
             this.addition.Size = new System.Drawing.Size(70, 70);
             this.addition.TabIndex = 20;
-            this.addition.Text = "+";
             this.addition.UseVisualStyleBackColor = false;
             this.addition.Click += new System.EventHandler(this.operation_Click);
             // 
@@ -1111,12 +1090,12 @@ namespace Kalkulacka
             this.multiplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.multiplication.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.multiplication.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.multiplication.Image = global::Kalkulacka.Properties.Resources.krathotovoo;
             this.multiplication.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.multiplication.Location = new System.Drawing.Point(214, 360);
+            this.multiplication.Location = new System.Drawing.Point(214, 351);
             this.multiplication.Name = "multiplication";
             this.multiplication.Size = new System.Drawing.Size(70, 70);
             this.multiplication.TabIndex = 18;
-            this.multiplication.Text = "×";
             this.multiplication.UseVisualStyleBackColor = false;
             this.multiplication.Click += new System.EventHandler(this.operation_Click);
             // 
@@ -1141,7 +1120,7 @@ namespace Kalkulacka
             this.question.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.question.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.question.ForeColor = System.Drawing.Color.Gray;
-            this.question.Location = new System.Drawing.Point(1, 49);
+            this.question.Location = new System.Drawing.Point(1, 40);
             this.question.Name = "question";
             this.question.Size = new System.Drawing.Size(22, 26);
             this.question.TabIndex = 31;
@@ -1149,13 +1128,35 @@ namespace Kalkulacka
             this.question.UseVisualStyleBackColor = false;
             this.question.Click += new System.EventHandler(this.question_Click);
             // 
+            // del
+            // 
+            this.del.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(0)))), ((int)(((byte)(3)))));
+            this.del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.del.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.del.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.del.FlatAppearance.BorderSize = 0;
+            this.del.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.del.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
+            this.del.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
+            this.del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.del.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.del.ForeColor = System.Drawing.Color.LightGray;
+            this.del.Image = global::Kalkulacka.Properties.Resources.DEL;
+            this.del.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.del.Location = new System.Drawing.Point(214, 280);
+            this.del.Name = "del";
+            this.del.Size = new System.Drawing.Size(70, 70);
+            this.del.TabIndex = 24;
+            this.del.UseVisualStyleBackColor = false;
+            this.del.Click += new System.EventHandler(this.InstantOp_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.equals;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(356, 573);
+            this.ClientSize = new System.Drawing.Size(356, 564);
             this.Controls.Add(this.question);
             this.Controls.Add(this.DisplayedM);
             this.Controls.Add(this.shiftClickedPanel);
@@ -1185,8 +1186,8 @@ namespace Kalkulacka
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(372, 612);
-            this.MinimumSize = new System.Drawing.Size(372, 612);
+            this.MaximumSize = new System.Drawing.Size(372, 603);
+            this.MinimumSize = new System.Drawing.Size(372, 603);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";

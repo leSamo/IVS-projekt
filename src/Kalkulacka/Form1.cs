@@ -2,7 +2,8 @@
 * IVS - project 2 - Calculator
 * Team Orient Express
 * Ac. y. 2019/20
-***********
+***********/
+/**
 * @file Form1.cs
 * @author Emma Krompaščíková
 * @author Filip Kružík
@@ -275,7 +276,7 @@ namespace Kalkulacka
 
         /**
          * @brief Checking validity of result
-         * Sets text box to result if all correct or to "Error" if not
+         * @brief Sets text box to result if all correct or to "Error" if not
          */
         public void Valid_Chk(decimal? result)
         {
@@ -328,7 +329,7 @@ namespace Kalkulacka
 
         /**
          * @brief Unary operations handler
-         * Integrated with math lib
+         * @brief Integrated with math lib
          */
 
         private void InstantOp_Click(object sender, EventArgs e)
