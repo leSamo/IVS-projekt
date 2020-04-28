@@ -1,0 +1,35 @@
+##########                       skutecnost.txt                      ##########
+########## IVS projekt 2 - Kalkulaèka - tím Orient Express - 2019/20 ##########
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+### STANOVENÉ TERMÍNY A PRIDELENIE ÚLOH ###
+Takmer žiadny z deadlinov dodržaný nebol, vzh¾adom na vyskytnutie neoèakávaných blokujúcich problémov.
+
+>>>>>>>>>>
+plánované - skutoèné
+16. 03.     15. 03.     Plánovanie a nastavenie vývojových prostredí (git, Visual Studio)
+22. 03.     23. 03.     Zlyhávajúce testy (TDD)
+22. 03.     23. 03.     Uživate¾ské rozhranie
+22. 03.     06. 04.     Matematická knižnica
+29. 03.     28. 04.*    Integrácia matematickej knižnice a uživate¾ského rozhrania
+29. 03.     20. 04.     Programová dokumentácia (Doxygen)
+05. 04.     27. 04.     Makefile
+05. 04.     -           Debugging
+05. 04.     09. 04.     Aplikácia na profiling
+05. 04.     28. 04.     Užívate¾ská príruèka
+12. 04.     -           Testovanie produktu
+12. 04.     -           Mockup budúcich verzií
+
+* - z väèšej èasti vykonané skôr, ale s výraznými problémami, ktoré sa opravili až v uvedený dátum; alebo dovtedy neúplne
+>>>>>>>>>>
+
+
+### KOMUNIKÁCIA ###
+Naplánovaný komunikaèný kanál discord bol postaèujúci pri procese vývoja, využívali sme jeho textové aj hlasové kanály a nápomocná bola
+aj funkcia zdie¾ania obrazovky.
+
+### SPRÁVA VERZIÍ ###
+Využívali sme naplánovaný github. Týmto projektom sa všetci èlenovia tímu zlepšili v jeho používaní. Problémom bývalo, že projekt mal relatívne málo súborov a teda èasto vznikali merge konflikty, ak viacerí pracovali naraz.
+
+
+########## KONIEC SÚBORU skutecnost.txt ##########
