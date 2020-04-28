@@ -32,6 +32,7 @@ namespace Kalkulacka
         private bool repeatEq = false;
         private bool opClick = false;
         private bool useAns = false;
+        private bool numChk = false;
         //private object txt_Result;
 
         public Form1()
@@ -301,6 +302,7 @@ namespace Kalkulacka
         private void operation_Click(object sender, EventArgs e)    //Určení stisknuté operace, uložení vstupu, vymazání textboxu
         {
             bool convValid;
+            
             Button button = (Button)sender;
             repeatEq = false;
 
@@ -308,12 +310,13 @@ namespace Kalkulacka
             {
                 firstNum = ans;
             }
-            if ((textBox1.Text != "" && firstNum == 0) || opClick)
+            if ((textBox1.Text != "" && !numChk) || opClick)
             {
                 convValid = decimal.TryParse(textBox1.Text, NumberStyles.Any, System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"), out firstNum);
                 erase = true;
+                numChk = true;
             }
-            else if (textBox1.Text != "" && firstNum != 0)
+            else if (textBox1.Text != "" && numChk)
             {
                 Valid_Chk(Calculate());
                 erase = true;
@@ -377,10 +380,11 @@ namespace Kalkulacka
                     {
                         firstNum = ans;
                     }
-                    if (firstNum != 0)
+                    if (numChk)
                     {
                         Valid_Chk(Calculate());
                         repeatEq = true;
+                        numChk = false;
                     }
                     else if (repeatEq)
                     {
@@ -489,6 +493,7 @@ namespace Kalkulacka
                     erase = true;
                 }
             }
+            numChk = false;
         }
 
         /**
