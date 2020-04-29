@@ -1,8 +1,9 @@
-/**********
+/*
 * IVS - project 2 - Calculator
 * Team Orient Express
 * Ac. y. 2019/20
-***********
+*/
+/**
 * @file BasicMathTests.cs
 * @brief File of tests for checking if calculator calutates right
 * @author Michal Findra

@@ -1,8 +1,4 @@
-/**
- * @file Info.Designer.cs
- * @author Emma Krompaščíková
- * @brief File responsible for showing informations about calculator
- */
+
 
 namespace Kalkulacka
 {
