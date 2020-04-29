@@ -27,6 +27,7 @@ namespace Profiling
 
             bool conversionSuccessful;
             string input;
+            decimal square = 0;
             decimal linearAccumulator = 0;
             decimal quadraticAccumulator = 0;
             int count = 0;
@@ -40,8 +41,9 @@ namespace Profiling
                     return -1;
                 }
                 count++;
-                linearAccumulator += currentNumber;
-                quadraticAccumulator += CheckNull(math.Exponentiate(currentNumber, 2));
+                linearAccumulator = CheckNull(math.Add(linearAccumulator, currentNumber));
+                square = CheckNull(math.Exponentiate(currentNumber, 2));
+                quadraticAccumulator = CheckNull(math.Add(quadraticAccumulator, square));
             }
 
             if (count < 2)
@@ -72,7 +74,7 @@ namespace Profiling
 
             Console.WriteLine(deviation);
             
-            // Console.ReadLine();
+            //Console.ReadLine();
 
             return 0;
         }
