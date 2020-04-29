@@ -87,15 +87,15 @@ namespace Kalkulacka
             if (shiftClicked)
             {
                 listPanel[0].BringToFront();
-                shift.BackColor = MRC.BackColor = Mplus.BackColor = Mminus.BackColor = off.BackColor = Color.FromArgb(115, 0, 3);
-                shift.FlatAppearance.MouseOverBackColor = MRC.FlatAppearance.MouseOverBackColor = Mplus.FlatAppearance.MouseOverBackColor = Mminus.FlatAppearance.MouseOverBackColor = off.FlatAppearance.MouseOverBackColor = Color.FromArgb(68, 0, 2);
+                shift.BackColor =  Color.FromArgb(115, 0, 3);
+                shift.FlatAppearance.MouseOverBackColor = Color.FromArgb(68, 0, 2);
                 shiftClicked = false;
             }
             else
             {
                 listPanel[1].BringToFront();
-                shift.BackColor = MRC.BackColor = Mplus.BackColor = Mminus.BackColor = off.BackColor = Color.FromArgb(68, 0, 2);
-                shift.FlatAppearance.MouseOverBackColor = MRC.FlatAppearance.MouseOverBackColor = Mplus.FlatAppearance.MouseOverBackColor = Mminus.FlatAppearance.MouseOverBackColor = off.FlatAppearance.MouseOverBackColor = Color.FromArgb(115, 0, 3);
+                shift.BackColor = Color.FromArgb(68, 0, 2);
+                shift.FlatAppearance.MouseOverBackColor = Color.FromArgb(115, 0, 3);
                 shiftClicked = true;
             }
         }
