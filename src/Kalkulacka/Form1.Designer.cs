@@ -87,6 +87,7 @@ namespace Kalkulacka
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(225)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox1.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.textBox1.HideSelection = false;
@@ -94,6 +95,7 @@ namespace Kalkulacka
             this.textBox1.MaximumSize = new System.Drawing.Size(999, 999);
             this.textBox1.MaxLength = 11;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(354, 65);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "0";
