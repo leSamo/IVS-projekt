@@ -10,7 +10,7 @@ zip_name=xoleks00_xfindr00_xkromp00_xkruzi04.zip
 
 # (spustí progam)
 all:
-	cd $(Visual_Stuio_dir) & Current\Bin\MSBuild.exe "$(CWD)\Kalkulacka\Kalkulacka.sln" /t:Build & $(CWD)\Kalkulacka\bin\Debug\Kalkulacka.exe
+	cd $(Visual_Stuio_dir) & Current\Bin\MSBuild.exe "$(CWD)\Kalkulacka\Kalkulacka.sln" /t:Build & "$(CWD)\Kalkulacka\bin\Debug\Kalkulacka.exe"
 
 # (zabalí projekt tak, aby mohl být odevzdán)   
 pack: 	
@@ -27,11 +27,10 @@ pack:
 clean:
 	cd .. & if exist "deploy" rmdir "deploy" /s /q
 	cd .. & if exist "dokumentace.pdf" del "dokumentace.pdf" /s /q
-
     
 # (spustí program)
 run: 
-	cd $(Visual_Stuio_dir) & Current\Bin\MSBuild.exe "$(CWD)\Kalkulacka\Kalkulacka.sln" /t:Build & $(CWD)\src\Kalkulacka\obj\Debug\Kalkulacka.exe
+	cd $(Visual_Stuio_dir) & Current\Bin\MSBuild.exe "$(CWD)\Kalkulacka\Kalkulacka.sln" /t:Build & "$(CWD)\src\Kalkulacka\obj\Debug\Kalkulacka.exe"
 
 # (spustí program pro výpočet směrodatné odchylky s ukázkovým testovacím vstupem)
 profile: 
@@ -39,9 +38,10 @@ profile:
 
 # (vypíše nápovědu s popisem, co je potřeba udělat před spuštěním programu)
 help: 
-	@echo "Pre build a spustenie programu zadaj 'make run/all'"
-	@echo "Pre spustenie profilingu zadaj 'make profile'(vsupné data sú v súbore \repo\src\data.txt)"
-	@echo "Pre vytvorenie .zip súboru s projektom na odovzdanie zadaj 'make pack'"
-	@echo "Pre vyčistenie projektu od pre odovzdanie zbytočných súborov zadaj 'make clean'"
-	@echo "Viac info o programe viď programová dokumentácia /doc"
-	@echo "V prípade otázok/návrhov/sťažností kontaktujte xoleks00@stud.fit.vutbr.cz alebo xfindr00@stud.fit.vutbr.cz alebo xkromp00@stud.fit.vutbr.cz alebo xkruzi04@stud.fit.vutbr.cz"
+	@echo "build and run program run: 'make run/all'"
+	@echo "run profiling with input data in \repo\src\data.txt run 'make profile'"
+	@echo "create .zip folder of project run 'make pack'"
+	@echo "remove unnecessary files run 'make clean'"
+	@echo "install file location \install\setup.exe"
+	@echo "more info about program see \doc\dokumentce.pdf"
+	@echo "if any questions/propositions contact xoleks00@stud.fit.vutbr.cz or xfindr00@stud.fit.vutbr.cz or xkromp00@stud.fit.vutbr.cz or xkruzi04@stud.fit.vutbr.cz"
