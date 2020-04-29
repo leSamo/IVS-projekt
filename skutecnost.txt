@@ -2,8 +2,19 @@
 ########## IVS projekt 2 - Kalkulaèka - tím Orient Express - 2019/20 ##########
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-### STANOVENÉ TERMÍNY A PRIDELENIE ÚLOH ###
-Takmer žiadny z deadlinov dodržaný nebol, vzh¾adom na vyskytnutie neoèakávaných blokujúcich problémov.
+### DESING ###
+Pred prvým stretnutím sme mali pripravený mockup, o ktorom sme sa skupinovo zhodli, že nie je dobrý a dohodli sme sa na inom dizajne, ktorý
+sme mali popísaný len slovne namiesto mockupu a ktorý nasledoval princípy minimalistického dizajnu.
+
+### STANOVENÉ TERMÍNY, PRIDELENIE ÚLOH, PROBLÉMY PRI VÝVOJI ###
+Takmer žiadny z deadlinov dodržaný nebol, vzh¾adom na vyskytnutie neoèakávaných blokujúcich problémov:
+- nároènos zaoblenia okrajov tlaèidiel - nakoniec sme sa dohodli na štvorcových tlaèidlách
+- chceli sme použi externú knižnicu na zaoblené tlaèidlá, ale autor nemal priloženú licenciu a na maily neodpovedal
+- nízka desatinná presnos výsledkov pochádzajúcich z knižnice - použili sme decimal (16 B) namiesto double (8 B)
+- ve¾ké množstvo krajných prípadov a neobvyklých kombinácií tlaèidiel vedelo vytvori neoèakávané chovanie aplikácie
+   - vytvorili sme si slovné popisy oèakávaného chovania (podobné BDD, ale neboli vytvorené predom ale poèas vývoja)
+- používanie powershellu pri vytváraní makefile, rozdiely od bashu spôsobovali problémy
+
 
 >>>>>>>>>>
 plánované - skutoèné
@@ -14,11 +25,10 @@ plánované - skutoèné
 29. 03.     28. 04.*    Integrácia matematickej knižnice a uživate¾ského rozhrania
 29. 03.     20. 04.     Programová dokumentácia (Doxygen)
 05. 04.     27. 04.     Makefile
-05. 04.     -           Debugging
 05. 04.     09. 04.     Aplikácia na profiling
 05. 04.     28. 04.     Užívate¾ská príruèka
-12. 04.     -           Testovanie produktu
-12. 04.     -           Mockup budúcich verzií
+12. 04.     29. 04.     Testovanie produktu
+12. 04.     29. 04.     Mockup budúcich verzií
 
 * - z väèšej èasti vykonané skôr, ale s výraznými problémami, ktoré sa opravili až v uvedený dátum; alebo dovtedy neúplne
 >>>>>>>>>>
@@ -30,6 +40,13 @@ aj funkcia zdie¾ania obrazovky.
 
 ### SPRÁVA VERZIÍ ###
 Využívali sme naplánovaný github. Týmto projektom sa všetci èlenovia tímu zlepšili v jeho používaní. Problémom bývalo, že projekt mal relatívne málo súborov a teda èasto vznikali merge konflikty, ak viacerí pracovali naraz.
+
+### ZÁVER ###
+Pri vývoji tejto aplikácie sme sa všetci z tímu nauèili ve¾a nových znalostí oh¾adom softvérového vývoja, konkrétne
+- vývoj softvéru na platforme Windows/Visual studio/.NET Framework - testy, makefile
+- práca v tíme, rozdelenie úloh, riešenie problémov v tíme, simultánny vývoj, používanie GITu
+- princípy TDD a BDD
+- práca s C#, jeho výhody a nevýhody oproti C
 
 
 ########## KONIEC SÚBORU skutecnost.txt ##########
