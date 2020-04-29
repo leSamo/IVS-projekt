@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Profiling.exe" version="1.0.0.0" publicKeyToken="5269c5a8a8af0e44" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Profiling" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Profiling.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Profiling.exe" size="9192">
+      <assemblyIdentity name="Profiling" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>vyBUu8XrB/HVevL0TAdz9sVEhi49nHWHzSST9zNsfqI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Profiling.exe.config" size="188">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VDy5/VrQni+RSOb/6uEMWMc6bGQEaa2e2UdeWG+KK1I=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-826F9T0\Samuel" issuerKeyHash="b810d5e88595f28c2f4dea590373795672447ad7" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>6XfpKzasI7Kuxgcc6YA8/9c+ooRGK0IlPps51/0C86s=</DigestValue></Reference></SignedInfo><SignatureValue>vXB/Cyqc/xiOzm6OYnau0zE49+OgRD93dxov5tV2mFHnHSKvlMuElJspyZFO18fnqxrrqeFIt1HA9Dm+bYS5EcM8dneFq/i8zYkS+aZ+/KMXUhjz9jn+wZwvixoH3Ywe3k+59WotxEHvJoymzdwX1VKvXThU9xMqDssBrFQRJ4A=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>39Md2YlOjZ0IK2l8pF7+lRrWoERNZ8rURvCaCHjOCI5Qs/gFaOTQrt0swJ5oNPoGP45CsQgJYv1W46uv+rGcfqGV3rTMV+1a5gqU/FUbkM3fUOayS86/B1HZtAPztTstMOUV/21Oq4zI6DHtRHK9hyxZR5J0d2duJf3qI7GGL4k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="abf302fdd7399b3e25422b4684a23ed7ff3c80e91c07c6aeb223ac362be977e9" Description="" Url=""><as:assemblyIdentity name="Profiling.exe" version="1.0.0.0" publicKeyToken="5269c5a8a8af0e44" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-826F9T0\Samuel</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>xQxXgno3+yIEp5WciC4D6A7QCu4norWFw+UjfvJVKNU=</DigestValue></Reference></SignedInfo><SignatureValue>NXs9ECZuBgO559/ajTcqDvZpDK5y0H54nBFEMkWrj74Vkh44Y5uDk02PZSe+xqn15Vqr9hWcDB10XuCgO3ckfPV1/eLWkk0RWE/hfN5FH6hDEATlHwnDsieCasCYMlzPbuBErm6pt1D2ASfiK5HotOAcRxIEG3JiQOuFdcfLlBk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>39Md2YlOjZ0IK2l8pF7+lRrWoERNZ8rURvCaCHjOCI5Qs/gFaOTQrt0swJ5oNPoGP45CsQgJYv1W46uv+rGcfqGV3rTMV+1a5gqU/FUbkM3fUOayS86/B1HZtAPztTstMOUV/21Oq4zI6DHtRHK9hyxZR5J0d2duJf3qI7GGL4k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQTvp4C3Kg+Z5C7JkBKKYC5DANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDHiwARABFAFMASwBUAE8AUAAtADgAMgA2AEYAOQBUADAAXABTAGEAbQB1AGUAbDAeFw0yMDA0MjkxOTQ4NDhaFw0yMTA0MzAwMTQ4NDhaMDcxNTAzBgNVBAMeLABEAEUAUwBLAFQATwBQAC0AOAAyADYARgA5AFQAMABcAFMAYQBtAHUAZQBsMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDf0x3ZiU6NnQgraXykXv6VGtagRE1nytRG8JoIeM4IjlCz+AVo5NCu3SzAnmg0+gY/jkKxCAli/Vbjq6/6sZx+oZXetMxX7VrmCpT8VRuQzd9Q5rJLzr8HUdm0A/O1Oy0w5RX/bU6rjMjoMe1Ecr2HLFlHknR3Z24l/eojsYYviQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAAMTlwZscOF+NBygCH7CzHCbvnA3zg4LNE7sg9eNMstxPUFjbsX7WhP0CBfRxby7xMIKv9kSvTVFt6OZcJMje/9DvD9ulD8PQxFEbIVNghMZdwLQ31bplUHvKG5adFLesLUbThg9IjfMsgggm/ZPXtxRJDZ48GCSiHi6NTQsLEx5</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
