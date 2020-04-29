@@ -87,15 +87,15 @@ namespace Kalkulacka
             if (shiftClicked)
             {
                 listPanel[0].BringToFront();
-                shift.BackColor = MRC.BackColor = Mplus.BackColor = Mminus.BackColor = off.BackColor = Color.FromArgb(115, 0, 3);
-                shift.FlatAppearance.MouseOverBackColor = MRC.FlatAppearance.MouseOverBackColor = Mplus.FlatAppearance.MouseOverBackColor = Mminus.FlatAppearance.MouseOverBackColor = off.FlatAppearance.MouseOverBackColor = Color.FromArgb(68, 0, 2);
+                shift.BackColor =  Color.FromArgb(115, 0, 3);
+                shift.FlatAppearance.MouseOverBackColor = Color.FromArgb(68, 0, 2);
                 shiftClicked = false;
             }
             else
             {
                 listPanel[1].BringToFront();
-                shift.BackColor = MRC.BackColor = Mplus.BackColor = Mminus.BackColor = off.BackColor = Color.FromArgb(68, 0, 2);
-                shift.FlatAppearance.MouseOverBackColor = MRC.FlatAppearance.MouseOverBackColor = Mplus.FlatAppearance.MouseOverBackColor = Mminus.FlatAppearance.MouseOverBackColor = off.FlatAppearance.MouseOverBackColor = Color.FromArgb(115, 0, 3);
+                shift.BackColor = Color.FromArgb(68, 0, 2);
+                shift.FlatAppearance.MouseOverBackColor = Color.FromArgb(115, 0, 3);
                 shiftClicked = true;
             }
         }
@@ -280,7 +280,7 @@ namespace Kalkulacka
          */
         public void Valid_Chk(decimal? result)
         {
-            if (result == null)
+            if (result == null || textBox1.Text == "Error")
             {
                 textBox1.Text = "Error";
                 //TODO error handler
@@ -478,14 +478,14 @@ namespace Kalkulacka
                     skipCheck = true;
                     break;
             }
-            if (instantOp != "del" && instantOp != "pi" && firstNum != 0 && instantOp != "negate")
+            if (instantOp != "del" && instantOp != "pi" && instantOp != "negate")
             {
                 erase = true;
                 //firstNum = 0;
             }
             if (!skipCheck)
             {
-                if (result != null)
+                if (result != null && textBox1.Text != "Error")
                 {
                     resultt = result ?? 0;
                     textBox1.Text = resultt.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
