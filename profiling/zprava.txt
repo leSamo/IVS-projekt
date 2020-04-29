@@ -1,0 +1,5 @@
+Volania funkcií pochádzajú z dvoch èastí:
+1. akumulovanie hodnôt poèas zadávania (využitie pamäte sme optimalizovali tým, že sme si hodnoty ukladali rovno do súètu bez použitia po¾a) - každej hodnote zodpovedá jedno sèítanie (prièítanie do lineárneho akumulátora), druhé sèítanie a mocnenie (prièítanie do kvadratického akumulátora)
+2. vypoèítanie výsledku zo vzorca - 2 delenia, 3 násobenia, odmocnenie, 2 odèítania
+
+Spracúvanie výsledku, aby sa zmestil na obrazovku kalkulaèky sa deje už na úrovni matematickej knižnice a znaèná optimalizácia by nastala po presunutí spracúvania do vnútra kalkulaèky, èo sa prejavuje hlavne na èasto invokovaných operáciách - sèítanie, mocnenie.
