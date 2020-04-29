@@ -165,6 +165,7 @@ namespace MathComponentsNS
         public decimal? Logarithm(decimal a, decimal b)
         {
             if (b <= 0 || b == 1 || a <= 0) return error;
+            if (a == b) return 1;
             decimal res = (decimal)System.Math.Log((double)a, (double)b);
             return TruncateToFit(res);
         }
