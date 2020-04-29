@@ -280,7 +280,7 @@ namespace Kalkulacka
          */
         public void Valid_Chk(decimal? result)
         {
-            if (result == null)
+            if (result == null || textBox1.Text == "Error")
             {
                 textBox1.Text = "Error";
                 //TODO error handler
@@ -478,14 +478,14 @@ namespace Kalkulacka
                     skipCheck = true;
                     break;
             }
-            if (instantOp != "del" && instantOp != "pi" && firstNum != 0 && instantOp != "negate")
+            if (instantOp != "del" && instantOp != "pi" && instantOp != "negate")
             {
                 erase = true;
                 //firstNum = 0;
             }
             if (!skipCheck)
             {
-                if (result != null)
+                if (result != null && textBox1.Text != "Error")
                 {
                     resultt = result ?? 0;
                     textBox1.Text = resultt.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("tr-tr"));
