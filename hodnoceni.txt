@@ -1,4 +1,4 @@
-xoleks00 X
-xfindr00 X
-xkromp00 X
-xkruzi04 X
+xoleks00 108 (matematická knižnica, profiling aplikácia, mockup do budúcnosti)
+xfindr00 107 (testy matematickej knižnice, Makefile)
+xkromp00 105 (UI kalkulaèky, nápoveda, Doxygen)
+xkruzi04 80 (integrácia matematickej knižnice a kalkulaèky, užívate¾ská príruèka, debugging)

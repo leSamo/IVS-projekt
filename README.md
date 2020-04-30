@@ -3,14 +3,21 @@ Prostredi
 
 Windows 64bit
 
+
 Autori
 ------
 
 Orient Express
-- xoleks00 Samuel Olekšák
+- xoleks00 Samuel Oleksak
 - xfindr00 Michal Findra
-- xkromp00 Emma Krompašèíková
-- xkruzi04 Filip Kružík
+- xkromp00 Emma Krompascikova
+- xkruzi04 Filip Kruzik
+
+Spusteni
+--------
+Visual Studio
+Compilation and running: run 'make help' in repo/src/
+Installation: execute install/setup.exe or reffer to the user guide
 
 Licence
 -------
